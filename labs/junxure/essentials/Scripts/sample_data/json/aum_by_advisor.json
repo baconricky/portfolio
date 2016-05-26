@@ -1,0 +1,26 @@
+[{
+    "name": "Shawn Ethridge",
+    "value": 2640000,
+    "color": "#3a87ad"
+}, {
+    "name": "Page Horton",
+    "value": 3640000,
+    "color": "#468847"
+}, {
+    "name":	"Ken Golding",
+    "value": 4640000,
+    "color": "#b94a48"
+}, {
+    "name":	"Greg Freidman",
+    "value": 8640000,
+    "color": "#f58233",
+    "explode": true
+}, {
+    "name":	"John Shangler",
+    "value": 5640000,
+    "color": "#ffc40d"
+}, {
+    "name":	"Erin Kincheloe",
+    "value": 6640000,
+    "color": "#7a43b6"
+}]

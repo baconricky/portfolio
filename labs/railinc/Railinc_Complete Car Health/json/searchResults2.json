@@ -1,0 +1,39 @@
+{
+	"sEcho": 1,
+ 	"iTotalRecords": "4",
+ 	"iTotalDisplayRecords": "4",
+    "aaData": [
+        ["4901105",
+            "UN0006",
+            "CARTRIDGESFORWEAPONS",
+            "1.1E",
+            "II",
+            "1929135",
+            "PROJECT.CANNON"
+        ],
+        ["4901110",
+            "UN0006",
+            "CARTRIDGESFORWEAPONS",
+            "1.1E",
+            "II",
+            "1929191",
+            "AMMUNITION"
+        ],
+        ["4901130",
+            "UN0006",
+            "CARTRIDGESFORWEAPONS",
+            "1.1E",
+            "II",
+            "1961111",
+            "CARTRIDGESEXPLOSIVE"
+        ],
+        ["4901131",
+            "UN0006",
+            "CARTRIDGESFORWEAPONS",
+            "1.1E",
+            "II",
+            "1961110",
+            "CARTRSMLARMS"
+        ]
+    ]
+}

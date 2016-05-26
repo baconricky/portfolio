@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>NCTracks - Provider Portal - Migrant Health Fee-For-Service Eligibility Form</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="css/portal_provider.css" />
+	
+	<script type="text/javascript" language="JavaScript" src="js/jquery.tools.min.js"></script>
+	<script type="text/javascript" language="JavaScript" src="js/DD_roundies.min.js"></script>
+	<script type="text/javascript" language="JavaScript" src="js/suckerfish.js"></script>
+	<script type="text/javascript" language="JavaScript" src="js/jCal.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/jquery.maskedinput-1.2.2.min.js"></script>
+	<script type="text/javascript" language="JavaScript" src="js/jquery.coolinput.min.js"></script>
+	<script type="text/javascript" language="JavaScript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/jquery.validate.rules.js"></script>
+	<script type="text/javascript" language="JavaScript" src="js/nctracks_init.js"></script>
+
+	<!--[if IE]><script type="text/javascript" src="../js/jquery.bgiframe.js"></script><![endif]-->
+
+</head>
+<body>
+
+<a href="#mainContent" id="skipNav" class="linkColor2" accesskey="2">skip navigation</a>
+
+<div id="header">
+	<div id="logo">
+        <a href="../website/home_page.html" accesskey="1"><img src="../images/layout/logo_main.png" width="596" height="60" alt="NCTracks"/></a>
+    </div>
+	<form method="get" action="#" id="siteSearch">
+		<input type="text" name="search" class="hint roundedLeft" title="search..." accesskey="4" />
+		<button type="submit"></button>
+		| <a href="help/Default.htm" class="help" class="linkColor2" accesskey="6">Help</a>
+	</form>
+</div>
+<div id="contentBackground">
+	<h1 id="portalTitle">Provider Portal</h1>
+	<div class="portalBrandColor" id="navStrip">
+		<ul>
+		<!-- MAIN NAVIGATION -->
+			<li>&nbsp;</li>
+		</ul>
+	</div>
+	<!-- breadcrumb navigation -->
+	<ol id="breadcrumb">
+		<li><a href="/">Provider Portal</a> <b>&gt;</b></li>
+		<li><a href="index.html">Recipient Enrollment</a> <b>&gt;</b></li>
+		<li>Migrant Health Fee-For-Service Eligibility Form</li>
+	</ol>
+	<div id="mainContent">
+		<div id="pageTitle">
+			<h1>Migrant Health Fee-For-Service Eligibility Form</h1>
+			<!-- page tools -->
+			<ul>
+				<li><a href="#"><img src="../images/icons/printer.png" width="24" height="24" alt="Print this page" /></a> |</li>
+				<li><a href="#" class="textScaling" id="decreaseFont"><img src="../images/icons/text_decrease.gif" width="24" height="24" alt="Decrease text size" /></a></li>
+				<li><a href="#" class="textScaling" id="increaseFont"><img src="../images/icons/text_increase.gif" width="24" height="24" alt="Increase text size" /></a>  |</li>
+				<li><a href="#">Help</a></li>
+			</ul>
+		</div>
+
+		<!-- single pane. it is always visible -->
+	    <form id="appForm" method="post" action="#">
+		<div id="requiredLegend"><img src="images/icons/icon_required.gif" width="14" height="9" alt="Required Field" /> indicates a required field</div>
+		<div id="formLegend">
+            <div class="formBtn">
+                <span>Legend</span>
+                <img src="../images/icons/legend_arrow.gif" width="11" height="17" alt="form legend" />
+            </div>
+            <ul>
+                <li><img src="../images/icons/calendar.png" width="16" height="16" alt="calendar icon" />Calendar</li>
+                <li><img src="../images/icons/audit.png" width="16" height="16" alt="audit icon" />Audit</li>
+                <li><img src="../images/icons/information.png" width="16" height="16" alt="tooltip icon" />Tooltip</li>
+            </ul>
+        </div>
+			<div class="formSection" id="individual_info">
+			<fieldset>
+				<legend>Patient Information</legend> 
+				<a href="help.html" rel="#overlay" class="formHelpTab"><img src="images/icons/help_tab.gif" width="22" height="22" alt="Help" title="Help" /></a>
+				<dl class="threeColumnLayout">
+					<dt><label for="patientFirstName">First Name:</label></dt>
+					<dd><input type="text" name="patientFirstName" id="patientFirstName" class="medium required" /></dd>
+					<dt><label for="patientLastName">Last Name:</label></dt>
+					<dd><input type="text" name="patientLastName" id="patientLastName" class="medium required" /></dd>
+					<dt><label for="patientMI">Middle Initial:</label></dt>
+					<dd><input type="text" name="patientMI" id="patientMI" class="small" /></dd>
+				</dl>
+				<dl class="threeColumnLayout">
+					<dt><label for="patientSSN">Social Security Number:</label></dt>
+					<dd><input type="text" name="patientSSN" id="patientSSN" class="medium ssn" /></dd>
+					<dt><label for="patientDOB">Date of Birth:</label></dt>
+					<dd><input type="text" name="patientDOB" id="patientDOB" title="Date should be in the format mm/dd/yyyy" class="required dateInput" /></dd>
+					<dt><label for="patientGender">Gender:</label></dt>
+					<dd><select id="patientGender" name="patientGender" title="Please select a Gender" class="required">
+						<option value="">&nbsp;</option>
+						<option value="0">Male</option>
+						<option value="1">Female</option>
+					</select>
+					</dd>
+				</dl>
+				<dl class="threeColumnLayout">
+                    <dt><label for="interpreter" class="required">Would you like an interpreter?:</label></dt>
+                    <dd>
+						<label for="interpreterY"><input type="radio" name="interpreter" id="interpreterY" value="y" /> Yes</label>
+                        <label for="interpreterN"><input type="radio" name="interpreter" id="interpreterN" value="n" /> No</label>
+                    </dd>
+                    <dt><label for="patientPreferredLanguage">Preferred Language:</label></dt>
+                    <dd><select id="patientPreferredLanguage" name="patientPreferredLanguage" class="required">
+                   		    <option value="">&nbsp;</option>
+                   	    	<option value="ar">AR - Arabic</option>
+    	               	    <option value="ca">CA - Cambodian</option>
+	                   	    <option value="ch">CH - Chinese</option>
+                    	    <option value="ca">EN - English</option>
+                    	    <option value="en">FR - French</option>
+                    	    <option value="xx">XX - GENERATED</option>
+                    	</select>
+                    </dd>
+                </dl>
+				<hr />
+				<dl>
+					<dt><label for="patientRace">Race:</label></dt>
+					<dd>
+						<select id="patientRace" name="patientRace" title="Please select a Race" class="required">
+							<option value="">&nbsp;</option>
+							<option value="w">XX - White</option>
+							<option value="b">XX - Black</option>
+							<option value="ai">XX - American Indian</option>
+							<option value="a">XX - Asian</option>
+							<option value="h">XX - Native Hawaiian/Other Pacific Islander</option>
+							<option value="m">XX - Multi-Racial</option>
+							<option value="x">XX - GENERATED</option>
+						</select>
+					</dd>
+					<dt><label for="patientEthnicity">Ethnicity:</label></dt>
+					<dd><select id="patientEthnicity" name="patientEthnicity" class="required">
+							<option value="">&nbsp;</option>
+							<option value="y">XX - Hispanic or Latino Origin</option>
+							<option value="n">XX - Not Hispanic or Latino Origin</option>
+							<option value="u">XX - Unknown</option>
+							<option value="x">XX - GENERATED</option>
+						</select>
+					</dd>
+				</dl>
+				<hr />
+				<dl>
+					<dt><label for="corAaddress">Address Line 1:</label></dt>
+					<dd><input type="text" id="corAaddress" name="corAaddress" class="large required" /></dd>
+					<dt><label for="corCity">City:</label></dt>
+					<dd><input type="text" class="required" id="corCity" name="corCity" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="corAaddress2">Address Line 2:</label></dt>
+					<dd><input type="text" id="corAaddress2" name="corAaddress2" class="large" /></dd>
+					<dt><label for="corState">State:</label></dt>
+					<dd>
+						<select id="corState" class="required" name="corState" title="Select State">
+							<option value="" />
+							<option value="AL">AL</option>
+							<option value="AK">AK</option>
+							<option value="AZ">AZ</option>
+							<option value="AR">AR</option>
+							<option value="CA">CA</option>
+							<option value="CO">CO</option>
+							<option value="CT">CT</option>
+							<option value="CT">CT</option>
+							<option value="DE">DE</option>
+							<option value="FL">FL</option>
+							<option value="GA">GA</option>
+							<option value="HI">HI</option>
+							<option value="ID">ID</option>
+							<option value="IL">IL</option>
+							<option value="IN">IN</option>
+							<option value="IA">IA</option>
+							<option value="KS">KS</option>
+							<option value="KY">KY</option>
+							<option value="LA">LA</option>
+							<option value="ME">ME</option>
+							<option value="MD">MD</option>
+							<option value="MA">MA</option>
+							<option value="MI">MI</option>
+							<option value="MN">MN</option>
+							<option value="MS">MS</option>
+							<option value="MO">MO</option>
+							<option value="MT">MT</option>
+							<option value="NE">NE</option>
+							<option value="NV">NV</option>
+							<option value="NH">NH</option>
+							<option value="NJ">NJ</option>
+							<option value="NM">NM</option>
+							<option value="NY">NY</option>
+							<option value="NC">NC</option>
+							<option value="ND">ND</option>
+							<option value="OH">OH</option>
+							<option value="OK">OK</option>
+							<option value="OR">OR</option>
+							<option value="PA">PA</option>
+							<option value="RI">RI</option>
+							<option value="SC">SC</option>
+							<option value="SD">SD</option>
+							<option value="TN">TN</option>
+							<option value="TX">TX</option>
+							<option value="UT">UT</option>
+							<option value="VT">VT</option>
+							<option value="VA">VA</option>
+							<option value="WA">WA</option>
+							<option value="WV">WV</option>
+							<option value="WI">WI</option>
+							<option value="WY">WY</option>
+						</select>
+					</dd>
+				</dl>
+				<dl>
+					<dt><label for="cor">County of Residence:</label></dt>
+					<dd><input type="text" class="required" id="cor" name="cor" /></dd>
+					<dt><label for="corZip">Zip Code:</label></dt>
+					<dd><input type="text" id="corZip" name="corZip" class="zip required" /></dd>
+				</dl>
+			</fieldset>
+               	<a href="#header"><img src="images/icons/return_top.gif" class="returnTop" width="12" height="13" alt="Back to top" title="Return to the top of the page" /></a>
+				<fieldset>
+					<legend class="required">Household Information</legend>
+					<dl>
+						<dt><label for="hohName">Name of migrant farmworker head of household:</label></dt>
+						<dd><input type="text" id="hohName" name="hohName" class="large" /></dd>
+					</dl>
+					<dl>
+						<dt><label for="hohRelationship">Relationship of patient to head of household:</label></dt>
+						<dd>
+							<select id="hohRelationship" name="hohRelationship" class="large">
+								<option value=" ">&nbsp;</option>
+	                            <option value="s">XX - Self</option>
+	                            <option value="p">XX - Parent</option>
+	                            <option value="c">XX - Child</option>
+	                            <option value="sp">XX - Spouse or Partner</option>
+	                        </select>
+						</dd>
+					</dl>
+				</fieldset>
+               	<a href="#header"><img src="images/icons/return_top.gif" class="returnTop" width="12" height="13" alt="Back to top" title="Return to the top of the page" /></a>
+				<fieldset>
+					<legend class="required">Within the past 24 months, has the head of household's main employment been agricultural work?<img class="tooltip_icon" src="images/icons/information.png" title="Farmwork means cultivating, harvesting or preparing seasonal crops for market or storage. Employment may be through a crew leader, by contract (H2A) or directly by the farmer." /></legend>
+					<dl>
+						<dd class="labelToRight">
+							<label for="hohMainWorkAgY"><input name="hohMainWorkAg" type="radio" id="hohMainWorkAgY" value="y" class="radioButtonGroup" /> Yes</label>
+							<label for="hohMainWorkAgN"><input name="hohMainWorkAg" type="radio" id="hohMainWorkAgN" value="n" /> No</label>
+						</dd>
+					</dl>
+				</fieldset>
+				<fieldset>
+					<legend class="required">Within the past 24 months, has the head of household moved to work in agriculture?</legend>
+					<dl>
+						<dd class="labelToRight">
+							<label for="hohWorkAgY"><input name="hohWorkAg" type="radio" id="hohWorkAgY" value="y" class="radioButtonGroup" /> Yes</label>
+							<label for="hohWorkAgN"><input name="hohWorkAg" type="radio" id="hohWorkAgN" value="n" /> No</label>
+						</dd>
+					</dl>
+				</fieldset>
+				<fieldset>
+					<legend class="required">Did the head of household work in agriculture but no longer does so due to disability?</legend>
+					<dl>
+						<dd class="labelToRight">
+							<label for="hohWorkAgDisY"><input name="hohWorkAgDis" type="radio" id="hohWorkAgDisY" value="y" class="radioButtonGroup" /> Yes</label>
+							<label for="hohWorkAgDisN"><input name="hohWorkAgDis" type="radio" id="hohWorkAgDisN" value="n" /> No</label>
+						</dd>
+					</dl>
+				</fieldset>
+				<fieldset>
+					<legend class="required">Is the head of household working on a farm now?</legend>
+					<dl>
+						<dd class="labelToRight">
+							<label for="hohWorkingY"><input name="hohWorking" type="radio" id="hohWorkingY" value="y" class="showDetail show-hohWorking-0" /> Yes</label>
+							<label for="hohWorkingN"><input name="hohWorking" type="radio" id="hohWorkingN" value="n" class="showDetail show-hohWorking-0" /> No</label>
+						</dd>
+					</dl>
+					<div id="hohWorking-details" class="hidden">
+						<dl>
+							<dt><label for="work_dt">When did the head of household last work on a farm?</label></dt>
+							<dd><input name="work_dt" id="work_dt" class="dateInput required" /></dd>
+						</dl>
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend>Please identify the farm, farmer or crew leader where the head of household works or last worked:</legend>
+					<dl>
+						<dt><label for="farm_name">Name:</label></dt>
+						<dd><input name="farm_name" id="farm_name" class="large required" /></dd>
+					</dl>
+					<dl>
+						<dt><label for="farm_city">Closest City:</label></dt>
+						<dd><input type="text" id="farm_city" name="farm_city" class="required"/></dd>
+						<dt><label for="farm_state">State:</label></dt>
+						<dd><select id="farm_state" name="farm_state" class="required">
+							<option value=" ">&nbsp;</option>
+							<option value="nc">NC - North Carolina</option>
+							<option value="sc">SC - South Carolina</option>
+							<option value="va">VA - Virginia</option>
+							<option value="fc">GENERATED</option>
+						</select></dd>
+					</dl>
+				</fieldset>
+
+                <a href="#header"><img src="../images/icons/return_top.gif" class="returnTop" width="12" height="13" alt="Back to top" title="Return to the top of the page" /></a>
+                </div>
+                <div class="btnRow">
+                    <button class="submitBtn" type="submit">Submit</button>
+                    <button type="reset">Start Over</button>
+                </div>
+        </form>
+	</div>
+	<ul id="footer" class="linkColor2 rounded">
+		<li><a href="#">Legal</a> |</li>
+		<li><a href="#">Privacy Policy</a> |</li>
+		<li><a href="#">Accessibility</a> |</li>
+		<li><a href="#">Site Map</a> |</li>
+		<li><a href="#">Contact Us</a> |</li>
+		<li><a href="#">Report Fraud</a></li>
+	</ul>
+</div>
+<div class="dropShadow" id="tileBtm">
+	<div id="cornerLeft"></div>
+	<div id="cornerRight"></div>
+</div>
+</body>
+</html>
+

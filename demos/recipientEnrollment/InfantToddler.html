@@ -1,0 +1,812 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>NCTracks - Member Portal - Infant Toddler Authorization Form</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="../css/portal_member.css" />
+	
+	<script type="text/javascript" language="JavaScript" src="js/jquery.tools.min.js"></script>
+	<script type="text/javascript" language="JavaScript" src="js/DD_roundies.min.js"></script>
+	<script type="text/javascript" language="JavaScript" src="js/suckerfish.js"></script>
+	<script type="text/javascript" language="JavaScript" src="js/jCal.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/jquery.maskedinput-1.2.2.min.js"></script>
+	<script type="text/javascript" language="JavaScript" src="js/jquery.coolinput.min.js"></script>
+	<script type="text/javascript" language="JavaScript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/jquery.validate.rules.js"></script>
+	<script type="text/javascript" language="JavaScript" src="../js/nctracks_init.js"></script>
+
+	<!-- init scripts to get things started -->
+
+	<script type="text/javascript" language="JavaScript">	
+		$(document).submit(function(event)
+		{
+			$('dd.error').removeClass('error');
+			var isValid = $(event.target).validate().form();
+			//return isValid;
+		}); 
+	</script>
+</head>
+<body>
+
+<a href="#mainContent" id="skipNav" class="linkColor2" accesskey="2">skip navigation</a>
+
+<div id="header">
+	<div id="logo">
+        <a href="../website/home_page.html" accesskey="1"><img src="../images/layout/logo_main.png" width="596" height="60" alt="NCTracks"/></a>
+    </div>
+	<form method="get" action="#" id="siteSearch">
+		<input type="text" name="search" class="hint roundedLeft" title="search..." accesskey="4" />
+		<button type="submit">Search</button>
+		| <a href="help/Default.htm" class="help" class="linkColor2" accesskey="6">Help</a>
+	</form>
+</div>
+<div id="contentBackground">
+	<h1 id="portalTitle">Member Portal</h1>
+	<div class="portalBrandColor" id="navStrip">
+		<ul>
+		<!-- MAIN NAVIGATION -->
+			<li>&nbsp;</li>
+		</ul>
+	</div>
+	<!-- breadcrumb navigation -->
+	<ol id="breadcrumb">
+		<li><a href="/">Member Portal</a> <b>&gt;</b></li>
+		<li><a href="index.html">Recipient Enrollment</a> <b>&gt;</b></li>
+		<li><a href="#">Infant Toddler Program Enrollment</a></li>
+	</ol>
+	<div id="mainContent">
+		<div id="pageTitle">
+			<h1>Infant Toddler Program Enrollment</h1>
+			<!-- page tools -->
+			<ul>
+				<li><a href="#"><img src="../images/icons/printer.png" width="24" height="24" alt="Print this page" /></a> |</li>
+				<li><a href="#" class="textScaling" id="decreaseFont"><img src="../images/icons/text_decrease.gif" width="24" height="24" alt="Decrease text size" /></a></li>
+				<li><a href="#" class="textScaling" id="increaseFont"><img src="../images/icons/text_increase.gif" width="24" height="24" alt="Increase text size" /></a>  |</li>
+				<li><a href="#">Help</a></li>
+			</ul>
+		</div>
+
+	    <form id="appForm" method="post" action="#">
+		<div id="requiredLegend"><img src="images/icons/icon_required.gif" width="14" height="9" alt="Required Field" /> indicates a required field</div>
+		<div id="formLegend">
+            <div class="formBtn">
+                <span>Legend</span>
+                <img src="../images/icons/legend_arrow.gif" width="11" height="17" alt="form legend" />
+            </div>
+            <ul>
+                <li><img src="../images/icons/calendar.png" width="16" height="16" alt="calendar icon" />Calendar</li>
+                <li><img src="../images/icons/audit.png" width="16" height="16" alt="audit icon" />Audit</li>
+            </ul>
+        </div>
+        <ul class="tabs">
+            <li><a href="#" class="current">Infant Toddler Authorization Form</a></li>
+        </ul>
+		<div class="formSection">
+			<fieldset>
+				<legend>Patient Information</legend> 
+				<a href="help.html" rel="#overlay" class="formHelpTab"><img src="images/icons/help_tab.gif" width="22" height="22" alt="Help" title="Help" /></a>
+				<dl class="threeColumnLayout">
+					<dt><label for="patientFirstName">First Name:</label></dt>
+					<dd><input type="text" name="patientFirstName" id="patientFirstName" class="medium required" /></dd>
+					<dt><label for="patientLastName">Last Name:</label></dt>
+					<dd><input type="text" name="patientLastName" id="patientLastName" class="medium required" /></dd>
+					<dt><label for="patientMI">Middle Initial:</label></dt>
+					<dd><input type="text" name="patientMI" id="patientMI" class="small" /></dd>
+				</dl>
+				<dl class="threeColumnLayout">
+					<dt><label for="patientSSN">Social Security Number:</label></dt>
+					<dd><input type="text" name="patientSSN" id="patientSSN" class="medium ssn" /></dd>
+					<dt><label for="patientDOB">Date of Birth:</label></dt>
+					<dd><input type="text" name="patientDOB" id="patientDOB" title="Date should be in the format mm/dd/yyyy" class="required dateInput" /></dd>
+					<dt>&nbsp;</dt>
+					<dd>&nbsp;</dd>
+				</dl>
+				<dl class="threeColumnLayout">
+					<dt><label for="patientGender">Gender:</label></dt>
+					<dd><select id="patientGender" name="patientGender" title="Please select a Gender" class="required">
+						<option value="">&nbsp;</option>
+						<option value="0">Male</option>
+						<option value="1">Female</option>
+					</select>
+					</dd>
+					<dt><label for="patientPreferredLanguage">Preferred Language:</label></dt>
+					<dd><select id="patientPreferredLanguage" name="patientPreferredLanguage" class="required">
+							<option value="">&nbsp;</option>
+							<option value="ar">AR - Arabic</option>
+							<option value="ca">CA - Cambodian</option>
+							<option value="ch">CH - Chinese</option>
+							<option value="ca">EN - English</option>
+							<option value="en">FR - French</option>
+							<option value="xx">XX - GENERATED</option>
+						</select>
+					</dd>
+				</dl>
+				<hr />
+				<dl>
+					<dt><label for="patientRace">Race:</label></dt>
+					<dd>
+						<select id="patientRace" name="patientRace" title="Please select a Race" class="required">
+							<option value="">&nbsp;</option>
+							<option value="w">XX - White</option>
+							<option value="b">XX - Black</option>
+							<option value="ai">XX - American Indian</option>
+							<option value="a">XX - Asian</option>
+							<option value="h">XX - Native Hawaiian/Other Pacific Islander</option>
+							<option value="m">XX - Multi-Racial</option>
+							<option value="x">XX - GENERATED</option>
+						</select>
+					</dd>
+					<dt><label for="patientEthnicity">Ethnicity:</label></dt>
+					<dd><select id="patientEthnicity" name="patientEthnicity" class="required">
+							<option value="">&nbsp;</option>
+							<option value="y">XX - Hispanic or Latino Origin</option>
+							<option value="n">XX - Not Hispanic or Latino Origin</option>
+							<option value="u">XX - Unknown</option>
+							<option value="x">XX - GENERATED</option>
+						</select>
+					</dd>
+				</dl>
+				<hr />
+				<dl>
+					<dt><label for="corAaddress">Address Line 1:</label></dt>
+					<dd><input type="text" id="corAaddress" name="corAaddress" class="large required" /></dd>
+					<dt><label for="corCity">City:</label></dt>
+					<dd><input type="text" class="required" id="corCity" name="corCity" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="corAaddress2">Address Line 2:</label></dt>
+					<dd><input type="text" id="corAaddress2" name="corAaddress2" class="large" /></dd>
+					<dt><label for="corState">State:</label></dt>
+					<dd>
+						<select id="corState" class="required" name="corState" title="Select State">
+							<option value="" />
+							<option value="AL">AL</option>
+							<option value="AK">AK</option>
+							<option value="AZ">AZ</option>
+							<option value="AR">AR</option>
+							<option value="CA">CA</option>
+							<option value="CO">CO</option>
+							<option value="CT">CT</option>
+							<option value="CT">CT</option>
+							<option value="DE">DE</option>
+							<option value="FL">FL</option>
+							<option value="GA">GA</option>
+							<option value="HI">HI</option>
+							<option value="ID">ID</option>
+							<option value="IL">IL</option>
+							<option value="IN">IN</option>
+							<option value="IA">IA</option>
+							<option value="KS">KS</option>
+							<option value="KY">KY</option>
+							<option value="LA">LA</option>
+							<option value="ME">ME</option>
+							<option value="MD">MD</option>
+							<option value="MA">MA</option>
+							<option value="MI">MI</option>
+							<option value="MN">MN</option>
+							<option value="MS">MS</option>
+							<option value="MO">MO</option>
+							<option value="MT">MT</option>
+							<option value="NE">NE</option>
+							<option value="NV">NV</option>
+							<option value="NH">NH</option>
+							<option value="NJ">NJ</option>
+							<option value="NM">NM</option>
+							<option value="NY">NY</option>
+							<option value="NC">NC</option>
+							<option value="ND">ND</option>
+							<option value="OH">OH</option>
+							<option value="OK">OK</option>
+							<option value="OR">OR</option>
+							<option value="PA">PA</option>
+							<option value="RI">RI</option>
+							<option value="SC">SC</option>
+							<option value="SD">SD</option>
+							<option value="TN">TN</option>
+							<option value="TX">TX</option>
+							<option value="UT">UT</option>
+							<option value="VT">VT</option>
+							<option value="VA">VA</option>
+							<option value="WA">WA</option>
+							<option value="WV">WV</option>
+							<option value="WI">WI</option>
+							<option value="WY">WY</option>
+						</select>
+					</dd>
+				</dl>
+				<dl>
+					<dt><label for="cor">County of Residence:</label></dt>
+					<dd><input type="text" class="required" id="cor" name="cor" /></dd>
+					<dt><label for="corZip">Zip Code:</label></dt>
+					<dd><input type="text" id="corZip" name="corZip" class="zip required" /></dd>
+				</dl>
+				<hr />
+				<dl>
+					<dt><label for="home_phone">Home Phone:</label></dt>
+					<dd><input type="text" id="home_phone" name="home_phone" class="phone" /></dd>
+					<dd class="andOr">or</dd>
+					<dt><label for="work_phone">Work Phone:</label></dt>
+					<dd><input type="text" id="work_phone" name="work_phone" class="phone" /></dd>
+				</dl>
+			</fieldset>
+			<fieldset class="threeColumnLayout">
+				<legend>Parent or Guardian Information</legend> 
+				<a href="help.html" rel="#overlay" class="formHelpTab"><img src="images/icons/help_tab.gif" width="22" height="22" alt="Help" title="Help" /></a>
+				<dl>
+					<dt><label for="guardianFirstname">First Name:</label></dt>
+					<dd><input type="text" id="guardianFirstname" name="guardianFirstname" class="medium required" /></dd>
+					<dt><label for="guardianLastName">Last Name:</label></dt>
+					<dd><input type="text" id="guardianLastName" name="guardianLastName" class="medium required" /></dd>
+					<dt><label for="guardianMI">Middle Initial:</label></dt>
+					<dd><input type="text" id="guardianMI" name="guardianMI" class="small" size="1" /></dd>
+				</dl>
+			</fieldset>
+			<fieldset>
+				<legend>Hospital or Provider of Requested Service</legend>
+				<a href="help.html" rel="#overlay" class="formHelpTab"><img src="images/icons/help_tab.gif" width="22" height="22" alt="Help" title="Help" /></a>
+				<dl>
+					<dt><label for="providerName">Name:</label></dt>
+					<dd><input type="text" class="required" id="providerName" name="providerName" /></dd>
+					<dt><label for="providerNpi">NPI:</label></dt>
+					<dd><input type="text" class="required npi" id="providerNpi" name="providerNpi" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="providerAddress">Address Line 1:</label></dt>
+					<dd><input type="text" id="providerAddress" name="providerAddress" class="large required" /></dd>
+					<dt><label for="providerCity">City:</label></dt>
+					<dd><input type="text" class="required" id="providerCity" name="providerCity" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="providerAddress2">Address Line 2:</label></dt>
+					<dd><input type="text" id="providerAddress2" name="providerAddress2" class="large" /></dd>
+					<dt><label for="providerState">State:</label></dt>
+					<dd>
+						<select id="providerState" class="required" name="providerState" title="Select State">
+							<option value="" />
+							<option value="AL">AL</option>
+							<option value="AK">AK</option>
+							<option value="AZ">AZ</option>
+							<option value="AR">AR</option>
+							<option value="CA">CA</option>
+							<option value="CO">CO</option>
+							<option value="CT">CT</option>
+							<option value="CT">CT</option>
+							<option value="DE">DE</option>
+							<option value="FL">FL</option>
+							<option value="GA">GA</option>
+							<option value="HI">HI</option>
+							<option value="ID">ID</option>
+							<option value="IL">IL</option>
+							<option value="IN">IN</option>
+							<option value="IA">IA</option>
+							<option value="KS">KS</option>
+							<option value="KY">KY</option>
+							<option value="LA">LA</option>
+							<option value="ME">ME</option>
+							<option value="MD">MD</option>
+							<option value="MA">MA</option>
+							<option value="MI">MI</option>
+							<option value="MN">MN</option>
+							<option value="MS">MS</option>
+							<option value="MO">MO</option>
+							<option value="MT">MT</option>
+							<option value="NE">NE</option>
+							<option value="NV">NV</option>
+							<option value="NH">NH</option>
+							<option value="NJ">NJ</option>
+							<option value="NM">NM</option>
+							<option value="NY">NY</option>
+							<option value="NC">NC</option>
+							<option value="ND">ND</option>
+							<option value="OH">OH</option>
+							<option value="OK">OK</option>
+							<option value="OR">OR</option>
+							<option value="PA">PA</option>
+							<option value="RI">RI</option>
+							<option value="SC">SC</option>
+							<option value="SD">SD</option>
+							<option value="TN">TN</option>
+							<option value="TX">TX</option>
+							<option value="UT">UT</option>
+							<option value="VT">VT</option>
+							<option value="VA">VA</option>
+							<option value="WA">WA</option>
+							<option value="WV">WV</option>
+							<option value="WI">WI</option>
+							<option value="WY">WY</option>
+						</select>
+					</dd>
+				</dl>
+				<dl>
+					<dt><label for="providerPhone">Phone:</label></dt>
+					<dd><input type="text" class="required phone" id="providerPhone" name="providerPhone" /></dd>
+					<dt><label for="providerZip">Zip Code:</label></dt>
+					<dd><input type="text" id="providerZip" name="providerZip" class="zip required" /></dd>
+				</dl>
+				<fieldset>
+					<h6>Requested dates for service</h6>
+					<div class="dataTable">
+						<table>
+						<thead>
+							<tr>
+								<th class="status" scope="col"></th>
+								<th scope="col"><label for="ctl00_ContentPlaceHolder1_ddOccuranceFrom">From</label></th>
+								<th scope="col"><label for="ctl00_ContentPlaceHolder1_ddOccuranceThrough">To</label></th>
+							</tr>
+							<tr class="hidden">
+								<th class="status" scope="col"></th>
+								<th scope="col"><label for="ctl00_ContentPlaceHolder1_ddOccuranceFrom1">From</label></th>
+								<th scope="col"><label for="ctl00_ContentPlaceHolder1_ddOccuranceThrough1">To</label></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="editable">
+								<td></td>
+								<td><input type="text" id="ctl00_ContentPlaceHolder1_ddOccuranceFrom" name="ctl00$ContentPlaceHolder1$ddOccuranceFrom" value="01/08/2009" class="dateInput required" /></td>
+								<td><input type="text" id="ctl00_ContentPlaceHolder1_ddOccuranceThrough" name="ctl00$ContentPlaceHolder1$ddOccuranceThrough" value="01/08/2009" class="dateInput required" /></td>
+							</tr>
+							<tr class="emphasizeRow">
+								<td><img src="../images/icons/table_add.png" width="16" height="16" alt="New Entry" /></td>
+								<td><input type="text" id="ctl00_ContentPlaceHolder1_ddOccuranceFrom1" name="ctl00$ContentPlaceHolder1$ddOccuranceFrom1" class="dateInput required" /></td>
+								<td><input type="text" id="ctl00_ContentPlaceHolder1_ddOccuranceThrough1" name="ctl00$ContentPlaceHolder1$ddOccuranceThrough1" class="dateInput required" /></td>
+							</tr>
+						</tbody>
+						</table>
+					</div>  
+					<div class="btnRow">
+						<button type="submit" class="submitBtn">Add</button>
+						<button type="button">Reset</button>
+					</div>    
+				</fieldset>          
+			</fieldset>
+			<fieldset>
+				<legend>Medical Information</legend>
+				<a href="help.html" rel="#overlay" class="formHelpTab"><img src="images/icons/help_tab.gif" width="22" height="22" alt="Help" title="Help" /></a>
+				<fieldset>
+					<legend class="required"><span>Diagnostic Code/Diagnosis</span></legend>
+					<dl>
+						<dt><label for="DiagnosticCodePrimary">Primary:</label></dt>
+						<dd><input type="text" id="DiagnosticCodePrimary" name="DiagnosticCodePrimary" /></dd>
+						<dt><label for="DiagnosticCodeSecondary">Secondary:</label></dt>
+						<dd><input type="text" id="DiagnosticCodeSecondary" name="DiagnosticCodeSecondary" /></dd>
+					</dl>
+				</fieldset>
+				<fieldset>
+					<legend class="required"><span>Required for all ITP Requests</span></legend>
+					<dl>
+						<dt><label for="feeScalePercentage">Assigned Sliding Fee Scale:</label></dt>
+						<dd><input type="text" id="feeScalePercentage" name="feeScalePercentage" />%</dd>
+					</dl>
+				</fieldset>
+			</fieldset>
+			<fieldset>
+				<legend>Insurance or 3rd Party Coverage Information</legend>
+				<a href="#" class="formHelpTab"><img src="../images/icons/help_tab.gif" width="22" height="22" alt="Help" title="Help" /></a>
+				<div class="info"><p>Please do not complete this section for CC&amp;E.</p></div>
+				<fieldset class="singleQ labelToRight">
+					<legend class="required"><span>Does family carry health insurance on this child?</span></legend>
+					<dl>
+						<dt>
+							<input id="familyHealthInsuranceYes" type="radio" value="y" name="familyHealthInsurance" class="radioButtonGroup" />
+							<label for="familyHealthInsuranceYes">Yes</label>
+						</dt>
+						<dt>
+							<input id="familyHealthInsuranceNo" type="radio" value="n" name="familyHealthInsurance" />
+							<label for="familyHealthInsuranceNo">No</label>
+						</dt>
+					</dl>
+				</fieldset>
+				<fieldset class="singleQ labelToRight">
+					<legend class="required"><span>Did parents give permission for insurance to be billed?</span></legend>
+					<dl id="permissionContainer" class="showDetail show-billInsPerm-0">
+						<dt>
+							<input id="permissionYes" type="radio" value="y" name="permission" class="radioButtonGroup" />
+							<label for="permissionYes">Yes</label>
+						</dt>
+						<dt>
+							<input id="permissionNo" type="radio" value="n" name="permission" />
+							<label for="permissionNo">No</label>
+						</dt>
+						<dt>
+							<input id="permissionNa" type="radio" value="na" name="permission" />
+							<label for="permissionNa">N/A</label>
+						</dt>
+					</dl>
+				</fieldset>
+				<div id="billInsPerm-details" class="hidden">
+					<fieldset>
+						<legend>Primary Insurance</legend>
+						<dl class="threeColumnLayout">
+							<dt><label for="primaryInsPolicyNumber">Policy Number:</label></dt>
+							<dd><input type="text" id="primaryInsPolicyNumber" name="primaryInsPolicyNumber" /></dd>
+							<dt><label for="primaryInsPolicyHolder">Policy Holder:</label></dt>
+							<dd><input type="text" id="primaryInsPolicyHolder" name="primaryInsPolicyHolder" /></dd>
+							<dt><label for="primaryInsPhone">Insurance Phone:</label></dt>
+							<dd><input type="text" id="primaryInsPhone" name="primaryInsPhone" class="phone" /></dd>
+						</dl>
+						<fieldset class="singleQ labelToRight">
+							<legend class="required"><span>Does this policy cover this service?</span></legend>
+							<dl class="showDetail show-primaryInsCovered-0">
+								<dt>
+									<input id="primaryInsCoveredYes" type="radio" value="y" name="primaryInsCovered" />
+									<label for="primaryInsCoveredYes">Yes</label>
+								</dt>
+								<dt>
+									<input id="primaryInsCoveredNo" type="radio" value="n" name="primaryInsCovered" />
+									<label for="primaryInsCoveredNo">No</label>
+								</dt>
+								<dt>
+									<input id="primaryInsCoveredUnknown" type="radio" value="na" name="primaryInsCovered" />
+									<label for="primaryInsCoveredUnknown">Unknown</label>
+								</dt>
+							</dl>
+						</fieldset>
+						<fieldset class="hidden" id="primaryInsCovered-details">
+							<legend>Claims Address</legend>
+							<dl>
+								<dt><label for="primaryInsAddress">Address Line 1:</label></dt>
+								<dd><input type="text" id="primaryInsAddress" name="primaryInsAddress" class="large" /></dd>
+								<dt><label for="primaryInsCity">City:</label></dt>
+								<dd><input type="text" id="primaryInsCity" name="primaryInsCity" /></dd>
+							</dl>
+							<dl>
+								<dt><label for="primaryInsAddress2">Address Line 2:</label></dt>
+								<dd><input type="text" id="primaryInsAddress2" name="primaryInsAddress2" class="large" /></dd>
+								<dt><label for="primaryInsState">State:</label></dt>
+								<dd>
+									<select id="primaryInsState" name="primaryInsState">
+										<option value="">&nbsp;</option>
+										<option value="nc">NC - North Carolina</option>
+										<option value="sc">SC - South Carolina</option>
+										<option value="va">VA - Virginia</option>
+										<option value="xx">--GENERATED--</option>
+									</select>
+								</dd>
+							</dl>
+							<dl>
+								<dd></dd>
+								<dt><label for="primaryInsZip">Zip Code:</label></dt>
+								<dd><input type="text" id="primaryInsZip" name="primaryInsZip" class="zip" /></dd>
+							</dl>
+						</fieldset>
+					</fieldset>
+					<fieldset>
+						<legend>Secondary Insurance</legend>
+						<dl class="threeColumnLayout">
+							<dt><label for="secondaryInsPolicyNumber">Policy Number:</label></dt>
+							<dd><input type="text" id="secondaryInsPolicyNumber" name="secondaryInsPolicyNumber" /></dd>
+							<dt><label for="secondaryInsPolicyHolder">Policy Holder:</label></dt>
+							<dd><input type="text" id="secondaryInsPolicyHolder" name="secondaryInsPolicyHolder" /></dd>
+							<dt><label for="secondaryInsPhone">Insurance Phone:</label></dt>
+							<dd><input type="text" id="secondaryInsPhone" name="secondaryInsPhone" class="phone" /></dd>
+						</dl>
+						<fieldset class="singleQ labelToRight">
+							<legend class="required"><span>Does this policy cover this service?</span></legend>
+							<dl class="showDetail show-secondaryInsCovered-0">
+								<dt>
+									<input id="secondaryInsCoveredYes" type="radio" value="y" name="sec_covered" />
+									<label for="secondaryInsCoveredYes">Yes</label>
+								</dt>
+								<dt>
+									<input id="secondaryInsCoveredNo" type="radio" value="n" name="sec_covered" />
+									<label for="secondaryInsCoveredNo">No</label>
+								</dt>
+								<dt>
+									<input id="secondaryInsCoveredUnknown" type="radio" value="na" name="sec_covered" />
+									<label for="secondaryInsCoveredUnknown">Unknown</label>
+								</dt>
+							</dl>
+						</fieldset>
+						<fieldset class="hidden" id="secondaryInsCovered-details">
+							<legend>Claims Address</legend>
+							<dl>
+								<dt><label for="secondaryInsAddress">Address Line 1:</label></dt>
+								<dd><input type="text" id="secondaryInsAddress" name="secondaryInsAddress" class="large" /></dd>
+								<dt><label for="secondaryInsCity">City:</label></dt>
+								<dd><input type="text" id="secondaryInsCity" name="secondaryInsCity" /></dd>
+							</dl>
+							<dl>
+								<dt><label for="secondaryInsAddress2">Address Line 2:</label></dt>
+								<dd><input type="text" id="secondaryInsAddress2" name="secondaryInsAddress2" class="large" /></dd>
+								<dt><label for="secondaryInsState">State:</label></dt>
+								<dd>
+									<select id="secondaryInsState" name="secondaryInsState">
+										<option value="">&nbsp;</option>
+										<option value="nc">NC - North Carolina</option>
+										<option value="sc">SC - South Carolina</option>
+										<option value="va">VA - Virginia</option>
+										<option value="xx">--GENERATED--</option>
+									</select>
+								</dd>
+							</dl>
+							<dl>
+								<dd></dd>
+								<dt><label for="secondaryInsZip">Zip Code:</label></dt>
+								<dd><input type="text" id="secondaryInsZip" name="secondaryInsZip" class="zip" /></dd>
+							</dl>
+						</fieldset>
+					</fieldset>
+				</div>
+				<fieldset class="labelToRight">
+					<legend>Services Requested</legend>
+					<ul class="half">
+						<li>
+							<input type="checkbox" name="audiology" value="audiology" />
+							<label for="audiology"> Audiology</label>
+						</li>
+						<li>
+							<input type="checkbox" name="cce" value="cce" id="cce" class="showDetail show-cce" />
+							<label for="cce" class="tip" title="If selected, you must select a discipline  below.">Case Consultation and Education (Medicaid/non-Medicaid)</label>
+						</li>
+						<li>
+							<input type="checkbox" name="de" id="de" />
+							<label for="de">Developmental Evaluations</label>
+						</li>
+						<li>
+							<input type="checkbox" name="fcts" id="fcts" />
+							<label for="fcts">Family Counceling and Therapy Services</label>
+						</li>
+						<li>
+							<input type="checkbox" name="ns" id="ns" />
+							<label for="ns">Nutrition Services</label>
+						</li>
+						<li>
+							<input type="checkbox" name="ots" id="ots" />
+							<label for="ots">Occupational Therapy Services</label>
+						</li>
+					</ul>
+					<ul class="half">
+						<li>
+							<input type="checkbox" name="pts" id="pts" />
+							<label for="pts">Physical Therpy Services</label>
+						</li>
+						<li>
+							<input type="checkbox" name="ps" id="ps" />
+							<label for="ps">Psychological Services</label>
+						</li>
+						<li>
+							<input type="checkbox" name="sws" id="sws" />
+							<label for="sws">Social Work Services</label>
+						</li>
+						<li>
+							<input type="checkbox" name="cbrs" id="cbrs" class="showDetail show-cbrs"  />
+							<label for="cbrs" class="tip" title="If selected, you must specify more details below.">Community Based Rehabilitve Servces (CBRS)</label>
+						</li>
+						<li>
+							<input type="checkbox" name="slts" />
+							<label for="slts">Speech and Language Therapy Services</label>
+						</li>
+						<li>
+							<input type="checkbox" name="tcms" id="tcms" />
+							<label for="tcms">Targeted Case Management Services</label>
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset id="cce-details" class="labelToRight hidden">
+					<legend class="required">Code for CC&amp;E Discipline Only: select one</legend>
+					<dl>
+						<dt><label><input type="radio" name="cce" id="cbrsp" /> Community Based Rehabilitive Services (CBRS)</label></dt>                
+						<dt><label><input type="radio" name="cce" id="slp" /> Speech/Language Provider</label></dt>
+						<dt><label><input type="radio" name="cce" id="pt" /> Physical Therapist</label></dt>
+						<dt><label><input type="radio" name="cce" id="ot" /> Occupational Therapist</label></dt>
+						<dt><label><input type="radio" name="cce" id="sw" /> Social Worker</label></dt>
+						<dt><label><input type="radio" name="cce" id="nrd" /> Nutritionist/Registered Dietician</label></dt>
+						<dt><label><input type="radio" name="cce" id="p" /> Pschologist</label></dt>
+						<dt><label><input type="radio" name="cce" id="a" /> Audiologist</label></dt>
+						<dt><label><input type="radio" name="cce" id="rn" /> Registered Nurse</label></dt>
+					</dl>
+				</fieldset>
+				<fieldset id="cbrs-details" class="threeColumnLayout hidden">
+					<legend class="required">For CBRS, please specify</legend>
+					<fieldset>
+						<legend class="required">ECI</legend>
+						<dl>
+							<dt><label for="eciIndividual">Individual:</label></dt>
+							<dd><input type="text" id="eciIndividual" name="eciIndividual" /></dd>
+							<dt><label for="eciGroup">Group:</label></dt>
+							<dd><input type="text" id="eciGroup" name="eciGroup" /></dd>
+							<dt><label for="eciTotal">Total:</label></dt>
+							<dd><input type="text" id="eciTotal" name="eciTotal" /></dd>
+						</dl>
+					</fieldset>
+					<fieldset>
+						<legend class="required">Prof</legend>
+						<dl>
+							<dt><label for="profIndividual">Individual:</label></dt>
+							<dd><input type="text" id="profIndividual" name="profIndividual" /></dd>
+							<dt><label for="profGroup">Group:</label></dt>
+							<dd><input type="text" id="profGroup" name="profGroup" /></dd>
+							<dt><label for="profTotal">Total:</label></dt>
+							<dd><input type="text" id="profTotal" name="profTotal" /></dd>
+						</dl>
+					</fieldset>
+					<fieldset>
+						<legend class="required">ParaProf</legend>
+						<dl>
+							<dt><label for="paraProfIndividual">Individual:</label></dt>
+							<dd><input type="text" id="paraProfIndividual" name="paraProfIndividual" /></dd>
+							<dt><label for="paraProfGroup">Group:</label></dt>
+							<dd><input type="text" id="paraProfGroup" name="paraProfGroup" /></dd>
+							<dt><label for="paraProfTotal">Total:</label></dt>
+							<dd><input type="text" id="paraProfTotal" name="paraProfTotal" /></dd>
+						</dl>
+					</fieldset>
+				</fieldset>
+				<fieldset>
+					<legend>Describe Service(s) Requested</legend>
+					<dl>
+						<dt><label for="serviceDescription">Enter the total number of units for the entire authorization period. Frequency per week or month may be entered. For Case Consultation and Education (CC&amp;E), provider discipline <em>must</em> be indicated by checking the appropriate box to the right of the code in the table below.:</label></dt>
+						<dd><textarea name="serviceDescription" id="serviceDescription" cols="50" rows="10"></textarea></dd>
+					</dl>
+				</fieldset>
+			</fieldset>
+			<fieldset>
+				<legend>Authorization Reply</legend>
+				<a href="#" class="formHelpTab"><img src="../images/icons/help_tab.gif" width="22" height="22" alt="Help" title="Help" /></a>
+				<div class="info">
+					<p>Enter the names and addresses of individuals to whom a copy of an approved Authorization Reply should be sent, such as the Service Coordinator, ITP Supervisor, DSS Worker. Do not include hospital, provider of requested service or CDSA.</p>
+				</div>
+                <h6>Alternate Address</h6>
+                <fieldset class="hidden" style="display: block;">
+					<dl>
+						<dt><label for="altName">Name:</label></dt>
+						<dd>John Doe	
+						</dd>
+						<dt><label for="altAddress1">Address Line 1:</label></dt>
+						<dd>123 Some St.</dd>
+				   </dl>
+					<dl>
+						<dt><label for="altAddress2">Address Line 2:</label></dt>
+						<dd></dd>
+						<dt><label for="altState">State:</label></dt>
+						<dd>NC</dd>
+					</dl>
+					<dl>
+						<dt><label for="altZip">Zip Code:</label></dt>
+						<dd></dd>
+                	</dl>
+                    <div class="btnRow">
+                    	<button class="submitBtn" type="submit">Edit</button>
+                    	<button type="submit">Delete</button>       
+                    </div>
+          	  	</fieldset>
+				<fieldset class="hideRequired">
+					<legend>Add Alternate Address</legend>
+					<dl>    
+						<dt><label for="altName">Name:</label></dt>
+						<dd><input type="text" id="altName" value="" class="large required" /></dd>
+						<dt><label for="altCity">City:</label></dt>
+						<dd><input type="text" id="altCity" value="" class="required" /></dd>
+					</dl>
+					<dl>
+						<dt><label for="altAddress1">Address Line 1:</label></dt>
+						<dd><input type="text" id="altAddress1" value="" class="large required" /></dd>
+						<dt><label for="altState">State:</label></dt>
+						<dd>        
+							<select id="altState" name="alternateAddress.state" class="required">
+								<option value="NC">NC</option>
+								<option value="AK">AK</option>
+								<option value="AL">AL</option>
+								<option value="AR">AR</option>
+								<option value="AZ">AZ</option>
+								<option value="CA">CA</option>
+								<option value="CO">CO</option>
+								<option value="CT">CT</option>
+								<option value="DE">DE</option>
+								<option value="FL">FL</option>
+								<option value="GA">GA</option>
+								<option value="HI">HI</option>
+								<option value="IA">IA</option>
+								<option value="ID">ID</option>
+								<option value="IL">IL</option>
+								<option value="IN">IN</option>
+								<option value="KS">KS</option>
+								<option value="KY">KY</option>
+								<option value="LA">LA</option>
+								<option value="MA">MA</option>
+								<option value="MD">MD</option>
+								<option value="ME">ME</option>
+								<option value="MI">MI</option>
+								<option value="MN">MN</option>
+								<option value="MO">MO</option>
+								<option value="MS">MS</option>
+								<option value="MT">MT</option>
+								<option value="ND">ND</option>
+								<option value="NE">NE</option>
+								<option value="NH">NH</option>
+								<option value="NJ">NJ</option>
+								<option value="NM">NM</option>
+								<option value="NV">NV</option>
+								<option value="NY">NY</option>
+								<option value="OH">OH</option>
+								<option value="OK">OK</option>
+								<option value="OR">OR</option>
+								<option value="PA">PA</option>
+								<option value="RI">RI</option>
+								<option value="SC">SC</option>
+								<option value="SD">SD</option>
+								<option value="TN">TN</option>
+								<option value="TX">TX</option>
+								<option value="UT">UT</option>
+								<option value="VA">VA</option>
+								<option value="VT">VT</option>
+								<option value="WA">WA</option>
+								<option value="WI">WI</option>
+								<option value="WV">WV</option>
+								<option value="WY">WY</option>
+							</select>
+						</dd>
+					</dl>
+					<dl>
+						<dt><label for="altAddress2">Address Line 2:</label></dt>
+						<dd><input type="text" class="large" id="altAddress2" value="" name="alternateAddress.address2" /></dd>
+						<dt><label for="altZip">Zip Code:</label></dt>
+						<dd><input type="text" id="altZip" value="" name="alternateAddress.zip" class="zip required" /></dd>	
+					</dl>
+					<div class="btnRow">
+						<button class="submitBtn" type="submit">Add</button>
+						<button type="reset">Reset</button>
+					</div>
+				</fieldset>
+			</fieldset>
+			<fieldset>
+				<legend>Requesting CDSA (central office)</legend>
+				<a href="help.html" rel="#overlay" class="formHelpTab"><img src="images/icons/help_tab.gif" width="22" height="22" alt="Help" title="Help" /></a>
+				<dl>
+					<dt><label for="cdsaFinancialOfficer">Financial Officer:</label></dt>
+					<dd><input type="text" id="cdsaFinancialOfficer" name="cdsaFinancialOfficer" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="cdsaAddress">Address Line 1:</label></dt>
+					<dd><input type="text" id="cdsaAddress" name="cdsaAddress" class="large" /></dd>
+					<dt><label for="cdsaCity">City:</label></dt>
+					<dd><input type="text" id="cdsaCity" name="cdsaCity" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="cdsaAddress2">Address Line 2:</label></dt>
+					<dd><input type="text" id="cdsaAddress2" name="cdsaAddress2" class="large" /></dd>
+					<dt><label for="cdsaState">State:</label></dt>
+					<dd>
+						<select id="cdsaState" name="cdsaState">
+							<option value="">&nbsp;</option>
+							<option value="nc">NC - North Carolina</option>
+							<option value="sc">SC - South Carolina</option>
+							<option value="va">VA - Virginia</option>
+							<option value="xx">--GENERATED--</option>
+						</select>
+					</dd>
+				</dl>
+				<dl>
+					<dt><label for="cdsaPhoneNumber">Phone Number:</label></dt>
+					<dd><input type="text" id="cdsaPhoneNumber" name="cdsaPhoneNumber" class="phone" /></dd>
+					<dt><label for="cdsaZip">Zip Code:</label></dt>
+					<dd><input type="text" id="cdsaZip" name="cdsaZip" class="zip" /></dd>
+				</dl>
+			</fieldset>
+			<a href="#header"><img src="images/icons/return_top.gif" class="returnTop" width="12" height="13" alt="Back to top" title="Return to the top of the page" /></a>
+		</div>
+		<div class="btnRow">
+			<button type="submit" id="btnSubmit" class="submitBtn">Submit</button>
+			<button type="reset" id="btnReset">Start Over</button>
+		</div>
+		</form>
+	</div>
+	<ul id="footer" class="linkColor2 rounded">
+		<li><a href="" accesskey="8">Legal</a> |</li>
+		<li><a href="">Privacy Policy</a> |</li>
+		<li><a href="">Accessibility</a> |</li>
+		<li><a href="" accesskey="3">Site Map</a> |</li>
+		<li><a href="" accesskey="9">Contact Us</a> |</li>
+		<li><a href="">Report Fraud</a></li>
+	</ul>
+</div>
+	
+<div class="dropShadow" id="tileBtm"></div>
+<div class="overlay" id="overlay"> 
+    <!-- the external content is loaded inside this tag --> 
+	<div class="wrap"></div> 
+</div>
+
+</body>
+</html>

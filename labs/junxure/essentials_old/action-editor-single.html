@@ -1,0 +1,267 @@
+<h1 style="color:#333">Edit <span style="color:#08c">Meeting</span> for <span style="color:#08c">Collins Family</span></h1>
+
+<div id="app-workspace-summary" class="ui-widget">
+    <div id="app-records-summary-header">
+        <h2>Perry Family Summary</h2>
+    </div>
+	<div class="home-block home-block-yellow">
+		<b>Alert</b> If there is an alert, it would appear here. And be editable as in the current system.
+    </div>
+    <div class="gunit-container" data-available-gunits="4">
+    	<div>
+    		<h4>Record Contacts</h4>
+            <img style="float:left" id="app-summary-pic" src="Content/Images/profile-pic-0.png" alt="PersonPic" width="80">
+            <ul style="float:left">
+                <li><label class="app-contact-name">Angel Roberts</label> Birth Date: 03/04/1955</li>
+                <li><label class="app-contact-name">Ashley Butler</label> Birth Date: 05/29/1960</li>
+                <li><label>Gold Tier<label></li>
+    		</ul>
+        </div>
+   		
+   		<div>
+    		<h4>Contact Methods</h4>
+            <ul>
+                <li><label>Cell Phone for Angel Roberts</label> <span class="app-contact-name">(919) 555-1212</span></li>
+                <li><label>Cell Phone for Ashley Butler</label> <span class="app-contact-name">(919) 555-1212</span></li>
+                <li><label>Work EMail for Angel Roberts</label> <a class="app-contact-name" href="mailto:Isaac.Griffin@aol.com">Isaac.Griffin@aol.com</a></li>
+                <li><label>Street Address</label> 123 Sesame Street<br> PO Box 123456<br> Townesville, ST 09876-0000</li>
+            </ul>
+    	</div>
+
+        <div>
+            <h4>Upcoming Actions</h4>
+            <ul class="SummaryActions">
+                <li>08/01 <a href="%23">Scheduled Meeting</a></li>
+                <li>07/22 <a href="%23">EMail</a></li>
+                <li>07/14 <a href="%23">Letter</a></li>
+                <li>07/05 <a href="%23">Phone</a></li>
+                <li>07/01 <a href="%23">Scheduled Meeting</a></li>
+            </ul>
+            <h4>Recent Actions</h4>
+            <ul class="SummaryActions">
+                <li>06/22 <a href="%23">Phone</a></li>
+                <li>06/21 <a href="%23">EMail</a></li>
+                <li>06/20 <a href="%23">Fax</a></li>
+                <li>06/19 <a href="%23">Phone</a></li>
+                <li>06/01 <a href="%23">Scheduled Meeting</a></li>
+            </ul>
+            
+        </div>
+
+    	<div>
+    		<h4>Assigned Staff</h4>
+    		<ul>
+    			<li><label>Advisors</label> Landon Baker<br>Alexis Roberts</li>
+    			<li><label>CSR</label> Samuel Jenkins</li>
+    		</ul>
+        </div>
+    </div>
+    <div>
+		<h4>Tags</h4>
+		<span class="app-tags">
+		  <a href="" class="tag">Holiday Gift</a>
+		  <a href="" class="tag">Newsletter</a>
+		  <a href="" class="tag">Interests: Automobiles</a>
+		  <a href="" class="tag">Interests: Computers</a>
+		  <a href="" class="tag">Interests: Music</a>
+		  <a href="" class="tag">Interests: Travel</a>
+        </span>
+    </div>
+</div>
+	
+<div id="app-workspace-toolbar" data-app-url="actions-toolbar.html"></div>
+
+<div style="display:block;">
+    <div style="display:block;margin: 0 10px;color:#08c;float:right;clear:both;">View by Actions <span class="k-icon k-arrow-down"></span></div>
+</div>
+
+<div id="action-editor"></div>
+
+<script id="treeview-template" type="text/kendo-ui-template">
+    # 
+      actionPreview = "";
+      rowClass = "action k-reset k-widget";
+      if (actionIndex % 2) { 
+          rowClass += " k-alt";
+      }
+      var collapsed = ""; 
+      if (actionIndex !== 0) { 
+        collapsed += "app-section-collapsed"; 
+      } 
+
+      actionIndex++;
+    #
+    
+<div class="#= rowClass # action action-status-#= item.Status #">
+    <div class="action-header">
+        <div class="action-icon-type"><span class="ui-tango-large-normal action-large-#= item.Type #"></span>#= item.Type #</div>
+        <div class="action-subject">#= item.Subject #</div>
+        <div class="action-date">#= item.EnteredDate #</div>
+        <div class="action-user">#= item.EnteredBy #</div>
+    </div>
+    
+    <div class="#= collapsed # action-content" style="width:80%;float:left;">
+        <ul class="action-info-group gunit-container" data-available-gunits="4">
+            <li><label>Entered By</label><select><option>#= item.EnteredBy #</option></select></li>
+            <li><label>Entered On</label><input type="text" class="DatePicker" value="#= item.EnteredOn #"/></li>
+            <li><label>Category</label><select><option>#= item.Category #</option></select></li>
+            <li><label>Time Spent</label><input type="text" class="TimeSpent" value="#= item.TimeSpent #" /></li>
+            <li><label>Assigned To</label><input type="text" value="#= item.AssignedTo #"/></li>
+            <li><label>Start Date</label><input type="text" class="DatePicker" value="#= item.DateStart #" /></li>
+            <li><label>Date Due</label><input type="text" class="DatePicker" value="#= item.DueDate #" /></li>
+            <li><label>Priority</label><input type="text" value="#= item.Priority #"/></li>
+            <li data-gunits="2">
+                <label>Subject</label>
+                <input type="text" value="#= item.Subject #" />
+                <label>Note</label>
+                <textarea rows="10">#= item.Note #</textarea>
+            </li>
+            <li data-gunits="2">
+                <label>Followers</label>
+                <table class="action-followers-grid">
+                    <tr>
+                        <th>User</th>
+                        <th>Date Added</th>
+                        <th>Priority</th>
+                        <th>Confirm</th>
+                    </tr>
+                    <tr>
+                        <td>Alexandra B. Gould</td>
+                        <td>05/20/2012</td>
+                        <td>Normal</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Peter K. Button</td>
+                        <td>05/20/2012</td>
+                        <td>Normal</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Kasey Q. Gordy</td>
+                        <td>05/20/2012</td>
+                        <td>Normal</td>
+                        <td>No</td>
+                    </tr>
+                </table>
+                <a href="%20" class="button">Add User</a>
+            </li>
+            <li>
+                <label class="action-label"><input type="checkbox" /> Repeating Action</label>
+                <label class="action-label"><input type="checkbox" /> Exclude from History</label>
+                <label class="action-label"><input type="checkbox" /> Further Action Required</label>
+            </li>
+        </ul>
+        <div class="action-summary" style="width:10%;float:left;clear:right;">
+            <h4>Summary</h4>
+            <ul class="action-summary-tree">
+                <li>Phone Call</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="action-tags">
+		<h4>Tags</h4>
+		<span class="app-tags">
+		  <a href="" class="tag">Meeting</a>
+        </span>
+    </div>
+
+    <div class="#= collapsed # action-tools">
+        <ul>
+            <li><button class="app-primary-button btn-add-action">Add Action</button></li>
+            <li><a href="add_action.html">Add Note</a></li>
+            <li><a href="add_action.html">Add Letter</a></li>
+            <li><a href="add_action.html">Add Service</a></li>
+            <li><a href="add_action.html">Add Meeting</a></li>
+            <li><a href="add_action.html">Add Goal</a></li>
+            <li><a href="add_action.html">Add Associate</a></li>
+            <li><a href="add_action.html">Add Insurance</a></li>
+            <li><a href="add_action.html">Add Account</a></li>
+            <li><a href="add_action.html">Follow</a></li>
+        </ul>
+    </div>
+</div>
+</script>
+        
+<script>
+    var actionIndex = 0,
+        $treeview = {};
+    
+    function expandActionNode(node) {
+        $treeview.expand(node);
+    }
+    
+    function expandActionDetail(id) {
+        //app-section-collapsed
+        $treeview.expand(".k-item");
+    }
+        
+    function onSelect(e) {
+        var $this = $(e.node),
+            collapsed = "app-section-collapsed",
+            expanded = "app-section-expanded",
+            tools = ".action-tools";
+            
+            Essentials.GUnits();
+        
+        //$this.on("click", onSelect);
+        
+        /**
+        $this.find(".action-content").each(function()  {
+            if ( $(this).hasClass(collapsed) ) {
+                $(this).slideDown().addClass(collapsed);
+                $this.find(tools).slideDown();
+            } else {
+                $(this).slideUp().removeClass(collapsed);
+                $this.find(tools).slideUp();
+            }
+        });
+        **/
+    }
+    
+    function onExpand(e) {
+        console.log("-- kendoTreeView onExpand --");
+        var $this = $(e.node);
+        
+        Essentials.ResetInputs(e.node);
+        Essentials.GUnits();
+    }
+    
+    $(document).ready(function() {
+        var treeview = $("#action-editor").kendoTreeView({
+            template: kendo.template($("#treeview-template").html()),
+            //checkboxTemplate: kendo.template($("#treeview-checkbox-template").html()),
+            dataSource: SampleData.SavedAction(),
+            dragAndDrop: true,
+            select: onSelect,
+            expand: onExpand
+        }), 
+        append = function(e) {
+            if (e.type != "keypress" || kendo.keys.ENTER == e.keyCode) {
+                var selectedNode = treeview.select();
+    
+                // passing a falsy value as the second append() parameter
+                // will append the new node to the root group
+                if (selectedNode.length == 0) {
+                    selectedNode = null;
+                }
+    
+                treeview.append({
+                   dataSource: SampleData.NewActionDataSource(),
+                   template: kendo.template($("#treeview-template").html())
+                }, selectedNode);
+            };
+        };
+        
+        $(".btn-add-action").click(append);
+        
+        $(".action-summary-tree").kendoTreeView({
+            dragAndDrop: false,
+        });
+        $(".action-followers-grid").kendoGrid();
+        
+        Essentials.ResetInputs(this);
+        Essentials.GUnits();
+    });
+</script>

@@ -1,0 +1,507 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>NCTracks - Member Portal - ADAP Program Enrollment</title>
+
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="../css/portal_member.css" />
+
+    <script type="text/javascript" language="JavaScript" src="js/jquery.tools.min.js"></script>
+	<script type="text/javascript" language="JavaScript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/jquery.validate.rules.js"></script>
+	<script type="text/javascript" language="JavaScript" src="js/jquery.coolinput.min.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/jquery.maskedinput-1.2.2.min.js"></script>
+	<script type="text/javascript" language="JavaScript" src="js/jCal.js"></script>
+	<script type="text/javascript" language="JavaScript" src="js/DD_roundies.min.js"></script>
+	<script type="text/javascript" language="JavaScript" src="js/suckerfish.js"></script>
+	<script type="text/javascript" language="JavaScript" src="js/recipient_init.js"></script>
+	<script type="text/javascript" language="JavaScript" src="../js/nctracks_init.js"></script>
+
+	<script type="text/javascript" language="JavaScript">	
+		$(document).submit(function(event)
+		{
+			$('dd.error').removeClass('error');
+			var isValid = $(event.target).validate().form();
+			return isValid;
+		});
+	</script>
+</head>
+<body>
+
+<a href="#mainContent" id="skipNav" class="linkColor2" accesskey="2">skip navigation</a>
+
+<div id="header">
+	<div id="logo">
+        <a href="../website/home_page.html" accesskey="1"><img src="../images/layout/logo_main.png" width="596" height="60" alt="NCTracks"/></a>
+    </div>
+	<form method="get" action="#" id="siteSearch">
+		<input type="text" name="search" class="hint roundedLeft" title="search..." accesskey="4" />
+		<button type="submit">Search</button>
+		| <a href="help/Default.htm" class="help" class="linkColor2" accesskey="6">Help</a>
+	</form>
+</div>
+<div id="contentBackground">
+	<h1 id="portalTitle">Member Portal</h1>
+	<div class="portalBrandColor" id="navStrip">
+		<ul>
+			<!-- MAIN NAVIGATION -->
+			<li>&nbsp;</li>
+		</ul>
+	</div>
+	<ol id="breadcrumb">
+		<li><a href="/">Member Portal</a> <b>&gt;</b></li>
+		<li><a href="index.html">Recipient Enrollment</a> <b>&gt;</b></li>
+		<li><a href="#">ADAP Program Enrollment</a></li>
+	</ol>
+	<div id="mainContent">
+		<div id="pageTitle">
+			<h1>ADAP Program Enrollment</h1>
+			<!-- page tools -->
+			<ul>
+				<li><a href="#"><img src="../images/icons/printer.png" width="24" height="24" alt="Print this page" /></a> |</li>
+				<li><a href="#" id="decreaseFont" class="textScaling"><img src="../images/icons/text_decrease.gif" width="24" height="24" alt="Decrease text size" /></a></li>
+				<li><a href="#" id="increaseFont" class="textScaling"><img src="../images/icons/text_increase.gif" width="24" height="24" alt="Increase text size" /></a> |</li>
+				<li><a href="#">Help</a></li>
+			</ul>
+		</div>
+		
+		<form id="appForm" method="post" action="#">
+		<div id="requiredLegend"><img src="../images/icons/icon_required.gif" width="14" height="9" alt="Required Field" /> indicates a required field</div>
+		<div id="formLegend">
+			<div>
+				<span>Legend</span>
+				<img src="../images/icons/legend_arrow.gif" width="11" height="17" alt="form legend" />
+			</div>
+			<ul>
+				<li><img src="../images/icons/calendar.png" width="16" height="16" alt="calendar icon" />Calendar</li>
+				<li><img src="../images/icons/audit.png" width="16" height="16" alt="audit icon" />Audit</li>
+				<li><img src="../images/icons/information.png" width="16" height="16" alt="tooltip icon" />Tooltip</li>
+			</ul>
+		</div>
+		<ul class="tabs">
+			<li><a href="ADAP-FinancialEligibilityApplication.html">Financial Eligibility Application</a></li>
+			<li><a href="#" class="current">Authorization Request</a></li>
+		</ul>
+		<!-- BEGIN 3056-ADAP -->
+		<div class="formSection">
+			<div class="info">
+				<p><em>Purpose:</em> To collect information required for the determination of ADAP/HIV Medications Program eligibility. An interviewer completes this form when a service authorization is requested unless a current form is already on file. Once determined, eligibility generally extends for 15 months. A new form is required when changes in countable family members and/or income occur.</p>
+				<p><em>Preparation:</em> Consult Purchase of Medical Care Services manual for information on residency requirements, income calculation and expense documentation. Income may be entered in the column labeled "Gross Income" or the one labeled "Income After Taxes". The same income should not be entered in both columns. Both Net and Gross Income need to be completed for ADAP.</p>
+			</div> 
+			<fieldset>
+				<legend>Patient Information</legend> 
+				<a href="help.html" rel="#overlay" class="formHelpTab"><img src="../images/icons/help_tab.gif" width="22" height="22" alt="Help" title="Help" /></a>
+				<dl class="threeColumnLayout">
+					<dt><label for="ADAP-3056_firstname">First Name:</label></dt>
+					<dd><input type="text" name="ADAP-3056_firstname" id="ADAP-3056_firstname" class="medium required" /></dd>
+					<dt><label for="ADAP-3056_lastname">Last Name:</label></dt>
+					<dd><input type="text" name="ADAP-3056_lastname" id="ADAP-3056_lastname" class="medium required" /></dd>
+					<dt><label for="ADAP-3056_mi">Middle Initial:</label></dt>
+					<dd><input type="text" name="ADAP-3056_mi" id="ADAP-3056_mi" class="small" /></dd>
+				</dl>
+				<dl class="threeColumnLayout">
+					<dt><label for="ADAP-3056_ssn">Social Security Number:</label></dt>
+					<dd><input type="text" name="ADAP-3056_ssn" id="ADAP-3056_ssn" class="medium ssn" /></dd>
+					<dt><label for="ADAP-3056_dob">Date of Birth:</label></dt>
+					<dd><input type="text" name="ADAP-3056_dob" id="ADAP-3056_dob" class="medium dateInput required" /></dd>
+					<dt><label for="patientResidency">NC Resident:</label></dt>
+					<dd>
+						<select id="patientResidency" name="patientResidency" class="required">
+						 <option value="">&nbsp;</option>
+							<option value="y">Yes</option>
+							<option value="n">No</option>
+						</select>
+					</dd>
+				</dl>
+				<dl class="threeColumnLayout">
+					<dt><label for="gndr">Gender:</label></dt>
+					<dd>
+						<select name="gndr" id="gndr" class="required">
+							<option value="A"></option>
+							<option value="B">Male</option>
+							<option value="C">Female</option>
+							<option value="D">Transgender M2F</option>
+							<option value="E">Transgender F2M</option>
+							<option value="F">Unknown</option>
+						</select>
+					</dd>
+					<dt><label for="ADAP-3056_p_lang">Preferred Language:</label></dt>
+					<dd>
+						<select id="ADAP-3056_p_lang" name="ADAP-3056_p_lang" class="medium required">
+							<option value="-">&nbsp;</option>
+							<option value="ar">AR - Arabic</option>
+							<option value="ca">CA - Cambodian</option>
+							<option value="ch">CH - Chinese</option>
+							<option value="ca">EN - English</option>
+							<option value="en">FR - French</option>
+							<option value="fc">XX - GENERATED</option>
+						</select>
+					</dd>
+				</dl>
+				<hr />
+				<dl>
+					<dt><label for="ADAP-3056_p_race">Race:</label></dt>
+					<dd>
+						<select id="ADAP-3056_p_race" name="ADAP-3056_p_race" class="large required" >
+							<option value="">&nbsp;</option>
+							<option value="w">White</option>
+							<option value="b">Black</option>
+							<option value="ai">American Indian</option>
+							<option value="a">Asian</option>
+							<option value="h">Native Hawaiian/Other Pacific Islander</option>
+							<option value="m">Multi-Racial</option>
+							<option value="fc">GENERATED</option>
+						</select>
+					</dd>
+					<dt><label for="patientEthnicity">Ethnicity:</label></dt>
+					<dd>
+						<select id="patientEthnicity" name="patientEthnicity" class="required">
+						 <option value="">&nbsp;</option>
+							<option value="y">Hispanic or Latino Origin</option>
+							<option value="n">Not Hispanic or Latino Origin</option>
+							<option value="u">Unknown</option>
+							<option value="fc">GENERATED</option>
+						</select>
+					</dd>
+				</dl>
+				<hr />
+				<dl>
+					<dt><label for="ADAP-3056_address">Address Line 1:</label></dt>
+					<dd><input type="text" id="ADAP-3056_address" name="ADAP-3056_address" class="large required" /></dd>
+					<dt><label for="ADAP-3056_city">City:</label></dt>
+					<dd><input type="text" id="ADAP-3056_city" name="ADAP-3056_city" class="medium required" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="ADAP-3056_address2">Address Line 2:</label></dt>
+					<dd><input type="text" id="ADAP-3056_address2" name="ADAP-3056_address2" class="large required" /></dd>
+					<dt><label for="ADAP-3056_state">State:</label></dt>
+					<dd>
+						<select id="ADAP-3056_state" name="ADAP-3056_state" class="required">
+							<option value=""></option>
+							<option value="AL">AL</option>
+							<option value="AK">AK</option>
+							<option value="AZ">AZ</option>
+							<option value="AR">AR</option>
+							<option value="CA">CA</option>
+							<option value="CO">CO</option>
+							<option value="CT">CT</option>
+							<option value="CT">CT</option>
+							<option value="DE">DE</option>
+							<option value="FL">FL</option>
+							<option value="GA">GA</option>
+							<option value="HI">HI</option>
+							<option value="ID">ID</option>
+							<option value="IL">IL</option>
+							<option value="IN">IN</option>
+							<option value="IA">IA</option>
+							<option value="KS">KS</option>
+							<option value="KY">KY</option>
+							<option value="LA">LA</option>
+							<option value="ME">ME</option>
+							<option value="MD">MD</option>
+							<option value="MA">MA</option>
+							<option value="MI">MI</option>
+							<option value="MN">MN</option>
+							<option value="MS">MS</option>
+							<option value="MO">MO</option>
+							<option value="MT">MT</option>
+							<option value="NE">NE</option>
+							<option value="NV">NV</option>
+							<option value="NH">NH</option>
+							<option value="NJ">NJ</option>
+							<option value="NM">NM</option>
+							<option value="NY">NY</option>
+							<option value="NC">NC</option>
+							<option value="ND">ND</option>
+							<option value="OH">OH</option>
+							<option value="OK">OK</option>
+							<option value="OR">OR</option>
+							<option value="PA">PA</option>
+							<option value="RI">RI</option>
+							<option value="SC">SC</option>
+							<option value="SD">SD</option>
+							<option value="TN">TN</option>
+							<option value="TX">TX</option>
+							<option value="UT">UT</option>
+							<option value="VT">VT</option>
+							<option value="VA">VA</option>
+							<option value="WA">WA</option>
+							<option value="WV">WV</option>
+							<option value="WI">WI</option>
+							<option value="WY">WY</option>
+						</select>
+					</dd>
+				</dl>
+				<dl>
+					<dt><label for="ADAP-3056_cor">County of Residence:</label></dt>
+					<dd><input type="text" id="ADAP-3056_cor" name="ADAP-3056_cor" class="medium required" /></dd>
+					<dt><label for="ADAP-3056_zip">Zip Code:</label></dt>
+					<dd><input type="text" id="ADAP-3056_zip" name="ADAP-3056_zip" class="zip medium required" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="ADAP-3056_home_phone">Home Phone:</label></dt>
+					<dd><input type="text" id="ADAP-3056_home_phone" name="ADAP-3056_home_phone" class="phone medium" /></dd>
+					<dt><label for="ADAP-3056_work_phone">Work Phone:</label></dt>
+					<dd><input type="text" id="ADAP-3056_work_phone" name="ADAP-3056_work_phone" class="phone medium" /></dd>
+				</dl>
+			</fieldset>
+			<fieldset class="labelToRight">
+				<legend class="required"><span class="tip" title="If applicant is incarcerated, select yes and indicate where applicant is currently residing (local jail or federal half way house). NOTE: Patients who are incarcerated in state or federal prisons cannot participate in the ADAP Program.">Is the applicant incarcerated?</span></legend>
+				<a href="help.html" rel="#overlay" class="formHelpTab"><img src="../images/icons/help_tab.gif" width="22" height="22" alt="Help" title="Help" /></a>
+				<dl class="singleQ showDetail show-ADAP-3056_incarcerated-0">
+					<dt>
+						<input id="ADAP-3056_incarcerated_yes" type="radio" value="y" name="ADAP-3056_incarcerated" />
+						<label for="ADAP-3056_incarcerated_yes" >Yes</label>
+					</dt>
+					<dt>
+						<input id="ADAP-3056_incarcerated_no" type="radio" value="n" name="ADAP-3056_incarcerated" />
+						<label for="ADAP-3056_incarcerated_no">No</label>
+					</dt>
+				</dl>
+				<fieldset id="ADAP-3056_incarcerated-details" class="threeColumnLayout hidden">
+					<legend class="required">Applicant Location</legend>
+					<dl>
+						<dt><label for="ADAP-3056_jail_name">Local Jail Name:</label></dt>
+						<dd><input type="text" id="ADAP-3056_jail_name" name="ADAP-3056_jail_name" /></dd>
+					</dl>
+					<dl>
+						<dt><label for="ADAP-3056_fhwh">Federal Half Way House:</label></dt>
+						<dd> <input type="text" id="ADAP-3056_fhwh" name="ADAP-3056_fhwh" /></dd>
+					</dl>
+				</fieldset>
+			</fieldset>
+			<fieldset class="threeColumnLayout">
+				<legend>Alternate Contact</legend>
+				<a href="help.html" rel="#overlay" class="formHelpTab"><img src="../images/icons/help_tab.gif" width="22" height="22" alt="Help" title="Help" /></a>
+				<dl>
+					<dt><label for="ADAP-3056_alt_firstname">First Name:</label></dt>
+					<dd><input type="text" id="ADAP-3056_alt_firstname" class="medium" /></dd>
+					<dt><label for="ADAP-3056_alt_lastname">Last Name:</label></dt>
+					<dd><input type="text" id="ADAP-3056_alt_lastname" class="medium" /></dd>
+					<dt><label for="ADAP-3056_alt_mi">Middle Initial:</label></dt>
+					<dd><input type="text" id="ADAP-3056_alt_mi" class="small" size="1" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="ADAP-3056_alt_phone">Phone Number:</label></dt>
+					<dd><input type="text" id="ADAP-3056_alt_phone" name="ADAP-3056_alt_phone" class="phone formHint" /></dd>
+				</dl>
+			</fieldset>
+			<fieldset>
+				<legend>Service Details</legend>
+				<a href="help.html" rel="#overlay" class="formHelpTab"><img src="../images/icons/help_tab.gif" width="22" height="22" alt="Help" title="Help" /></a>
+				<dl>
+					<dt>Provider of Requested Service:</dt>
+					<dd>CVS Caremark 1-800-238-7828</dd>
+				</dl>
+				<fieldset>
+					<h6><span class="tip" title="Program year, up to 12 months prior or in the future.">Requested Dates for Service</span></h6>
+					<div class="dataTable">
+						<table>
+						<thead>
+							<tr>
+								<th class="status" scope="col"></th>
+								<th scope="col"><label for="reqFrom">From</label></th>
+								<th scope="col"><label for="reqTo">To</label></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td></td>
+								<td>01/08/2009</td>
+								<td>01/08/2009</td>
+							</tr>
+							<tr class="emphasizeRow">
+								<td><img src="../images/icons/table_add.png" width="16" height="16" alt="New Entry" /></td>
+								<td><input type="text" id="reqFrom" class="dateInput required" /></td>
+								<td><input type="text" id="reqTo" class="dateInput required" /></td>
+							</tr>
+						</tbody>
+						</table>
+					</div>
+					<div class="btnRow">
+						<button type="submit" class="submitBtn">Add</button>
+					</div>
+				</fieldset>
+			</fieldset>
+			<fieldset>
+				<legend>Medical Information</legend>
+				<a href="help.html" rel="#overlay" class="formHelpTab"><img src="../images/icons/help_tab.gif" width="22" height="22" alt="Help" title="Help" /></a>
+				<fieldset>
+					<legend>Diagnostic Code/Diagnosis</legend>
+					<dl>
+						<dt><label for="ADAP-3056_dcd_primary">Primary:</label></dt>
+						<dd><input type="text" id="ADAP-3056_dcd_primary" name="ADAP-3056_dcd_primary" value="042" readonly="readonly" /></dd>
+						<dt><label for="ADAP-3056_dcd_secondary">Secondary:</label></dt>
+						<dd><input type="text" id="ADAP-3056_dcd_secondary" name="ADAP-3056_dcd_secondary" /></dd>
+					</dl>
+				</fieldset>
+				<fieldset>
+					<legend>Complete for all HIV Requests</legend>
+					<dl>
+						<dt><label for="ADAP-3056_cd4_cnt">CD<sub>4</sub> Count:</label></dt>
+						<dd><input type="text" id="ADAP-3056_cd4_cnt" name="ADAP-3056_cd4_cnt" class="medium required" /></dd>
+						<dt><label for="ADAP-3056_vl">Viral Load:</label></dt>
+						<dd><input type="text" id="ADAP-3056_vl" name="ADAP-3056_vl" class="medium required" /></dd>
+					</dl>
+					<dl>
+						<dt><label for="ADAP-3056_cd4_cnt_dt">Date:</label></dt>
+						<dd><input id="ADAP-3056_cd4_cnt_dt" class="dateInput required" /></dd>
+						<dt><label for="ADAP-3056_vl_dt">Date:</label></dt>
+						<dd><input id="ADAP-3056_vl_dt" class="dateInput required" /></dd>
+					</dl>
+				</fieldset>
+			</fieldset>
+			<fieldset>
+				<legend class="required"><span>Please choose a shipping address</span></legend>
+				<a href="help.html" rel="#overlay" class="formHelpTab"><img src="../images/icons/help_tab.gif" width="22" height="22" alt="Help" title="Help" /></a>
+				<dl class="singleQ labelToRight showDetail show-shipToAddress-1">
+					<dt>
+						<input type="radio" id="use_address" name="ship_to_address" value="no_alt" />
+						<label for="use_address"> Ship to address above</label>
+					</dt>
+					<dt>
+						<input type="radio" id="use_alt_address" name="ship_to_address" value="yes_alt" />
+						<label for="use_alt_address"> Ship to alternate address</label>
+					</dt>
+				</dl>
+				<fieldset id="shipToAddress-details" class="hidden">
+					<legend class="required">Ship To Address</legend>
+					<dl>
+						<dt><label for="alt_co">Care of, if applicable</label></dt>
+						<dd><input type="text" id="alt_co" name="alt_co" class="large" /></dd>
+						<dt><label for="alt_city">City:</label></dt>
+						<dd><input type="text" id="alt_city" name="alt_city" /></dd>
+					</dl>
+					<dl>
+						<dt><label for="alt_address">Address Line 1:</label></dt>
+						<dd><input type="text" id="alt_address" name="alt_address" class="large" /></dd>
+						<dt><label for="alt_state">State:</label></dt>
+						<dd><select id="alt_state" name="alt_state">
+							<option>&nbsp;</option>
+							<option value="nc">NC - North Carolina</option>
+							<option value="sc">SC - South Carolina</option>
+							<option value="va">VA - Viginia</option>
+						</select></dd>
+					</dl>
+					<dl>
+						<dt><label for="alt_address2">Address Line 2:</label></dt>
+						<dd><input type="text" id="alt_address2" name="alt_address2" class="large" /></dd>
+						<dt><label for="alt_zip">Zip Code:</label></dt>
+						<dd><input type="text" id="alt_zip" class="zip formHint" /></dd>
+					</dl>
+				</fieldset>
+			</fieldset>
+			<fieldset>
+				<legend class="required"><span>Requesting Office Contact Information</span></legend>
+				<a href="help.html" rel="#overlay" class="formHelpTab"><img src="../images/icons/help_tab.gif" width="22" height="22" alt="Help" title="Help" /></a>
+				<dl>
+					<dt><label for="ro_agency">Agency:</label></dt>
+					<dd><input type="text" id="ro_agency" name="ro_agency" class="medium" /></dd>
+					<dt><label for="ro_name">Contact:</label></dt>
+					<dd><input type="text" id="ro_name" name="ro_name" class="medium" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="ro_dt">Date:</label></dt>
+					<dd><input type="text" class="dateInput" id="ro_dt"  /></dd>
+				</dl>
+				<dl>
+					<dt><label for="ro_phone">Phone Number:</label></dt>
+					<dd><input type="text" id="ro_phone" name="ro_phone" class="phone medium" /></dd>
+					<dt><label for="ro_city">City</label></dt>
+					<dd><input type="text" id="ro_city" name="ro_city" class="medium" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="ro_address">Address Line 1:</label></dt>
+					<dd><input type="text" id="ro_address" name="ro_address" class="large" /></dd>
+					<dt><label for="ro_state">State:</label></dt>
+					<dd>
+						<select id="ro_state" name="ro_state">
+							<option value="">&nbsp;</option>
+							<option value="AL">AL</option>
+							<option value="AK">AK</option>
+							<option value="AZ">AZ</option>
+							<option value="AR">AR</option>
+							<option value="CA">CA</option>
+							<option value="CO">CO</option>
+							<option value="CT">CT</option>
+							<option value="CT">CT</option>
+							<option value="DE">DE</option>
+							<option value="FL">FL</option>
+							<option value="GA">GA</option>
+							<option value="HI">HI</option>
+							<option value="ID">ID</option>
+							<option value="IL">IL</option>
+							<option value="IN">IN</option>
+							<option value="IA">IA</option>
+							<option value="KS">KS</option>
+							<option value="KY">KY</option>
+							<option value="LA">LA</option>
+							<option value="ME">ME</option>
+							<option value="MD">MD</option>
+							<option value="MA">MA</option>
+							<option value="MI">MI</option>
+							<option value="MN">MN</option>
+							<option value="MS">MS</option>
+							<option value="MO">MO</option>
+							<option value="MT">MT</option>
+							<option value="NE">NE</option>
+							<option value="NV">NV</option>
+							<option value="NH">NH</option>
+							<option value="NJ">NJ</option>
+							<option value="NM">NM</option>
+							<option value="NY">NY</option>
+							<option value="NC">NC</option>
+							<option value="ND">ND</option>
+							<option value="OH">OH</option>
+							<option value="OK">OK</option>
+							<option value="OR">OR</option>
+							<option value="PA">PA</option>
+							<option value="RI">RI</option>
+							<option value="SC">SC</option>
+							<option value="SD">SD</option>
+							<option value="TN">TN</option>
+							<option value="TX">TX</option>
+							<option value="UT">UT</option>
+							<option value="VT">VT</option>
+							<option value="VA">VA</option>
+							<option value="WA">WA</option>
+							<option value="WV">WV</option>
+							<option value="WI">WI</option>
+							<option value="WY">WY</option>
+						</select>
+					</dd>
+				</dl>
+				<dl>
+					<dt><label for="ro_address2">Address Line 2:</label></dt>
+					<dd><input type="text" id="ro_address2" name="ro_address2" class="large" /></dd>
+					<dt><label for="ro_zip">Zip Code:</label></dt>
+					<dd><input type="text" id="ro_zip" class="zip medium" /></dd>
+				</dl>
+			</fieldset>
+			<a href="#header"><img src="../images/icons/return_top.gif" class="returnTop" width="12" height="13" alt="Back to top" title="Return to the top of the page" /></a>
+		</div>
+		<div class="btnRow">
+             <button type="submit" class="submitBtn">Submit</button>
+             <button type="reset">Start Over</button>
+        </div>
+	</div>
+	</form>
+	<ul id="footer" class="linkColor2 rounded">
+		<li><a href="#">Legal</a> |</li>
+		<li><a href="#">Privacy Policy</a> |</li>
+		<li><a href="#">Accessibility</a> |</li>
+		<li><a href="#">Site Map</a> |</li>
+		<li><a href="#">Contact Us</a> |</li>
+		<li><a href="#">Report Fraud</a></li>
+	</ul>
+</div>
+<div class="dropShadow" id="tileBtm"></div>
+ <!-- overlayed element --> 
+<div class="overlay" id="overlay"> 
+    <!-- the external content is loaded inside this tag --> 
+    <div class="wrap"></div> 
+</div>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>Junxure Essentials &raquo; Records Workspace</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		
+		<!-- Le style -->
+		
+		<!-- DO NOT EDIT - generate from ../Content/less/application.less -->
+		<!-- SEE http://lesscss.org/ -->
+		<!--
+		<link rel="stylesheet" href="assets/css/essentials.css" />
+		-->
+		<link rel="stylesheet" type="text/css" href="../Content/css/application.css" />
+		
+		<style>
+			.action-subject {
+				font: 12pt/14pt sans-serif;
+				font-weight: bold;
+			}
+			.action-assignment {
+				font: 10pt/12pt sans-serif;
+				margin-top: 5px;
+			}
+			.action-summary {
+				font: 8pt/10pt sans-serif;
+				margin-top: 5px;
+			}
+			
+			.k-listview:after, .product dl:after {
+				content: ".";
+				display: block;
+				height: 0;
+				clear: both;
+				visibility: hidden;
+			}
+			.k-listview {
+				border: 0;
+				padding: 0 0 20px 0;
+				min-width: 0;
+			}
+		</style>
+		
+		<!-- LESS - ONLY FOR DEVELOPMENT
+		<link rel="stylesheet/less" type="text/css" href="../Content/less/application.less"/>
+		<script type="text/javascript">less = { env: 'development' };</script>
+		<script src="../Scripts/plugins/less-1.3.0.min.js"></script>
+		<script type="text/javascript">less.watch();</script>
+		/LESS -->
+		
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!-- Le fav and touch icons -->
+		<link rel="shortcut icon" href="http://www.junxure.com/public/sites/default/files/imgs/favicon.png">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.junxure.com/public/sites/default/files/imgs/favicon.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://www.junxure.com/public/sites/default/files/imgs/favicon.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://www.junxure.com/public/sites/default/files/imgs/favicon.png">
+		<link rel="apple-touch-icon-precomposed" href="http://www.junxure.com/public/sites/default/files/imgs/favicon.png">
+	</head>
+	
+	<body data-spy="scroll" data-target="#jx-workspace-toolbar" data-offset="50">
+		<!-- title bar -->
+	    <div class="remote-content titlebar" data-src="../common/titlebar.html"></div>
+	    <!-- /title bar -->
+	    
+		<!-- application-wide toolbar -->
+		<div class="remote-content" data-src="toolbar.html" id="jx-workspace-toolbar"></div>
+		<!-- /application-wide toolbar -->
+
+	    <!-- remote bread crumb trail -->
+		<div id="breadcrumb" class="bct-label container-fluid"></div>
+		<!-- /remote bread crumb trail -->
+		
+	    <!-- workspace -->
+	    <div id="workspace" class="main-content container-fluid"></div> 
+	    <!-- /workspace -->
+
+		<div id="new-modal" class="modal hide fade in remote-content" data-src="../actions/new-action.html"></div>
+
+		<div id="app-workspace-summary" class="collapsible hide remote-content" data-src="summary.html"></div>
+		
+		<!-- navigation bar -->
+	    <div class="navbar navbar-static-bottom remote-content" data-src="../common/navigation.html" id="navpanel"></div>
+	    <!-- /navigation bar -->
+	    
+	    <div id="dialog-confirm" class="warning" title="Delete the asset?" style="height: 100px;display:none">
+		    <p>This asset will be removed. Are you sure?</p>
+		</div>
+	    
+		<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script type="text/javascript" src="../Scripts/jquery/jquery-1.7.2.js"></script>
+		<script type="text/javascript" src="../Scripts/jquery/jquery-ui-1.8.21.js"></script>
+		
+		<script type="text/javascript" src="../Scripts/bootstrap/bootstrap.js"></script>
+				
+		<script type="text/javascript" src="../Scripts/kendo/kendo.core.js"></script>
+		<script type="text/javascript" src="../Scripts/kendo/kendo.web.js"></script>
+		<script type="text/javascript" src="../Scripts/kendo/kendo.dataviz.min.js"></script>
+		
+		<script type="text/javascript" src="../Scripts/plugins/path.js"></script>
+		<script type="text/javascript" src="../Scripts/plugins/jquery.officebar.js"></script>
+		<script type="text/javascript" src="../Scripts/plugins/chosen.jquery.js"></script>
+		<script type="text/javascript" src="../Scripts/plugins/ui.checkbox-ui.radiobutton.js"></script>
+		<script type="text/javascript" src="../Scripts/plugins/jquery.autoresize.js"></script>
+		<script type="text/javascript" src="../Scripts/plugins/jquery.cluetip.js"></script>
+		<script type="text/javascript" src="../Scripts/plugins/fullcalendar.js"></script>
+		
+		<script type="text/javascript" src="../Scripts/essentials/base.js"></script>
+		<script type="text/javascript" src="../Scripts/essentials/form-toggle.js"></script>
+
+		<script type="text/javascript" src="../Scripts/sample_data/Nonsense.js"></script>
+		<script type="text/javascript" src="../Scripts/sample_data/localdata.js"></script>
+		
+		<script type="text/javascript">
+            $(document).ready(function () { 
+            	var $actions = $("#form_actions"),
+		        	$form = $("#account_info"),
+		        	bct = ["Home","Records Workspace"],
+		        	mode_map = {
+			        	"list": "View by ",
+			        	"record": "Records",
+			        	"acct": "Accounts",
+			        	"asset": "Assets",
+			        	"action": "Actions",
+			        	"new": "New",
+			        	"detail": "Detail for "
+		        	};
+		        
+		        
+		        $("#form_edit, #form_save", $actions).on("click", function(e) {
+			        jxToggleForm($form);
+		        });
+		                    	
+            	function loadPanel(t, params) {
+            		var url = "pviews/"+params["mode"]+"-workspace.html";
+                	
+                	t.html(loading.html());
+                	
+	            	$.ajax({
+						url: url,
+						success: function(html) { /* loads external content into current div element */
+							var trail = ["Home","Records Workspace"];
+							
+								trail.push( mode_map[params["mode"]] + " " + mode_map[params["type"]] );
+								
+							updateBreadcrumb(trail);
+				            
+				            t.html(html);
+							jxInitForm("form", t);
+							
+							Essentials.reInit();
+						},
+						error: function(jqXHR, textStatus, errorThrown) {
+							t.html( error(errorThrown + "<p><b>Thrown By:</b> " + url + "</p>") );
+						}
+					});
+            	}
+            	
+            	function updateBreadcrumb(trail) {
+            		$("#breadcrumb").html( '<ul class="breadcrumb"><li><a href="#">' + trail.join('</a><i class="icon-chevron-right"></i></li><li><a href="#">') + "</a></li></ul>");
+            	}
+            	
+            	function error(msg) {
+	            	return '<div class="alert alert-block alert-error fade in">' +
+						'<button type="button" class="close" data-dismiss="alert">×</button>' + 
+						'<h4 class="alert-heading">Oh snap! You got an error!</h4>' + 
+						'<p class="code">' + msg + '</p></div>';
+            	}
+            
+				function clearPanel(){
+				    // You can put some code in here to do fancy DOM transitions, such as fade-out or slide-in.
+				}
+				
+				// This is our "rescue" method.
+				function notFound(){
+					$("#workspace").html( error("404 Not Found") );
+				}
+        
+		        Path.map("#/:view/:mode/:type").to(function(){
+		            loadPanel( $("#workspace"), this.params);
+		        });
+        
+		        Path.root("#/workspace/list/record");
+				
+				Path.listen();
+            });
+        </script>
+		<!-- End Scripts-->
+	</body>
+</html>

@@ -1,0 +1,9 @@
+function GetElqContentPersonalizationValue(strDataField){
+    var strTemp = '';
+    if(strDataField == 'Apps_Tactics_T_Campaign_ID_151' || strDataField == 'Apps_Tactics_T_Campaign_ID_151'){strTemp = '1';}
+    if(strDataField == 'Apps_Tactics_T_Campaign_ID_181' || strDataField == 'Apps_Tactics_T_Campaign_ID_181'){strTemp = '1';}
+    if(strDataField == 'Apps_Tactics_T_Campaign_Name1' || strDataField == 'Apps_Tactics_T_Campaign_Name1'){strTemp = 'Test Tactic 1 - nharris - 41417.4780324074';}
+    if(strDataField == 'Apps_Tactics_T_Type1' || strDataField == 'Apps_Tactics_T_Type1'){strTemp = 'Social Media';}
+    if(strDataField == 'Apps_Tactics_T_Record_Type1' || strDataField == 'Apps_Tactics_T_Record_Type1'){strTemp = '';}
+    return strTemp;
+}

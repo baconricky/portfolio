@@ -1,0 +1,46 @@
+<div id="action_calendar"></div>
+
+<div class="k-button-wrapper">
+	<button class="k-button k-button-primary btn-small"><i class="icon-plus"></i></button>
+</div>
+
+<div id="actionListView"></div>
+
+<div id="actionListViewPager" class="k-pager-wrap"></div>
+
+<script type="text/x-kendo-tmpl" id="actionListViewTemplate">
+	<div class="action mine fade in">
+		<a class="close" data-dismiss="action" href="\#"><img style="display: inline-block;width: 14px;height: 14px;" src="../Content/Images/metro/open_in_browser.png"></a>
+		<div class="action-subject"><img style="display:inline-block;width:28px;height:28px;" src="../Content/Images/metro/${icon}.png"> ${type} </div>
+		<div class="action-assignment"> ${assignedTo} <span class="pull-right">${due}</span></div>
+		<div class="action-summary">${subject}</div>
+	</div>
+</script>
+
+<script>
+	//Essentials.reInit();
+
+	var actionDataSource = new kendo.data.DataSource({
+		transport: {
+			read: {
+				url: "../Scripts/sample_data/json/actions.json",
+				dataType: "jsonp"
+			},
+			contentType: "application/json; charset=utf-8"
+		},
+		pageSize: 2
+    });
+
+    $("#action_calendar").kendoCalendar();
+
+	$("#actionListView").kendoListView({
+        dataSource: actionDataSource,
+        template: kendo.template( $("#actionListViewTemplate").html() )
+    });
+
+   	$("#actionListViewPager").kendoPager({
+        dataSource: actionDataSource
+    });
+
+</script>
+

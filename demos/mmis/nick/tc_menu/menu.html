@@ -1,0 +1,369 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+	<head>
+		<title>Menu Sample - jQuery</title>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<link rel="stylesheet" type="text/css" href="css/superfish.css" media="screen">
+		<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+		<script type="text/javascript" src="js/hoverIntent.js"></script>
+		<script type="text/javascript" src="js/superfish.js"></script>
+		<script type="text/javascript">
+
+		// initialise plugins
+		jQuery(function(){
+			jQuery('ul.sf-menu').superfish();
+		});
+
+		</script>
+	</head>
+	<body>
+		<div style="width:100%;background:#45457A;height:2.5em;border-bottom:1px solid #45457A;">
+		<ul class="sf-menu">
+			<!-- begin clients menu -->
+			<li>
+				<a class="toplevel" href="#">Clients</a>
+				<ul>
+					<li>
+						<a href="#">Client</a>
+						<ul>
+							<li><a href="#">Client Search</a></li>
+							<li><a href="#">Duplicate Client Search</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Client Cases</a></li>
+					<li>
+						<a href="#">Transportation Restrictions</a>
+						<ul>
+							<li><a href="#">Transportation Restrictions Search</a></li>
+							<li><a href="#">RTR Activity Search</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Verify Eligibility</a></li>
+					<li>
+						<a href="#">Managed Care Benefit Plan</a>
+						<ul>
+							<li><a href="#">Managed Care Benefit Plan Search</a></li>
+							<li><a href="#">Procedure Enhanced Fee Search</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Labels</a>
+					</li>
+				</ul>
+			</li>	
+			<!-- end clients menu -->
+			<!-- begin case mgmt menu -->
+			<li>
+				<a class="toplevel" href="#">Case Management</a>
+				<ul>
+					<li>
+						<a href="#">Client Search</a>
+					</li>
+				</ul>
+			</li>	
+			<!-- end case mgmt menu -->
+			<!-- begin proviers menu -->
+			<li>
+				<a class="toplevel" href="#">Providers</a>
+				<ul>
+					<li><a href="#">Provider/License</a></li>
+					<li>
+						<a href="#">Enrollment Tracking</a>
+						<ul>
+							<li><a href="#">Enrollment Tracking Search</a></li>
+							<li><a href="#">Enrollment Summary</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Base Profiles</a>
+						<ul>
+							<li><a href="#">Base Profile Search</a></li>
+							<li><a href="#">HIPAA Service Type (HSRVC) Search</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Reports</a></li>
+					<li><a href="#">Labels</a></li>
+					<li>
+						<a href="#">TSN</a>
+						<ul>
+							<li><a href="#">Provider/TSN Search</a></li>
+							<li><a href="#">BSB/TSN Search</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Sanctions</a></li>
+					<li><a href="#">Ownership</a></li>
+					<li>
+						<a href="#">ePaces Activation</a>
+						<ul>
+							<li><a href="#">Provider Search</a></li>
+							<li><a href="#">Submitter Search</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Criteria Set</a></li>
+					<li><a href="#">Profession Code</a></li>
+					<li><a href="#">COS Code</a></li>
+					<li><a href="#">Entity</a></li>
+					<li><a href="#">Tax Payer Address</a></li>
+				</ul>
+			</li>	
+			<!-- end proviers menu -->
+			<!-- begin prior auth menu -->
+			<li>
+				<a class="toplevel" href="#">Prior Authorization</a>
+				<ul>
+					<li>
+						<a href="#">Prior Authorization</a>
+						<ul>
+							<li><a href="#">PA Search</a></li>
+							<li><a href="#">PA Review</a></li>
+							<li><a href="#">PA Report Search</a></li>
+							<li><a href="#">Attachments</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Service Authorization</a></li>
+					<li><a href="#">Open Orders</a></li>
+					<li><a href="#">MEVS Transactions</a></li>
+					<li>
+						<a href="#">TOAs</a>
+						<ul>
+							<li><a href="#">TOA Search</a></li>
+							<li><a href="#">TOA Review</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>	
+			<!-- end prior auth menu -->
+			<!-- begin claims menu -->
+			<li>
+				<a class="toplevel" href="#">Claims</a>
+				<ul>
+					<li><a href="#">Claim Inquiry</a></li>
+					<li><a href="#">Mass Adjustment</a></li>
+					<li><a href="#">Pend Release</a></li>
+					<li><a href="#">Pend Resolution</a></li>
+					<li><a href="#">Pend Resolution Worked/Reviewed Report</a></li>
+					<li><a href="#">Pend Location Report</a></li>
+					<li><a href="#">DUR Reject</a></li>
+					<li><a href="#">DUR Report</a></li>
+					<li>
+						<a href="#">OSC Audit</a>
+						<ul>
+							<li><a href="#">OSC Criteria Sets</a></li>
+							<li><a href="#">OSC Pended Claims</a></li>
+							<li><a href="#">OSC Mass Release Request</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>	
+			<!-- end claims menu -->
+			<!-- begin 3rd party menu -->
+			<li>
+				<a class="toplevel" href="#">Third Party</a>
+				<ul>
+					<li><a href="#">Carrier</a></li>
+					<li><a href="#">Employer</a></li>
+					<li><a href="#">Mass Change Request</a></li>
+					<li><a href="#">Medicare Savings Premium Cap</a></li>
+					<li><a href="#">Resource</a></li>
+				</ul>
+			</li>	
+			<!-- end 3rd party menu -->
+			<!-- begin financial menu -->
+			<li>
+				<a class="toplevel" href="#">Financial</a>
+				<ul>
+					<li>
+						<a href="#">General Ledger</a>
+						<ul>
+							<li><a href="#">General Ledger Search</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Accounts Receivable</a>
+						<ul>
+							<li><a href="#">Accounts Receivable Search</a></li>
+							<li><a href="#">Financial Reason Code Search</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Operations</a>
+						<ul>
+							<li><a href="#">Manual Check Entry</a></li>
+							<li><a href="#">Checks Printed/Retro Fit</a></li>
+							<li><a href="#">Check Retreival Request</a></li>
+							<li><a href="#">Remittance Message</a></li>
+							<li><a href="#">Facility Codes</a></li>
+							<li><a href="#">Public Goods Pool Parameter</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Claims Payment</a>
+						<ul>
+							<li><a href="#">Claims Search</a></li>
+							<li><a href="#">Payment History Search</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>	
+			<!-- end financial menu -->
+			<!-- begin MARS menu -->
+			<li>
+				<a class="toplevel" href="#">MARS</a>
+				<ul>
+					<li><a href="#">Shares Search</a></li>
+					<li><a href="#">Financial Fund</a></li>
+					<li><a href="#">Weekly Batch Report Request</a></li>
+				</ul>
+			</li>	
+			<!-- end MARS menu -->
+			<!-- begin ecommerce menu -->
+			<li>
+				<a class="toplevel" href="#">eCommerce</a>
+				<ul>
+					<li>
+						<a href="#">TMS</a>
+						<ul>
+							<li><a href="#">Devices</a></li>
+							<li><a href="#">Order Entry</a></li>
+							<li><a href="#">Orders List</a></li>
+							<li><a href="#">Order Serial Entry</a></li>
+							<li><a href="#">Transaction Statistics</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Reporting</a>
+						<ul>
+							<li><a href="#">Raw Data Report</a></li>
+							<li><a href="#">Provider Device Statistics</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>	
+			<!-- end ecommerce menu -->
+			<!-- begin SURS menu -->
+			<li>
+				<a class="toplevel" href="#">SURS</a>
+				<ul>
+					<li><a href="#">Rate Paid Provider Inquiry</a></li>
+					<li><a href="#">Rate Paid Provider Projection</a></li>
+				</ul>
+			</li>	
+			<!-- end SURS menu -->
+			<!-- begin reference menu -->
+			<li>
+				<a class="toplevel" href="#">Reference</a>
+				<ul>
+					<li>
+						<a href="#">Drug</a>
+						<ul>
+							<li><a href="#">Drug Code Search</a></li>
+							<li><a href="#">DUR Filter Search</a></li>
+							<li><a href="#">Batch Drug Mass Change Search</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Group</a></li>
+					<li>
+						<a href="#">Plan</a>
+						<ul>
+							<li><a href="#">Plan Search</a></li>
+							<li><a href="#">Copy Plan</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Grouper</a>
+						<ul>
+							<li><a href="#">DRG Search</a></li>
+							<li><a href="#">DRG Percentages</a></li>
+							<li><a href="#">Case Payment Group Type Search</a></li>
+						</ul>
+					</li>
+					<li><a href="#">ICD9 Diagnosis</a></li>
+					<li><a href="#">ICD9 Procedure</a></li>
+					<li>
+						<a href="#">Procedure</a>
+						<ul>
+							<li><a href="#">Procedure Code Search</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Provider Rate</a>
+						<ul>
+							<li><a href="#">Provider Rate Code Search</a></li>
+							<li><a href="#">Provider Rate Agency Search</a></li>
+							<li><a href="#">Provider Rate Batch Search</a></li>
+							<li><a href="#">Provider Rate Nursing Home License Search</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Revenue</a></li>
+					<li>
+						<a href="#">Utilization</a>
+						<ul>
+							<li><a href="#">Procedure Code Search</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Pricing</a>
+						<ul>
+							<li>
+								<a href="#">Procedure</a>
+								<ul>
+									<li><a href="#">COS Search</a></li>
+									<li><a href="#">Location Code Search</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Revenue</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Claim Edit</a></li>
+					<li>
+						<a href="#">PA</a>
+						<ul>
+							<li><a href="#">PA Edit Code Search</a></li>
+							<li><a href="#">PA Edit Code Routing</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Text</a>
+						<ul>
+							<li><a href="#">EOMB Code Search</a></li>
+							<li><a href="#">Location Code Search</a></li>
+							<li><a href="#">PA Reviewer Unit Code Search</a></li>
+							<li><a href="#">PA Reviewer Status Reason Search</a></li>
+							<li><a href="#">RA EOB Code Search</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Reporting</a></li>
+					<li><a href="#">Lost/Stolen Prrescriptions</a></li>
+				</ul>
+			</li>	
+			<!-- end reference menu -->
+			<!-- begin admin menu -->
+			<li>
+				<a class="toplevel" href="#">Administration</a>
+				<ul>
+					<li>
+						<a href="#">TMS</a>
+						<ul>
+							<li><a href="#">Devices</a></li>
+							<li><a href="#">Order Entry</a></li>
+							<li><a href="#">Orders List</a></li>
+							<li><a href="#">Order Serial Entry</a></li>
+							<li><a href="#">Transaction Statistics</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Reporting</a>
+						<ul>
+							<li><a href="#">Raw Data Report</a></li>
+							<li><a href="#">Provider Device Statistics</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>	
+			<!-- end admin menu -->
+
+		</ul>
+		</div>
+	</body>
+</html>

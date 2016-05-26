@@ -1,0 +1,108 @@
+<div class="subnav">
+	<div class="navbar-inner">
+		<ul class="nav">	
+			
+			<li class="divider-vertical"></li>
+			<li class="dropdown">
+				<a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/print.html">
+					<i class="icon-star"></i> Favorites
+					<b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+				  <li><a tabindex="-1" href="#">All</a></li>
+				  <li><a tabindex="-1" href="#">Selected</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/print.html">
+					<i class="icon-file"></i> Reports
+					<b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+				  <li><a tabindex="-1" href="#">All</a></li>
+				  <li><a tabindex="-1" href="#">Selected</a></li>
+				</ul>
+			</li>
+			<li class="divider-vertical"></li>
+			<li class="dropdown">
+				<a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/print.html">
+					<i class="icon-plus"></i> New
+					<b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+					<li><a tabindex="-1" href="#"><i class="icon-user"></i> Record</a></li>
+					<li class="dropdown-submenu"><a tabindex="-1" href="#"><i class="icon-tasks"></i> Action</a>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+							<li class="menutitle">Action Workflows</li>
+							<li><a href="#"><i class="icon-tasks"></i> Action Workflow 1</a></li>
+							<li><a href="#"><i class="icon-tasks"></i> Action Workflow 2</a></li>
+							<li><a href="#"><i class="icon-tasks"></i> Action Workflow 3</a></li>
+							<li><a href="#"><i class="icon-tasks"></i> Action Workflow 4</a></li>
+							<li><a href="#"><i class="icon-tasks"></i> Action Workflow 5</a></li>
+							<li><a href="#"><i class="icon-tasks"></i> New Action Workflow</a></li>
+							<li class="divider"></li>
+							<li class="menutitle">Actions</li>
+							<li><a data-action-type="Email"   href="#"><i class="icon-envelope-alt"></i> Email</a></li>
+							<li><a data-action-type="Letter"  href="#"><i class="icon-file"></i> Letter</a></li>
+							<li><a data-action-type="Fax"     href="#"><i class="icon-print"></i> Fax</a></li>
+							<li><a data-action-type="Call"    href="#"><i class="icon-phone"></i> Call</a></li>
+							<li><a data-action-type="Meeting" href="#"><i class="icon-calendar"></i> Meeting</a></li>
+						</ul>
+					</li>
+					<li class="dropdown-submenu"><a tabindex="-1" href="#"><i class="icon-tasks"></i> Asset</a>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+							<li class="menutitle">Action Workflows</li>
+							<li><a href="#"><i class="icon-tasks"></i> Action Workflow 1</a></li>
+							<li><a href="#"><i class="icon-tasks"></i> Action Workflow 2</a></li>
+							<li><a href="#"><i class="icon-tasks"></i> Action Workflow 3</a></li>
+							<li><a href="#"><i class="icon-tasks"></i> Action Workflow 4</a></li>
+							<li><a href="#"><i class="icon-tasks"></i> Action Workflow 5</a></li>
+							<li><a href="#"><i class="icon-tasks"></i> New Action Workflow</a></li>
+							<li class="divider"></li>
+							<li class="menutitle">Actions</li>
+							<li><a data-action-type="Email"   href="#"><i class="icon-envelope-alt"></i> Email</a></li>
+							<li><a data-action-type="Letter"  href="#"><i class="icon-file"></i> Letter</a></li>
+							<li><a data-action-type="Fax"     href="#"><i class="icon-print"></i> Fax</a></li>
+							<li><a data-action-type="Call"    href="#"><i class="icon-phone"></i> Call</a></li>
+							<li><a data-action-type="Meeting" href="#"><i class="icon-calendar"></i> Meeting</a></li>
+						</ul>
+					</li>
+					<li><a tabindex="-1" href="#"><i class="icon-umbrella"></i> Insurance</a></li>
+				</ul>
+			</li>
+			<li class="divider-vertical"></li>
+			<li>
+				<form class="navbar-search pull-left">
+					<div class="input-append">
+						<input type="text" class="input-mini search-query">
+						<button type="submit" class="btn"><i class="icon-search"></i></button>
+					</div>
+				</form>
+			</li>
+			<li class="dropdown">
+				<a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" title="Advanced Search" href="/print.html">
+					<i class="icon-search"> Adv</i> 
+					<b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+				  <li><a tabindex="-1" href="#">Record</a></li>
+				  <li><a tabindex="-1" href="#">Action</a></li>
+				  <li><a tabindex="-1" href="#">Asset</a></li>
+				  <li><a tabindex="-1" href="#">Insurance</a></li>
+				</ul>
+			</li>
+			<li class="divider-vertical"></li>
+			<li><a href="#"><i class="icon-download-alt icon-large"></i></a></li>
+			<li><a href="#"><i class="icon-cog icon-large"></i></a></li>
+			<li><a href="#"><i class="icon-calendar icon-large"></i></a></li>
+		</ul>
+	</div>
+</div>
+<script type="text/javascript">
+	$(function () {
+		$("#globalCalendarButton").click(function () {
+			navTo('/Tools/Calendar/CalendarView');
+		});
+	})
+</script>

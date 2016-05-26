@@ -1,0 +1,10 @@
+Changelog for Superfish - a jQuery menu plugin
+
+v1.0	implemented with base superfish and Railinc Style
+
+Notes:
+
+Max Width: The menus must fit within a 9xx wide browser window. Menus wider than that may not be visible for all customers.
+
+Character/Content Restrictions: Please ensure that the HTML is W3C compliant before applying the superfish enhancement.
+

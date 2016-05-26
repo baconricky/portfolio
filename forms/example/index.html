@@ -1,0 +1,244 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js ie6 oldie" lang="en"><![endif]-->
+<!--[if IE 7]><html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]><html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+        <head id="head">
+        <title>Red Hat | DynamicForm Examples</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="shortcut icon" href="/favicon.ico" />
+
+        <link type="text/css" rel="stylesheet" href="/forms/css/redhat/bootstrap.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="/forms/css/redhat/editorial.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="/forms/css/redhat/overpass.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="/forms/css/redhat/print.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="/forms/css/redhat/style.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="/forms/css/redhat/forms.css" media="all" />
+
+        <script src="/forms/scripts/lib/jquery/1.10/jquery.min.js"></script>
+        <script src="/forms/scripts/jquery.gatedform.js"></script>
+        <!--[if IE 8]>
+            <link id="style" rel="stylesheet" type="text/css" href= "/rh-resources/skin/RedhatStyle/Redhat/css/ie8.css" />
+        <![endif]-->
+        <!--[if IE 7]>
+            <link id="style" rel="stylesheet" type="text/css" href= "/rh-resources/skin/RedhatStyle/Redhat/css/ie7.css" />
+        <![endif]-->
+
+        <style>
+
+        a:hover {
+            font-weight: bold;
+            color: #333;
+            background: #fefefe;
+        }
+        </style>
+    </head>
+      <body>
+
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="hero">
+                        <h1>UAT Script Scenarios</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">1. Modal form, right-click and "Open in new window/tab" for direct.</div>
+                    <div class="col-sm-4"><a href="/forms?offer_id=A&amp;sc_cid=70160000000H4AjAAK&amp;pid=1">PDF</a></div>
+                    <div class="col-sm-4"><a href="/forms?offer_id=B&amp;sc_cid=70160000000H4AjAAK&amp;pid=1">Event ICS</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">3. Cross-Domain PDF</div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SingleOffer_PDF.html?sc_cid=70160000000H4AjAAK&amp;pid=1">Cross Domain Direct PDF</a></div>
+                    <div class="col-sm-4"><a href="//qa.engage.redhat.com/content/DynamicForm_UAT_SingleOffer_PDF?sc_cid=70160000000H4AjAAK&amp;pid=1">Cross Domain Direct PDF</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">4. Cross-Domain ICS file for Events</div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SingleOffer_ICS.html?sc_cid=70160000000H4AjAAK&amp;pid=1">Cross Domain Direct ICS</a></div>
+                    <div class="col-sm-4"><a href="//qa.engage.redhat.com/content/DynamicForm_UAT_SingleOffer_ICS?sc_cid=70160000000H4AjAAK&amp;pid=1">Cross Domain Direct ICS</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">5. Translations</div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">BG</div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SingleOffer_PDF.html?language=bg">Embedded</a></div>
+                    <div class="col-sm-4"><a href="/forms/?offer_id=A&amp;language=bg">Modal</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">CZ</div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SingleOffer_PDF.html?language=cz">Embedded</a></div>
+                    <div class="col-sm-4"><a href="/forms/?offer_id=A&amp;language=cz">Modal</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">DE</div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SingleOffer_Language.html">Embedded (Config)</a></div>
+                    <div class="col-sm-4"><a href="/forms/?offer_id=A&amp;language=de">Modal</a> / <a href="/de/example.html">Path</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">EL</div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SingleOffer_PDF.html?language=el">Embedded</a></div>
+                    <div class="col-sm-4"><a href="/forms/?offer_id=A&amp;language=el">Modal</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">EN</div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SingleOffer_PDF.html?language=en">Embedded</a></div>
+                    <div class="col-sm-4"><a href="/forms/?offer_id=A&amp;language=en">Modal</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">ES</div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SingleOffer_PDF.html?language=es">Embedded</a></div>
+                    <div class="col-sm-4"><a href="/forms/?offer_id=A&amp;language=es">Modal</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">FR</div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SingleOffer_PDF.html?language=fr">Embedded</a></div>
+                    <div class="col-sm-4"><a href="/forms/?offer_id=A&amp;language=fr">Modal</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">HU</div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SingleOffer_PDF.html?language=hu">Embedded</a></div>
+                    <div class="col-sm-4"><a href="/forms/?offer_id=A&amp;language=hu">Modal</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">IT</div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SingleOffer_PDF.html?language=it">Embedded</a></div>
+                    <div class="col-sm-4"><a href="/forms/?offer_id=A&amp;language=it">Modal</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">JA</div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SingleOffer_PDF.html?language=ja">Embedded</a></div>
+                    <div class="col-sm-4"><a href="/forms/?offer_id=A&amp;language=ja">Modal</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">KR</div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SingleOffer_PDF.html?language=kr">Embedded</a></div>
+                    <div class="col-sm-4"><a href="/forms/?offer_id=A&amp;language=ko">Modal</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">PL</div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SingleOffer_PDF.html?language=pl">Embedded</a></div>
+                    <div class="col-sm-4"><a href="/forms/?offer_id=A&amp;language=pl">Modal</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">PT</div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SingleOffer_PDF.html?language=pt">Embedded</a></div>
+                    <div class="col-sm-4"><a href="/forms/?offer_id=A&amp;language=pt">Modal</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">RU</div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SingleOffer_PDF.html?language=ru">Embedded</a></div>
+                    <div class="col-sm-4"><a href="/forms/?offer_id=A&amp;language=ru">Modal</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">SK</div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SingleOffer_PDF.html?language=sk">Embedded</a></div>
+                    <div class="col-sm-4"><a href="/forms/?offer_id=A&amp;language=sk">Modal</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">ZH</div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SingleOffer_PDF.html?language=zh">Embedded</a></div>
+                    <div class="col-sm-4"><a href="/forms/?offer_id=A&amp;language=zh">Modal</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">6. Multi-City Events (Offer that delivers an assetUrl from another offer)</div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SingleOffer_MultiCity.html">Multi-city Event</a></div>
+                    <div class="col-sm-4"><a href="//qa.engage.redhat.com/content/DynamicForm_UAT_SingleOffer_MultiCity">Multi-city Event</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">7. No Query String Parameters</div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SingleOffer_NoQS.html">Hard coded for Omniture</a></div>
+                    <div class="col-sm-4"><a href="//qa.engage.redhat.com/content/DynamicForm_UAT_SingleOffer_NoQS">Hard coded for Omniture</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">8. Long Form for Validation</div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SingleOffer_Validation.html">Longform Validation</a></div>
+                    <div class="col-sm-4"><a href="//qa.engage.redhat.com/content/DynamicForm_UAT_SingleOffer_Validation">Longform Validation</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">9. Custom Thank You/CTA Button</div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SingleOffer_CustomThankYou_ShowButton.html">Custom Thank You button</a></div>
+                    <div class="col-sm-4"><a href="//qa.engage.redhat.com/content/DynamicForm_UAT_SingleOffer_CustomThankYou_ShowButton">Custom Thank You button</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">10. No Thank You/CTA Button</div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SingleOffer_CustomThankYou_HideButton.html">No Thank You button</a></div>
+                    <div class="col-sm-4"><a href="//qa.engage.redhat.com/content/DynamicForm_UAT_SingleOffer_CustomThankYou_HideButton">No Thank You button</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">11. Tracked Offer (always autosubmit as if known visitor)</div>
+                    <div class="col-sm-4"><a href="/forms/?offer_id=E&amp;sc_cid=70160000000H4AjAAK&amp;pid=1">Track not Gate (Modal)</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">13. Intl Formatting of names</div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SinglOffer_International.html">International Format</a></div>
+                    <div class="col-sm-4"><a href="//qa.engage.redhat.com/example/DynamicForm_UAT_SinglOffer_International.html">International Format</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">14. Multi Offer Landing Page (Form in Modal)</div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_MultipleOffer.html">Multi-offer Landing Page</a></div>
+                    <div class="col-sm-4"><a href="//qa.engage.redhat.com/content/DynamicForm_UAT_MultipleOffer">Multi-offer Landing Page</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">15. Offer and Tactic IDs in query string parameters (s_code saves to cookies)</div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_MultipleOffer.html?sc_cid=70160000000H4AjAAK&amp;offer_ID=10150000000Ty5NoiD&amp;pid=1">Query-string Parameter capture into cookies for “Dynamic Form”</a></div>
+                    <div class="col-sm-4"><a href="//qa.engage.redhat.com/content/DynamicForm_UAT_MultipleOffer?sc_cid=70160000000H4AjAAK&amp;offer_ID=10150000000Ty5NoiD&amp;pid=1">Query-string Parameter capture into cookies for “Dynamic Form”</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">16. More query string parameter options (case-insensitive, partner id, internal tactic id)</div>
+                    <div class="col-sm-4"><a href="/forms?sc_cid=70160000000H4AjAAK&amp;offer_ID=10150000000Ty5NoiD&amp;pid=1">Query String Parameters</a></div>
+                </div>
+
+                <div class="row">
+                    <div class="hero">
+                        <h1>Custom Layout Examples</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SingleOffer_Custom_ContactFields.html">Additional Contact Fields</a></div>
+                    <div class="col-sm-4"><a href="//qa.engage.redhat.com/content/DynamicForm_UAT_SingleOffer_Custom_ContactFields">Additional Contact Fields (qa.engage)</a></div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SingleOffer_CustomThankYou_RelatedLinks.html">Related Links</a></div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SingleOffer_Custom_CTA.html">Custom CTA</a></div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SingleOffer_UDF.html">Custom Questions</a></div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SingleOffer_Custom_NoPhone.html">Hidden Phone Field</a></div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SingleOffer_Custom_NoEmail.html">Hidden Email Field</a></div>
+                    <div class="col-sm-4"><a href="/forms/example/DynamicForm_UAT_SingleOffer_Custom_EmailOnly.html">Only Display Email Field</a></div>
+                </div>
+
+
+                <div class="row">
+                    <div class="hero">
+                        <h1>Example Query String Parameters</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4"><a href="/forms?offer_id=A&amp;no_auto=true">No Auto-Submit</a></div>
+                    <div class="col-sm-4"><a href="/forms?offer_id=A&amp;access_rule=tracked">Override Offer Access Rule</a></div>
+                    <div class="col-sm-4"><a href="/forms?offer_id=A">Offer ID A</a></div>
+                    <div class="col-sm-4"><a href="/forms?no_offer=true">No Offer ID</a></div>
+                    <div class="col-sm-4"><a href="/forms?offer_id=A&amp;sc_cid=1234567890">Offer ID A &amp; External Tactic 1234567890</a></div>
+                </div>
+                <div class="row">
+                    <div class="hero">
+                        <h1>Dynamic Form - Testing/Debugging</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4"><a href="/forms?offer_id=A&amp;testing=true">Testing Info Pane</a></div>
+                    <div class="col-sm-4"><a href="/forms?offer_id=nrh404">Broken Asset URL</a></div>
+                    <div class="col-sm-4"><a href="/forms?offer_id=nrh500">Missing Asset URL</a></div>
+                    <div class="col-sm-4"><a href="/forms?offer_id=ÏÏÏÏ">Invalid Offer ID</a></div>
+                    <div class="col-sm-4">&nbsp;</div>
+                    <div class="col-sm-4">&nbsp;</div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var s = s || {};
+            s.channel = "Testing Multi-Offer Landing Page";
+        </script>
+    </body>
+</html>

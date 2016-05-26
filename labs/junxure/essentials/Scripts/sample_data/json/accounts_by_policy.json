@@ -1,0 +1,18 @@
+[{
+    "name":		"Policy 1",
+    "value":	250,
+    "color":	"#3a87ad",
+    "explode":	true
+},{
+    "name":		"Policy 2",
+    "value":	100,
+    "color":    "#468847"
+},{
+    "name":		"Policy 3",
+    "value":	30,
+    "color":    "#b94a48"
+},{
+    "name":		"Policy 4",
+    "value":    60,
+    "color":    "#f58233"
+}]

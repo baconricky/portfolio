@@ -1,0 +1,134 @@
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        //expand and miminize bottom blocks
+        $("#record-mailing-addresses a.expander-white").click(
+            function (e) {
+                var $Section = $(this).parent().parent().nextAll('div.maximized-content:first'), isVisible = $Section.is(":visible");
+                $(this).removeClass('expand-btn-white minimize-btn-white');
+                $(this).addClass(isVisible ? "expand-btn-white" : "minimize-btn-white")
+                if (isVisible) {
+                    $Section.slideUp("slow");
+                }
+                else {
+                    $Section.slideDown("slow");
+                }
+            }
+         );
+
+        //radio buttons and checkboxes
+        $('#record-mailing-addresses input[type=checkbox]').checkbox().bind('ui-checkbox-changed ui-checkbox-enabled ui-checkbox-disabled ui-checkbox-focus ui-checkbox-blur',
+            function (event, info) { $('#log').prepend('[' + $(this).attr('id') + '] ' + $('label[for=' + $(this).attr('id') + ']').text() + ': ' + event.type + '<br />'); }
+        );
+
+        $('#record-mailing-addresses input[type=radio]').radiobutton().bind('ui-radiobutton-changed ui-radiobutton-enabled ui-radiobutton-disabled ui-radiobutton-focus ui-radiobutton-blur',
+	        function (event, info) { $('#log').prepend('[' + $(this).attr('id') + '] ' + $('label[for=' + $(this).attr('id') + ']').text() + ': ' + event.type + '<br />'); }
+        );
+
+        $('#record-mailing-addresses input[type=radio][name=radiogroup3]').radiobutton('option', 'highlightGroup', true);
+
+        // Tooltips
+        $('.field-help').cluetip({
+            splitTitle: '|', // use the invoking element's title attribute to populate the clueTip...
+            // ...and split the contents into separate divs where there is a "|"
+            showTitle: false, // hide the clueTip's heading
+            cluetipClass: 'rounded',
+            waitImage: false,
+            arrows: true,
+            cursor: 'pointer',
+            dropShadowSteps: 4,
+            positionBy: 'mouse',
+            topOffset: 17
+        });
+
+    });
+</script>
+
+<div id="record-mailing-addresses" class="form-block ui-widget">
+    <div class="form-header ui-widget-header clearfix">
+        <h3 class="form-title"><a href="javascript:void(0)" title="Minimize/Maximize Mailing Address Details" class="expander-white minimize-btn-white"></a>Mailing Addresses</h3>
+         <div class='edit-form' onclick='NavigateView("record-mailing-addresses","/Record/Record/MailingAddresses?event=edit&RecordID=e736a2b2-1330-4191-9d47-190630666c27&ModelName=RecordMailAddressesModel")'><a title='Edit' class='edit-link' href='javascript:void(0)'> Edit</a></div>
+    </div>
+    <div class="clear"></div>
+    <div class="form-content maximized-content multiple-blocks">
+        <!--TODO: Implement List Card HERE-->
+        <div id="record-addresses">
+        
+        Record Addresses
+
+
+<form action="/Record/Record/MailingAddresses?event=edit&amp;RecordID=e736a2b2-1330-4191-9d47-190630666c27&amp;ModelName=RecordMailAddressesModel" class="view" method="post">    <div class="span-24 first last">
+            <div class="first last span-12">
+            <div class="first span-21 address-desc">Address 1 </div>
+            <div class="span-2 last"><div class="settings-btn"><a href="" title="Configure Custom Form Fields"></a></div></div>
+            <div class="clear"></div>        
+            <label onchange='MarkDirty(this);' isDirty='False' class='span-5 prepend-1' for="item_Data_tblLookTypeOf_AddressType_AddressType">AddressType</label>       
+            <div onchange='MarkDirty(this);' isDirty='False' class='chzn-select span-4 append-1 JxDropDownList' name='AddressType' id='addresstype_e9b951ed-1b9d-40f5-bb88-35eeb25331cf' tabindex='1' >Home</div>
+            <label for="PrimaryAddress" class="span-3">Primary<img alt="?" src="/Content/Images/icons/form-field-help-icon.png" height="10" width="10" class="field-help" title="Primary Address:|Please select a mailing address that you would like to be the primary mailing address for us to reach you." /></label>
+            <div class='centered-field span-1 JxEditorFor' name='Primary' tabindex='2' id='' ><select class="tri-state list-box" disabled="disabled"><option value="">Not Set</option><option selected="selected" value="true">True</option><option value="false">False</option></select></div> 
+            <div class="clear"></div>
+            <label onchange='MarkDirty(this);' isDirty='False' class='span-5 prepend-1' for="item_Data_AddressLabel">AddressLabel</label>
+            <div class='span-6 JxEditorFor' name='Label' tabindex='3' id='' >943110B4-DFC7-4BAF-8849-DEC9B5484A28</div> 
+            <div class="clear"></div>
+            <label onchange='MarkDirty(this);' isDirty='False' class='span-5 prepend-1' for="item_Data_tblAddresses_AddressLine1">AddressLine1</label>
+            <div class='span-6 JxEditorFor' name='AddressLine1' tabindex='4' id='tblAddresses:-AddressLine1' >544 Lawyer Circle</div> 
+            <div class="clear"></div>
+            <label onchange='MarkDirty(this);' isDirty='False' class='span-5 prepend-1' for="item_Data_tblAddresses_AddressLine2">AddressLine2</label>
+            <div class='span-6 JxEditorFor' name='AddressLine2' tabindex='5' id='tblAddresses:-AddressLine2' ></div> 
+            <div class="clear"></div>
+            <label onchange='MarkDirty(this);' isDirty='False' class='span-5 prepend-1' for="item_Data_tblAddresses_City">City</label>
+            <div class='span-4 JxEditorFor' name='City' tabindex='6' id='tblAddresses:-City' >Alexandria</div> 
+            <label onchange='MarkDirty(this);' isDirty='False' class='span-2' for="item_Data_tblAddresses_tblLookTypeOf_State_StateName">StateName</label>       
+            <div onchange='MarkDirty(this);' isDirty='False' class='chzn-select span-2 JxDropDownList' name='State' id='addressstate_e9b951ed-1b9d-40f5-bb88-35eeb25331cf' tabindex='7' ></div>
+            <div class="clear"></div>
+            <label onchange='MarkDirty(this);' isDirty='False' class='span-5 prepend-1' for="item_Data_tblAddresses_ZIP">ZIP</label>
+            <div class='span-6 JxEditorFor' name='ZipCode' tabindex='8' id='tblAddresses:-ZIP' >27877                                             </div> 
+            <div class="clear"></div>
+            <label onchange='MarkDirty(this);' isDirty='False' class='span-5 prepend-1' for="item_Data_tblAddresses_tblLookTypeOf_Country_Country">Country</label>       
+            <div onchange='MarkDirty(this);' isDirty='False' class='chzn-select span-6 JxDropDownList' name='Country' id='addresscountry_e9b951ed-1b9d-40f5-bb88-35eeb25331cf' tabindex='1' ></div>
+            <div class="clear"></div>  
+        </div>
+    </div>
+</form>
+        Record Person Addresses
+
+
+<form action="/Record/Record/MailingAddresses?event=edit&amp;RecordID=e736a2b2-1330-4191-9d47-190630666c27&amp;ModelName=RecordMailAddressesModel" class="view" method="post">    <div class="span-24 first last">
+            <div class="first last span-12">
+            <div class="first span-21 address-desc">Address 2 </div>
+            <div class="span-2 last"><div class="settings-btn"><a href="" title="Configure Custom Form Fields"></a></div></div>
+            <div class="clear"></div>        
+            <label onchange='MarkDirty(this);' isDirty='False' class='span-5 prepend-1' for="addressOwner_tblLookTypeOf_AddressType_AddressType">AddressType</label>       
+            <div onchange='MarkDirty(this);' isDirty='False' class='chzn-select span-4 append-1 JxDropDownList' name='AddressType' id='addresstype_e9b951ed-1b9d-40f5-bb88-35eeb25331cf' tabindex='1' >Business</div>
+            <label for="PrimaryAddress" class="span-3">Primary<img alt="?" src="/Content/Images/icons/form-field-help-icon.png" height="10" width="10" class="field-help" title="Primary Address:|Please select a mailing address that you would like to be the primary mailing address for us to reach you." /></label>
+            <div class='centered-field span-1 JxEditorFor' name='Primary' tabindex='2' id='' ><select class="tri-state list-box" disabled="disabled"><option value="">Not Set</option><option selected="selected" value="true">True</option><option value="false">False</option></select></div> 
+            <div class="clear"></div>
+            <label onchange='MarkDirty(this);' isDirty='False' class='span-5 prepend-1' for="addressOwner_AddressLabel">AddressLabel</label>
+            <div class='span-6 JxEditorFor' name='Label' tabindex='3' id='' ></div> 
+            <div class="clear"></div>
+            <label onchange='MarkDirty(this);' isDirty='False' class='span-5 prepend-1' for="addressOwner_tblAddresses_AddressLine1">AddressLine1</label>
+            <div class='span-6 JxEditorFor' name='AddressLine1' tabindex='4' id='tblAddresses:-AddressLine1' >544 Lawyer Circle</div> 
+            <div class="clear"></div>
+            <label onchange='MarkDirty(this);' isDirty='False' class='span-5 prepend-1' for="addressOwner_tblAddresses_AddressLine2">AddressLine2</label>
+            <div class='span-6 JxEditorFor' name='AddressLine2' tabindex='5' id='tblAddresses:-AddressLine2' ></div> 
+            <div class="clear"></div>
+            <label onchange='MarkDirty(this);' isDirty='False' class='span-5 prepend-1' for="addressOwner_tblAddresses_City">City</label>
+            <div class='span-4 JxEditorFor' name='City' tabindex='6' id='tblAddresses:-City' >Alexandria</div> 
+            <label onchange='MarkDirty(this);' isDirty='False' class='span-2' for="addressOwner_tblAddresses_tblLookTypeOf_State_StateName">StateName</label>       
+            <div onchange='MarkDirty(this);' isDirty='False' class='chzn-select span-2 JxDropDownList' name='State' id='addressstate_e9b951ed-1b9d-40f5-bb88-35eeb25331cf' tabindex='7' ></div>
+            <div class="clear"></div>
+            <label onchange='MarkDirty(this);' isDirty='False' class='span-5 prepend-1' for="addressOwner_tblAddresses_ZIP">ZIP</label>
+            <div class='span-6 JxEditorFor' name='ZipCode' tabindex='8' id='tblAddresses:-ZIP' >27877                                             </div> 
+            <div class="clear"></div>
+            <label onchange='MarkDirty(this);' isDirty='False' class='span-5 prepend-1' for="addressOwner_tblAddresses_tblLookTypeOf_Country_Country">Country</label>       
+            <div onchange='MarkDirty(this);' isDirty='False' class='chzn-select span-6 JxDropDownList' name='Country' id='addresscountry_e9b951ed-1b9d-40f5-bb88-35eeb25331cf' tabindex='1' ></div>
+            <div class="clear"></div>  
+        </div>
+    </div>
+</form>
+
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>

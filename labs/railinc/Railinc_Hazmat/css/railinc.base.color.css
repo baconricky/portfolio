@@ -1,0 +1,126 @@
+@charset "UTF-8";
+/**
+ BASE COLORS
+ **/
+
+/* Primary Colors */
+.txtDkRed {
+	color: #990000
+}
+.txtRed {
+	color: #c41230;
+}
+.bgRed {
+	background-color: #c41230;
+}
+.txtBlack {
+	color: #231f20;
+}
+.bgBlack {
+	background-color: #231f20;
+}
+.txtGreen {
+	color: #a29a4a;
+}
+.bgGreen {
+	background-color: #a29a4a;
+}
+.txtDkGrey {
+	color: #9d9fa1;
+}
+.bgDkGrey {
+	background-color: #9d9fa1;
+}
+.txtDkBrown {
+	color: #54301a;
+}
+.bgDkBrown {
+	background-color: #54301a;
+}
+/* Secondary Colors */
+.txtPurple {
+	color: #38132c;
+}
+.bgPurple {
+	background-color: #38132c;
+}
+.txtAquaGreen {
+	color: #c5e5dd;
+}
+.bgAquaGreen {
+	background-color: #c5e5dd;
+}
+.txtYellow {
+	color: #e2e278;
+}
+.bgYellow {
+	background-color: #e2e278;
+}
+.txtBrown {
+	color: #9c5f0e;
+}
+.bgBrown {
+	background-color: #9c5f0e;
+}
+/* Tertiary Colors */
+.txtGrey {
+	color: #EAEAEA;
+}
+.bgGrey {
+	color: #EAEAEA;
+}
+.txtDkGrey {
+	color: #5A5758;
+}
+.bgDkGrey {
+	color: #5A5758;
+}
+.txtGrey {
+	color: #EAEAEA;
+}
+.bgGrey {
+	color: #EAEAEA;
+}
+.txtGrey {
+	color: #EAEAEA;
+}
+.bgGrey {
+	color: #EAEAEA;
+}
+.txtWhite {
+	color: #FFFFFF;
+}
+.bgWhite {
+	color: #FFFFFF;
+}
+.paging_full_numbers span.paginate_button {
+	background-color: #ddd;
+}
+.paging_full_numbers span.paginate_button:hover {
+	background-color: #ccc;
+}
+.paging_full_numbers span.paginate_active {
+	background-color: #99B3FF;
+}
+table.display tr.even.row_selected td {
+	background-color: #B0BED9;
+}
+table.display tr.even.row_selected td:over {
+	background-color: red;
+}
+table.display tr.odd.row_selected td {
+	background-color: #9FAFD1;
+}
+table.display tr.odd.row_selected td:over {
+	background-color: red;
+}
+/*
+ * Sorting classes for columns
+ */
+/* For the standard odd/even */
+tr.odd td.sorting_1 {
+	background-color: #FFC;
+}
+tr.even td.sorting_1 {
+	background-color: #FFC;
+}

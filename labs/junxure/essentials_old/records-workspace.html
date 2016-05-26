@@ -1,0 +1,208 @@
+<h1>Records</h1>
+<div id="app-workspace-toolbar" class="collapsible" data-url="records-toolbar.html"></div>
+
+<div id="app-workspace-grid"></div>
+<div id="app-workspace-summary" class="collapsible"></div>
+
+<!-- Window HTML -->
+<div id="app-window"></div>
+            
+<!-- Kendo/Telerik Templates -->
+
+    <script type="text/x-kendo-template" id="app-grid-toolbar-template">
+        <div class="toolbar">
+            <label class="category-label" for="view-by">View entries by:</label>
+            <select id="view-by">
+                <option>Record</option>
+                <option>Person</option>
+            </select>
+        </div>
+    </script>
+    <script type="text/x-kendo-template" id="app-workspace-summary-template">
+        <div class="collapsable">
+            <div id="app-records-summary-header">
+                <h2 class="toggle ui-helper-clearfix">#= Record # Summary</h2>
+        	</div>
+        	<div class="home-block home-block-yellow">
+        		<b>Alert</b> If there is an alert, it would appear here. And be editable as in the current system.
+            </div>
+            <div class="ingrid in-fifths">
+            	<div class="gunit" style="width:100px">
+            	   <img style="float:left;" id="app-summary-pic" src="Content/Images/profile-pic-0.png" alt="PersonPic" width="80" height="80" />
+                </div>
+            	<div class="gunit">
+            		<h4>Record Contacts</h4>
+                    <ul>
+                        <li><label class="app-contact-name">#= Contact1 #</label> Birth Date: #= kendo.toString(Contact1BDay, "MM/dd/yyyy") #</li>
+                        <li><label class="app-contact-name">#= Contact2 #</label> Birth Date: #= kendo.toString(Contact2BDay, "MM/dd/yyyy") #</li>
+                        <li><label>#= Tier # Tier</label></li>
+            		</ul>
+        		</div>
+	       		<div class="gunit">
+	        		<h4>Contact Methods</h4>
+	                <ul class="stacked">
+	                    <li><label>#= Contact1PhoneType # Phone for #= Contact1 #</label> <span class="app-contact">#= Contact1Phone #</span>
+	                    <li><label>#= Contact1PhoneType # Phone for #= Contact2 #</label> <span class="app-contact">#= Contact2Phone #</span>
+	                    <li><label>#= Contact1EmailType # EMail for #= Contact1 #</label> <a href="mailto:#= Contact1Email #" class="app-contact">#= Contact1Email #</a></dd>
+	                    <li><label>Street Address</label> 123 Sesame Street<br> PO Box 123456<br> Townesville, ST 09876-0000</dd>
+	                </ul>
+	        	</div>
+
+	            <div class="gunit">
+	                <h4>Upcoming Actions</h4>
+	                <ul class="SummaryActions">
+	                    <li>08/01 <a href="%23">Scheduled Meeting</a></li>
+	                    <li>07/22 <a href="%23">EMail</a></li>
+	                    <li>07/14 <a href="%23">Letter</a></li>
+	                    <li>07/05 <a href="%23">Phone</a></li>
+	                    <li>07/01 <a href="%23">Scheduled Meeting</a></li>
+	                </ul>
+	                <h4>Recent Actions</h4>
+	                <ul class="SummaryActions">
+	                    <li>06/22 <a href="%23">Phone</a></li>
+	                    <li>06/21 <a href="%23">EMail</a></li>
+	                    <li>06/20 <a href="%23">Fax</a></li>
+	                    <li>06/19 <a href="%23">Phone</a></li>
+	                    <li>06/01 <a href="%23">Scheduled Meeting</a></li>
+	                </ul>
+	                
+	            </div>
+
+	        	<div class="gunit">
+	        		<h4>Assigned Staff</h4>
+	        		<ul class="stacked">
+	        			<li><label>Advisors</label> #= Advisor1 #<br> #= Advisor2 #</dd>
+	        			<li><label>CSR</label> #= CSR #</li>
+	        		</ul>
+	        	</div>
+	        </div>
+	        
+	        <div>
+        		<h4>Tags</h4>
+        		<span class="app-tags">
+        		  <a href="" class="tag">Holiday Gift</a>
+        		  <a href="" class="tag">Newsletter</a>
+        		  <a href="" class="tag">Interests: Automobiles</a>
+        		  <a href="" class="tag">Interests: Computers</a>
+        		  <a href="" class="tag">Interests: Music</a>
+        		  <a href="" class="tag">Interests: Travel</a>
+                </span>
+            </div>
+                
+	    </div>
+	</script>
+
+<script type="text/javascript">
+
+    function SetupWorkspaceGridAndSummary() {        
+        $("#app-workspace-grid").kendoGrid({
+            dataSource: {
+                data: SampleData.GetRecordData(100),
+                pageSize: 20,
+                serverPaging: false,
+                serverFiltering: false,
+                serverSorting: false
+            },
+            groupable: true,
+            selectable: "multiple, row",
+            scrollable: {
+                virtual: true
+            },
+            navigatable: true,
+            filterable: true,
+            sortable: true,
+            pageable: false,
+            resizable: true,
+            toolbar: kendo.template($("#app-grid-toolbar-template").html()),
+            columns: [
+            {
+                field: "AlertFlag",
+                title: "Alert",
+                template: '<img src="Content/Styles/junxure/tango-icons/small-normal/#= AlertFlag #"/>',
+                width: 32,
+                filterable: false
+            },
+            "Record",
+            "Tier",
+            {
+                field: "Contact1",
+                title: "Contact 1"
+            }, {
+                field: "Contact1Phone",
+                title: "Phone"
+            }, {
+                field: "Contact2",
+                title: "Contact 2"
+            }, {
+                field: "Contact2Phone",
+                title: "Phone"
+            }, {
+                field: "Advisor1",
+                title: "Advisor"
+            }, {
+                field: "Advisor2",
+                title: "Advisor"
+            }, {
+                field: "LastContacted",
+                title: "Last Contacted",
+                template: '#= kendo.toString(LastContacted,"MM/dd/yyyy") #'
+            }, 
+            "Company"
+            , {
+                field: "AUM",
+                title: "Assets",
+                template: '<div style="text-align:right;">$ #= kendo.toString(AUM, "n2") #</div>'
+            }]
+        });
+        
+        
+        var RecordSummary = $("#app-workspace-summary"),
+            RecordGrid = $("#app-workspace-grid").data("kendoGrid"),
+            SummaryTemplate = kendo.template($("#app-workspace-summary-template").html());
+            
+        RecordGrid.bind("change", function(e) {
+            e.preventDefault();
+            
+            var selected = RecordGrid.select(),
+                dataItem = RecordGrid.dataItem(selected);
+    
+            RecordSummary.html(SummaryTemplate(dataItem));
+        });
+    }
+    
+    $(document).ready(function() {
+        var $window = $("#app-window");
+     
+        $("#app-workspace-view-by").kendoDropDownList({
+            dataTextField: "name",
+            dataValueField: "value",
+            autoBind: false,
+            optionLabel: "All",
+            dataSource: SampleData.ViewByDataSource("records"),
+            change: function() {
+                var value = this.value();
+                if (value) {
+                    console.log("value: " + value);
+                } else {
+                    $("#app-workspace-grid").data("kendoGrid").dataSource.filter({});
+                }
+            }
+        });
+        
+		Essentials.SetWorkspaceToolbar();
+
+        SetupWorkspaceGridAndSummary();
+
+        $('.summary-toggle').next().hide();
+    
+        if (!$window.data("kendoWindow")) {
+            $window.kendoWindow({
+                actions: ["Minimize", "Maximize", "Close"],
+                width: "615px",
+                title: "New Action",
+                visible: false,
+                content: "record-new_action.html"
+            });
+        }
+    });    
+</script>

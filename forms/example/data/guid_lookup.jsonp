@@ -1,0 +1,12 @@
+function GetElqContentPersonalizationValue(strDataField) {
+    var strTemp = '';
+    if(strDataField == 'V_Browser_Type' || strDataField == 'Browser_Type'){strTemp = 'Chrome 33.0';}
+    if(strDataField == 'V_LastPageInVisit' || strDataField == 'LastPageInVisit'){strTemp = 'Form Submitted\x3a Responded to Campaign';}
+    if(strDataField == 'V_MostRecentReferrer' || strDataField == 'MostRecentReferrer'){strTemp = 'http\x3a\x2f\x2f\x2fforms\x2fexample\x2fDynamicForm_UAT_SingleOffer_MultiCity.html';}
+    if(strDataField == 'V_ElqEmailAddress' || strDataField == 'ElqEmailAddress'){strTemp = 'nharris\x40redhat.com';}
+    if(strDataField == 'V_CountryFromIP' || strDataField == 'CountryFromIP'){strTemp = 'United States';}
+    if(strDataField == 'V_ProvinceFromIP' || strDataField == 'ProvinceFromIP'){strTemp = 'North Carolina';}
+    if(strDataField == 'V_CityFromIP' || strDataField == 'CityFromIP'){strTemp = 'Raleigh';}
+    if(strDataField == 'V_Email_Address' || strDataField == 'Email_Address'){strTemp = 'nharris\x40redhat.com';}
+    return strTemp;
+}

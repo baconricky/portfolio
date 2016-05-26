@@ -1,0 +1,371 @@
+/* 
+ * defs for small "modules" in messages ctr (landing page)
+ */
+.moduleTitle {
+    height: 38px;
+    border-bottom: 1px dotted #c0cfde;
+}
+
+	.moduleTitle h2 {
+	    float: left;
+	    font-size: 1.65em;
+	    border-bottom: none;
+	}
+	
+	.moduleTitle p {
+	    font-size: .85em;
+	    text-align: right;
+	    margin: 0;
+	}
+
+.homeUserModule .moduleTitle {
+    border-bottom: none;
+}
+
+.homeUserModuleBtnRow {
+    text-align: right;
+    height: 25px;
+}
+
+	.homeUserModuleBtnRow img {
+	    vertical-align: middle;
+	}
+
+/* 
+ * "Call to action button" defs for landing pages
+ */
+.ctaWrapper {
+    width: 100%;
+    text-align: center;
+	font-family:Trebuchet MS,Helvetica,sans-serif;
+    padding: 20px;
+    margin: auto;
+}
+
+	.ctaContainer {
+		display:inline-block;
+		/* IE7 hackery....*/
+		.display:inline;
+		
+	    text-align: center;
+	    border: 1px solid #6688DD;
+	    font-family: Trebuchet MS, Helvetica, sans-serif;
+	    height: 69px;
+	    margin-left: 4px;
+		clear:both;
+	}
+
+		.ctaLeft {
+			background: url('../images/layout/cta-left.png') no-repeat scroll 0 0 transparent;
+			height:68px;
+			float:left;
+			width:10px;
+		}
+		.ctaMiddle {
+			background: url('../images/layout/cta-middle.png') repeat-x;
+			height:68px;
+			float:left;
+			min-width:10px;
+		}
+			.ctaMiddle h2 {
+				margin-bottom:12px;
+				color:white;
+				font-variant:small-caps;
+				text-align:center;
+				letter-spacing:.15em;
+				min-width:300px;
+			}
+			.ctaMiddle a {
+			    color: #555;
+			    font-size: 1.75em;
+			    padding: 10px 10px 10px 0px;
+			    text-align: center;
+			    text-decoration: none
+			}
+			.ctaMiddle a:hover {
+			    color: #333;
+			}
+		.ctaRight {
+			background: url('../images/layout/cta-right.png') no-repeat scroll 0 0 transparent;
+			height:68px;
+			float:left;
+			width:10px;
+		}
+
+/* 
+ * landing page/message center "splash" area, with the nice image in the BG and all that
+ */
+#splash {
+    width: 100%;
+    margin-bottom: 13px;
+    color: #258;
+    background: #FFF url("../images/layout/form_section_bg.gif") repeat-x scroll center bottom;
+    border: 1px solid #ccc;
+}
+
+	#splashContent {
+	    width: 100%;
+	    min-height: 315px;
+	}
+
+#quickLinks {
+    float: right;
+	padding:0 5px 0 0;
+    width: 17.5%;
+}
+
+	#quickLinks div {
+	    margin: 13px 0 0 0;
+	    padding: 0 7px 13px 10px;
+	    border-left: 1px solid #ccc;
+	}
+	
+	#quickLinks h2 {
+	    font-size: 1.25em;
+	    line-height: .6em;
+	}
+	
+	#quickLinks ul {
+	    margin-top: 10px;
+	    height: 260px;
+	    overflow-y: hidden;
+	}
+
+	#quickLinks a {
+	    line-height: 1.36em;
+	}
+	
+	#quickLinks li {
+	    margin-bottom: 7px;
+	}
+
+#announcements {
+    float: right;
+    width: 50%;
+    margin-right: 20px;
+    padding-top: 11px;
+    /*background-color: #fff;
+     opacity: 0.7;
+     filter: alpha(opacity=70);*/
+}
+
+	#announcements ul {
+	    clear: left;
+	    margin-top: 10px;
+	    font-size: .85em;
+	}
+	
+	#announcements li {
+	    margin-right: 0;
+	    padding-bottom: 5px;
+	    border-bottom: 1px dotted #c0cfde;
+	}
+	
+	#announcements li p {
+    	margin: 7px 0;
+	}
+
+	#announcements li ul:first-child {
+	    clear: both;
+	    font-size: 1.2em;
+	    *margin-top: 0;
+	}
+	
+	#announcements li li {
+	    float: left;
+	    margin: 0 35px 10px 0;
+	    *margin-bottom: 0;
+	    padding:
+	    0;
+	    border-bottom: none;
+	}
+	
+	#announcements ul + p {
+	    clear: left;
+	}
+
+/*
+ * these styles define the look and feel for the message center inbox
+ */
+
+#messageCenter {
+    width: 73%;
+    height: 265px;
+    float: left;
+    margin-bottom: 13px;
+    padding: 5px;
+    color: #258;
+    background: #E7EBEF url("../images/layout/landing_module_bg.gif") repeat-x top;
+    border: 1px solid #CCC;
+}
+
+	#messageCenter .moduleTitle {
+	    height: 55px;
+	}
+	
+	#messageCenter .moduleTitle h2 {
+	    margin: 10px 58px;
+	}
+	
+	#messageCenter .moduleTitle p {
+	    padding: 8px 0 0 10px;
+	}
+
+.messageTable {
+    width: 100%;
+    border: none;
+}
+
+	.messageTable th {
+	    text-align: left;
+	    background-color: transparent;
+	    border-width: 0 0 2px;
+	}
+	
+	.messageTable tbody .even, .messageTable tbody .odd {
+	    font-size: 8pt;
+	}
+	
+	.messageTable td {
+	    padding: 5px;
+	    border: none;
+	}
+	
+	.messageTable .unread {
+	    font-weight: bold;
+	}
+	
+	.messageTable a {
+	    display: block;
+	    vertical-align: middle;
+	    font-size: 10pt;
+	    line-height: 1.2em;
+	    height: 2.4em;
+	    padding-bottom: 2px;
+	    overflow: hidden;
+	}
+
+/*
+ * these styles define the look and feel for the news modules on the landing page/message center
+ */
+
+.newsModule {
+    float: left;
+    background: url(../images/layout/form_section_bg.gif) repeat-x scroll center bottom #FFFFFF;
+    width: 23%;
+    color: #258;
+    padding: 5px;
+    margin: 0 0 13px .94%;
+    border: 1px solid #ccc;
+}
+
+.homeUserModule {
+    float: left;
+    background: url(../images/layout/form_section_bg.gif) repeat-x scroll center bottom #FFFFFF;
+    color: #258;
+    padding: 5px;
+    margin: 0 13px 13px .94%;
+    border: 1px solid #ccc;
+}
+
+div .newsModule:first-child {
+    margin-left: 0;
+}
+
+	.newsModule h4 {
+	    line-height: 1.1em;
+	}
+
+
+	.newsModule p {
+	    margin: 0;
+	}
+
+	.newsModule h3 {
+	    float: left;
+	    width: 90%;
+	    height: 2.2em;
+	    overflow: hidden;
+	    line-height: 1.1em;
+	    font-size: 1.15em;
+	}
+	
+	.newsModule ul {
+	    clear: left;
+	    font-size: .85em;
+	    margin-top: 13px;
+	}
+	
+	.newsModule li {
+	    margin-bottom: 10px;
+	}
+
+#mainContent h4 + p {
+    margin-top: 0;
+}
+
+/* 
+ * DEPRICATED
+ */
+
+#CTA-shadow {
+    background: url(../images/layout/peCTA-shadow.png);
+    width: 336px;
+    height: 77px;
+    margin: 15px auto 0;
+}
+
+#CTA {
+    font-family: Trebuchet MS, Helvetica, sans-serif;
+    background-color: #6688dd;
+    width: 326px;
+    height: 69px;
+    border: 1px solid #6688dd;
+    margin-left: 4px;
+}
+
+#mainContent #CTA h2 {
+    background-image: url(../images/layout/peCTA.gif);
+    height: 21px;
+    background-repeat: no-repeat;
+    font-size: 1.2em;
+    font-variant: small-caps;
+    letter-spacing: .2em;
+    text-align: center;
+    color: #e4ebf8;
+}
+
+#CTA #online {
+    float: left;
+    display: block;
+    width: 326px;
+    height: 47px;
+    margin-top: 1px;
+    background-image: url(../images/layout/peCTA.gif);
+    background-position: 0 -21px;
+    background-repeat: no-repeat;
+    text-indent: -999em;
+}
+
+#CTA #online:hover {
+    background-image: url(../images/layout/peCTA.gif);
+    background-position: 0 -68px;
+}
+
+#CTA #download {
+    float: left;
+    display: block;
+    width: 225px;
+    height: 47px;
+    margin-top: 1px;
+    background-image: url(../images/layout/peCTA.gif);
+    background-position: -225px -21px;
+    background-repeat: no-repeat;
+    text-indent: -999em;
+}
+
+#CTA #download:hover {
+    background-image: url(../images/layout/peCTA.gif);
+    background-position: -225px -68px;
+}
+

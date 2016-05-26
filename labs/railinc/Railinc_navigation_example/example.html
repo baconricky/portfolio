@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Railinc - Hazmat Query">
+		<meta name="author" content="nick.harris@railinc.com">
+		<title>Railinc - Top Navigation Example</title>
+		<!-- JS -->
+		<script src="js/jquery.tools.min.js" type="text/javascript"></script>	
+		<script src="js/jquery.hoverIntent.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="js/superfish.js"></script>
+
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="css/railinc.theme.css"/>
+		<link rel="stylesheet" type="text/css" href="css/railinc.base.reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/railinc.base.standard.css"/>
+
+		<link rel="stylesheet" type="text/css" href="css/superfish.css" media="screen">
+
+		<!-- Local JavaScript -->
+		<script type="text/javascript">
+		// initialise plugins
+		$(function(){
+			$('ul.sf-menu').superfish({ 
+				delay:       100,                            // one second delay on mouseout 
+				speed:       'fast',                          // faster animation speed 
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<div id="header">
+			<div id="util-nav-wrapper">
+				<ul id="util-nav">
+					<li>
+						<span class="userName">ipacp01 :</span><span class="company">RAIL - Railinc Corporation</span>
+					</li>
+					<li>
+						<a href="http://www.railinc.com/rportal" class="launchPad">Launch Pad</a>
+						<div class="sub">
+							<ul>
+								<li>
+									<h2>Applications</h2>
+									<ul id="appList">
+										<li>
+											<a href="#">UMLER</a>
+										</li>
+										<li>
+											<a href="#">SCRS</a>
+										</li>
+										<li>
+											<a href="#">Embargoes</a>
+										</li>
+										<li>
+											<a href="#">Equipment Health</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<h2>User Services</h2>
+									<ul>
+										<li>
+											<a href="https://wwwdev.railinc.com/sso/user/setsession?redirect=/sso/editUserProfile.do">Edit Profile</a>
+										</li>
+										<li>
+											<a href="https://wwwdev.railinc.com/sso/user/setsession?redirect=/sso/editUserProfile.do">Change Password</a>
+										</li>
+										<li>
+											<a href="https://wwwdev.railinc.com/sso/user/setsession?redirect=/sso/editUserProfile.do">View / Request Permissions</a>
+										</li>
+										<li>
+											<a href="https://wwwdev.railinc.com/sso/user/setsession?redirect=/sso/editUserProfile.do">Permission Request Status</a>
+										</li>
+										<li>
+											<a href="http://www.railinc.com/rportal/web/csc">Launch Pad</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="http://www.railinc.com/contactus">Contact Us</a>
+					</li>
+					<li class="lastLK">
+						<a href="http://www.railinc.com/sso">Sign Out</a>
+					</li>
+				</ul>
+			</div>
+			<a href="http://www.railinc.com" class="logo"><img src="images/logo.png" alt="Go to www.railinc.com" width="150" height="26" border="0" /></a>
+			<div class="headerDescription">
+				APPLICATION NAME
+			</div>
+			<div class="clear"></div>
+		</div>
+		<!-- Header End -->
+		<!-- App Nav Begin -->
+		<div id="appNavWrapper">
+			<ul id="nav" class="sf-menu">
+				<li class="current">
+					<a href="#">Parent 1</a>
+				</li>
+				<li>
+					<a href="#">Parent 2</a>
+					<ul>
+						<li><a href="#">P2 Child 1</a></li>
+						<li><a href="#">P2 Child 2</a></li>
+						<li><a href="#">P2 Child 3</a></li>
+						<li><a href="#">P2 Child 4</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Parent 3</a>
+					<ul>
+						<li>
+							<a href="#">P3 Child 1</a>
+							<ul>
+								<li><a href="#">P3 C1 Child 1</a></li>
+								<li><a href="#">P3 C1 Child 2</a></li>
+								<li><a href="#">P3 C1 Child 3</a></li>
+								<li><a href="#">P3 C1 Child 4</a></li>
+								<li><a href="#">P3 C1 Child 5</a></li>
+								<li><a href="#">P3 C1 Child 6</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">P3 Child 2</a>
+							<ul>
+								<li><a href="#">P3 C2 Child 1</a></li>
+								<li><a href="#">P3 C2 Child 2</a></li>
+								<li><a href="#">P3 C2 Child 3</a></li>
+								<li><a href="#">P3 C2 Child 4</a></li>
+								<li><a href="#">P3 C2 Child 5</a></li>
+								<li><a href="#">P3 C2 Child 6</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">P3 Child 3</a>
+							<ul>
+								<li><a href="#">P3 C3 Child 1</a></li>
+								<li><a href="#">P3 C3 Child 2</a></li>
+								<li><a href="#">P3 C3 Child 3</a></li>
+								<li><a href="#">P3 C3 Child 4</a></li>
+								<li><a href="#">P3 C3 Child 5</a></li>
+								<li><a href="#">P3 C3 Child 6</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">P3 Child 4</a>
+							<ul>
+								<li><a href="#">P3 C4 Child 1</a></li>
+								<li><a href="#">P3 C4 Child 2</a></li>
+								<li><a href="#">P3 C4 Child 3</a></li>
+								<li><a href="#">P3 C4 Child 4</a></li>
+								<li><a href="#">P3 C4 Child 5</a></li>
+								<li><a href="#">P3 C4 Child 6</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Parent 4</a>
+					<ul>
+						<li>
+							<a href="#">P4 Child 1</a>
+							<ul>
+								<li><a href="#">P4 C1 Child 1</a>
+									<ul>
+										<li><a href="#">P4 C1 C1 Child 1</a></li>
+										<li><a href="#">P4 C1 C1 Child 2</a></li>
+										<li><a href="#">P4 C1 C1 Child 3</a></li>
+										<li><a href="#">P4 C1 C1 Child 4</a></li>
+										<li><a href="#">P4 C1 C1 Child 5</a></li>
+									</ul>
+								</li>
+								<li><a href="#">P4 C1 Child 2</a>
+									<ul>
+										<li><a href="#">P4 C1 C2 Child 1</a></li>
+										<li><a href="#">P4 C1 C2 Child 2</a></li>
+										<li><a href="#">P4 C1 C2 Child 3</a></li>
+										<li><a href="#">P4 C1 C2 Child 4</a></li>
+										<li><a href="#">P4 C1 C2 Child 5</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">P4 Child 2</a>
+							<ul>
+								<li><a href="#">P4 C2 Child 1</a>
+									<ul>
+										<li><a href="#">P4 C2 C1 Child 1</a></li>
+										<li><a href="#">P4 C2 C1 Child 2</a></li>
+										<li><a href="#">P4 C2 C1 Child 3</a></li>
+										<li><a href="#">P4 C2 C1 Child 4</a></li>
+										<li><a href="#">P4 C2 C1 Child 5</a></li>
+									</ul>
+								</li>
+								<li><a href="#">P4 C2 Child 2</a>
+									<ul>
+										<li><a href="#">P4 C2 C2 Child 1</a></li>
+										<li><a href="#">P4 C2 C2 Child 2</a></li>
+										<li><a href="#">P4 C2 C2 Child 3</a></li>
+										<li><a href="#">P4 C2 C2 Child 4</a></li>
+										<li><a href="#">P4 C2 C2 Child 5</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+	</body>
+</html>

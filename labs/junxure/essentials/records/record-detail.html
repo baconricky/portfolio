@@ -1,0 +1,159 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>Junxure Essentials &raquo; Record &raquo; Walters, Fred</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		
+		<!-- Le style -->
+		
+		<!-- DO NOT EDIT - generate from ../Content/less/application.less -->
+		<!-- SEE http://lesscss.org/ -->
+		<!--
+		<link rel="stylesheet" href="assets/css/essentials.css" />
+		-->
+		<link rel="stylesheet" type="text/css" href="../Content/less/application.css" />
+		
+		<style>
+			.action-subject {
+				font: 12pt/14pt sans-serif;
+				font-weight: bold;
+			}
+			.action-assignment {
+				font: 10pt/12pt sans-serif;
+				margin-top: 5px;
+			}
+			.action-summary {
+				font: 8pt/10pt sans-serif;
+				margin-top: 5px;
+			}
+			
+			.k-listview:after, .product dl:after {
+				content: ".";
+				display: block;
+				height: 0;
+				clear: both;
+				visibility: hidden;
+			}
+			.k-listview {
+				border: 0;
+				padding: 0 0 20px 0;
+				min-width: 0;
+			}
+		</style>
+		
+		<!-- LESS - ONLY FOR DEVELOPMENT
+		<link rel="stylesheet/less" type="text/css" href="../Content/less/application.less"/>
+		<script type="text/javascript">less = { env: 'development' };</script>
+		<script src="../Scripts/plugins/less-1.3.0.min.js"></script>
+		<script type="text/javascript">less.watch();</script>
+		/LESS -->
+		
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!-- Le fav and touch icons -->
+		<link rel="shortcut icon" href="http://www.junxure.com/public/sites/default/files/imgs/favicon.png">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.junxure.com/public/sites/default/files/imgs/favicon.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://www.junxure.com/public/sites/default/files/imgs/favicon.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://www.junxure.com/public/sites/default/files/imgs/favicon.png">
+		<link rel="apple-touch-icon-precomposed" href="http://www.junxure.com/public/sites/default/files/imgs/favicon.png">
+	</head>
+	
+	<body data-spy="scroll" data-target=".subnav" data-offset="50">
+<!-- title bar -->
+	    <div class="remote-content titlebar" data-src="../common/titlebar.html"></div>
+	    <!-- /title bar -->
+		
+		<!-- record summary -->
+		<div class="remote-content" data-src="summary.html"></div>
+		<!-- /record summary -->
+
+		<!-- bread crumb trail -->
+		<div class="container-fluid">
+			<ul class="breadcrumb">
+				<li><a href="#home"><i class="icon-home"></i> essentials</a> <span class="divider"><i class="icon-chevron-right"></i></span></li>
+				<li><a href="#home">Records</a> <span class="divider"><i class="icon-chevron-right"></i></span></li>
+				<li class="active">Walters, Fred</li>
+			</ul>
+		</div>
+		<!-- /bread crumb trail -->
+
+		<!-- page content -->
+		<!-- tab bar -->
+		<div class="dashboard-container container-fluid">
+			<ul id="tabstrip">
+			    <li class="k-state-active"><a data-toggle="tab" class="tabs-icon" href="Dashboard.html"><i class="icon-tasks"></i> Dashboard</a></li>
+                <li><a data-toggle="tab" class="tabs-icon" href="Profile.html"><i class="icon-user"></i> Profile</a></li>
+                <li><a data-toggle="tab" class="tabs-icon" href="Actions.html"><i class="icon-calendar"></i> Actions</a></li>
+                <li><a data-toggle="tab" class="tabs-icon" href="Documents.html"><i class="icon-file"></i> Documents</a></li>
+                <li><a data-toggle="tab" class="tabs-icon" href="Financials.html"><i class="icon">$</i> Financials</a></li>
+                <li><a data-toggle="tab" class="tabs-icon" href="Opportunities.html"><i class="icon-road"></i> Opportunities</a></li>
+                <li><a data-toggle="tab" class="tabs-icon" href="Planning.html"><i class="icon-list-alt"></i> Planning</a></li>
+            </ul>
+		</div>
+		<!-- /tab bar -->
+
+		<!-- navigation bar -->
+	    <div class="remote-content" data-src="../common/navigation.html" id="navpanel"></div>
+	    <!-- /navigation bar -->
+	    
+		<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script type="text/javascript" src="../Scripts/jquery/jquery-1.7.2.js"></script>
+		<script type="text/javascript" src="../Scripts/jquery/jquery-ui-1.8.21.js"></script>
+		
+		<script type="text/javascript" src="../Scripts/bootstrap/bootstrap.js"></script>
+		<script type="text/javascript" src="../Scripts/bootstrap/bootstrap-affix.js"></script>
+		
+		
+		<script type="text/javascript" src="../Scripts/kendo/kendo.core.js"></script>
+		<script type="text/javascript" src="../Scripts/kendo/kendo.web.js"></script>
+		<script type="text/javascript" src="../Scripts/kendo/kendo.dataviz.min.js"></script>
+		
+		<script type="text/javascript" src="../Scripts/plugins/jquery.officebar.js"></script>
+		<script type="text/javascript" src="../Scripts/plugins/chosen.jquery.js"></script>
+		<script type="text/javascript" src="../Scripts/plugins/ui.checkbox-ui.radiobutton.js"></script>
+		<script type="text/javascript" src="../Scripts/plugins/jquery.autoresize.js"></script>
+		<script type="text/javascript" src="../Scripts/plugins/jquery.cluetip.js"></script>
+		<script type="text/javascript" src="../Scripts/plugins/fullcalendar.js"></script>
+		
+		<script type="text/javascript" src="../Scripts/essentials/base.js"></script>
+		<script type="text/javascript" src="../Scripts/essentials/form-toggle.js"></script>
+
+		<script type="text/javascript" src="../Scripts/sample_data/Nonsense.js"></script>
+		<script type="text/javascript" src="../Scripts/sample_data/localdata.js"></script>
+		
+		<script type="text/javascript" src="../Scripts/google-code-prettify/prettify.js"></script>
+		<script type="text/javascript" src="../Scripts/application.js"></script>
+		
+		<script type="text/javascript">
+            $(document).ready(function () {
+            
+				$("#tabstrip").kendoTabStrip({
+					animation: { open: { effects: "fadeIn"} },
+					contentUrls: [
+						'Dashboard.html',
+						'Profile.html',
+						'Actions.html',
+						'Documents.html',
+						'Financials.html',
+						'Opportunities.html',
+						'Planning.html'
+					]
+				});
+            });
+        </script>
+		<!-- End Scripts-->
+	</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+	
+	<!-- jQuery UI Stuff -->
+	<link rel="stylesheet" href="../css/jquery-ui-1.8.21.custom.css" type="text/css" media="all" />
+	<script src="../Scripts/jquery-ui-1.8.21.min.js" type="text/javascript"></script>
+	<script src="../Scripts/jquery.ui.datepicker.js" type="text/javascript"></script>
+
+	<!-- Bootstrap Stuff -->
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.css" type="text/css" media="all" />
+	<script src="bootstrap/js/bootstrap.js" type="text/javascript"></script>
+	
+	<script>
+		
+		
+	</script>
+	
+	<!-- ABT Styles -->
+	<link rel="stylesheet" href="style.css" type="text/css" media="all" />
+	
+	<title>Business Asset</title>
+
+</head>
+
+<body>
+	
+	<div class="section top">
+		<div class="row-fluid">
+			<div class="span12">
+				<div id="net-value" class="heading">
+					<div class="amount flag">$228,600</div>
+					<h2>Net Value</h2>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!--<div class="row-fluid">
+			
+			<div class="span12">
+				<div id="ownership-value">
+					<div class="amount"><p>25% / $50,000.00 <button class="btn btn-primary accordian-toggle" data-toggle="collapse" data-target="#owners" data-parent="#accordian">details</button></p></div>
+					<p>Ownership Value</p>
+				</div>
+				
+				<div id="owners" class=" collapse">
+						
+						<div class="details-block span5">First Owner</div>
+						<div class="details-block span5">Second Owner</div>
+						
+				</div>
+				
+			</div>
+			
+			<div class="span12">
+				<div id="liabilities">
+					<div class="amount flag"><p>$278,554.00 <button class="btn btn-primary accordian-toggle" data-toggle="collapse" data-target="#liability" data-parent="#accordian">details</button></p></div>
+					<p>Liabilities</p>
+				</div>
+				
+				<div id="liability" class="collapse">
+						<div class="details-block span5">First Owner</div>
+						<div class="details-block span5">Second Owner</div>
+						<div class="details-block span5">Third Owner</div>
+				</div>
+				
+			</div>
+			
+		</div>-->
+		
+		<div class="row-fluid">
+			<div class="accordian span12" id="accordion">
+		            
+		            <div class="accordion-group">
+		              <div class="accordion-heading clearfix">
+		                <p class="amount">25% / $50,000.00 <button class="btn btn-primary accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">details</button></p>
+		                <p class="label">Ownership Value</p>
+		              </div>
+		              <div id="collapseOne" class="collapse">
+		                <div class="accordion-inner">
+
+							<div class="row-fluid">
+								<div class="details-block span5">
+									<p class="clearfix"><span class="label">Joint: Ken Golding</span> <span class="value">20% / 40,000.00</span></p>
+									<p class="clearfix"><span class="label">Purchase Date: </span> <span class="value">01 / $20,000.00</span></p>
+									<p class="clearfix"><span class="label">Last Update: </span> <span class="value">07/01/2012</span></p>
+									<p class="note"><button class="btn btn-primary">>></button>A note about Ken. He's a guy and owns less stuff. We should still try to get as much of it as we can.</p>
+								</div>
+								
+								<div class="details-block span5">
+									<p class="clearfix"><span class="label">Joint: Ken Golding</span> <span class="value">20% / 40,000.00</span></p>
+									<p class="clearfix"><span class="label">Purchase Date: </span> <span class="value">01 / $20,000.00</span></p>
+									<p class="clearfix"><span class="label">Last Update: </span> <span class="value">07/01/2012</span></p>
+									<p class="note"><button class="btn btn-primary">>></button>A note about Ken. He's a guy and owns less stuff. We should still try to get as much of it as we can.</p>
+								</div>
+							</div>
+
+		                </div>
+		              </div>
+		            </div>
+		            
+		            <div class="accordion-group">
+		              <div class="accordion-heading clearfix">
+		                <p class="amount flag">$278,554.00 <button class="btn btn-primary accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">details</button></p>
+		                <p class="label">Liabilities</p>
+		                
+		              </div>
+		              <div id="collapseTwo" class="collapse">
+		                <div class="accordion-inner">
+
+							<div class="row-fluid">
+								<div class="details-block span5">
+									<p class="clearfix"><span class="label">Joint: Ken Golding</span> <span class="value"><span class="percent">50%</span> / <span class="dollar">$228,600</span></span></p>
+									<p class="clearfix"><span class="label">Purchase Date: </span> <span class="value">01 / $20,000.00</span></p>
+									<p class="clearfix"><span class="label">Last Update: </span> <span class="value">07/01/2012</span></p>
+									<button class="btn btn-primary">>></button>
+									<p class="note">A note about Ken. He's a guy and owns less stuff. We should still try to get as much of it as we can.</p>
+								</div>
+								
+								<div class="details-block span5">
+									<p class="clearfix"><span class="label">Joint: Ken Golding</span> <span class="value"><span class="percent">50%</span> / <span class="dollar flag">$228,600</span></span></p>
+									<p class="clearfix"><span class="label">Purchase Date: </span> <span class="value">01 / $20,000.00</span></p>
+									<p class="clearfix"><span class="label">Last Update: </span> <span class="value">07/01/2012</span></p>
+									<button class="btn btn-primary">>></button>
+									<p class="note">A note about Ken. He's a guy and owns less stuff. We should still try to get as much of it as we can.</p>
+								</div>
+							</div>
+							
+							<div class="row-fluid">
+								<div class="details-block span5">
+									<p class="clearfix"><span class="label">Joint: Ken Golding</span> <span class="value"><span class="percent">50%</span> / <span class="dollar">$228,600</span></span></p>
+									<p class="clearfix"><span class="label">Purchase Date: </span> <span class="value">01 / $20,000.00</span></p>
+									<p class="clearfix"><span class="label">Last Update: </span> <span class="value">07/01/2012</span></p>
+									<button class="btn btn-primary">>></button>
+									<p class="note">A note about Ken. He's a guy and owns less stuff. We should still try to get as much of it as we can.</p>
+								</div>
+							</div>					
+
+		                </div>
+		              </div>
+		            </div>
+		            
+		         </div>
+		 </div>
+		
+		
+	<div id="real-estate-information" class="section main">
+		
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="heading">
+					<h2>Business Information</h2>
+				</div>
+			</div>
+		</div>	
+		
+		<div class="row-fluid">
+			<div class="span3">
+				<div class="entry">
+					<div class="label"><p>Name</p></div>
+					<div class="value"><p>CRM Software</p></div>
+				</div>
+			</div>
+			<div class="span3">	
+				<div class="entry">
+					<div class="label"><p>Type</p></div>
+					<div class="value"><p>Software Company</p></div>
+				</div>
+			</div>
+			<div class="span3">	
+				<div class="entry">
+					<div class="label"><p>Structure</p></div>
+					<div class="value"><p>C Corp</p></div>
+				</div>
+			</div>
+			<div class="span3">				
+				<div class="entry">
+					<div class="label"><p>State of Incorporation</p></div>
+					<div class="value"><p>TX</p></div>
+				</div>
+			</div>
+		</div>		
+				
+		<div class="row-fluid">
+			<div class="span3">	
+				<div class="entry">
+					<div class="label"><p>Founded</p></div>
+					<div class="value"><p>01/01/2000</p></div>
+				</div>
+			</div>
+			<div class="span3">	
+				<div class="entry">
+					<div class="label"><p>Tax ID</p></div>
+					<div class="value"><p>98-098898</p></div>
+				</div>
+			</div>
+			<div class="span3">	
+				<div class="entry">
+					<div class="label"><p>Tax Year End Date</p></div>
+					<div class="value"><p>05/22</p></div>
+				</div>
+			</div>		
+		</div>
+		
+		<div class="row-fluid">
+			<div class="span3">
+				<div class="entry">
+					<div class="label"><p>Current Value</p></div>
+					<div class="value"><p>$200,000.00</p></div>
+				</div>
+			</div>
+			<div class="span3">	
+				<div class="entry">
+					<div class="label"><p>Last Updated</p></div>
+					<div class="value"><p>01/01/2012</p></div>
+				</div>
+			</div>
+			<div class="span3">	
+				<div class="entry">
+					<div class="label"><p>Balance Sheet Category</p></div>
+					<div class="value"><p>Liability</p></div>
+				</div>
+			</div>
+			<div class="span3">				
+				<div class="entry">
+					<div class="label"><p>Balance Sheet Owner</p></div>
+					<div class="value"><p>Client</p></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row-fluid">
+			<div class="span12">
+				<div id="notes" class="section">
+					<p class="label">Note</p>
+					<p>This is a note about this property</p>		
+				</div>
+			</div>
+		</div>
+							
+	</div>
+	
+	
+
+</body>
+</html>

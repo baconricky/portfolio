@@ -1,0 +1,131 @@
+
+/*--------------------------------------------------------
+
+Author:   Robert Piirainen
+Twitter:  @robertpiira
+Created:  2011
+Updated:  2012/2/17
+   
+--------------------------------------------------------*/
+
+
+
+
+/* INGRID
+   Here are the building blocks of Ingrid
+--------------------------------------------------------*/
+
+.ingrid {
+  margin: 0 -1em; /* Can be set in em, % or px */
+  padding: 0; /* Remove if you already reset paddings */
+  clear: both;
+  list-style: none; /* Works with ul & ol */
+  letter-spacing: -0.31em;
+  word-spacing: -0.43em;
+}
+
+.gunit,
+.field-gunit {
+  margin: 0; /* Remove if you already reset margins */
+  display: inline-block;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+}
+
+.field-gunit  {
+  display: block;
+} 
+
+
+
+
+/* GUTTERS 
+   Gutter set directly on units (thanks border-box)
+--------------------------------------------------------*/
+
+.gunit,
+.field-unit {
+  padding: 0 1em; /* Can be set in em, % or px (must match .ingrid negative margins) */
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+
+
+/* OLDIE 
+   Some IE7 patching (optional)
+--------------------------------------------------------*/
+
+.ingrid {
+  *letter-spacing: normal;
+  *zoom: 1;
+}
+
+.gunit {
+  *display: inline;
+}
+
+.gunit,
+.field-unit {
+  *margin-right: -1px;
+  *padding: 0;
+  *zoom: 1;
+}
+
+
+
+
+/* UNITS 
+   These divider classes are set on .ingrid container
+--------------------------------------------------------*/
+
+.in-halves    >   .gunit   { width: 50%; } 
+.in-thirds    >   .gunit   { width: 33.33333%; } 
+.in-fourths   >   .gunit   { width: 25%; } 
+.in-fifths    >   .gunit   { width: 20%; } 
+.in-sixths    >   .gunit   { width: 16.66666%; }
+.in-sevenths  >   .gunit   { /*width: 14.28571%;*/ }
+
+
+
+
+/* SPATIALS
+   The span-x classes are set on individual .gunits
+--------------------------------------------------------*/
+
+/* Spatial units in thirds */
+.in-halves    >   .across-two   { width: 100%; }
+
+/* Spatial units in thirds */
+.in-thirds    >   .across-two   { width: 66.66666%; }
+.in-thirds    >   .across-three   { width: 100%; }
+
+/* Spatial units in fourths */
+.in-fourths   >   .across-two   { width: 50%; }
+.in-fourths   >   .across-three { width: 75%; }
+.in-fourths   >   .across-four { width: 100%; }
+
+/* Spatial units in fifths */
+.in-fifths    >   .across-two   { width: 40%; }
+.in-fifths    >   .across-three { width: 60%; }
+.in-fifths    >   .across-four  { width: 80%; }
+.in-fifths    >   .across-five  { width: 100%; }
+
+/* Spatial units in sixths */
+.in-sixths    >   .across-two   { width: 33.33333%; }
+.in-sixths    >   .across-three { width: 50%; }
+.in-sixths    >   .across-four  { width: 66.66666%; }
+.in-sixths    >   .across-five  { width: 83.33333%; }
+.in-sixths    >   .across-six  { width: 100%; }
+
+/* Spatial units in sevenths */
+.in-sevenths  >   .across-two   { width: 28.57142%; }
+.in-sevenths  >   .across-three { width: 42.85714%; }
+.in-sevenths  >   .across-four  { width: 57.14285%; }
+.in-sevenths  >   .across-five  { width: 71.42857%; }
+.in-sevenths  >   .across-six   { width: 85.71428%; }
+.in-sevenths  >   .across-seven   { width: 100%; }
+

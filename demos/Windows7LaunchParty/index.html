@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<title>Windows 7 Launch Party</title>
+            
+	<script type="text/javascript" charset="utf-8" src="js/jquery-1.3.2.min.js"></script>
+	<!-- NOTE: need to add proper login and API key values -->
+	<script type="text/javascript" charset="utf-8" src="http://bit.ly/javascript-api.js?version=latest&login=eldouche&apiKey=R_0a8a4f63819b1d8d26c2fb90c3d5f84b"></script>
+	<script type="text/javascript" charset="utf-8">
+
+		$(function() {
+			jQuery.fn.defaultVal = function(value) {
+				$(this).val(value);
+				$(this).focus(
+					function(){ if($(this).val() == value) $(this).val(''); }
+				).blur(
+					function(){ if($(this).val() == '') $(this).val(value); }
+				);
+			}
+			$('#long_url').defaultVal('Event URL...');
+			
+		    $("form").submit(function() {
+				//grey out the "waiting" message
+				$('#short_url').css("color","#ccc");
+				$('#short_url').val("waiting for Bit.ly...");
+				
+				BitlyCB.myShortenCallback = function(data) {
+					var result;
+					for (var r in data.results) {
+						result = data.results[r];
+						result['longUrl'] = r;
+						break;
+					}
+					
+					//store the short url in a variable for later usage
+					if (result) {
+						var short_url;
+						short_url = result['shortUrl'];
+						
+						//populate short url text field and set it's color to black
+						$('#short_url').val(short_url);
+						$('#short_url').css("color","black");
+						
+						//update the 3 badge URLs
+						$('#promote_1 #badge1_code').val('<a href="'+short_url+'"><img src="http://server.com/img/badge_1.jpg" /></a>');
+						$('#promote_2 #badge2_code').val('<a href="'+short_url+'"><img src="http://server.com/img/badge_2.jpg" /></a>');
+						$('#promote_3 #badge3_code').val('<a href="'+short_url+'"><img src="http://server.com/img/badge_3.jpg" /></a>');
+						
+						//create and update the facebook link
+						fb_link = "http://www.facebook.com/share.php?u="+short_url;
+						$('#social #social_f').html('<a href="'+fb_link+'"><img border="0" src="img/FaceBook_48x48.png" /></a><a href="'+fb_link+'">Update your Facebook profile with your event!</a>');
+
+						//create and update the twitter link
+						t_link = "http://twitter.com/home?status=Join my Windows 7 Launch Party! "+short_url;
+						$('#social #social_t').html('<a href="'+t_link+'"><img border="0" src="img/Twitter_48x48.png" /></a><a href="'+t_link+'">Tweet your event</a>');
+					} else {
+						$('#short_url').val("bit.ly error!");
+						$('#short_url').css("color","red");
+					}
+					
+				}
+				BitlyClient.shorten($('#long_url').val(), 'BitlyCB.myShortenCallback');
+				return false;
+			});
+		});
+	</script>
+	
+	<style>
+	textarea {
+		margin:5px;
+		padding:5px;
+		border:1px dashed #ccc;
+		font-size:smaller;
+		width:180px;
+		height:75px;
+	}
+	
+	#short_url {
+		color: #ccc;
+	}
+	
+	center { 
+		display: none; 
+	}
+	
+	#promote_1, #promote_2, #promote_3 {
+		width:210;
+		float:left;
+		padding:10px
+	}
+	
+	.badge, .code, #social_img {
+		float:left;
+	}
+	
+	#social_links {
+		float:left;
+		padding:10px;
+	}
+	
+	#social_t, #social_f {
+		height:48px;
+		padding:10px;
+		vertical-align:middle
+	}
+	
+	</style>
+	
+</head>
+
+	<body>
+		<h1>Enter Your Event URL</h1>
+		<p>Promote your meetup by getting a custom URL to your information, or grab a badge to share on your site. Just enter the permalink for your event page and we'll shorten it so you share it anywhere.</p>
+
+		<div>
+			<form name="shorten" id="shorten">
+				<label for="long_url" style="display:none">Your event URL:</label>
+				<input type="text" id="long_url" />
+				<input type="submit" value="enter" id="doit" />
+				<br /><br />
+
+				<label for="short_url">Your shortened URL:</label><br />
+				<input type="text" id="short_url" />
+			</form>
+		</div>
+
+		<p>To further help you promote your meetup, we've created some badges you can embed on your website, social network profile, or blog. Grab the code from one of the badges below, and you can embed it on your personal site.</p>
+
+		<div id="badges" style="clear:both;">
+			<div id="promote_1">
+				<div class="badge"><img alt="badge 1" width="100" height="100" src="img/100x100.jpg" /></div>
+				<div class="code">
+				<textarea id="badge1_code"></textarea>
+				</div>
+			</div>
+			<div id="promote_2">
+				<div class="badge"><img alt="badge 1" width="100" height="100" src="img/100x100.jpg" /></div>
+				<div class="code">
+				<textarea id="badge2_code"></textarea>
+				</div>
+			</div>
+			<div id="promote_3">
+				<div class="badge"><img alt="badge 1" width="100" height="100" src="img/100x100.jpg" /></div>
+				<div class="code">
+				<textarea id="badge3_code"></textarea>
+				</div>
+			</div>
+		</div>
+
+		<p style="clear:both;">You can also grab this Countdown Widget to place on your own site so everyone will know when Windows 7 will hit shelves everywhere. Each day will display a new fact or tip about Windows 7, which will help you and your friends learn about the new system.</p>
+
+		<div id="social" style="clear:both;">
+			<div id="social_img"><img width="200" height="200" src="img/300x300.jpg" alt="Countdown Widget" /></div>
+			<div id="social_links">
+				<div id="social_t"><img border="0" src="img/Twitter_48x48.png" /></div>
+				<div id="social_f"><img border="0" src="img/FaceBook_48x48.png" /></div>
+			</div>
+		</div>
+	</body>
+</html>

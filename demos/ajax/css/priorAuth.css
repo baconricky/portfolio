@@ -1,0 +1,46 @@
+.adlScoreTable
+{	
+	margin-bottom: 13px;
+	width: 100%;
+}
+.adlScoreTable tbody
+{
+	background-color: #ffffff;
+	border: 1px solid #ABCBFF;
+}	
+.adlScoreTable caption
+{
+	font-weight: bold;	
+}
+.adlScoreTable thead
+{
+	position: absolute;
+	left: -999em;	
+}
+.adlScoreTable tr.odd
+{
+	background-color: #E7F0FF;
+}
+.adlScoreTable tr.odd th
+{
+	background-color: #c0d8ff;
+}
+.adlScoreTable tr.even th
+{
+	background-color: #cfe1ff;
+}
+.adlScoreTable th, .adlScoreTable td
+{	
+	padding: 5px;	
+}
+.adlScoreTable td
+{
+	padding-left: 10px;
+	border-left: 1px solid #c0d8ff;
+}
+.adlScoreTable th
+{
+	background-color: #cfe1ff; /* Declaration added for ie7 */
+	width: 10px;
+	font-weight: bold;
+}

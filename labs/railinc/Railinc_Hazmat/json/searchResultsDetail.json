@@ -1,0 +1,58 @@
+{
+	"US": [
+		"Hazardous Material Response Code (HMRC)":,
+		"Standard Transportaton Commodity Code (STCC)":,
+		"UN/NA ID Number":,
+		"Proper Shipping Name":,
+		"Primary Hazard Class or Division":,
+		"Subsidiary Hazard(s)":,
+		"Packing Group":,
+		"Alternate Proper Shipping Name(s)":,
+		"Technical Name(s)":,
+		"Hazard Zone":,
+		"PIH/TIH Indicator":,
+		"Hazardous Substance Name(s)":,
+		"Marine Pollutant Name(s)":,
+		"EPA Waste Stream Number(s)":
+	], "Canadian": [
+		"Hazardous Material Response Code (HMRC)":,
+		"Standard Transportaton Commodity Code (STCC)":,
+		"UN Number":,
+		"Shipping Name":,
+		"Primary Class":,
+		"Subsidiary Class(es)":,
+		"Packing Group":,
+		"Alternate Shipping Name(s)":,
+		"Technical Name(s)":,
+		"PIH/TIH Indicator":,
+		"Hazardous Substance Name(s)":,
+		"Marine Pollutant Name(s)":,
+		"ERAP Indicator":
+	], "International": [
+		"Hazardous Material Response Code (HMRC)":,
+		"Standard Transportaton Commodity Code (STCC)":,
+		"UN Number":,
+		"Proper Shipping Name":,
+		"Primary Hazard Class or Division":,
+		"Subsidiary Hazard Class(es) or Division(s)":,
+		"Packing Group":,
+		"Alternate Proper Shipping Name(s)":,
+		"Technical Name(s)":,
+		"PIH/TIH Indicator":,
+		"Hazardous Substance Name(s)":,
+		"Marine Pollutant Name(s)":
+	], "Mexican " [
+		"Hazardous Material Response Code (HMRC)":,
+		"Standard Transportaton Commodity Code (STCC)":,
+		"UN/NA ID Number":,
+		"Proper Shipping Name":,
+		"Primary Hazard Class or Division":,
+		"Subsidiary Hazard Class(es) or Division(s)":,
+		"Packing Group":,
+		"Alternate Proper Shipping Name(s)":,
+		"Technical Name(s)":,
+		"PIH/TIH Indicator":,
+		"Hazardous Substance Name(s)":,
+		"Marine Pollutant Name(s)":,
+	]
+}

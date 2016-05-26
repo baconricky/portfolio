@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Railinc - Hazmat Query">
+		<meta name="author" content="nick.harris@railinc.com">
+		<title>Railinc - Hazmat Query</title>
+		
+        <!-- Railinc Standard CSS -->
+		<link rel="stylesheet" type="text/css" href="css/standard.css"/>
+		<link rel="stylesheet" type="text/css" href="css/app.css"/>
+
+		<!-- Railinc Standard JS -->
+		<script src="js/standard.js" type="text/javascript"></script>
+		<script src="js/app.js" type="text/javascript"></script>
+        
+        <style>
+        .error {
+			border: 2px solid red;
+		}
+        </style>
+  	</head>
+	<body>
+		<!-- Header Begin -->
+		<div id="header">
+			<div id="util-nav-wrapper">
+				<ul id="util-nav">
+					<li class="row">
+						<span class="userName">ipacp01 :</span><span class="company">RAIL - Railinc Corporation</span>
+					</li>
+					<li class="row">
+						<a href="http://www.railinc.com/rportal" class="launchPad">Launch Pad</a>
+						<div class="sub">
+							<ul>
+								<li class="row">
+									<h2>Applications</h2>
+									<ul id="appList">
+										<li class="row">
+											<a href="#">UMLER</a>
+										</li>
+										<li class="row">
+											<a href="#">SCRS</a>
+										</li>
+										<li class="row">
+											<a href="#">Embargoes</a>
+										</li>
+										<li class="row">
+											<a href="#">Equipment Health</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<ul>
+								<li class="row">
+									<h2>User Services</h2>
+									<ul>
+										<li class="row">
+											<a href="https://wwwdev.railinc.com/sso/user/setsession?redirect=/sso/editUserProfile.do">Edit Profile</a>
+										</li>
+										<li class="row">
+											<a href="https://wwwdev.railinc.com/sso/user/setsession?redirect=/sso/editUserProfile.do">Change Password</a>
+										</li>
+										<li class="row">
+											<a href="https://wwwdev.railinc.com/sso/user/setsession?redirect=/sso/editUserProfile.do">View / Request Permissions</a>
+										</li>
+										<li class="row">
+											<a href="https://wwwdev.railinc.com/sso/user/setsession?redirect=/sso/editUserProfile.do">Permission Request Status</a>
+										</li>
+										<li class="row">
+											<a href="http://www.railinc.com/rportal/web/csc">Launch Pad</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="row">
+						<a href="http://www.railinc.com/contactus">Contact Us</a>
+					</li>
+					<li class="lastLK">
+						<a href="http://www.railinc.com/sso">Sign Out</a>
+					</li>
+				</ul>
+			</div>
+			<a href="http://www.railinc.com" class="logo"><img src="images/lite/logo.png" alt="Go to www.railinc.com" width="150" height="26" /></a>
+			<div class="headerDescription">
+				COMPLETE CAR HEALTH
+			</div>
+			<div class="ui-helper-clearfix"></div>
+		</div>
+		<!-- Header End -->
+		<!-- App Nav Begin -->
+		<div id="appNavWrapper">
+			<ul id="nav">
+				<li class="firstLK">
+					<a href="index.html">Home</a>
+				</li>
+			</ul>
+			<div class="ui-helper-clearfix"></div>
+		</div>
+		<!-- App Nav End -->
+		<!-- App Area Begin -->
+		<div id="container" class="container_12">
+	       <!-- Section 1: Shipping Description Elements -->
+            <div class="ui-helper-clearfix grid_2">
+            <fieldset class="row">
+                <h1>Search</h1>
+                <p>
+                	<input type="text" style="width:100%" value="BNSF488400-488430">
+                </p>
+                <p style="clear:both">
+                	<input id="carSearch" class="button ui-action-positive" style="float:left" type="submit" value="Search">
+                	<input class="button" type="button" style="float:right" value="Return">
+                </p>
+                <p style="clear:both">&nbsp;</p>
+                <div id="carsFound" class="ui-helper-clearfix advanced hidden">
+	                <h3><a href="#">Cars Found <span class="count">8</span></a></h3>
+    				<div>
+                        <p>
+                            <select style="width:100%" multiple="multiple">
+                                <option selected value="BNSF00004884100">BNSF0000488400</option>
+                                <option value="BNSF0000488401">BNSF0000488401</option>
+                                <option value="BNSF0000488402">BNSF0000488402</option>
+                                <option value="BNSF0000488403">BNSF0000488403</option>
+                                <option value="BNSF0000488404">BNSF0000488404</option>
+                                <option value="BNSF0000488405">BNSF0000488405</option>
+                                <option value="BNSF0000488406">BNSF0000488406</option>
+                                <option value="BNSF0000488407">BNSF0000488407</option>
+                                <option value="BNSF0000488408">BNSF0000488408</option>
+                                <option value="BNSF0000488409">BNSF0000488409</option>
+                                <option value="BNSF0000488410">BNSF0000488410</option>
+                                <option value="BNSF0000488411">BNSF0000488411</option>
+                                <option value="BNSF0000488412">BNSF0000488412</option>
+                                <option value="BNSF0000488413">BNSF0000488413</option>
+                                <option value="BNSF0000488414">BNSF0000488414</option>
+                                <option value="BNSF0000488415">BNSF0000488415</option>
+                                <option value="BNSF0000488416">BNSF0000488416</option>
+                                <option value="BNSF0000488417">BNSF0000488417</option>
+                                <option value="BNSF0000488418">BNSF0000488418</option>
+                                <option value="BNSF0000488419">BNSF0000488419</option>
+                                <option value="BNSF0000488420">BNSF0000488420</option>
+                                <option value="BNSF0000488421">BNSF0000488421</option>
+                                <option value="BNSF0000488422">BNSF0000488422</option>
+                                <option value="BNSF0000488423">BNSF0000488423</option>
+                                <option value="BNSF0000488424">BNSF0000488424</option>
+                                <option value="BNSF0000488425">BNSF0000488425</option>
+                                <option value="BNSF0000488426">BNSF0000488426</option>
+                                <option value="BNSF0000488427">BNSF0000488427</option>
+                                <option value="BNSF0000488428">BNSF0000488428</option>
+                                <option value="BNSF0000488429">BNSF0000488429</option>
+                                <option value="BNSF0000488430">BNSF0000488430</option>
+                            </select>
+                        </p>
+                        <p>
+                            <input class="button previous"type="button" style="float:left" value="&lt; Prev">
+                            <input class="button next" type="button" style="float:right" value="Next &gt;">
+                        </p>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="row">
+                <h1>User</h1>
+                <p><b>DOUGBNSF</b> is logged in for company <b>BNSF</b></p>
+                <p><a href="#" title="Click to Launch Application">Launch Pad</a><span class="ui-silk ui-silk-application-go"></span></p>
+            </fieldset>
+            <fieldset class="row">
+                <h1>Fleet Status</h1>
+                <p>Umler SMOW = RAIL</p>
+                <div class="ui-helper-clearfix advanced">
+	                <h3><a href="#">EHMS Alerts <span class="count">104066</span></a></h3>
+    				<div>
+    					<ul>
+                        	<li>WILD - W <span class="count">70666</span></li>
+                        	<li>WILD - O <span class="count">13799</span></li>
+                        	<li>WILD - M <span class="count">64</span></li>
+                        	<li>WILD - C <span class="count">5483</span></li>
+                        	<li>THD - C <span class="count">166</span></li>
+                        	<li>THD - W <span class="count">13523</span></li>
+                        	<li>ABD - C <span class="count">365</span></li>
+                        </ul>
+	            	</div>
+                    
+					<h3><a href="#">EW <span class="count">4186</span></a></h3>
+	    			<div>
+    					<ul>
+                        	<li>EW <span class="count">3100</span></li>
+	    					<li>MA <span class="count">1086</span></li>
+                            </ul>
+	            	</div>
+	          	</div>
+	            <div class="ui-helper-clearfix advanced">
+					<h3><a href="#">Inspections Past Due <span class="count">5645</span></a></h3>
+	    			<div>
+    					<ul>
+                        	<li>ABT <span class="count">3564</span></li>
+	    					<li>Door Lube <span class="count">2081</span></li>
+                        </ul>
+	            	</div>
+                    <h3><a href="#">Cars <span class="count">105823</span></a></h3>
+                    <div>
+    					<ul>
+                        	<li>Active <span class="count">103468</span></li>
+                            <li>Pre-registered <span class="count">1604</span></li>
+                            <li>Inactive <span class="count">751</span></li>
+                        </ul>
+	    	       	</div>
+					<h3><a href="#">Cars Restricted from Interchange <span class="count">6998</span></a></h3>
+    				<div>
+    					<ul>
+                        	<li>X <span class="count">5258</span></li>
+    						<li>Y <span class="count">1740</span></li>
+                        </ul>
+	    	       	</div>
+					<h3><a href="#">Confilcts <span class="count">4</span></a></h3>
+                    <div>
+                    	<ul>
+                        	<li>Confilcts <span class="count">3</span></li>
+                        	<li>Info Conflict <span class="count">1</span></li>
+                    	</ul>
+                    </div>
+					<h3><a href="#">Equipment Group <span class="count">105823</span></a></h3>
+                    <div>
+    					<ul>
+                        	<li>BOXC <span class="count">8495</span></li>
+                            <li>CHSS <span class="count">5676</span></li>
+                            <li>CONT <span class="count">1029</span></li>
+                            <li>EOTD <span class="count">7634</span></li>
+                            <li>FLAT <span class="count">3842</span></li>
+                            <li>GOND <span class="count">13672</span></li>
+                            <li>HOPP <span class="count">45795</span></li>
+                            <li>IFLT <span class="count">6870</span></li>
+                            <li>LOCO <span class="count">6926</span></li>
+                            <li>MISC <span class="count">4685</span></li>
+                            <li>PSGR <span class="count">40</span></li>
+                            <li>STWH <span class="count">40</span></li>
+                            <li>TANK <span class="count">460</span></li>
+                            <li>VFLT <span class="count">657</span></li>
+                        </ul>
+	    	       	</div>
+					<h3><a href="#">End of Service within 30 Days <span class="count">1162</a></h3>
+                </div>
+                <p><a href="#" class="expandAll">Expand All</a></p>
+            </fieldset>
+            </div>
+            <div class="ui-helper-clearfix grid_8">
+	            <fieldset class="row">
+                	<h1>Early Warning Notices</h1>
+                     <table id="sortableTable-ewn" class="tablesorter sortableTable">
+                    <thead>
+                    	<tr>
+                        	<th>Notice</th>
+                            <th>Severity</th>
+                            <th>Expires</th>
+                            <th>Effective</th>
+                            <th>Title</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    	<tr>
+                        	<td>EW 5243</td>
+                            <td>06</td>
+                            <td class="txtRed"><b>06/03/2011</b></td>
+                            <td>03/03/2011</td>
+                            <td>Inspect S-2-HDWedge Shoes Manufactured by ASF for Rapid Wear (ASF Part Nu</td>
+                        </tr>
+                    	<tr>
+                        	<td>MA 0124</td>
+                            <td>06</td>
+                            <td>11/19/2011</td>
+                            <td>01/14/2011</td>
+                            <td>Maintenance Advisory for Rule 1 Incidents</td>
+                        </tr>
+                    </tbody>
+	                </table>
+                    <p><a href="#" title="Click to Launch Application">Launch Early Warning Notices</a><span class="ui-silk ui-silk-application-go"></span></p>
+            	</fieldset>
+	            <fieldset class="row">
+    	            <h1>Equipment Health Management System</h1>
+                    <table id="sortableTable-ehms" class="tablesorter sortableTable">
+                    <thead>
+                    	<tr>
+                        	<th>Alert Type</th>
+                            <th>Location</th>
+                            <th>Alert Level</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    	<tr>
+                        	<td>WILD</td>
+                            <td>AXLE 01</td>
+                            <td>Condemnable</td>
+                        </tr>
+	                    	<tr>
+                        	<td>Truck Hunting</td>
+                            <td>TRUCK B</td>
+                            <td>ATSI Window open</td>
+                        </tr>
+	                    	<tr>
+                        	<td>WILD</td>
+                            <td>WHEEL o1L</td>
+                            <td>ATSI Window open</td>
+                        </tr>
+                    </tbody>
+	                </table>
+                    <p><a href="#" title="Click to Launch Application">Launch EHMS</a><span class="ui-silk ui-silk-application-go"></span></p>
+		            </fieldset>
+	            <fieldset class="row">
+        	        <h1>Mileage</h1>
+                    <br>
+                    <b>Equipment Miles</b> 31651 &nbsp;&nbsp;&nbsp;
+                    <b>From</b> 01/01/2011 &nbsp;&nbsp;&nbsp;
+                    <b>To</b> 11/04/2011
+                  	<br>
+                  	<br>
+                    <h2>Equipment</h2>
+                    <table id="sortableTable-mileage" class="tablesorter sortableTable">
+                    <thead>
+                    	<tr>
+                        	<th>Component</th>
+                            <th>Miles</th>
+                            <th>Application Dt</th>
+                            <th>From Dt</th>
+                            <th>To Dt</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    	<tr>
+                        	<td>Wheelset 2</td>
+                            <td>3375</td>
+                            <td>9/28/2011</td>
+                            <td>10/19/2011</td>
+                            <td>11/04/2011</td>
+                        </tr>
+                    	<tr>
+                        	<td>Wheelset 3</td>
+                            <td>31651</td>
+                            <td>9/28/2011</td>
+                            <td>10/19/2011</td>
+                            <td>11/04/2011</td>
+                        </tr>
+                    	<tr>
+                        	<td>Wheelset 4</td>
+                            <td>No Data</td>
+                            <td>12/25/2011</td>
+                            <td>No Data</td>
+                            <td>No Data</td>
+                        </tr>
+                    </tbody>
+	                </table>
+	     	        </fieldset>
+	            <fieldset class="row">
+	                <h1>Damaged and Defective Car Tracking</h1>
+					<table id="sortableTable-mileage" class="tablesorter sortableTable">
+                        <thead>
+                            <tr>
+                                <th>Incident ID</th>
+                                <th>Incident Date</th>
+                                <th>Originating Road</th>
+                                <th>Car Mark Owner</th>
+                                <th>Interchange Rue</th>
+                                <th>Defect</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>RAIL00015996</td>
+                                <td>10/06/2011</td>
+                                <td>RAIL</td>
+                                <td>BNSF</td>
+                                <td>1</td>
+                                <td>A - Body, B - Braking System</td>
+                                <td>Open</td>
+                            </tr>
+                            <tr>
+                                <td>RAIL00015996</td>
+                                <td>10/06/2011</td>
+                                <td>RAIL</td>
+                                <td>BNSF</td>
+                                <td>1</td>
+                                <td>A - Body, B - Braking System</td>
+                                <td>Open</td>
+                            </tr>
+                        </tbody>
+	                </table>
+                    <p><a href="#" title="Click to Launch Application">Launch DDCT</a><span class="ui-silk ui-silk-application-go"></span></p>
+            </fieldset>
+			</div>
+            <div class="ui-helper-clearfix grid_2">
+
+				<fieldset class="row">
+        	        <h1>Umler</h1>
+                    <h2>Inspections</h2>
+                   		<h3>Air Brake Test</h3>
+                        <dl>
+                        	<dt>Inspections Date Done</dt>
+                            <dd>01/28/2009</dd>
+                            
+                            <dt>ABT 12-Month Due Date</dt>
+                            <dd class="txtRed"><b>02/01/2011</b></dd>
+                            
+                            <dt>AB 5/8-Year Due Date</dt>
+                            <dd>01/01/2017</dd>
+                        </dl>
+                        <h3>Relectorization Event</h3>
+                        <dl>
+                        	<dt>Inspection Date Done</dt>
+                            <dd>01/28/2009</dd>
+                        </dl>
+
+                    <h2>Equipment Registry</h2>
+                    	<h3 class="row">General</h3>
+                        <dl>
+							<dt>Stencil Mark Owner</dt>
+            		        <dd>BNSF</dd>
+	                    </dl>
+	                    <dl class="row">
+							<dt>Status Code</dt>
+            		        <dd>A - Active</dd>
+	                    </dl>
+	                    <dl class="row">
+							<dt>Build Date</dt>
+            		        <dd>01/01/2009</dd>
+	                    </dl>
+	                    <dl class="row">
+							<dt>Eqipment Type Code</dt>
+            		        <dd>C114</dd>
+        		        </dl>
+                    	
+                        <h2 class="row">Capacity</h2>
+                        <dl class="row">
+							<dt>Gross Rail Load/Weight</dt>
+            		        <dd>286,000 lb</dd>
+	                    </dl>
+	                    <dl class="row">
+							<dt>Load Limit</dt>
+            		        <dd>223,000 lb</dd>
+	                    </dl>
+	                    <dl class="row">
+							<dt>Capacity</dt>
+            		        <dd>5188 cuft</dd>
+        		        </dl>
+                    	
+                        <h2 class="row">Specifications</h2>
+                        <dl class="row">
+							<dt>Truck Count</dt>
+            		        <dd>2</dd>
+	                    </dl>
+	                    <dl class="row">
+							<dt>Axle Count</dt>
+            		        <dd>4</dd>
+	                    </dl>
+	                    <dl class="row">
+							<dt>Outside Length</dt>
+            		        <dd>58ft, 0in</dd>
+	                    </dl>
+	                    <dl class="row">
+							<dt>Compartment Count</dt>
+            		        <dd>3</dd>
+        		        </dl>
+                        <p><a href="#" title="Click to Launch Application">Launch UMLER</a><span class="ui-silk ui-silk-application-go"></span></p>
+    	        </fieldset>
+                <!--
+                <fieldset class="row">
+    	            <h1>Location</h1>
+                    <img src="images/maps.jpg">
+                    <dl>
+                    	<dt>Location</dt>
+                        <dd>MARCELINE, MO</dd>
+                        <dt>Last Move</dt>
+                        <dd>10/04/2011 08:55 (Loaded)</dd>
+                        <dt>STCC</dt>
+                        <dd>2083110 - MALT</dd>
+                    </dl>
+	            </fieldset>
+                -->
+			</div>
+        </div>
+	</body>
+</html>

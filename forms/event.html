@@ -1,0 +1,45 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js ie6 oldie" lang="en"><![endif]-->
+<!--[if IE 7]><html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]><html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+        <meta http-equiv="PRAGMA" content="NO-CACHE">
+        <meta http-equiv="EXPIRES" content="0">
+        <title>Red Hat | Event</title>
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <link type="text/css" rel="stylesheet" href="/forms/css/redhat/bootstrap.css" media="all" /><link type="text/css" rel="stylesheet" href="/forms/css/redhat/editorial.css" media="all" /><link type="text/css" rel="stylesheet" href="/forms/css/redhat/overpass.css" media="all" /><link type="text/css" rel="stylesheet" href="/forms/css/redhat/print.css" media="all" /><link type="text/css" rel="stylesheet" href="/forms/css/redhat/style.css" media="all" /><link type="text/css" rel="stylesheet" href="/forms/css/redhat/forms.css" media="all" />
+
+        <script src="/forms/scripts/lib/jquery/1.10/jquery.min.js"></script>
+        <script src="//www.redhat.com/j/s_code.js"></script>
+        <script src="/forms/scripts/jquery.gatedform.js"></script>
+    </head>
+    <body>
+<script type="t/template" id="DynamicEventTemplate">BEGIN:VCALENDAR
+PRODID:RedHat-Calendar-Provider
+VERSION:2.0
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:{{=event}}
+SUMMARY:{{=summary}}
+LOCATION:{{=location}}
+ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE:
+ORGANIZER;CN={{=organizerName}:mailto:{{=organizerEmail}}
+DTSTART={{=dtstart}}
+DTEND={{=dtend}}
+CLASS:PUBLIC
+X-MICROSOFT-CDO-INTENDEDSTATUS:BUSY
+SEQUENCE:0
+DESCRIPTION:The following is a new meeting request:\n\nSubject: {{=summary}} \nOrganizer: {{=organizerName}} <{{=organizerEmail}}> \n\nLocation: {{=location}} \nTime: {{=startDate}} {{=startTime}} - {{=endDate}} {{=endTime}}\n \nInvitees: {{=attendeeEmail}\n\n\n*~*~*~*~*~*~*~*~*~*\n\n\n X-ALT-DESC;FMTTYPE=text/html:<html><body id='htmlmode'><h3>The following is a new meeting request:</h3>\n\n<p>\n<table border='0'>\n<tr><th align=left>Subject:</th><td>{{=summary}}</td></tr>\n<tr><th align=left>Organizer:</th><td>{{=organizerName}} &lt\;{{=organizerEmail}}&gt\;</td></tr>\n</table>\n<p>\n<table border='0'>\n<tr><th align=left>Location:</th><td>{{=location}} </td></tr>\n<tr><th align=left>Time:</th><td>{{=startDate}} {{=startTime}} - {{=endDate}} {{=endTime}}\n </td></tr></table>\n<p>\n<table border='0'>\n<tr><th align=left>Invitees:</th><td>{{=attendeeEmail}} </td></tr>\n</table>\n<div>*~*~*~*~*~*~*~*~*~*</div><br></body></html>
+END:VEVENT
+END:VCALENDAR</script>
+    </body>
+</html>

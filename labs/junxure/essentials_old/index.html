@@ -1,0 +1,105 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/i/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  		<title>Junxure Essentials :: Home</title>
+  		<meta name="description" content="A preview of the Junxure Essentials theme">
+
+  		<!-- Mobile viewport optimized: h5bp.com/viewport -->
+  		<meta name="viewport" content="width=device-width">
+
+		<!-- Styles -->	
+        <link rel="stylesheet" type="text/css" href="Content/kendo.common.css" />  
+        <link rel="stylesheet" type="text/css" href="Content/kendo.default.min.css" />  
+        <link rel="stylesheet" type="text/css" href="Content/kendo.metroblue.css" />
+            
+		<link rel="stylesheet" type="text/css" href="Content/jquery-ui-1.8.16.custom.css" />
+		
+		<link href="Content/ribbon.css" rel="stylesheet" type="text/css" />
+		<link href="Content/soft_button.css" rel="stylesheet" type="text/css" />
+
+        <link rel="stylesheet" type="text/css" href="Content/Navigation/Navigation.css" />
+        
+        <link rel="stylesheet" type="text/css" href="/ingrid/css/ingrid.css" />
+
+        <link rel="stylesheet" type="text/css" href="Content/essentials.css" />
+		<link rel="stylesheet" type="text/css" href="Content/icons.css" />
+		
+  		<!-- All JavaScript at the bottom, except this Modernizr build.
+		       Modernizr enables HTML5 elements & feature detects for optimal performance.
+		       Create your own custom Modernizr build: www.modernizr.com/download/ -->
+		       
+		<!-- data-main attribute tells require.js to load
+             Scripts/main.js after require.js loads. 
+        <script data-main="Scripts/main" src="Scripts/require.js"></script>
+        -->
+	</head>
+	<body id="jx-app">
+		<!--[if IE]>
+		<link rel="stylesheet" type="text/css" href="Styles/custom-theme/jquery.ui.1.8.16.ie.css"/>
+		<![endif]-->
+		<header id="app-toolbar" class="app-toolbar" data-jx-url="app-header.html"></header>
+  		
+        <div id="app-content" class="ingrid in-sevenths">
+            <div class="unit"            id="app-sidebar"></div>
+            <div class="unit across-six" id="app-workspace" data-jx-url="records-workspace.html"></div>
+        </div>
+        
+        <footer id="app-footer" data-jx-url="app-footer.html"></footer>
+
+		<!-- jQuery Base -->
+		<script type="text/javascript" src="Scripts/jquery-1.7.2.js"></script>    
+        <script type="text/javascript" src="Scripts/jquery-ui-1.8.20.min.js"></script>
+        
+        <script type="text/javascript" src="Scripts/jquery.validate.js"></script>    
+        <script type="text/javascript" src="Scripts/jquery.validate.unobtrusive.js"></script>    
+        
+        <script type="text/javascript" src="Scripts/jquery.unobtrusive-ajax.js"></script>    
+        
+        <script type="text/javascript" src="Scripts/superfish/superfish.js"></script>    
+        <script type="text/javascript" src="Scripts/superfish/hoverIntent.js"></script>    
+        
+        <script type="text/javascript" src="Scripts/js/ui.checkbox-ui.radiobutton.js"></script>    
+        <script type="text/javascript" src="Scripts/js/jquery.cluetip.js"></script>    
+        <script type="text/javascript" src="Scripts/js/chosen.jquery.js"></script>    
+        
+        <script type="text/javascript" src="Scripts/Essentials/jxInlineEditing.js"></script>    
+        <script type="text/javascript" src="Scripts/Essentials/jxDraftmanagement.js"></script>    
+        
+        <script type="text/javascript" src="Scripts/AutoResize/jquery.autoresize.js"></script>    
+        
+        <script type="text/javascript" src="Scripts/Navigation/jquery.hoveraccordion.min.js"></script>    
+        
+        <script type="text/javascript" src="Scripts/JxGrid/JxGrid.js"></script>    
+        
+        <script type="text/javascript" src="Scripts/tiny_mce/tiny_mce.js"></script>    
+ 
+        <script type="text/javascript" src="Scripts/jquery.validate.js"></script>    
+        <script type="text/javascript" src="Scripts/jquery.validate.unobtrusive.js"></script>    
+        
+        <script type="text/javascript" src="Content/ribbon.js"></script>
+        <script type="text/javascript" src="Content/jquery.tooltip.min.js"></script>
+
+        <script type="text/javascript" src="Scripts/kendo.web.min.js"></script>    
+    
+        
+        <!-- Junxure Essentials Sample Data -->
+        <script type="text/javascript" src="/Samples/Nonsense.js"></script> 
+		<script type="text/javascript" src="/Samples/Data.js"></script> 
+		
+		<!-- Junxure Essentials Application -->
+        <script type="text/javascript" src="Scripts/jx.essentials.js"></script>
+        
+		<!-- End Scripts-->
+	</body>
+</html>

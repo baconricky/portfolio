@@ -1,0 +1,223 @@
+ 
+<!--
+<script type="text/javascript">
+    var autoResize = function(c,o) {
+    	var context = c || "body",
+    		opts = o || { maxHeight: 200, minHeight: 20, extraSpace: 10 };
+    		
+	    $(context).autoResize(opts);
+    } 
+    
+    var jxExpander = function(d) {
+	    var $container = $(d);
+	    
+	    $container.on("click", function() {
+		    $(this).removeClass('expand-btn minimize-btn');
+            $(this).addClass(isVisible ? "expand-btn" : "minimize-btn");
+            
+            var isVisible = $(this).is(":visible");
+            $(this).slideToggle( 500, "easeOutBounce", function() { 
+            	$(this).removeClass('expand-btn minimize-btn');
+                $(this).addClass(isVisible ? "expand-btn" : "minimize-btn");
+                
+                console.log("slideToggle done..."); 
+            });
+	    });
+    }
+    $(document).ready(function () {
+        //Autoresize for Alert Text
+        
+        
+        autoResize("#impt-info textarea.expand");
+
+        //expand and miminize top block
+        $("#impt-info a.expander").on("click", jxExpander(this));
+        
+        /**(
+            function (e) {
+                var $Section = $('#impt-info div.maximized-content:first'), isVisible = $Section.is(":visible");
+                
+                if (isVisible) {
+                    $Section.slideUp("slow");
+                }
+                else {
+                    $Section.show("slow");
+                }
+            }
+        );
+        **/
+
+        //radio buttons and checkboxes
+        $('#impt-info input[type=checkbox]').checkbox().bind('ui-checkbox-changed ui-checkbox-enabled ui-checkbox-disabled ui-checkbox-focus ui-checkbox-blur');
+        $('#impt-info input[type=radio]').radiobutton().bind('ui-radiobutton-changed ui-radiobutton-enabled ui-radiobutton-disabled ui-radiobutton-focus ui-radiobutton-blur');
+        $('#impt-info input[type=radio][name=radiogroup3]').radiobutton('option', 'highlightGroup', true);
+
+        //        $('#keywords-dialog').dialog({
+        //            autoOpen: false,
+        //            width: 250,
+        //            buttons: {
+        //                "Ok": function () {
+        //                    $(this).dialog("close");
+        //                }
+        //            }
+        //        });
+
+        $('#classifications-dialog').dialog({
+            autoOpen: false,
+            width: 250,
+            buttons: {
+                "Ok": function () {
+                    $(this).dialog("close");
+                }
+            }
+        });
+        // Employees Dialog			
+        $('#employees-dialog').dialog({
+            autoOpen: false,
+            width: 250,
+            buttons: {
+                "Ok": function () {
+                    $(this).dialog("close");
+                }
+            }
+        });
+        // Employees Dialog Link
+        $('#employees-dialog-link').click(function () {
+            $('#employees-dialog').dialog('open');
+            return false;
+        });
+        // Keywords Dialog Link
+        $('#keywords-dialog-link').click(function () {
+            $('#keywords-dialog').dialog({
+                autoOpen: true,
+                width: 250,
+                buttons: {
+                    "Ok": function () {
+                        $(this).dialog("destroy");
+                    }
+                }
+            });
+            return false;
+        });
+        // Classifications Dialog Link
+        $('#classifications-dialog-link').click(function () {
+            $('#classifications-dialog').dialog('open');
+            return false;
+        });
+    });
+</script> 
+-->
+
+
+<div class="form-content">
+    <a href="#" title="Expand Record Details" class="expander expand-btn"></a>
+    <div name='RecordName' class='span-5 JxEditorFor' id='Record:-RecordName' title='Record Name' >Walters Fred</div>
+    <div name='PhoneNumber' id='Record.tblPhone_Owners::d55bbb34-8066-4c6b-873d-03ea8503bcac.tblPhones:-PhoneNumber' class='span-3 JxEditorFor' title='Record Phone' >(561) 437-6767</div>
+    <label onchange='MarkDirty(this);' isDirty='False' name='Alert' class='span-2 AlertLabel' for="Record_AlertText">Alert:</label>
+    <div class='expand prepend-1 span-5 AlertText JxTextAreaFor' title='Record Alert' id='Record:-AlertText' >Client meeting in 3 days</div>
+    <div id="edit-save-btns" class="span-2 last">
+        <div class='edit-form' onclick='NavigateView("impt-info","/Record/Record/Detail?event=edit&RecordID=e736a2b2-1330-4191-9d47-190630666c27&ModelName=RecordDetailModel")'><a title='Edit' class='edit-link' href='javascript:void(0)'> Edit</a></div>
+        
+    </div>
+    <div class="clear"></div>
+    <div class="span-7 RecordAddress ui-corner-all-small">
+        <div class='span-23 last JxEditorFor' id='Record.tblAddress_Owners::5e19ce03-2f5c-4e95-9638-3412a428687b:-PreferredMailingName' >Mr. Fred Walters </div>
+        <div name='AddressLine1' id='Record.tblAddress_Owners::5e19ce03-2f5c-4e95-9638-3412a428687b.tblAddresses:-AddressLine1' class='span-23 last JxEditorFor' >544 Lawyer Circle</div>
+        <div name='AddressLine2' id='Record.tblAddress_Owners::5e19ce03-2f5c-4e95-9638-3412a428687b.tblAddresses:-AddressLine2' class='span-23 last JxEditorFor' ></div>
+        <div class='span-14 first JxEditorFor' id='Record.tblAddress_Owners::5e19ce03-2f5c-4e95-9638-3412a428687b.tblAddresses:-City' >Alexandria</div>
+        <div onchange='MarkDirty(this);' isDirty='False' class='span-9 last chzn-select JxDropDownList' id='Record.tblAddress_Owners::5e19ce03-2f5c-4e95-9638-3412a428687b.tblAddresses.tblLookTypeOf_State:-StateID' >NC</div>
+        <div onchange='MarkDirty(this);' isDirty='False' class='span-14 first chzn-select JxDropDownList' id='Record.tblAddress_Owners::5e19ce03-2f5c-4e95-9638-3412a428687b.tblAddresses:-CountryID' >United States</div>
+        <div class='span-9 last JxEditorFor' id='Record.tblAddress_Owners::5e19ce03-2f5c-4e95-9638-3412a428687b.tblAddresses:-ZIP' >27877                                             </div>
+    </div>         
+    <div class="span-8 column">
+        <div class="form-content-lbl">Keywords:<a href="javascript:void(0)" id="keywords-dialog-link" class="jxOpenDialog view-all" title="Click here to see all Keywords; Only the first 3 show below"></a></div>
+        <div data-placeholder='Select Keywords' id='Record.tblRecord_Keywords--KeywordID_TypeOf' class='chzn-select' >JunxureSampleData</div>
+        <div class="form-content-lbl">Classification:<a href="javascript:void(0)" id="classifications-dialog-link" class="jxOpenDialog view-all" title="Click here to see all Classifications; Only the first 3 show below"></a></div>
+        <div data-placeholder='Select Classifications' id='Record.tblRecord_Classifications--ClassificationID_TypeOf' class='chzn-select' >Connection</div>
+    </div> 
+    <div class="span-7 column">
+        <div class="form-content-lbl">People:</div>
+        <div id="People">
+                    
+Primary - Fred Walters <br />
+        </div>
+        <a id="employees-dialog-link" class="jxOpenDialog button-icon-left ui-corner-all" href="javascript:void();">
+            <span title="View all Client Employees">View Team Members</span>
+        </a>
+    </div>       
+    <div id="record-pic" class="span-1 last">
+        <img id="RecordPic" src="/Content/Images/profile-pic.png"  width="70" height="70" alt="Variable for Record Name" />
+    </div>
+
+    <div class="clear"></div>
+    <div class="maximized-content clearfix">
+        <div class="span-3 column smaller-label first">
+            <label onchange='MarkDirty(this);' isDirty='False' for="Record_tblLookTypeOf_RecordType_RecordType">RecordType</label>
+            <label onchange='MarkDirty(this);' isDirty='False' for="Record_DateCreated">DateCreated</label>
+            <label onchange='MarkDirty(this);' isDirty='False' for="Record_tblUsers1">tblUsers1</label>
+        </div>
+        <div class="span-3 column smaller-label">
+            <div onchange='MarkDirty(this);' isDirty='False' id='Record.tblLookTypeOf_RecordType:-RecordTypeID' class='chzn-select JxDropDownList' >Corporate</div>
+            <div id='Record:-DateCreated' class='datefield' >12/16/2011</div>
+            <div id='Record.tblUsers1:-LName' class='JxEditorFor' ></div>
+        </div>
+        <div class="span-3 column smaller-label">
+            <label>Crsp. Preference:</label>
+            <label>Dear/Salutation:
+                <div class="field-help help-icon" title="Dear:|How would you address this contact in a letter or email?"></div>
+            </label>
+            <label>No Mail:
+                <div class="field-help help-icon" title="No Mail:|Do you want this contact to be placed on the 'no mail' list?"></div>
+            </label>
+        </div> 
+        <div class="span-4 column smaller-data">
+            <div id="CorrespondencePreference">Email</div>
+            <div id="DearField">Richard and Deborah</div>
+            <div id="NoMail">No</div>
+        </div> 
+        <div class="span-2 column smaller-data">
+            <label onchange='MarkDirty(this);' isDirty='False' class='form-content-lbl' for="Record_DateVerified">DateVerified</label>
+            <label onchange='MarkDirty(this);' isDirty='False' class='form-content-lbl' for="Record_tblUsers">tblUsers</label>
+        </div>
+        <div class="span-3 column smaller-data">
+            <div id='Record:-DateVerified' class='datefield' ></div>
+            <div id='Record.tblUsers:-LName' class='JxEditorFor' ></div>
+        </div>
+        <div class="span-2 smaller-data column">
+            <label onchange='MarkDirty(this);' isDirty='False' class='form-content-lbl' for="Record_tblSecurityGroups">tblSecurityGroups</label>
+            <label onchange='MarkDirty(this);' isDirty='False' class='form-content-lbl' for="Record_tblSecurityGroups1">tblSecurityGroups1</label>
+                    
+        </div>
+        <div class="span-3 column smaller-data last">
+            <div onchange='MarkDirty(this);' isDirty='False' class='chzn-select JxDropDownList' id='Record.tblSecurityGroups:-SecurityGroupID' ></div>
+            <div onchange='MarkDirty(this);' isDirty='False' class='chzn-select JxDropDownList' id='Record.tblSecurityGroups1:-SecurityGroupID' ></div>
+        </div>
+        <div class="clear"></div> 
+    </div>        
+    <div id="keywords-dialog" title="All Keywords" style="display:none">
+        <ul class="arrow-list">
+            <li>JunxureSampleData</li>
+        </ul>
+    </div>
+    <div id="classifications-dialog" title="All Classifications">
+        <ul class="arrow-list">
+            <li>Connection</li>
+        </ul>
+    </div>
+    <div id="employees-dialog" title="Team Members">
+        <ul class="arrow-list">
+            <li>
+                <div class="form-content-lbl">Advisor 1:</div>
+                <div id="Advisor1">Tabitha Rowen</div>
+            </li>
+            <li>
+                <div class="form-content-lbl">CSR:</div>
+                <div id="CSR">Thomas Kincade</div>
+            </li>
+            <li>
+                <div class="form-content-lbl">Advisor 2:</div>
+                <div id="Advisor2">Pippi Longstocking</div>
+            </li>
+        </ul>
+    </div>
+</div>

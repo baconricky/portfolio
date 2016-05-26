@@ -1,0 +1,35 @@
+callback([
+    {
+        "icon": "phone1",
+        "type": "Phone Call",
+        "record": "Jones Family",
+        "due": "08/20/2012",
+        "assignedTo": "S. Ethridge",
+        "subject": "Monthly Status Meeting",
+        "note": "Mail documents for review"
+    },
+    {
+        "icon": "phone1",
+        "type": "Phone Call",
+        "record": "Richards Hobby Shop",
+        "due": "08/20/2012",
+        "subject": "Mail documents for review",
+        "note": "Mail documents for review"
+    },
+    {
+        "icon": "phone1",
+        "type": "Phone Call",
+        "record": "Jones Family",
+        "due": "08/20/2012",
+        "subject": "Monthly Status Meeting",
+        "note": "Mail documents for review"
+    },
+    {
+        "icon": "phone1",
+        "type": "Phone Call",
+        "record": "Jones Family",
+        "due": "08/20/2012",
+        "subject": "Return 401k call",
+        "note": "Mail documents for review"
+    }
+]);

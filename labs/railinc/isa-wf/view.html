@@ -1,0 +1,406 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=9,IE=8,IE=7,IE=6,IE=EDGE,chrome=1" />
+		<link rel="shortcut icon" href="images/favicon.ico" />
+		<title>Interline Service Agreement</title>
+		
+
+
+
+
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="description" content="Inter Service Agreement">
+		<meta name="author" content="Railinc Corporation">
+		<link rel="stylesheet" type="text/css" href="css/standard.css"/>
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
+		<link rel="stylesheet" type="text/css" href="css/app.css"/>
+	</head>
+	<body>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="rail-header">
+	<div id="util-nav-wrapper">
+	  <ul id="util-nav">
+	    <li>
+	      	
+			    <span id="rail-app-user">Role03 :</span> <span id="rail-app-user-company">RAIL - RAILINC CORPORATION</span>
+			 
+	    </li>
+	    
+	    <li><a href="#">Launch Pad</a>
+	      <div id="rail-launch-pad">
+	        <ul> 
+	          <li><h2>Applications</h2>
+	            <ul id="appList"> 
+					<li><a href="#">AAR Embargo/OPSL Permit System</a></li><li><a href="#">CIF</a></li><li><a href="#">CIF61</a></li><li><a href="#">HAZMAT</a></li><li><a href="#">ISA</a></li><li><a href="#">ISA 61</a></li><li><a href="#">ISA Repository QA</a></li><li><a href="#">ISA Repository-Dev</a></li><li><a href="#">QA Embargo and Permit System</a></li><li><a href="#">Reciprocal Switch Web</a></li>            
+	              </ul> 
+	            </li> 
+	          
+	          </ul>
+	        
+	        <ul> 
+	          <li><h2>User Services</h2>
+	            <ul>
+	              <li><a href="#">Edit Profile</a></li>
+	              <li><a href="#">Change Password</a></li>
+	              <li><a href="#">View / Request Permissions</a></li>
+	              <li><a href="#">Permission Request Status</a></li>
+	              <li><a href="#">Launch Pad</a></li>
+	              
+	              </ul> 
+	            </li> 
+	          </ul>
+	        </div> 
+	      
+	      </li>
+	    <li><a href="#">Contact Us</a></li>
+	    <li class="lastLK"><a href="#">Sign Out</a></li> 
+	    
+	  
+	  </ul>
+	</div>
+	<a href="http://www.railinc.com" id="railinc-logo"><img src="images/logo.png" alt="Go to www.railinc.com" width="150" height="26" /></a>
+	<div id="rail-app-name">Interline Service Agreement</div>
+	<div class="clear"></div>  
+</div>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul id="rail-app-nav">
+	
+		<li><a class="current" href="/isarepo/index.jsp">Home
+		</a>
+		</li>
+	
+	
+		<li><a href="create_isa.html">Create ISA
+		</a>
+		</li>
+	
+	
+		<li><a href="list_isa.html">View ISAs
+		</a>
+			<ul>
+				<li><a href="list_isa.html">All</a>
+				</li>
+				<li><a href="list_isa.html#ACTIVE">Active</a>
+				</li>
+				<li><a href="list_isa.html#DRAFT">Draft</a>
+				</li>
+				<li><a href="list_isa.html#PENDING">Pending</a>
+				</li>
+				<li><a href="list_isa.html#REJECTED">Rejected</a>
+				</li>
+				<li><a href="list_isa.html#ARCHIVED">Archived</a>
+				</li>
+			</ul></li>
+		<li><a href="#">Export ISAs (csv)
+		</a>
+		</li>
+		<li><a href="#">Documentation
+		</a>
+		</li>
+	
+	
+</ul>
+
+
+
+		<div id="rail-app-container">
+			
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="wizard-review">
+	<h1>
+		View ISA Details: 456200-712-555
+	</h1>
+
+	<div class="buttons">
+		<div class="leftSide">
+			<a href="#" data-rail-status="" class="button backToList">
+				<span class="icon icon8"> </span>
+				<span class="label">Back to ISAs List</span>
+			</a>
+			<a class="button" href='#' target="_blank">
+				<span class="icon icon70"></span>
+				<span class="label">Download PDF</span>
+			</a>
+		</div>
+		<div class="rightSide">
+			<input type="hidden" id="isaId" name="isaId" value="996475">
+			<button class="action blue editISA">Edit ISA</button>
+		</div>
+	</div>
+	
+	<div class="panel">
+		<h2 class="sectionHeader">
+			Basic Information
+		</h2>
+		<div class="half">
+			<dl>
+				<dt class="label">Origin Railroad</dt>
+				<dd>CSXT</dd>
+			</dl>
+			<dl>
+				<dt class="label">ISA Number</dt>
+				<dd>456200-712-555</dd>
+			</dl>
+			<dl>
+				<dt class="label">Partner Railroad</dt>
+				<dd>NS</dd>
+			</dl>
+			<dl>
+				<dt class="label">Status</dt>
+				<dd>DRAFT</dd>
+			</dl>
+			<dl>
+				<dt class="label">Effective Date</dt>
+				<dd>04/25/2012</dd>
+			</dl>
+		</div>
+		<div class="half">
+			<dl>
+				<dt class="label">Reason for ISA</dt>
+				<dd>sa</dd>
+			</dl>
+			<dl>
+				<dt class="label">Interchange Gateway</dt>
+				<dd>ATLANTA GA. SPLC 456200</dd>
+			</dl>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="panel">
+		<h2 class="sectionHeader">Description Information</h2>
+		<dl>
+		
+			
+				<dt class="label">Interchange Locations
+				</dt>
+				<dd>TO CSXT: Tilford Yard - Atlanta, GA
+TO NS:      Inman Yard - Atlanta, GA</dd>
+		
+			
+				<dt class="label">Actual Interchange Reporting
+				</dt>
+				<dd>Interchange reporting will be completed within four (4) hours of the event.</dd>
+		
+			
+			</dl>
+			<dl>
+			
+				<dt class="label">Revision of ISA
+				</dt>
+				<dd>Each party to this ISA will notify the other at least fourteen (14) days in advance of the need to revise the ISA. The reason(s) for the revision and the plan for the revision will be presented to the partner in writing. Each partner must agree in writing before the ISA will be considered revised and the revision date added to the ISA. The Service Design/Planning groups on each railway will coordinate and execute the revisions to the ISA as necessary. Should the parties be unable to agree on mutually satisfactory revisions within thirty (30) days of the date of the notice of demand for revision, either party may terminate this ISA on an additional (30) days' notice to the other party hereto.</dd>
+		
+			
+				<dt class="label">Performance Evaluation
+				</dt>
+				<dd>Service Design/Planning groups within each railroad will measure the performance of this ISA and jointly review the results quarterly or semi-annually.</dd>
+		
+			
+			</dl>
+			<dl>
+			
+				<dt class="label">Advance Consist Requirements
+				</dt>
+				<dd>Roads to forward advance notification and consists four (4) hours prior to interchange.  AEI readers will be used to augment this consist information.</dd>
+		
+			
+				<dt class="label">Temporary and Emergency Plans
+				</dt>
+				<dd>CSXT Operations Center and NS Network Operations Center will coordinate emergency plan overrides. Service Design/Network Planning groups on both railways will jointly define and measure all time period exemptions from the plan. Either party may revise the schedule, upon 24 hours notice, when temporary or emergency conditions exist. The parties agree to adjust the ISA if emergent conditions continue to exist. The parties also agree to exchange Holiday Operating Plans and engineering curfew plans with as much advance notice as practical. CSX D-OC (904)359-7550.</dd>
+		
+			
+			</dl>
+			<dl>
+			
+				<dt class="label">Agreement Conflicts
+				</dt>
+				<dd>In the event any provision(s) included in this Interline Service Agreement conflicts with provision(s) contained in other legally executed agreements, the provision(s) contained in such agreements will govern.</dd>
+		
+			
+				<dt class="label">Mechanical Inspection Requirements
+				</dt>
+				<dd>AAR Interchange Rules, and Provisions of the governing Interchange Agreement apply. Receiving carrier performs standard interchange inspection. </dd>
+		
+			
+			</dl>
+			<dl>
+			
+				<dt class="label">Interchange Event
+				</dt>
+				<dd>NS to CSXT: Upon arrival at CSXT Tilford yard on designated interchange tracks,  engines  cut away and 418 and proper documentations is received
+CSXT to NS: Upon arrival at NS Inman Yd on designated interchange tracks,  engines  cut away and 418 and proper documentations is received
+NOTE: Local operating managers have agreed that crews of the offering carrier must have  (3) three hours of service remaining under hours of service rules when arriving at I/C juntion. Further the receiving carrier will not be penalized for refussing to accept the interchange consist.</dd>
+		
+			
+				<dt class="label">Locomotive Requirements
+				</dt>
+				<dd>Locomotive requirements will be covered in the Master Locomotive Agreement</dd>
+		
+		</dl>
+		<div class="clear"></div>
+	</div>
+	<div class="panel">
+		<h2 class="sectionHeader">
+			Train Plan Addendum
+		</h2>
+		
+
+	</div>
+	<div class="panel">
+		<h2 class="sectionHeader">
+			Contacts
+		</h2>
+		
+			<div class="panel">
+				<h3 class="sectionHeader">thota, rakesh</h3>
+				<dl class="threeColumnLayout">
+					<dt class="label">
+						 Phone
+					</dt>
+					<dd>919-323-3333</dd>
+					<dt class="label">
+						 Email
+					</dt>
+					<dd></dd>
+					<dt class="label">
+						 Railroad
+					</dt>
+					<dd>NS</dd>
+				</dl>
+				<dl class="threeColumnLayout">
+					<dt class="label">
+						 Area
+						
+					</dt>
+					<dd></dd>
+					<dt class="label">
+						 Title
+						
+					</dt>
+					<dd></dd>
+					<dt class="label">
+						 Role
+						
+					</dt>
+					<dd>Secondary Contact</dd>
+				</dl>
+				<div class="clear"></div>
+			</div>
+		
+		<div class="clear"></div>
+	</div>
+
+	<div class="buttons">
+		<div class="leftSide">
+			<a href="#" data-rail-status="" class="button backToList">
+				<span class="icon icon8"> </span>
+				<span class="label">Back to ISAs List</span>
+			</a>
+			<a class="button" href='#' target="_blank">
+				<span class="icon icon70"></span>
+				<span class="label">Download PDF</span>
+			</a>
+		</div>
+		<div class="rightSide">
+			<input type="hidden" id="isaId" name="isaId" value="996475">
+			<button class="action blue editISA">Edit ISA</button>
+		</div>
+	</div>
+
+</div>
+
+
+		</div>
+		<div class="clear"></div>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div id="rail-footer" >
+			<ul class="horizontal-menu">
+				<li><a href="#">legal notices</a></li>
+				<li><a href="#">privacy rights</a></li>
+				<li><a href="#">terms of service</a></li>
+				<li><a href="#">contact us</a></li>
+			</ul>
+		</div>
+		<script type="text/javascript"> 
+			var images = "images";
+			var contextPath = "/~nick/railinc/Railinc_ISA/";
+		</script>
+		<!-- jquery libs -->
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+	   	<!-- Railinc libs -->
+		<script src="js/standard.js" type="text/javascript"></script>
+		<script src="js/wizard.js" type="text/javascript"></script>
+		<script src="js/validation.js" type="text/javascript"></script>
+		<script src="js/app.js" type="text/javascript"></script>
+	</body>
+</html>

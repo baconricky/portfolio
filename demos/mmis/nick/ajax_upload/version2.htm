@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- base href="http://20.20.154.246/XXXXX" -->
+<head>
+	<title>NCTracks - Agent Portal - Upload Example</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="../../css/portal_agent.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/compact.css" />
+	
+	<script type="text/javascript" src="../../js/jquery.tools.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery.dump.js"></script>
+    <script type="text/javascript" src="../../js/DD_roundies.min.js"></script>
+	<script type="text/javascript" src="../../js/suckerfish.js"></script>
+	<script type="text/javascript" src="../../js/jCal.js"></script>
+	<script type="text/javascript" src="../../js/jquery.coolinput.min.js"></script>
+	
+	<script type="text/javascript">
+		var ajaxUploadActionURL = 'upload.htm';
+		var fileMask = ["txt","xls"];
+	</script>
+	<script type="text/javascript" src="../../js/ajaxupload.js"></script>
+
+	<script type="text/javascript" src="../../js/ajax_init.js"></script>
+	
+	<script type="text/javascript" src="../../js/nctracks_init.js"></script>
+
+</head>
+<body>
+
+<a href="#mainContent" id="skipNav" class="linkColor2" accesskey="2">skip navigation</a>
+
+<div id="header">
+	<div id="logo">
+		<a href="../website/home_page.html" accesskey="1"><img src="../../images/layout/logo_main.png" width="596" height="60" alt="NCTracks Home" title="Return to NCTracks Home" /></a>
+	</div>
+	<form action="" id="siteSearch">
+		<br /><br />
+		<input type="text" name="search" class="searchBox hint" title="search..." accesskey="4" />
+		<button type="submit"></button>
+		| <a href="help/Default.htm" class="help" class="linkColor2" accesskey="6">Help</a>
+	</form>
+</div>
+<div id="contentBackground">
+	<h1 id="portalTitle">Operations Portal</h1>
+	<div class="portalBrandColor" id="navStrip">
+		<ul>
+		<!-- MAIN NAVIGATION -->
+			<li>
+				<a href="#">Clients</a>
+				<ul>
+					<li>
+						<a href="#">Client</a>
+						<ul>
+							<li><a href="#">Client Search</a></li>
+							<li><a href="#">Duplicate Client Search</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Client Cases</a></li>
+					<li><a href="#">Transportation Restrictions</a></li>
+					<li><a href="#">Verify Eligibility</a></li>
+					<li><a href="#">Managed Care Benefit Plan</a></li>
+					<li><a href="#">Labels</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Case Mgmt</a>
+			</li>
+			<li>
+				<a href="#">Providers</a>
+			</li>
+			<li>
+				<a href="#">Prior Auth</a>
+			</li>
+			<li>
+				<a href="#">Claims</a>
+			</li>
+			<li>
+				<a href="#">3rd-Party</a>
+			</li>
+			<li>
+				<a href="#">Financial</a>
+			</li>
+			<li>
+				<a href="#">MARS</a>
+			</li>
+			<li>
+				<a href="#">eCommerce</a>
+			</li>
+			<li>
+				<a href="#">Reference</a>
+			</li>
+			<li>
+				<a href="#">Admin</a>
+			</li>
+		</ul>
+	</div>
+	<!-- breadcrumb navigation -->
+	<ol id="breadcrumb">
+		<li><a href="#">Operations Portal</a> <b>&gt;</b></li>
+		<li><a href="#">Claim Search</a></li>
+	</ol>
+	<div id="mainContent">
+		<div id="pageTitle">
+			<h1>Claim Search</h1>
+			<!-- page tools -->
+			<ul>
+				<li><a href="#"><img src="../../images/icons/printer.png" width="24" height="24" alt="Print this page" /></a> |</li>
+				<li><a href="#" class="textScaling" id="decreaseFont"><img src="../../images/icons/text_decrease.gif" width="24" height="24" alt="Decrease text size" /></a></li>
+				<li><a href="#" class="textScaling" id="increaseFont"><img src="../../images/icons/text_increase.gif" width="24" height="24" alt="Increase text size" /></a>  |</li>
+				<li><a href="#">Help</a></li>
+			</ul>
+		</div>
+		
+		<div id="requiredLegend">&nbsp;</div>
+		<div id="formLegend">
+			<div class="formBtn">
+				<span>Legend</span>
+				<img src="../../images/icons/legend_arrow.gif" width="11" height="17" alt="form legend" />
+			</div>
+			<ul>
+				<li><img src="../../images/icons/calendar.png" width="16" height="16" alt="calendar icon" />Calendar</li>
+				<li><img src="../../images/icons/audit.png" width="16" height="16" alt="audit icon" />Audit</li>
+			</ul>
+		</div>
+		<form name="SearchProcCd" method="post" action="json/C_W_200.json" onsubmit="return false;">
+			<div class="formSection" id="fileUpload">
+				<fieldset>
+					<legend>File Upload</legend>
+					<a href="help.html" rel="#overlay" class="formHelpTab"><img src="../../images/icons/help_tab.gif" width="22" height="22" alt="Help" title="Help" /></a>
+                    <fieldset>
+                    <legend><span>Attached Files</span></legend>
+					<ol class="files"></ol>
+					
+                    </fieldset>
+                    <div class="btnRow">
+						<button type="button" id="fileUploadBtn" class="submitBtn uploadMultiple">Choose File</button>
+					</div>
+				</fieldset>
+				<div class="btnRow">
+					<button type="submit" class="submitBtn" >Save</button>
+					<button type="reset">Reset</button>
+				</div>
+				<a href="#header"><img src="../../images/icons/return_top.gif" class="returnTop" width="12" height="13" alt="Back to top" title="Back to top" /></a>
+			</div>
+		</form>
+	</div>
+	<ul id="footer" class="linkColor2 rounded">
+		<li><a href="#" accesskey="8">Legal</a> |</li>
+		<li><a href="#">Privacy Policy</a> |</li>
+		<li><a href="#">Accessibility</a> |</li>
+		<li><a href="#" accesskey="3">Site Map</a> |</li>
+		<li><a href="#" accesskey="9">Contact Us</a> |</li>
+		<li><a href="#">Report Fraud</a></li>
+	</ul>
+</div>
+<div class="dropShadow" id="tileBtm"></div>
+ <!-- overlayed element --> 
+<div class="overlay" id="overlay"> 
+    <!-- the external content is loaded inside this tag --> 
+    <div class="wrap"></div> 
+</div>
+</body>
+</html>

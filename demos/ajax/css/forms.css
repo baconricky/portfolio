@@ -1,0 +1,1614 @@
+@import "datePicker.css";
+
+/*
+ * only used with "sync scrolling" in
+ * mockups/mpas/reference 
+ * R_W_061-compare.htm
+ * R_W_063.htm
+ * R_W_223_01.htm
+ * R_W_223_02.htm
+ * R_W_223_03.htm
+ * R_W_223_04.htm
+ * R_W_223_05.htm
+ * R_W_223_06.htm
+ * R_W_223_07.htm
+ */
+h2.syncScroll {
+	background:#22BB22;
+	color:white;
+	z-index:300;
+	padding:10px;
+	opacity:0.85;
+	filter:alpha(opacity=85);
+	clear:all;
+}
+
+#new,
+#old {
+	overflow:auto;
+	height:350px;
+	position:relative;
+}
+/* end sync scoll */
+
+#requiredLegend
+{
+	height: 35px;
+	float: left;
+	font-size: 0.8em;
+}
+#formLegend
+{
+	width: 140px;
+	height: 25px;
+	float: right;
+	position: relative;
+	z-index: 999;
+}
+	#formLegend div
+	{
+		height: 1.6em;
+		padding: 0;
+		font: bold 0.85em/155% "Trebuchet MS";
+		letter-spacing: 1px;
+		color: #445;
+		background: #FFF url("../images/layout/btn_bg_tile.gif") repeat-x bottom;
+		border: 1px solid #A7AFBF;
+		cursor: default;
+	}
+		#formLegend div:hover
+		{
+			background: url("../images/layout/btn_bg_tile_hover.gif") repeat-x top;
+		}
+		#formLegend span
+		{
+			float: left;
+			margin-left: 39px;
+		}
+		#formLegend img
+		{
+			float: right;
+			margin: 1px 5px 0 0;
+		}
+	#formLegend ul
+	{
+		display: none;
+		width: 128px;
+		float: right;
+		position: relative;
+		padding: 5px 5px 0;
+		font-size: 0.8em;
+		text-align: center;
+		background-color: #E7EBEF;
+		border: 1px solid #CCC;
+		border-top: none;
+	}
+		#formLegend ul li
+		{
+			clear: left;
+			padding: 0 0 8px;
+		}
+		#formLegend ul img
+		{
+			float: left;
+		}
+
+.formSection										/* outermost container */
+{
+	clear: left;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 10px;
+	border: 1px solid #CCC;
+	border-left-width: 3px;
+	padding-bottom: 10px;
+} 
+	.tabs + .formSection,
+	.tabs + .panes .formSection,
+	#tabNext + .formSection
+	{
+		border-top: none;
+	}
+	.formSection ul,
+	.info ul
+	{
+		margin-left: 27px;
+		padding: 7px 0;
+	}
+		.formSection ul ul,
+		.info ul ul
+		{
+			margin-left: 0;	
+		}
+		.formSection li,
+		.info li
+		{
+			margin-bottom: 5px;
+			padding-left: 1em;
+		}
+		.formSection li
+		{		
+			background: url("../images/icons/bullet_gray.png") no-repeat 0 0.4em;	
+		}
+		.formSection ul ul li		
+		{
+			background: url("../images/icons/bullet-nested_gray.png") no-repeat 0 0.4em;
+		}
+		.info li
+		{
+			background: url("../images/icons/bullet_info.png") no-repeat 0 0.4em;
+		}
+		.info ul ul li
+		{
+			background: url("../images/icons/bullet-nested_info.png") no-repeat 0 0.4em;
+		}
+	
+fieldset
+{
+	clear: both;
+	position: relative;
+	padding: 0 5px 5px;
+	background: url("../images/layout/form_section_bg.gif") repeat-x bottom;
+	border: 1px solid #CCC;
+	border-bottom-width: 2px;
+}
+	legend
+	{
+		padding: 0 3px;
+		font-family: "Trebuchet MS";
+		font-variant: small-caps;
+		letter-spacing: 1px;
+		white-space: normal;
+		color: #315B7C;
+	}
+	fieldset > dl:first-child
+	{
+		margin-top: 8px;
+	}
+	.formSection > fieldset,
+	.formSection > div > fieldset,
+	form > fieldset,
+	.panes > div > fieldset
+	{
+		margin: 13px 7px 0;
+	}
+	.formHelpTab + fieldset
+	{
+		margin-top: 0;
+	}
+	fieldset > fieldset,
+	fieldset > div > fieldset
+	{
+		min-height: 0;
+		margin: 3px 0;
+		background: #FFF;
+		border-bottom: 1px solid #CCC;
+	}
+		fieldset fieldset legend
+		{
+			font-variant: normal;
+			letter-spacing: 0;
+		}
+	
+.formSubSection
+{
+	float: left;
+	margin: 5px 0;
+	padding: 5px;
+	background-color: #FFF;
+	border: 1px solid #DDD;
+}
+	
+fieldset hr
+{
+	float: left;
+	clear: both;
+	margin: 6px 0;
+	border-color: #d7dbdf;	
+}
+/* Fix for ie spacing bug */
+*hr + .btnRow 
+{
+	float: right;
+	margin-top: -15px;	
+}
+
+/* info and error boxes */
+.info
+{
+	clear: both;
+	margin: 7px 0;
+	padding: 7px 7px 0;
+	color: #315B7C;
+	background-color: #E7F0FF;
+	border: 1px solid #ABCBFF;
+	border-left-width: 3px;
+	text-align:left;
+}
+	.info h1 {
+		font-size:2em;
+		border-bottom: 1px dashed #ABCBFF;
+	}
+	.formSection > .info
+	{
+		margin: 7px;
+	}
+	div.info p
+	{
+		margin: 0 0 7px;
+	}
+	.half fieldset .info
+	{
+		margin: 2px;
+	}
+	.info .info
+	{
+		background-color: #fff;
+		border-width: 1px;
+	}
+		.info .info ul
+		{
+			margin-left: 10px;
+		}
+			.info .info ul ul
+			{
+				margin: 0;	
+			}
+.errorDiv {
+	background-color: #C33;
+	border: 1px solid #900;
+	border-width:1px 1px 1px 3px;
+	clear:both;
+	text-align:left;
+}
+
+.error, 
+.errorDiv /*errorDiv doesn't get hidden when validation runs and removes the class*/
+{
+	color: #FFF;
+	background-color: #C33;
+	border: 1px solid #900;
+}
+	/* the validation plugin always puts the error class on the label even though we want it on the parent, so let's make it do nothing */
+	.error .error
+	{
+		display: block;
+		font-weight: normal;
+		background: none;
+		border: none;
+	}
+	.error a, .errorDiv a
+	{
+		color: #EDB;
+		margin: 0;
+		font-weight: normal;
+	}
+	.error input,
+	.error select,
+	.error textarea,
+	.errorDiv input, 
+	.errorDiv select, 
+	.errorDiv textarea
+	{
+		background-color: #FFB;
+		border: 1px solid #900;
+	}
+		.error input:focus,
+		.error select:focus,
+		.error textarea:focus,
+		.errorDiv input:focus, 
+		.errorDiv select:focus, 
+		.errorDiv textarea:focus
+
+		{
+			border-color: #900;
+		}
+	dd.error 
+	{
+		margin-bottom: 5px;
+	}
+		dd.error p
+		{
+			max-width: 300px;
+			margin: 0;
+		}
+	div.error
+	div.errorDiv
+	{
+		clear: both;
+		margin: 7px 0;
+		padding: 0 7px 0;
+		border-left-width: 4px;
+	}
+		div.error label
+		div.errorDiv label
+		{
+			margin: 3px;
+		}
+		#mainContent .error ul,
+		#mainContent .errorDiv ul
+		{
+			margin-left: 5px;	
+		}
+			#mainContent .error li,
+			#mainContent .errorDiv li
+			{
+				background: url("../images/icons/bullet_error.png") no-repeat;
+				background-position: 0 .1em;
+				padding-left: 1.35em;
+			}
+			#mainContent .error ul ul li,
+			#mainContent .errorDiv ul ul li
+			{
+				background: url("../images/icons/bullet_red.png") no-repeat;
+				background-position: 0 .4em;
+				padding-left: 1em;
+			}
+
+.error ul,
+.errorDiv ul
+{
+	margin-left: 0;
+	padding: 7px 0;
+}
+.info h3,
+.error h3
+{
+	margin: 10px 0;
+}
+
+.formHelpTab
+{
+	float: right;
+	position: relative;
+	margin: 0 7px -1px 0;
+	z-index: 100;
+}
+	legend + .formHelpTab
+	{
+		margin: -30px -6px 0 0;
+	}
+
+.returnTop
+{
+	margin-right: 12px;
+	float: right;
+	clear: both;
+}
+	.half + a .returnTop
+	{
+		margin: -12px 0 5px;
+	}
+
+.sideBySide
+{
+	clear: both;
+	margin: 13px 7px;
+}
+	.sideBySide:after
+	{
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+		line-height: 0;
+	}
+	.third
+	{
+		width: 33%;
+		float: left;
+		margin-right: 0.5%;
+	}
+		.third > fieldset
+		{
+			margin: 0;
+		}
+			.third dt
+			{
+				width: 31.5%;
+				min-width: 7em;
+			}
+			.third dd
+			{
+				margin-left: -67%;
+			}
+		.third + .third + .third
+		{
+			float: right;
+			margin: 0;
+		}
+
+.half
+{
+	width: 50%;
+	position: static;
+	float: left;
+	clear: left;
+	margin-bottom: 13px;
+}
+	.half + .half
+	{
+		float: right;
+		clear: right;
+		margin-left: -50%;
+	}
+	.half > .btnRow
+	{
+		margin: 5px 0;
+	}
+	.half dt,
+	#overlay dt
+	{
+		width: 24%;
+	}
+	.half dd,
+	#overlay dd
+	{
+		margin-left: -75%;
+	}
+	.half dd + dt,
+	#overlay dd + dt
+	{
+		margin-left: -52%;
+	}
+	.half dd + dt + dd,
+	#overlay dd + dt + dd
+	{
+		margin-left: -27%;
+	}
+
+fieldset.singleQ
+{
+	margin: 8px 0;
+	padding: 0;	
+	background: none;
+	border: none;
+}
+	/* Cause singleQ questions to wrap in ie8, instead of going off the edge */
+	.singleQ legend
+	{
+		width: 99%;
+	}
+	.singleQ legend > span
+	{
+		zoom: 1;
+		margin: 10px 0 3px 4px;
+		padding: 0;
+		font: 1em Verdana, sans-serif;
+		letter-spacing: normal;
+		color: #444;
+	}
+	.singleQ dl
+	{
+		float: left;
+		margin-left: 1.5%;
+	}
+		.singleQ dt
+		{
+			width: auto !important;
+			min-width: 0;
+			position: static;
+			margin: 0 15px 0 0;
+		}
+		.singleQ dd
+		{
+			position: static;
+			margin-left: 0;
+		}
+
+/* form column layout, default is two columns (two pair of label/input) */
+dl
+{
+	width: 100%;
+	float: left;
+	clear: both;
+	position: relative;
+	line-height: 150%;
+}
+	/* since we can't put top padding on the fieldset because of the help tab, make the first dl in the fieldset have a top-margin */
+	.formHelpTab + dl						
+	{
+		margin-top: 2px;
+	}
+	/* for some reason, IE seems to think that DLs following labelToRight are part of it, so let's reset the margin */
+	.labelToRight + dl
+	{
+		margin-left: 0;
+	}
+	dt
+	{
+		width: 17.5%;
+		min-width: 8em;
+		float: left;
+		position: relative;
+		left: 100%;
+		margin-left: -100%;
+		padding: 3px 0;
+		text-align: right;
+		color: #000;
+	}
+		dd + dt
+		{
+			margin-left: -46%;
+		}
+		dt span
+		{
+			display: block;
+		}
+		dt .error
+		{
+			padding: 1px 4px;
+			border-left-width: 3px;
+		}
+	dd
+	{
+		display: inline;
+		float: left;
+		position: relative;
+		left: 100%;
+		z-index: 99;
+		margin-left: -82%;
+		padding: 3px;
+		font-weight: bold;
+	}
+		dd a
+		{
+			font-weight: normal;	
+		}
+		dd label
+		{
+			font-weight: normal;	
+		}
+		dd dt
+		{
+			width: 100%;
+			clear: left;
+			text-align: left;
+		}
+		dd + dt + dd
+		{
+			margin-left: -28%;
+		}
+		
+	.threeColumnLayout dd + dt,
+	.threeColumnLayout dd + dt + dd + dt
+	{
+		width: 15.5%;
+		min-width: 7em;
+	}
+	.threeColumnLayout dd + dt
+	{
+		margin-left: -68%;
+	}
+	.threeColumnLayout dd + dt + dd
+	{
+		margin-left: -52%;
+	}
+	.threeColumnLayout dd + dt + dd + dt
+	{
+		margin-left: -35%;
+	}
+	.threeColumnLayout dd + dt + dd + dt + dd
+	{
+		margin-left: -19%;
+	}
+	
+	/* fieldset class for sets of checkboxes or radio buttons; inputs with labels to the right instead of the left */
+	.labelToRight dl,
+	dl.labelToRight
+	{
+		margin-left: 15px;
+	}
+		.labelToRight dt
+		{
+			width: 33%;
+			position: static;
+			left: 0;
+			margin-left: 0;
+			text-align: left;
+			white-space: nowrap;
+		}
+		.labelToRight input
+		{
+			margin: -1px 3px 2px;
+			vertical-align: middle;
+		}
+		dd.labelToRight input
+		{
+			margin-left: 7px;
+		}
+		dd.labelToRight label								/*spacing for radio buttons in the same column */
+		{
+			margin-right: 20px;
+			font-weight: normal;
+		}
+	
+	.fullWidth dt
+	{
+		width: 64%;
+		margin-left: -100%;
+	}
+	.fullWidth dd
+	{
+		margin-left: -35%;
+	}
+
+/* dl class for sub-text such as "last updated" */
+.subText
+{
+	width: auto;
+	float: right;
+	margin: -7px 7px 0 0;
+	font-size: 0.7em;
+}
+	.subText dt,
+	.subText dd
+	{
+		width: auto;
+		min-width: 0;
+		position: static;
+		left: 0;
+		margin-left: 0;
+		color: #999;
+	}
+	.subText dt
+	{
+		margin-left: 15px;
+	}
+
+.note
+{
+	font-size: .8em;	
+}
+	.info li .note
+	{
+		margin: 7px 0;	
+	}
+	.info ul + .note
+	{
+		margin: 0 0 7px;	
+	}
+
+dd input,
+dd select,
+dd textarea
+{
+	margin: 0;
+	font-weight: normal;
+}
+
+.charRemain
+{
+	margin-top: -3px;
+	font-size: 0.7em;
+	font-weight: normal;
+	text-align: right;
+	color: #777;
+}
+
+input.disabled, 
+select.disabled
+{
+	background-color: #EEE;
+}
+	input.disabled:focus,
+	select.disabled:focus
+	{
+		padding: 1px;
+		border: 1px solid #BBB;
+	}
+	
+.dateInput
+{
+	width: 127px;
+}
+td > .dateInput,									/* date fields in table cells don't need to be as big */
+td > select.small
+{
+	width: 85px;
+}
+select.medium
+{
+	width: 131px;
+}
+input.small
+{
+	width: 35px;
+}
+input.auto
+{
+	width: 100%;
+}
+input.phone
+{
+	width: 111px;
+}
+
+input.large,
+textarea.large
+{
+	width: 296px;
+}
+select.large
+{
+	width: 300px;
+}
+textarea.fullWidth
+{
+	width: 700px;
+	height: 100px;
+}
+
+.fieldIcon
+{
+	margin: 1px 2px 0;
+	vertical-align: top;
+	cursor: pointer;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=text].sffocus,
+select:focus,
+textarea:focus,
+textarea.sffocus
+{
+	padding: 0;
+	border: 2px solid #A7AFBF;
+}
+
+/* cross-select boxes */
+.crossSelect
+{
+	display: block;
+	margin: 0 5px;
+}
+	.crossSelect dt
+	{
+		float: none;
+		margin-bottom: 4px;
+		text-align: left;
+	}
+	.crossSelect dd
+	{
+		float: none;
+		display: block;
+		margin-left: 0;
+		position: static;
+		left: 0;
+	}
+	.crossSelect select
+	{
+		min-width: 10em;
+		max-width: 310px;
+		min-height: 8em;
+		max-height: 20em;
+		float: left;
+		margin: 8px 0;
+	}
+	.crossSelect label
+	{
+		display: block;
+		font-size: 0.8em;
+		white-space: normal;
+		line-height: 0.8em;
+	}
+	.crossSelect div
+	{
+		display: inline;
+		float: left;
+		margin: 8px 2%;
+	}
+		.crossSelect button
+		{
+			width: 2.5em;
+			float: left;
+			clear: both;
+			margin: 0 0 5px;
+			font-size: 1.1em;
+			line-height: 130%;
+			letter-spacing: -2px;
+		}
+		.crossAdd, .crossAddAll
+		{
+			border-right-width: 4px;
+		}
+		.crossRemove, .crossRemoveAll
+		{
+			border-left-width: 4px;
+		}
+
+.andOr
+{
+	height: 0;
+	position: relative;
+	top: -0.8em;
+	font-size: 1.7em;
+	letter-spacing: 2px;
+	text-align: center;
+	color: #BBB;
+}
+	dd.andOr
+	{
+		top: -0.1em;
+		margin-left: -55%;
+		font-weight: normal;
+	}
+	.threeColumnLayout dd.andOr
+	{
+		margin-left: -66.5%;
+	}
+	fieldset + div.andOr
+	{
+		height: auto;
+		margin: 0;
+		top: 0;
+	}
+
+.btnRow
+{
+	clear: both;
+	overflow: auto;
+	margin-top: 5px;
+	padding: 0;
+	text-align: right;
+}
+	.dataTable + .btnRow
+	{
+		margin: 5px 0 0;
+	}
+	.formSection > .btnRow,
+	.subForm > .btnRow
+	{
+		margin: 7px;
+	}
+	div > .btnRow #prevBtn,
+	div > .btnRow #nextBtn,
+	div > .btnRow #submitBtn
+	{
+		margin-top: 7px;
+	}
+
+ul.tabs
+{
+	height: 1.84em;
+	clear: left;
+	padding: 0;
+	border-bottom: 1px solid #CCC;
+}
+.formSection .tabs
+{
+	margin: 10px 7px 0;
+}
+	.tabs li
+	{
+		float: left;
+		margin: 0;
+		padding: 0;
+		background: none;
+	}
+	.tabs a
+	{
+		height: 1.18em;
+		display: block;
+		margin: 0 1px 0 0;
+		padding: 5px 8px 5px;
+		font-size: 0.85em;
+		font-weight: bold;
+		text-decoration: none;
+		background-color: #FFF;
+		border: 1px solid #CCC;
+	}
+		.tabs a:hover
+		{
+			background: url("../images/layout/btn_bg_tile.gif") repeat-x bottom;
+		}
+	.tabs .current
+	{
+		height: 1.28em;
+		position: relative;
+		z-index: 999;
+		margin-top: -4px;
+		padding: 7px 12px;
+		color: #000;
+		background: #FFF url("../images/layout/btn_bg_tile_hover.gif") repeat-x top;
+		border-left-width: 3px;
+		border-bottom: none;
+	}
+		.tabs a.current:hover
+		{
+			background: #FFF url("../images/layout/btn_bg_tile_hover.gif") repeat-x top;
+		}
+	.tabs .current + div
+	{
+		margin-right: 1px;
+		padding: 3px 0;
+		font-size: 0.75em;
+		text-align: center;
+		background: url("../images/layout/btn_bg_tile_hover.gif") repeat-x top;
+		border: 1px solid #CCC;
+		border-width: 0 1px;
+	}
+	.formSection .tabs .current
+	{
+		border-left: 1px solid #CCC;
+	}
+#scrollableTabs
+{ 
+	width: 97%;
+	height: 2.1em;
+	padding-top: 3px;
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
+	#scrollableTabs .tabs
+	{
+		width: 2000em;
+		float: left;
+		position: absolute;
+		margin-top: 2px;
+		border-bottom: 1px solid #CCC;
+	}
+#tabPrev,
+#tabNext
+{
+	width: 1.5%;
+	height: 1.97em;
+	margin-top: 2px;
+	padding-top: 0.15em;
+	border-bottom: 1px solid #CCC;
+}
+	button.prev,
+	button.next
+	{
+		width: 14px;
+		height: 22px;
+		background: url("../images/icons/tab_arrow.gif") no-repeat;
+		border: none;
+	}
+		button.prev.disabled,
+		button.next.disabled
+		{
+			display: none;
+		}
+		button.prev::-moz-focus-inner,
+		button.next::-moz-focus-inner
+		{
+			border: none;
+		}
+#tabPrev
+{
+	float: left;
+	clear: left;
+}
+	button.prev
+	{
+		float: left;
+		clear: left;
+	}
+		button.prev:hover
+		{
+			background-position: 0 -22px;
+		}
+#tabNext
+{
+	float: right;
+	clear: right;
+}
+	button.next
+	{
+		float: right;
+		clear: right;
+		background-position: -14px 0;
+	}
+		button.next:hover
+		{
+			background-position: -14px -22px;
+		}
+		
+.panes
+{
+	padding-bottom: 7px;
+	border-top: none;
+}
+	.panes > div
+	{
+		display:none;
+		padding-top: 3px;
+	}
+
+
+button a,
+button a:active,
+button a:hover,
+button a:visited
+{
+	color: #445;
+	text-decoration: none !important;
+}
+
+
+button.formSearchBtn
+{
+	width: 26px;
+	height: 20px;
+	vertical-align: top;
+	text-indent: -999em;
+	background: #FFF url("../images/icons/search.gif") no-repeat -4px;
+}
+	button.formSearchBtn:hover
+	{
+		background-position: -31px;
+	}
+
+button.formEditBtn
+{
+	width: 26px;
+	height: 21px;
+	vertical-align: top;
+	text-indent: -999em;
+	background: #FFF url("../images/icons/edit.gif") no-repeat -4px;
+}
+	button.formEditBtn:hover
+	{
+		background-position: -31px;
+	}
+*input + button.formSearchBtn
+{
+	margin-left: 5px;
+}
+
+fieldset h6											/* collapsable data table header */
+{
+	clear: both;
+	margin: 5px 0 0;
+	padding: 4px 30px 5px;
+	font-size: 0.95em;
+	font-weight: bold;
+	font-variant: small-caps;
+	letter-spacing: 1px;
+	color: #FFF;
+	background: #315B7C url("../images/icons/table_collapse_down.gif") no-repeat 8px center;
+	cursor: pointer;
+}
+	fieldset .collapsed
+	{
+		background-image: url("../images/icons/table_collapse_right.gif");
+	}
+	fieldset h6 + fieldset
+	{
+		margin: 0;
+		padding: 5px;
+		border-top: none;
+	}
+	fieldset h6 + fieldset > fieldset
+	{
+		margin: 5px;
+	}
+	fieldset h6 img
+	{
+		float: left;
+		margin: -1px 8px 0 0;
+	}
+.dataTable
+{
+	width: auto;
+	float: none;
+	margin: 6px 0 0;
+	border: 1px solid #CCC;
+}
+	h6 + .dataTable,
+	h6 + div.hidden
+	{
+		width: auto;
+		float: none;
+		margin-top: 0;
+		padding: 0;
+	}
+	.dataTable table
+	{
+		width: 100%;
+	}
+		.dataTable td,
+		.dataTable th
+		{
+			padding: 3px;
+			border-left: 1px solid #CCC;
+		}
+		#searchResultsTable th
+		{
+			cursor: pointer;
+			cursor: hand;				
+		}
+		.dataTable th
+		{
+			font-size: 10pt;
+			font-weight: bold;
+			text-align: center;
+			background-color: #DDD;
+			border-bottom: 2px solid #BBB;
+		}
+			
+			.dataTable th.sortBy,
+			.dataTable th:hover
+			{
+				color: #111;
+			}
+			.dataTable th img.sortIcon
+			{
+				vertical-align:middle;
+				padding-left: 3px;
+			}
+			.dataTable .status
+			{
+				width: 18px;
+				padding: 3px;
+			
+			}
+		.dataTable tbody .even
+		{
+			font-size: 10pt;
+			background-color: #FFF;
+		}
+		.dataTable tbody .odd
+		{
+			font-size: 10pt;
+			background-color: #E7EBEF;
+		}
+.fileTable td
+{
+	padding: 5px;	
+}
+	.fileTable img
+	{
+		vertical-align: bottom;
+	}
+.attachmentTable img
+{
+	vertical-align: bottom;	
+}
+/* editable table rows */
+.editable,
+tr.showDetail,
+.clickable
+{
+	cursor: pointer;
+}
+	.dataTable .editable:hover,
+	.dataTable tr.showDetail:hover,
+	.dataTable .clickable:hover
+	{
+		background-color: #D7DBDF;
+	}
+.dimmed,
+.editable.dimmed:hover
+{
+	color: #BBB;
+	background-color: #EEE;
+	cursor: default;
+}
+.editBtns td
+{
+	background: #FFF;
+	border-bottom: 1px solid #CCC;
+}
+.editBtns div
+{
+	float: right;
+	margin: -4px 5px 0 2px;
+	padding: 3px 5px 4px;
+	background-color: #D7DBDF;
+	border: 1px solid #A7ABAF;
+	border-width: 0 1px 1px;
+}
+.rowDetails + .editBtns div
+{
+	background-color: #BBB;
+}
+.editBtns button
+{
+	margin-left: 5px;
+}
+.editable input,
+.editable select,
+.editable button,
+.editable .dateInput + .fieldIcon,
+.editable label
+{
+	padding: 0;
+	display: none;
+}
+.rowDetails > td
+{
+	margin: 0;
+	padding: 0;
+	background: #BBB url("../images/layout/menu_sub_shadow.png") repeat-x top;
+}
+.subForm
+{
+	width: auto;
+	float: none;
+	position: static;
+	margin: 7px;
+	padding: 7px 2px 8px;
+	background-color: #EEE;
+	border: 1px solid #999;
+}
+	.subForm fieldset
+	{
+		background-color: #FFF;
+	}
+	.subForm > p
+	{
+		margin: 10px 5px 5px;
+	}
+	.subForm dl
+	{
+		float: none;
+		clear: both;
+		z-index: 999;
+	}
+		.subForm dl:after
+		{
+			content: ".";
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+			line-height: 0;
+		}
+
+/* rows that are set apart, such as new rows or totals */
+.emphasizeRow td
+{
+	white-space: nowrap;
+	background-color: #D7DBDF;
+	border: 1px solid;
+	border-color: #A7ABAF #C7CBCF;
+	border-right-width: 0;
+	cursor: default;
+}
+.favoriteRow td, 
+.headerRow th
+{
+	background: url("../images/layout/btn_bg_tile_hover.gif") repeat-x;
+	border: 1px solid #C7CBCF;
+	border-right-width: 0;
+}
+	.favoriteRow .subText
+	{
+		margin: 2px 5px 0;
+	}
+	
+.centered
+{
+	text-align: center;
+}
+
+.subTable
+{
+	width: auto;
+	max-height: 15.5em;
+	float: none;
+	margin: 7px;
+	border: 1px solid #999;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+	.subTable th
+	{
+		padding: 3px 15px;
+	}
+	
+.dataTable table ~ div
+{
+	margin-top: 0;
+	padding: 4px;
+	text-align: right;
+	color: #777;
+	background-color: #DDD;
+	border-top: 1px solid #BBB;
+}
+	.pageResults p
+	{
+		float: left;
+		margin: 4px 0 0;
+		font-size: 0.8em;
+	}
+	.pageResults li
+	{
+		display: inline;
+		padding-left: 0;
+		vertical-align: middle;
+		background: none;
+	}
+	.pageResults a
+	{
+		display: inline-block;
+		padding: 0 3px;
+		background-color: #FFF;
+		border: 1px solid #CCC;
+		text-decoration: none;
+	}
+	
+ol.files
+{
+}
+	ol.files li
+	{
+		background: url(../images/icons/attach.png) no-repeat 0 .1em;
+		padding-left: 1.5em;
+		height:auto;
+	}
+		ol.files li img
+		{
+			vertical-align: middle;
+		}
+		
+#prevBtn,
+#nextBtn,
+#submitBtn
+{
+	width: 80px;
+	height: 32px;
+	line-height: 0;
+	text-indent: -999em;
+	background: url("../images/btn_next_prev_submit.png") no-repeat;
+	border: none;
+}
+	#prevBtn::-moz-focus-inner,
+	#nextBtn::-moz-focus-inner,
+	#submitBtn::-moz-focus-inner					/* only recognized by Firefox */
+	{
+		border: none;
+	}
+#prevBtn
+{
+	float: left;
+}
+	#prevBtn:hover
+	{
+		cursor: pointer;
+		background-position: 0 -32px;
+	}
+#nextBtn
+{
+	float: right;
+	clear: right;
+	background-position: -80px 0;
+}
+	#nextBtn:hover
+	{
+		cursor: pointer;
+		background-position: -80px -32px;
+	}
+#submitBtn
+{
+	float: right;
+	clear: right;
+	background-position: -160px 0;
+}
+	#submitBtn:hover
+	{
+		cursor: pointer;
+		background-position: -160px -32px;
+	}
+button.borderRight
+{
+	border-right-width: 4px;
+}
+
+/* hidden class for dynamic form elements; show/hide based on input */
+fieldset.hidden
+{
+	padding: 0 0 5px;
+}
+div.hidden
+{
+	width: 100%;
+	float: left;
+}
+
+/* class to make a label hidden, but accessible to screen readers */
+.hideLabel,
+.editable label,
+.emphasizeRow label,
+.centered label
+{
+	position: absolute;
+	left: -999em;	
+}
+.emphasizeRow label.forCheckbox, .emphasizeRow .labelToRight label {
+	position: relative;
+	left: 0px;
+
+}
+
+
+/* context help overlay */
+/* the overlayed element */
+.overlay {
+	position:relative;
+	
+	/* growing background image */
+	background:url('../images/white.png');
+
+	/* dimensions after the growing animation finishes  */
+	width:550px;
+
+	/* initially overlay is hidden */
+	display:none;
+	
+	/* some padding to layout nested elements nicely  */
+	padding:35px;
+}
+
+#service {
+	position:relative;
+	
+	/* growing background image */
+	background:url('../images/white.png');
+
+	/* dimensions after the growing animation finishes  */
+	width:959px;
+
+	/* initially overlay is hidden */
+	display:none;
+	
+	/* some padding to layout nested elements nicely  */
+	padding:35px;
+}
+
+	#progress {
+		/* growing background image */
+		position:relative;
+		
+		/* growing background image */
+		background-image:url('../images/progress_white.png') !important;
+	
+		/* dimensions after the growing animation finishes  */
+		width:580px;
+	
+		/* initially overlay is hidden */
+		display:none;
+		
+		/* some padding to layout nested elements nicely  */
+		padding:35px;
+		
+	}
+	
+	/* default close button positioned on upper right corner */
+	.overlay .close {
+		background-image:url('../images/close.png');
+		position:absolute;
+		right:5px;
+		top:5px;
+		cursor:pointer;
+		height:35px;
+		width:35px;
+	}
+	/* container for external content. uses vertical scrollbar, if needed */ 
+	.overlay .wrap
+	{ 
+		overflow:auto;
+		padding:10px;
+		width:540px;
+		color:#444;
+	}
+	#service .wrap
+	{ 
+		overflow:auto;
+		padding:10px;
+		width:98%;
+		height:810px;
+		color:#444;
+	}	
+	#overlay .wrap
+	{ 
+		height:410px;
+	}
+	#progress .wrap
+	{ 
+		height:210px;
+	}
+	/* container for external content. uses vertical scrollbar, if needed */ 
+	.overlay .wrap h1 { 
+		font-size:3em;
+		border-bottom:1px solid #444;
+		color:#444;
+	}
+	.overlay .wrap h3 { 
+		font-size:1.4em;
+		color:#444;
+	}
+	.overlay .wrap h4 { 
+		border-bottom:1px dashed #444;
+		font-size:1.2em;
+		color:#315B7C;
+	}
+	.overlay fieldset
+	{
+		position:static;
+		margin: 13px 0 0;
+	}
+
+.inputOverlay
+{
+	display:none;
+	width:1000px;
+	z-index: 9999;
+	padding:15px;
+	background-color: #FFF;
+	border: 2px solid #666;
+} 
+
+.tooltip
+{
+	display:none;
+	max-width:200px;
+	z-index:1000;
+	padding:7px 10px;
+	color:#fff;
+	background-color:#000;
+	border:1px solid #fff;
+	/* outline radius for mozilla/firefox only */
+	-moz-box-shadow:0 0 10px #000;
+	-webkit-box-shadow:0 0 10px #000;
+}
+	.tooltip em
+	{
+		font-weight: bold;
+	}
+
+
+#exposeMask
+{
+	background-color: #405060;
+}
+
+/* DEPRECATED - WILL BE REMOVED */
+.pagination
+{
+	float: right;
+	margin-top: 5px;
+	color: #777;
+}
+.pagination li
+{
+	display: inline;
+	vertical-align: middle;
+}
+.pagination a
+{
+	display: inline-block;
+	padding: 0 3px;
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	text-decoration: none;
+}
+.numResults
+{
+	float: left;
+	position: relative;
+	margin-top: 4px;
+	font-size: 0.8em;
+	color: #777;
+}
+
+.reportHeading {
+	font-family: monospace;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.6em;
+}
+.linetext {
+	font-family: monospace;
+}
+.amount {
+	text-align: right;
+}
+.id {
+	text-align: center;
+}

@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+        <meta http-equiv="PRAGMA" content="NO-CACHE">
+        <meta http-equiv="EXPIRES" content="0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="robots" content="noindex,nofollow">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <link rel="shortcut icon" href="//www.redhat.com/favicon.ico">
+
+        <link id="style" rel="stylesheet" type="text/css" href="css/rh-main.css" /><link id="style" rel="stylesheet" type="text/css" href="css/webfonts.css" /><link id="style" rel="stylesheet" type="text/css" href="css/custom.css" /><link id="style" rel="stylesheet" type="text/css" href="css/jquery.gatedform.css" />
+
+
+        <link rel="stylesheet" href="//www.redhat.com/assets/fonts/brand-icons/brand-icons-forms.css" />
+
+        <script src="/forms/scripts/lib/jquery/1.10/jquery.min.js"></script>
+        <script src="/forms/scripts/vendor/elq/elqCfg.js"></script>
+        <script src="/forms/scripts/vendor/elq/elqImg.js"></script>
+        <script src="/forms/scripts/vendor/elq/elqScr.js"></script>
+
+    <script type="text/javascript">
+            var GatedFormConfig = {
+                /**************************************
+                   Locale
+                ***************************************/
+                language : 'en', //language code
+                country  : 'us', //country code
+
+                /**************************************
+                   Campaign ID
+                ***************************************/
+                sc_cid   : '70160000000H4AjAAK',    //external campaign id
+
+                /**************************************
+                   Partner ID
+                ***************************************/
+                pid : '1',
+
+                /**************************************
+                   Offer ID
+                ***************************************/
+                //offer_id : 'A',
+
+                FormTitle: '',
+                FormIntro: '',
+
+                /**************************************
+                   Up to 3 User Defined Fields (UDF)
+                ***************************************/
+
+                /**************************************
+                   Google Analytics
+                ***************************************/
+                //GoogleAnalyticsID : 'UA-XXXXX-X',
+
+                /**************************************
+                   Google AdWords Conversion Tracking
+                ***************************************/
+                GoogleAdWordsConversionTracking : {
+                    'id'        : '990030321',
+                    'label'     : 'SNw6CL-wggcQ8dOK2AM'
+                }
+            }
+        </script>
+
+        <link href="//img.en25.com/Web/RedHat/bootstrap.min_09032013.css" rel="stylesheet">
+        <link href="//img.en25.com/Web/RedHat/bootstrap-responsive.min_09032013.css " rel="stylesheet">
+        <link href="//img.en25.com/Web/RedHat/multi-offer_09032013.css" rel="stylesheet">
+        <link href="//img.en25.com/Web/RedHat/webfonts_09032013.css" type="text/css" media="all" rel="stylesheet">
+
+        <script src="/forms/scripts/jquery.gatedform.js"></script>
+        <script src="http://dynamicform-theharris.rhcloud.com/j/s_code.js"></script>
+
+        <!--[if lt IE 9]>
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <title>Red Hat | UAT Multi-offer Landing Page</title>
+
+        <!--=====================================================================================-->
+
+        <!-- Enter data for your multiple-offer landing page below. -->
+        <script>
+
+            var offers = [{
+
+                    "offerID":"",
+                    "offerHeading":"Sample Heading",
+                    "offerSubheading":"Sample Sub-Heading",
+                    "offerDescription":"Offer QA_TEST_1 (Gated)",
+                    "offerCTA":"Sample CTA #1",
+                    "offerBanner":"//img.en25.com/Web/RedHat/rh-rhev-lp-1003x400-red2.png",
+                    "offerThumbnailBackground":"//img.en25.com/Web/RedHat/red_blank.png",
+                    "offerThumbnailIcon":"\ue07f",
+                    "offerLink":"/forms/?offer_id=QA_TEST_1&language=en"
+                },{
+
+                    "offerID":"",
+                    "offerHeading":"",
+                    "offerSubheading":"",
+                    "offerDescription":"Offer QA_TEST_2 (Gated)",
+                    "offerCTA":"Sample CTA #2",
+                    "offerBanner":"a",
+                    "offerThumbnailBackground":"//img.en25.com/Web/RedHat/red_blank.png",
+                    "offerThumbnailIcon":"\ue07f",
+                    "offerLink":"/forms/?offer_id=QA_TEST_2&language=fr"
+                },{
+
+                    "offerID":"",
+                    "offerHeading":"",
+                    "offerSubheading":"",
+                    "offerDescription":"Offer QA_TEST_3 (Tracked).",
+                    "offerCTA":"Sample CTA #3",
+                    "offerBanner":"a",
+                    "offerThumbnailBackground":"//img.en25.com/Web/RedHat/red_blank.png",
+                    "offerThumbnailIcon":"\ue088",
+                    "offerLink":"/forms/?offer_id=QA_TEST_3"
+                },{
+                    "offerID":"sampleidabcdefghij",
+                    "offerHeading":"Sample Headline - Offer #4",
+                    "offerSubheading":"Sample Sub-Headline - Offer #4",
+                    "offerDescription":"Sample Description #4",
+                    "offerCTA":"Sample CTA #4",
+                    "offerBanner":"a",
+                    "offerThumbnailBackground":"a",
+                    "offerThumbnailIcon":"a",
+                    "offerLink":"a"
+                },{
+
+                    "offerID":"sampleidabcdefghij",
+                    "offerHeading":"Sample Headline - Offer #5",
+                    "offerSubheading":"Sample Sub-Headline - Offer #5",
+                    "offerDescription":"Sample Description #5",
+                    "offerCTA":"Sample CTA #5",
+                    "offerBanner":"a",
+                    "offerThumbnailBackground":"a",
+                    "offerThumbnailIcon":"a",
+                    "offerLink":"a"
+                },{
+                    "offerID":"sampleidabcdefghij",
+                    "offerHeading":"Sample Headline - Offer #6",
+                    "offerSubheading":"Sample Sub-Headline - Offer #6",
+                    "offerDescription":"Sample Description #6",
+                    "offerCTA":"Sample CTA #6",
+                    "offerBanner":"a",
+                    "offerThumbnailBackground":"a",
+                    "offerThumbnailIcon":"a",
+                    "offerLink":"a"
+                },{
+
+                    "offerID":"sampleidabcdefghij",
+                    "offerHeading":"Sample Headline - Offer #7",
+                    "offerSubheading":"Sample Sub-Headline - Offer #7",
+                    "offerDescription":"Sample Description #7",
+                    "offerCTA":"Sample CTA #7",
+                    "offerBanner":"a",
+                    "offerThumbnailBackground":"a",
+                    "offerThumbnailIcon":"a",
+                    "offerLink":"a"
+                },{
+
+                    "offerID":"sampleidabcdefghij",
+                    "offerHeading":"Sample Headline - Offer #8",
+                    "offerSubheading":"Sample Sub-Headline - Offer #8",
+                    "offerDescription":"Sample Description #8",
+                    "offerCTA":"Sample CTA #8",
+                    "offerBanner":"a",
+                    "offerThumbnailBackground":"a",
+                    "offerThumbnailIcon":"a",
+                    "offerLink":"a"
+                },{
+
+                    "offerID":"sampleidabcdefghij",
+                    "offerHeading":"Sample Headline - Offer #9",
+                    "offerSubheading":"Sample Sub-Headline - Offer #9",
+                    "offerDescription":"Sample Description #9",
+                    "offerCTA":"Sample CTA #9",
+                    "offerBanner":"a",
+                    "offerThumbnailBackground":"a",
+                    "offerThumbnailIcon":"a",
+                    "offerLink":"a"
+                },{
+
+                    "offerID":"sampleidabcdefghij",
+                    "offerHeading":"Sample Headline - Offer #10",
+                    "offerSubheading":"Sample Sub-Headline - Offer #10",
+                    "offerDescription":"Sample Description #10",
+                    "offerCTA":"Sample CTA #10",
+                    "offerBanner":"a",
+                    "offerThumbnailBackground":"a",
+                    "offerThumbnailIcon":"a",
+                    "offerLink":"a"
+                },{
+
+                    "offerID":"sampleidabcdefghij",
+                    "offerHeading":"Sample Headline - Offer #11",
+                    "offerSubheading":"Sample Sub-Headline - Offer #11",
+                    "offerDescription":"Sample Description #11",
+                    "offerCTA":"Sample CTA #11",
+                    "offerBanner":"a",
+                    "offerThumbnailBackground":"a",
+                    "offerThumbnailIcon":"a",
+                    "offerLink":"a"
+                },{
+
+                    "offerID":"sampleidabcdefghij",
+                    "offerHeading":"Sample Headline - Offer #12",
+                    "offerSubheading":"Sample Sub-Headline - Offer #12",
+                    "offerDescription":"Sample Description #12",
+                    "offerCTA":"Sample CTA #12",
+                    "offerBanner":"a",
+                    "offerThumbnailBackground":"a",
+                    "offerThumbnailIcon":"a",
+                    "offerLink":"a"
+                },
+
+            ];
+
+
+
+
+        //alert('end of script');
+
+
+        </script>
+        <!------------------------------------------------------------------------------->
+
+        <script>
+            $(document).ready(function(){
+                $('.columnContainer').each(function(){
+                    var highestBox = 0;
+                    $('.column', this).each(function(){
+                        if($(this).height() > highestBox)
+                            highestBox = $(this).height();
+                    });
+                    $('.column',this).height(highestBox);
+                });
+            });
+        </script>
+
+
+        <!--[if lt IE 9]>
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+        <style>
+            #main-promo-content h1 {
+                font-size:250%;
+            }
+             #main-promo {
+                background:#440000 url("//img.en25.com/Web/RedHat/rh-rhev-lp-1003x400-red2.png") no-repeat 0 0;
+
+            }
+            .promo-thumb {
+                background:url("//img.en25.com/Web/RedHat/red_blank.png") no-repeat;
+            }
+            section {
+                           padding: 0px 0px 0px;
+                       }
+            .cta {
+                margin-top:20px;
+            }
+
+            /* Tablets in portrait mode and desktops with less than 994px of horizontal browser width */
+            @media only screen and (min-device-width: 586px) and (orientation: portrait),
+            screen and (max-width: 768px) {
+
+                .container.main {
+                    box-shadow: none;
+                    overflow:hidden;
+                }
+                .container {
+                    width:100%;
+                }
+
+                #main-promo {
+                    height:300px;
+                    background-size:1003px;
+                    margin:0;
+                    padding:0;
+                }
+                #main-promo-content {
+                    margin:0;
+                    padding:20px 20px;
+                    width:95%;
+                }
+                #main-promo-content h1 {
+                    font-size:1.7em;
+                    line-height:1.2em;
+                    text-shadow: 1px 1px #444444;
+                    width:95%;
+                }
+                #more-content h2 {
+                    font-size:180%;
+                    line-height:1.3em;
+                }
+                .promo-thumb {
+                    width:80px;
+                    margin:0 10px 0 0;
+                }
+                .promo-icon {
+                    width:40px;
+                }
+                img.promo-icon {
+                    top:15px;
+                    left:15px;
+                }
+                .cta-content h2 {
+                    margin:10px 25px 10px 80px;
+                }
+                .cta-content p {
+                    margin:10px 25px 10px 80px;
+                }
+                span.promo-icon {
+                            position: absolute;
+                            top: 10px;
+                            left: 0;
+                            font-size: 5.0em;
+                            color: #ffffff;
+                        }
+
+
+            } /* End Tablets */
+
+
+
+            /* anything less than 320px (primarily phones in portrait */
+            @media screen and (max-width: 320px) {
+
+                #main-promo-content h1 {
+                    font-size:1.7em;
+                    line-height:1.2em;
+                    text-shadow: 1px 1px #444444;
+                    width:95%;
+                }
+                #main-promo-content h2 {
+                    font-size:1.4em;
+                    line-height:1.3em;
+                    text-shadow: 1px 1px #444444;
+                    width:95%;
+                }
+                #main-promo-content p {
+                    display:block;
+                    font-size:.9em;
+                    line-height:1.4em;
+                }
+
+                #more-content h2 {
+                    font-size:160%;
+                    line-height:1.3em;
+                }
+                .cta-content h2 {
+                    font-size:1.2em;
+                    line-height:1.2em;
+                    margin:10px 25px 10px 80px;
+                }
+                .cta-content p {
+                    font-size:.9em;
+                    line-height:1.3em;
+                    margin:10px 25px 10px 80px;
+                }
+                .promo-thumb {
+                    width:70px;
+                    margin:0 10px 0 0;
+                }
+                .promo-icon {
+                    width:40px;
+                }
+                img.promo-icon {
+                    top:15px;
+                    left:15px;
+                }
+            }
+
+
+            }
+        </style>
+
+    </head>
+
+
+    <body class="multiple">
+
+        <div class="container main">
+            <div class="row-fluid">
+                <section>
+                    <div id="brand">
+                        <div id="logo"><a href="//www.redhat.com">Red Hat</a></div>
+                    </div>
+                </section>
+                <section>
+                    <div id="main-promo">
+                        <div id="main-promo-content" class="light-text">
+                            <h1 id="main-promo-heading">Error Loading Page</h1>
+                            <h2 id="main-promo-subheading"></h2>
+                            <p id="main-promo-description"></p>
+                            <a id="main-promo-cta" href="" class="btn btn-default" rel="" target="_blank"></a>
+                        </div>
+                    </div>
+                </section>
+            </div><!-- end .row-fluid -->
+
+            <div class="row-fluid">
+                <div class="benefits">
+                    <section class="columnContainer">
+                        <div class="span6 column" id="promo1" style="display:none">
+                                            <a class="promo-offer" href="" id="promo1-link" target="_blank">
+
+                                <span id="promo1-icon" class="promo-icon one" aria-hidden="true" data-icon=""></span>
+                                <div id="promo1-thumbnailbackground" class="promo-thumb"></div>
+
+                                <div class="cta">
+                                    <img class="cta-arrow" src="//www.redhat.com/g/icons/go-arrow-gray2.png">
+                                </div>
+
+                                <div class="cta-content">
+                                    <h2 id="promo1-cta" style="text-transform:uppercase;">Blank - CTA - Offer 2</h2>
+                                    <p id="promo1-description" style="margin-left:15px;margin-bottom:10px;">Blank - Description - Offer 2</p>
+                                </div>
+
+                                            </a>
+                                    </div>
+
+                                       <div class="span6 column" id="promo2" style="display:none">
+                                            <a class="promo-offer" href="" id="promo2-link" target="_blank">
+                                <span id="promo2-icon" class="promo-icon one" aria-hidden="true" data-icon=""></span>
+                                <div id="promo2-thumbnailbackground" class="promo-thumb"></div>
+
+                                <div class="cta">
+                                    <img class="cta-arrow" src="//www.redhat.com/g/icons/go-arrow-gray2.png">
+                                </div>
+
+                                <div class="cta-content">
+                                    <h2 id="promo2-cta" style="text-transform:uppercase;">Blank - CTA - Offer 2</h2>
+                                    <p id="promo2-description" style="margin-left:15px;margin-bottom:10px;">Blank - Description - Offer 2</p>
+                                </div>
+
+                                            </a>
+                                    </div>
+
+                        <div class="span6 column" id="promo3" style="display:none">
+                                            <a class="promo-offer" href="" id="promo3-link" target="_blank">
+                                <span id="promo3-icon" class="promo-icon one" aria-hidden="true" data-icon=""></span>
+                                <div id="promo3-thumbnailbackground" class="promo-thumb"></div>
+
+                                <div class="cta">
+                                    <img class="cta-arrow" src="//www.redhat.com/g/icons/go-arrow-gray2.png">
+                                </div>
+
+                                <div class="cta-content">
+                                    <h2 id="promo3-cta" style="text-transform:uppercase;">Find your P<span style="text-transform:lowercase">aa</span>S solution</h2>
+                                    <p id="promo3-description" style="margin-left:15px;margin-bottom:10px;">Blank - Description - Offer 3</p>
+                                </div>
+
+                                            </a>
+                                    </div>
+
+                        <div class="span6 column" id="promo4" style="display:none">
+                                            <a class="promo-offer" href="" id="promo4-link" target="_blank">
+                                <span id="promo4-icon" class="promo-icon one" aria-hidden="true" data-icon=""></span>
+                                <div id="promo4-thumbnailbackground" class="promo-thumb"></div>
+
+                                <div class="cta">
+                                    <img class="cta-arrow" src="//www.redhat.com/g/icons/go-arrow-gray2.png">
+                                </div>
+
+                                <div class="cta-content">
+                                    <h2 id="promo4-cta" style="text-transform:uppercase;">Blank - CTA - Offer 4</h2>
+                                    <p id="promo4-description" style="margin-left:15px;margin-bottom:10px;">Blank - Description - Offer 4</p>
+                                </div>
+
+                                            </a>
+                                    </div>
+
+                        <div class="span6 column" id="promo5" style="display:none">
+                                            <a class="promo-offer" href="" id="promo5-link" target="_blank">
+                                <span id="promo5-icon" class="promo-icon one" aria-hidden="true" data-icon=""></span>
+                                <div id="promo5-thumbnailbackground" class="promo-thumb"></div>
+
+                                <div class="cta">
+                                    <img class="cta-arrow" src="//www.redhat.com/g/icons/go-arrow-gray2.png">
+                                </div>
+
+                                <div class="cta-content">
+                                    <h2 id="promo5-cta" style="text-transform:uppercase;">Blank - CTA - Offer 5</h2>
+                                    <p id="promo5-description" style="margin-left:15px;margin-bottom:10px;">Blank - Description - Offer 5</p>
+                                </div>
+
+                                            </a>
+                                    </div>
+
+                        <!--
+                        <div class="span6 column" id="promo4" style="display:none">
+                            <a class="promo-offer cta-content" href="//www.youtube.com/embed/OhCzCTsxbak?iframe&rel=0&autoplay=1" rel="lightbox">
+                                <img style="width:120;height:155px;float:left;box-shadow: 3px 3px 5px #999999;margin:15px 15px 15px 15px;" src="//img.en25.com/Web/RedHat/vp-OhCzCTsxbak.png">
+
+                                <div class="cta">
+                                    <img class="cta-arrow" src="//www.redhat.com/g/icons/go-arrow-gray2.png">
+                                </div>
+
+                                <div class="cta-content">
+                                    <h2 id="promo4-cta" style="text-transform:uppercase;">Blank - CTA - Offer 3</h2>
+                                    <p id="promo4-description" style="margin-left:15px;margin-bottom:10px;">Blank - Description - Offer 3</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="span6 column" id="promo5" style="display:none">
+                            <a class="promo-offer cta-content" href="//www.youtube.com/embed/IH41qiSQw08?iframe&rel=0&autoplay=1" rel="lightbox">
+                                <img style="width:120;height:155px;float:left;box-shadow: 3px 3px 5px #999999;margin:15px 15px 15px 15px;" src="//img.en25.com/Web/RedHat/vp-IH41qiSQw08.png">
+
+                                <div class="cta">
+                                    <img class="cta-arrow" src="//www.redhat.com/g/icons/go-arrow-gray2.png">
+                                </div>
+
+                                <div class="cta-content">
+                                    <h2 id="promo5-cta" style="text-transform:uppercase;">Blank - CTA - Offer 4</h2>
+                                    <p id="promo5-description" style="margin-left:15px;margin-bottom:10px;">Blank - Description - Offer 4</p>
+                                </div>
+
+                            </a>
+                        </div>
+                        -->
+                    </section>
+
+                </div><!-- end .row-fluid -->
+            </div><!-- end .container .main -->
+
+
+            <div class="row-fluid">
+                <footer style="margin-top:20px;">
+                    <div class="span8">
+                        <nav>
+                            <ul>
+                                <li><a target="_blank" href="//www.redhat.com/legal/privacy_statement.html">Privacy policy</a></li>
+                                <li><a target="_blank" href="//www.redhat.com/legal/legal_statement.html">Terms of use</a></li>
+                                <li><a target="_blank" href="//www.redhat.com/about/contact/">Contact us</a></li>
+                                <li><a target="_blank" href="//www.redhat.com/about/">About Red Hat</a></li>
+                            </ul>
+                        </nav>
+
+                        <p>Copyright  &copy;2013 Red Hat, Inc.</p>
+                    </div><!-- /span8 -->
+
+                    <div class="span4">
+                        <ul class="social-icons">
+                            <li><span>Connect:</span></li>
+                            <li><a href="//www.twitter.com/redhatstorage" target="_blank"><img src="//www.redhat.com/g/connect/twitter-i.png" alt="Twitter"></a></li>
+                            <li><a href="//www.facebook.com/RedHatStorage" target="_blank"><img src="//www.redhat.com/g/connect/facebook-i.png" alt="Facebook"></a></li>
+                            <li><a href="//www.youtube.com/user/RedHatVideos" target="_blank"><img src="//www.redhat.com/g/connect/youtube-i.png" alt="YouTube"></a></li>
+                            <li><a href="//www.linkedin.com/groups?home=&gid=2525539" target="_blank"><img src="//www.redhat.com/g/connect/linkedin-i.png" alt="LinkedIn"></a></li>
+                        </ul>
+                    </div><!-- /.threecol -->
+
+
+
+
+                    <script>
+                     $(document).ready(function() {
+
+                        function resizeBoxes() {
+                            var heightArray = $(".columnContainer>div").map( function(){
+                                return  $(this).height();
+                            }).get();
+                            var maxHeight = Math.max.apply( Math, heightArray);
+                            $(".columnContainer>div").height(maxHeight+20);
+                        };
+
+                    resizeBoxes();
+
+                    });
+
+
+                    </script>
+
+                </footer>
+            </div>
+        </div><!--/.container, the main one -->
+
+        <!-- Begin Omniture (Adobe Analytics) Code -->
+        <div id="oTags">
+
+        <!-- Begin ENGAGE Specific Code -->
+        <script language="JavaScript" type="text/javascript"><!--
+        if(offers[0].offerID){
+            offerID = offers[0].offerID;
+        }
+        offerLanguage = "en";
+        //--></script>
+        <!-- End ENGAGE Specific Code -->
+
+        <script type="text/javascript" src="//www.redhat.com/assets/js/tracking/s_code.js"></script>
+        <script type="text/javascript" src="//www.redhat.com/assets/js/tracking/track_engage.js"></script>
+        <script type="text/javascript" src="//www.redhat.com/assets/js/tracking/rh_omni_footer.js"></script>
+        <script language="JavaScript" type="text/javascript"><!--
+        if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('<')+'\!-'+'-')
+        //--></script><noscript><a href="//www.omniture.com" title="Web Analytics"><img
+        src="//smtrcs.redhat.com/b/ss/redhatcom,redhatglobal/1/H.25.4--NS/0?[AQB]&cdp=3&[AQE]"
+        height="1" width="1" border="0" alt="" /></a></noscript><!--/DO NOT REMOVE/-->
+        </div>
+        <!-- End Omniture (Adobe Analytics) Code -->
+
+    </body>
+
+    <!-- Multiple Offer Dynamic Content Functionality -->
+    <script type='text/javascript'>
+
+        function getQueryStrings() {
+            var assoc  = {};
+            var decode = function (s) { return decodeURIComponent(s.replace(/\+/g, " ")); };
+            var queryString = location.search.substring(1);
+            var keyValues = queryString.split('&');
+
+            for(var i in keyValues) {
+                var key = keyValues[i].split('=');
+                if (key.length > 1) {
+                    assoc[decode(key[0])] = decode(key[1]);
+                }
+            }
+
+            return assoc;
+        }
+
+        var qs = getQueryStrings();
+
+        //Get nurture score
+        var n_score = qs["ns"];
+        //Get nurture score
+        var l_score = qs["ls"];
+
+
+        //Set default display of offers
+        //If nurture score is missing, display all offers
+        /*if(!n_score){
+            //If nurture score is not valid, display all offers
+            for (var i=1;i<=offers.length;i++)
+            {
+                document.getElementById('promo' + i).style.display = "inline";
+            }
+        } */
+        //If nurture score equals 010507, show offers 1, 5 and 7 in spots 1, 2, and 3, respectively.
+        //Scores must be in ascending order to be valid (i.e. ns=101211 is NOT valid)
+        if(n_score && n_score.length==6 && n_score.substring(0,2)<13 && n_score.substring(2,4)<13 && n_score.substring(4,6)<13 && (n_score.substring(0,2)<n_score.substring(2,4)) && (n_score.substring(2,4)<n_score.substring(4,6))){
+
+            var trim_nscore_1,trim_nscore_2,trim_nscore_3;
+
+            //If score is less 10, trim leading 0.
+            if(n_score.substring(0,1)==0){
+                trim_nscore_1=n_score.substring(1,2);
+            } else {
+                trim_nscore_1=n_score.substring(0,2);
+            }
+            if(n_score.substring(2,3)==0){
+                trim_nscore_2=n_score.substring(3,4);
+            } else {
+                trim_nscore_2=n_score.substring(2,4);
+            }
+            if(n_score.substring(4,5)==0){
+                trim_nscore_3=n_score.substring(5,6);
+            } else {
+                trim_nscore_3=n_score.substring(4,6);
+            }
+
+            /* TODO: Once the layout of the tiles is determined, set the values of the JSON objects dynamically */
+
+            //Set promo spot #1 content
+            document.getElementById("main-promo-heading").innerHTML = offers[trim_nscore_1-1].offerHeading;
+            document.getElementById("main-promo-subheading").innerHTML = offers[trim_nscore_1-1].offerSubheading;
+            document.getElementById("main-promo-description").innerHTML = offers[trim_nscore_1-1].offerDescription;
+            document.getElementById("main-promo-cta").innerHTML = offers[trim_nscore_1-1].offerCTA;
+
+            //Set promo spot #2 content
+            document.getElementById("promo"+trim_nscore_2+"-cta").innerHTML = offers[(trim_nscore_2-1)].offerCTA;
+            document.getElementById("promo"+trim_nscore_2+"-description").innerHTML = offers[(trim_nscore_2-1)].offerDescription
+            document.getElementById("promo"+trim_nscore_2).style.display = "inline";
+            document.getElementById("promo"+trim_nscore_2).style.cssText = "margin-left:0px;";
+            //document.getElementById("promo"+trim_nscore_2).style.cssText = "margin-bottom:0px;";
+
+            //Set promo spot #3 content
+            document.getElementById("promo"+trim_nscore_3+"-cta").innerHTML = offers[(trim_nscore_3-1)].offerCTA;
+            document.getElementById("promo"+trim_nscore_3+"-description").innerHTML = offers[(trim_nscore_3-1)].offerDescription
+            document.getElementById("promo"+trim_nscore_3).style.display = "inline";
+            //document.getElementById("promo"+trim_nscore_3).style.cssText = "margin-left:0px;";
+            document.getElementById("promo"+trim_nscore_3).style.cssText = "margin-bottom:0px;";
+
+        } else {
+            //If nurture score is present but not valid, display all offers.
+
+            //Default promo spot #1 content to first offer
+            document.getElementById("main-promo").style.cssText = "background:#440000 url('" + offers[0].offerBanner + "') no-repeat 0 0;"
+            document.getElementById("main-promo-heading").innerHTML = offers[0].offerHeading;
+            document.getElementById("main-promo-subheading").innerHTML = offers[0].offerSubheading;
+            document.getElementById("main-promo-description").innerHTML = offers[0].offerDescription;
+            document.getElementById("main-promo-cta").innerHTML = offers[0].offerCTA;
+            document.getElementById("main-promo-cta").href = offers[0].offerLink;
+
+            //Show all remaining offers' CTA tiles, skip offer #1
+            for (var i=2;i<=offers.length;i++)
+            {
+                //Show CTA
+                document.getElementById("promo" + i).style.display = "inline";
+                if(i!=3){
+                    document.getElementById("promo"+i+"-cta").innerHTML = offers[(i-1)].offerCTA;
+                }
+                document.getElementById("promo"+i+"-link").href = offers[(i-1)].offerLink;
+                document.getElementById("promo"+i+"-description").innerHTML = offers[(i-1)].offerDescription;
+                document.getElementById("promo"+i+"-icon").setAttribute('data-icon', offers[(i-1)].offerThumbnailIcon);
+                document.getElementById("promo"+i+"-thumbnailbackground").style.cssText = "background:#440000 url('" + offers[(i-1)].offerThumbnailBackground + "') no-repeat 0 0;"
+
+
+                //Styling touch-ups based on which column a CTA will be in
+                if(i%2){
+                    document.getElementById("promo" + i).style.cssText = "margin-bottom:0px;";
+                } else {
+                    document.getElementById("promo" + i).style.cssText = "margin-left:0px;";
+                }
+            }
+        }
+
+        </script>
+    </html>

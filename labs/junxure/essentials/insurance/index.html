@@ -1,0 +1,639 @@
+<!doctype html> <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!-->
+<html lang="en">
+	<!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>Junxure Essentials &raquo; Insurance</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<!-- Le style -->
+
+		<!-- DO NOT EDIT - generate from ../Content/less/application.less -->
+		<!-- SEE http://lesscss.org/ -->
+		<!--
+		<link rel="stylesheet" href="assets/css/essentials.css" />
+		-->
+
+		<link rel="stylesheet" type="text/css" href="../Content/css/application.css" />
+
+		<!-- LESS - ONLY FOR DEVELOPMENT
+		<link rel="stylesheet/less" type="text/css" href="../Content/less/application.less"/>
+		<script type="text/javascript">less = { env: 'development' };</script>
+		<script src="../Scripts/plugins/less-1.3.0.min.js"></script>
+		<script type="text/javascript">less.watch();</script>
+		/LESS -->
+
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!-- Le fav and touch icons -->
+		<link rel="shortcut icon" href="http://www.junxure.com/public/sites/default/files/imgs/favicon.png">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.junxure.com/public/sites/default/files/imgs/favicon.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://www.junxure.com/public/sites/default/files/imgs/favicon.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://www.junxure.com/public/sites/default/files/imgs/favicon.png">
+		<link rel="apple-touch-icon-precomposed" href="http://www.junxure.com/public/sites/default/files/imgs/favicon.png">
+	</head>
+
+	<body data-spy="scroll" data-target=".subnav" data-offset="50">
+
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<a class="brand" href="//junxure.com/"><img src="../Content/Images/junxure-logo.png" alt="Junxure Essentials" width="180" height="23" /></a>
+				<ul class="nav pull-right">
+					<li>
+						<a href="#Profile"><i class="icon-user">&nbsp;</i> Shawn Ethridge</a>
+					</li>
+					<li>
+						<a href="#Logout"><i class="icon-signout">&nbsp;</i> Log Out</a>
+					</li>
+				</ul>
+			</div>
+			<!-- generated breadcrumb trail -->
+			<div class="navbar-inner" id="breadcrumb">&nbsp;</div>
+			<!-- /generated breadcrumb trail -->
+		</div>
+
+		<!-- record summary -->
+		<div class="remote-content container-fluid record_summary" data-src="../records/summary.html">&nbsp;</div>
+		<!-- /record summary -->
+
+		<!-- page content -->
+
+		<!-- ============================================================================== -->
+		<!-- ============================ BEGIN ABT MARKUP ================================ -->
+		<!-- ============================================================================== -->
+		<div class="form-wrap">
+			<form data-actions="insurance_actions" id="insurance_info">
+				<div class="container-fluid">
+					<!-- ROW -->
+					<div class="control-group span3">
+						<div class="field">
+							<label for="type" class="control-label">Type</label>
+							<div class="controls">
+								<!-- Dynamic Element: XX -->
+								<select class="chzn-select span3" id="type">
+									<option value="">Please Select...</option>
+									<option value="auto">Auto</option>
+									<option value="dental">Dental</option>
+									<option value="disability">Disability</option>
+									<option value="health">Health</option>
+									<option value="homeowners">Homeowners</option>
+									<option value="life">Life</option>
+									<option value="long_term_care">Long Term Care</option>
+									<option value="umbrella">Umbrella</option>
+								</select>
+								<!-- /Dynamic Element: XX -->
+							</div>
+						</div>
+					</div>
+
+					<div class="control-group span3">
+						<div class="field">
+							<label for="issuing_company" class="control-label">Issuing Company</label>
+							<div class="controls">
+								<!-- Dynamic Element: XX -->
+								<input id="issuing_company" value="Genworth Financial" class="span3" type="text" />
+								<!-- /Dynamic Element: XX -->
+							</div>
+						</div>
+					</div>
+
+					<div class="control-group span3">
+						<div class="field">
+							<label for="policy_number" class="control-label">Policy Number</label>
+							<div class="controls">
+								<!-- Dynamic Element: XX -->
+								<input id="policy_number" value="23232345" class="span3" type="text" />
+								<!-- /Dynamic Element: XX -->
+							</div>
+						</div>
+					</div>
+
+					<div class="control-group span3">
+						<div class="field">
+							<label for="insured" class="control-label">Insured</label>
+							<div class="controls">
+								<!-- Dynamic Element: XX -->
+								<select class="chzn-select span3" id="insured">
+									<option value="">Please Select...</option>
+									<option value="Client">Client</option>
+									<option value="Option 2">Option 2</option>
+									<option value="Option 3">Option 3</option>
+								</select>
+								<!-- /Dynamic Element: XX -->
+							</div>
+						</div>
+					</div>
+
+					<div class="control-group span3">
+						<div class="field">
+							<label for="owner" class="control-label">Owner</label>
+							<div class="controls">
+								<!-- Dynamic Element: XX -->
+								<input id="owner" value="George Andrews" class="span3" type="text" />
+								<!-- /Dynamic Element: XX -->
+							</div>
+						</div>
+					</div>
+
+					<div class="control-group span3">
+						<div class="field">
+							<label for="status" class="control-label">Status</label>
+							<div class="controls">
+								<!-- Dynamic Element: XX -->
+								<select class="chzn-select span3" id="status">
+									<option value="">Please Select...</option>
+									<option value="Open">Open</option>
+									<option value="Option 2">Option 2</option>
+									<option value="Option 3">Option 3</option>
+								</select>
+								<!-- /Dynamic Element: XX -->
+							</div>
+						</div>
+					</div>
+
+					<div class="control-group span3">
+						<div class="field">
+							<label for="plan_type" class="control-label">Plan Type</label>
+							<div class="controls">
+								<!-- Dynamic Element: XX -->
+								<select class="chzn-select span3" id="plan_type">
+									<option value="">Please Select...</option>
+									<option value="GerinHope">GerinHope</option>
+									<option value="Option 2">Option 2</option>
+									<option value="Option 3">Option 3</option>
+								</select>
+								<!-- /Dynamic Element: XX -->
+							</div>
+						</div>
+					</div>
+
+					<div class="control-group span3">
+						<div class="field">
+							<label for="plan_name" class="control-label">Plan Name</label>
+							<div class="controls">
+								<!-- Dynamic Element: XX -->
+								<input id="plan_name" value="" class="span3" type="text" />
+								<!-- /Dynamic Element: XX -->
+							</div>
+						</div>
+					</div>
+
+					<div class="control-group span3">
+						<div class="field">
+							<label for="policy_date" class="control-label">Policy Date</label>
+							<div class="controls">
+								<!-- Dynamic Element: XX -->
+								<input id="policy_date" value="" class="span3 datepicker" type="text" />
+								<!-- /Dynamic Element: XX -->
+							</div>
+						</div>
+					</div>
+
+					<div class="control-group span3">
+						<div class="field">
+							<label for="expiration_date" class="control-label">Expiration Date</label>
+							<div class="controls">
+								<!-- Dynamic Element: XX -->
+								<input id="expiration_date" value="" class="span3 datepicker" type="text" />
+								<!-- /Dynamic Element: XX -->
+							</div>
+						</div>
+					</div>
+
+					<div class="control-group span3">
+						<div class="field">
+							<label for="prs_date" class="control-label">Policy Receipt Signature Date</label>
+							<div class="controls">
+								<!-- Dynamic Element: XX -->
+								<input id="prs_date" value="" class="span3 datepicker" type="text" />
+								<!-- /Dynamic Element: XX -->
+							</div>
+						</div>
+					</div>
+
+					<div class="control-group span3">
+						<div class="field">
+							<label for="" class="control-label">Policy Document</label>
+							<div class="controls">
+								<!-- Dynamic Element: XX -->
+								<input id="" class="span3 input-file" class="span3" type="file">
+								<!-- /Dynamic Element: XX -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="container-fluid">
+					<div class="span12">
+						<h4>Payment Information</h4>
+					</div>
+				</div>
+
+				<div class="container-fluid">
+					<div class="control-group span3">
+						<div class="field">
+							<label for="due_date" class="control-label">Premium Due</label>
+							<div class="controls">
+								<!-- Dynamic Element: XX -->
+								<input id="due_date" value="" class="span3 datepicker" type="text" />
+								<!-- /Dynamic Element: XX -->
+							</div>
+						</div>
+					</div>
+
+					<div class="control-group span3">
+						<div class="field">
+							<label for="amt" class="control-label">Amount</label>
+							<div class="controls input-prepend">
+								<span class="add-on">$</span>
+								<!-- Dynamic Element: XX -->
+								<input id="amt" value="3050.00" class="span2" type="number" />
+								<!-- /Dynamic Element: XX -->
+							</div>
+						</div>
+					</div>
+
+					<div class="control-group span3">
+						<div class="field">
+							<label for="freq" class="control-label">Frequency</label>
+							<div class="controls">
+								<!-- Dynamic Element: XX -->
+								<select class="chzn-select span3" id="freq">
+									<option value="">Please Select...</option>
+									<option value="Annual">Annual</option>
+									<option value="Option 2">Option 2</option>
+									<option value="Option 3">Option 3</option>
+								</select>
+								<!-- /Dynamic Element: XX -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="container-fluid">
+					<div class="span12">
+						<h4>Agent Information</h4>
+					</div>
+				</div>
+
+				<div class="container-fluid">
+					<div class="control-group span3">
+						<div class="field">
+							<label for="company" class="control-label">Company</label>
+							<div class="controls">
+								<!-- Dynamic Element: XX -->
+								<input id="company" value="First Colony Insurance" class="span3" type="text" />
+								<!-- /Dynamic Element: XX -->
+							</div>
+						</div>
+					</div>
+
+					<div class="control-group span3">
+						<div class="field">
+							<label for="website" class="control-label">Website</label>
+							<div class="controls input-prepend">
+								<!-- Dynamic Element: XX -->
+								<span class="add-on"><i class="icon-bookmark">&nbsp;</i></span>
+								<input id="website" value="http://firstcolony.com/agent=deweyc" type="text" class="span2 url" />
+								<!-- /Dynamic Element: XX -->
+							</div>
+						</div>
+					</div>
+
+					<div class="control-group span3">
+						<div class="field">
+							<label for="email" class="control-label">Email</label>
+							<div class="controls input-prepend">
+								<!-- Dynamic Element: XX -->
+								<span class="add-on"><i class="icon-envelope">&nbsp;</i></span>
+								<input id="email" value="deweyc@firstcolony.com" type="text" class="span2 email" />
+								<!-- /Dynamic Element: XX -->
+							</div>
+						</div>
+					</div>
+
+					<div class="control-group span3">
+						<div class="field">
+							<label for="phone" class="control-label">Phone</label>
+							<div class="controls input-prepend">
+								<!-- Dynamic Element: XX -->
+								<span class="add-on"><i class="icon-phone">&nbsp;</i></span>
+								<input id="phone" value="(919) 555-5555 x5555" type="text" class="span2 tel" />
+								<!-- /Dynamic Element: XX -->
+							</div>
+						</div>
+					</div>
+
+					<div class="control-group span3">
+						<div class="field">
+							<label for="agent" class="control-label">Agent</label>
+							<div class="controls">
+								<!-- Dynamic Element: XX -->
+								<input id="agent" value="Dewey C." class="span3" type="text" />
+								<!-- /Dynamic Element: XX -->
+							</div>
+						</div>
+					</div>
+
+					<div class="control-group span3">
+						<div class="field">
+							<label for="agent_code" class="control-label">Agent Code</label>
+							<div class="controls">
+								<!-- Dynamic Element: XX -->
+								<input id="agent_code" value="" class="span3" type="text" />
+								<!-- /Dynamic Element: XX -->
+							</div>
+						</div>
+					</div>
+
+					<div class="control-group span3">
+						<div class="field">
+							<label for="first_yr_commission" class="control-label">1st Year Commission</label>
+							<div class="controls input-prepend">
+								<span class="add-on">$</span>
+								<!-- Dynamic Element: XX -->
+								<input id="first_yr_commission" value="3050.00" class="span2" type="text" />
+								<!-- /Dynamic Element: XX -->
+							</div>
+						</div>
+					</div>
+					<div class="control-group span3">
+						<div class="field">
+							<label for="renewal_commission" class="control-label">Renewal Commission</label>
+							<div class="controls input-prepend">
+								<span class="add-on">$</span>
+								<!-- Dynamic Element: XX -->
+								<input id="renewal_commission" value="3050.00" class="span2" type="text" />
+								<!-- /Dynamic Element: XX -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="container-fluid">
+					<div class="span12">
+						<h4>Insurance Information</h4>
+					</div>
+				</div>
+
+				<span id="insurance_details">&nbsp;</span>
+		</form>
+		</div>
+
+		<div class="navbar-fixed-bottom" id="bottom_nav">
+			<!-- actions bar -->
+			<div class="form-actions" id="insurance_actions">
+				<span class="pull-right">
+					<button data-display="all"		data-hide="new" 		data-intent="delete"	class="btn">
+						Delete
+					</button>
+					<button data-display="view" 	data-hide="edit" 		data-intent="edit"		class="btn btn-primary">
+						Edit
+					</button>
+					<button data-display="all"		data-hide="view" 		data-intent="cancel"	class="btn" id="form_cancel" >
+						Cancel
+					</button>
+					<button data-display="all"		data-hide="view" 		data-intent="save"		class="btn btn-primary">
+						Save
+					</button> </span>
+			</div>
+			<!-- /actions bar -->
+			<div class="navbar-inner">
+				<ul class="nav nav-pills centered" id="app_nav">
+					<li>
+						<div class="nav-option">
+							<a href="../records/"><i class="icon-group">&nbsp;</i> Records</a>
+						</div>
+					</li>
+					<li>
+						<div class="nav-option">
+							<a href="../actions/"><i class="icon-sitemap">&nbsp;</i> Actions</a>
+						</div>
+					</li>
+					<li>
+						<div class="nav-option">
+							<a href="../assets/"><i class="icon-briefcase">&nbsp;</i> Assets</a>
+						</div>
+					</li>
+					<li class="home img-circle">
+						<button class="btn btn-home">
+							<i class="icon-home icon-large">&nbsp;</i>
+						</button>
+					</li>
+					<li class="active">
+						<div class="nav-option">
+							<a href="../insurance/"><i class="icon-umbrella">&nbsp;</i> Insurance</a>
+						</div>
+					</li>
+					<li>
+						<div class="nav-option">
+							<a href="../dashboards/"><i class="icon-dashboard">&nbsp;</i> Dashboards</a>
+						</div>
+					</li>
+					<li>
+						<div class="nav-option">
+							<a href="../reports/"><i class="icon-files">&nbsp;</i> Reports</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="insurance_list" style="display:none">
+			<h3>New Insurance</h3>
+			<ul>
+				<li>
+					<a href="#/new/auto">Auto</a>
+				</li>
+				<li>
+					<a href="#/new/dental">Dental</a>
+				</li>
+				<li>
+					<a href="#/new/disability">Disability</a>
+				</li>
+				<li>
+					<a href="#/new/health">Health</a>
+				</li>
+				<li>
+					<a href="#/new/homeowners">Homeowners</a>
+				</li>
+				<li>
+					<a href="#/new/life">Life</a>
+				</li>
+				<li>
+					<a href="#/new/long_term_care">Long Term Care</a>
+				</li>
+				<li>
+					<a href="#/new/umbrella">Umbrella</a>
+				</li>
+			</ul>
+
+			<h3>View Insurance Details</h3>
+
+			<ul>
+				<li>
+					<a href="#/view/auto">Auto</a>
+				</li>
+				<li>
+					<a href="#/view/dental">Dental</a>
+				</li>
+				<li>
+					<a href="#/view/disability">Disability</a>
+				</li>
+				<li>
+					<a href="#/view/health">Health</a>
+				</li>
+				<li>
+					<a href="#/view/homeowners">Homeowners</a>
+				</li>
+				<li>
+					<a href="#/view/life">Life</a>
+				</li>
+				<li>
+					<a href="#/view/long_term_care">Long Term Care</a>
+				</li>
+				<li>
+					<a href="#/view/umbrella">Umbrella</a>
+				</li>
+			</ul>
+
+			<h3>Edit Insurance Details</h3>
+
+			<ul>
+				<li>
+					<a href="#/edit/auto">Auto</a>
+				</li>
+				<li>
+					<a href="#/edit/dental">Dental</a>
+				</li>
+				<li>
+					<a href="#/edit/disability">Disability</a>
+				</li>
+				<li>
+					<a href="#/edit/health">Health</a>
+				</li>
+				<li>
+					<a href="#/edit/homeowners">Homeowners</a>
+				</li>
+				<li>
+					<a href="#/edit/life">Life</a>
+				</li>
+				<li>
+					<a href="#/edit/long_term_care">Long Term Care</a>
+				</li>
+				<li>
+					<a href="#/edit/umbrella">Umbrella</a>
+				</li>
+			</ul>
+		</div>
+
+		<div id="new-window" style="display:none">&nbsp;</div>
+
+		<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script type="text/javascript" src="../Scripts/jquery/jquery-1.7.2.js"></script>
+		<script type="text/javascript" src="../Scripts/jquery/jquery-ui-1.8.21.js"></script>
+
+		<script type="text/javascript" src="../Scripts/bootstrap/bootstrap-alert.js"></script>
+		<script type="text/javascript" src="../Scripts/bootstrap/bootstrap-affix.js"></script>
+
+		<script type="text/javascript" src="../Scripts/kendo/kendo.core.js"></script>
+		
+		<script type="text/javascript" src="../Scripts/kendo/kendo.calendar.js"></script>
+		<script type="text/javascript" src="../Scripts/kendo/kendo.datepicker.js"></script>
+		<script type="text/javascript" src="../Scripts/kendo/kendo.fx.js"></script>
+		<script type="text/javascript" src="../Scripts/kendo/kendo.grid.js"></script>
+		<script type="text/javascript" src="../Scripts/kendo/kendo.pager.js"></script>
+		<script type="text/javascript" src="../Scripts/kendo/kendo.popup.js"></script>
+		<script type="text/javascript" src="../Scripts/kendo/kendo.treeview.js"></script>
+		<script type="text/javascript" src="../Scripts/kendo/kendo.upload.js"></script>
+
+		<script type="text/javascript" src="../Scripts/kendo/kendo.dataviz.min.js"></script>
+
+		<script type="text/javascript" src="../Scripts/plugins/jquery.officebar.js"></script>
+		<script type="text/javascript" src="../Scripts/plugins/chosen.jquery.js"></script>
+		<script type="text/javascript" src="../Scripts/plugins/ui.checkbox-ui.radiobutton.js"></script>
+		<script type="text/javascript" src="../Scripts/plugins/jquery.autoresize.js"></script>
+		<script type="text/javascript" src="../Scripts/plugins/jquery.cluetip.js"></script>
+		<script type="text/javascript" src="../Scripts/plugins/fullcalendar.js"></script>
+
+		<script type="text/javascript" src="../Scripts/essentials/base.js"></script>
+
+		<script type="text/javascript" src="../Scripts/plugins/path.js"></script>
+		<script type="text/javascript" src="../Scripts/sample_data/Nonsense.js"></script>
+		<script type="text/javascript" src="../Scripts/sample_data/localdata.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+
+				var bct = ["Home", "Records", "Fred Walters Family"], insurance_map = {
+					"auto" : "Auto Insurance",
+					"dental" : "Dental Insurance",
+					"disability" : "Disability Insurance",
+					"health" : "Health Insurance",
+					"homeowners" : "Homeowners Insurance",
+					"life" : "Life Insurance",
+					"long_term_care" : "Long Term Care Coverage",
+					"umbrella" : "Umbrella Coverage"
+				}, mode_map = {
+					"new" : "New",
+					"view" : "Detail for ",
+					"edit" : "Editing "
+				};
+
+				Essentials.init();
+
+				//Mimic MVC with jQuery
+				Path.map("#/list/:filter").to(function() {
+					$("#insurance_details, #insurance_info, #insurance_actions, .record_summary").hide();
+					$("#insurance_list").show();
+				});
+
+				Path.map("#/:mode/:type").to(function() {
+					var _params = this.params;
+					
+					$("#insurance_list, #insurance_details, #insurance_actions").hide();
+
+					$("#insurance_details").attr("data-mode", this.params["mode"]);
+
+					//Essentials.setParams(this.params);
+					//this.params['mode'] =
+					Essentials.params(this.params);
+
+					Essentials.updateBreadcrumb(['<i class="icon-group">&nbsp;</i> Records Workspace', '<i class="icon-user">&nbsp;</i> Fred Walters Family', '<i class="icon-umbrella">&nbsp;</i> Insurance', mode_map[this.params["mode"]] + " " + insurance_map[this.params["type"]]]);
+					
+					console.log("type: " + this.params["type"]);
+					console.log("#type_chzn: " + $("#type_chzn").val() );
+					console.log("#type: " + $("#type").val() );
+					
+					$("#type_chzn").val( this.params["type"] ).trigger("liszt:updated");
+					
+					console.log("type: " + this.params["type"]);
+					console.log("#type_chzn: " + $("#type_chzn").val() );
+					console.log("#type: " + $("#type").val() );
+					
+					Essentials.loadPview("#insurance_details", "pviews/" + this.params["type"] + ".html#/" + this.params["mode"]);
+
+					$("#insurance_details, #insurance_info, #insurance_actions, .record_summary").show();
+					Essentials.init();
+				});
+
+				Path.root("#/list/all");
+
+				Path.listen();
+
+			});
+		</script>
+		<!-- End Scripts-->
+	</body>
+</html>

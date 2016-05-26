@@ -1,0 +1,712 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>NCTracks - Recipient Portal - Sickle Cell Program Enrollment</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+   	<link rel="stylesheet" type="text/css" href="../css/portal_member.css" />
+
+    <script type="text/javascript" language="JavaScript" src="../js/jquery.tools.min.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/jquery.maskedinput-1.2.2.min.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/jquery.validate.min.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/jquery.validate.rules.js"></script>
+
+    <script type="text/javascript" src="../js/DD_roundies.min.js"></script>
+	<script type="text/javascript" src="../js/suckerfish.js"></script>
+	<script type="text/javascript" src="../js/jCal.js"></script>
+	<script type="text/javascript" src="../js/jquery.coolinput.min.js"></script>
+	<script type="text/javascript" src="../js/nctracks_init.js"></script>
+</head>
+<body>
+
+<a href="#mainContent" id="skipNav" class="linkColor2" accesskey="2">skip navigation</a>
+
+<div id="header">
+	<div id="logo">
+        <a href="../website/home_page.html" accesskey="1"><img src="../images/layout/logo_main.png" width="596" height="60" alt="NCTracks" /></a>
+    </div>
+	<form method="get" action="#" id="siteSearch">
+		<input type="text" name="search" class="hint roundedLeft" title="search..." accesskey="4" />
+		<button type="submit"></button>
+	</form>
+	<ul class="linkColor2" id="languages">
+		<li><a href="#S">Espa&ntilde;ol</a>,</li>
+		<li><a href="#V">tiếng Việt</a>,</li>
+		<li><a href="#H">Hmong</a> |</li>
+		<li><a href="#V">Help</a></li>
+	</ul>
+</div>
+
+<div id="contentBackground">
+	<h1 id="portalTitle">Member Portal</h1>
+	<div class="portalBrandColor" id="navStrip">
+		<ul>
+			<!-- MAIN NAVIGATION -->
+			<li>&nbsp;</li>
+		</ul>
+	</div>
+	<!-- breadcrumb navigation -->
+	<ol id="breadcrumb">
+		<li><a href="/">Member Portal</a> <b>&gt;</b></li>
+		<li><a href="index.html">Recipient Enrollment</a> <b>&gt;</b></li>
+		<li><a href="#">Sickle Cell Program Enrollment</a></li>
+	</ol>
+	<div id="mainContent">
+		<div id="pageTitle">
+			<h1>Sickle Cell Program Enrollment</h1>
+			<!-- page tools -->
+			<ul>
+				<li><a href="#"><img src="../images/icons/printer.png" width="24" height="24" alt="Print this page" /></a> |</li>
+				<li><a href="#" class="textScaling" id="decreaseFont"><img src="../images/icons/text_decrease.gif" width="24" height="24" alt="Decrease text size" /></a></li>
+				<li><a href="#" class="textScaling" id="increaseFont"><img src="../images/icons/text_increase.gif" width="24" height="24" alt="Increase text size" /></a> |</li>
+				<li><a href="#">Help</a></li>
+			</ul>
+		</div>
+		<form id="appForm" method="post" action="#">
+		<div id="requiredLegend"><img src="../images/icons/icon_required.gif" width="14" height="9" alt="Required Field" /> indicates a required field</div>
+		<div id="formLegend">
+			<div class="formBtn">
+				<span>Legend</span>
+				<img src="../images/icons/legend_arrow.gif" width="11" height="17" alt="form legend" />
+			</div>
+			<ul>
+				<li><img src="../images/icons/calendar.png" width="16" height="16" alt="calendar icon" />Calendar</li>
+				<li><img src="../images/icons/audit.png" width="16" height="16" alt="audit icon" />Audit</li>
+			</ul>
+		</div>
+		<ul class="tabs">
+			<li><a href="SickleCell-FinancialEligibilityApplication.html">Financial Eligibility Application</a></li>
+			<li><a href="#" class="current">Authorization Request</a></li>
+		</ul>
+        <div class="formSection">
+			<fieldset>
+				<legend>Patient Information</legend>
+				<a href="help.html" rel="#overlay" class="formHelpTab"><img src="images/icons/help_tab.gif" width="22" height="22" alt="Help" title="Help" /></a> 
+				<dl class="threeColumnLayout">
+					<dt><label for="firstname">First Name:</label></dt>
+					<dd><input type="text" name="firstname" id="firstname" class="medium required" /></dd>
+					<dt><label for="lastname">Last Name:</label></dt>
+					<dd><input type="text" name="lastname" id="lastname" class="medium required" /></dd>
+					<dt><label for="mi">Middle Initial:</label></dt>
+					<dd><input type="text" name="mi" id="mi" class="small" /></dd>
+				</dl>
+				<dl class="threeColumnLayout">
+					<dt><label for="ssn">Social Security Number:</label></dt>
+					<dd><input type="text" id="ssn" class="medium ssn" /></dd>
+					<dt><label for="dob">Date of Birth:</label></dt>
+					<dd><input type="text" id="dob" class="dateInput required" /></dd>
+				</dl>
+				<dl class="threeColumnLayout">
+					<dt><label for="gndr">Gender:</label></dt>
+					<dd>
+						<select name="gndr" id="gndr" class="required">
+							<option value="A"></option>
+							<option value="B">Male</option>
+							<option value="C">Female</option>
+							<option value="D">Transgender M2F</option>
+							<option value="E">Transgender F2M</option>
+							<option value="F">Unknown</option>
+						</select>
+					</dd>
+					<dt><label for="p_lang">Preferred Language:</label></dt>
+					<dd>
+						<select id="p_lang" name="p_lang" class="medium required">
+							<option value="-">&nbsp;</option>
+							<option value="ar">AR - Arabic</option>
+							<option value="ca">CA - Cambodian</option>
+							<option value="ch">CH - Chinese</option>
+							<option value="ca">EN - English</option>
+							<option value="en">FR - French</option>
+							<option value="fc">XX - GENERATED</option>
+						</select>
+					</dd>
+				</dl>
+				<hr />
+				<dl>
+					<dt><label for="p_race">Race:</label></dt>
+					<dd>
+						<select id="p_race" name="p_race" class="required" >
+							<option value=" ">&nbsp;</option>
+							<option value="w">XX - White</option>
+							<option value="b">XX - Black</option>
+							<option value="ai">XX - American Indian</option>
+							<option value="a">XX - Asian</option>
+							<option value="h">XX - Native Hawaiian/Other Pacific Islander</option>
+							<option value="m">XX - Multi-Racial</option>
+							<option value="fc">XX - GENERATED</option>
+						</select>
+					</dd>
+					<dt><label for="p_ethnicity">Ethnicity:</label></dt>
+					<dd>
+						<select id="p_ethnicity" name="p_ethnicity" class="required">
+							<option value=" ">&nbsp;</option>
+							<option value="y">XX - Hispanic or Latino Origin</option>
+							<option value="n">XX - Not Hispanic or Latino Origin</option>
+							<option value="u">XX - Unknown</option>
+							<option value="fc">XX - GENERATED</option>
+						</select>
+					</dd>
+				</dl>
+				<hr />
+				<dl>
+					<dt><label for="address">Address Line 1:</label></dt>
+					<dd><input type="text" id="address" name="address" class="large required" /></dd>
+					
+					<dt><label for="city">City:</label></dt>
+					<dd><input type="text" id="city" name="city medium" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="address2">Address Line 2:</label></dt>
+					<dd><input type="text" id="address2" name="address2" class="large" /></dd>
+					<dt><label for="state">State:</label></dt>
+					<dd>
+						<select id="state" name="state">
+							<option value=""></option>
+							<option value="AL">AL</option>
+							<option value="AK">AK</option>
+							<option value="AZ">AZ</option>
+							<option value="AR">AR</option>
+							<option value="CA">CA</option>
+							<option value="CO">CO</option>
+							<option value="CT">CT</option>
+							<option value="CT">CT</option>
+							<option value="DE">DE</option>
+							<option value="FL">FL</option>
+							<option value="GA">GA</option>
+							<option value="HI">HI</option>
+							<option value="ID">ID</option>
+							<option value="IL">IL</option>
+							<option value="IN">IN</option>
+							<option value="IA">IA</option>
+							<option value="KS">KS</option>
+							<option value="KY">KY</option>
+							<option value="LA">LA</option>
+							<option value="ME">ME</option>
+							<option value="MD">MD</option>
+							<option value="MA">MA</option>
+							<option value="MI">MI</option>
+							<option value="MN">MN</option>
+							<option value="MS">MS</option>
+							<option value="MO">MO</option>
+							<option value="MT">MT</option>
+							<option value="NE">NE</option>
+							<option value="NV">NV</option>
+							<option value="NH">NH</option>
+							<option value="NJ">NJ</option>
+							<option value="NM">NM</option>
+							<option value="NY">NY</option>
+							<option value="NC">NC</option>
+							<option value="ND">ND</option>
+							<option value="OH">OH</option>
+							<option value="OK">OK</option>
+							<option value="OR">OR</option>
+							<option value="PA">PA</option>
+							<option value="RI">RI</option>
+							<option value="SC">SC</option>
+							<option value="SD">SD</option>
+							<option value="TN">TN</option>
+							<option value="TX">TX</option>
+							<option value="UT">UT</option>
+							<option value="VT">VT</option>
+							<option value="VA">VA</option>
+							<option value="WA">WA</option>
+							<option value="WV">WV</option>
+							<option value="WI">WI</option>
+							<option value="WY">WY</option>
+						</select>
+					</dd>
+				</dl>
+				<dl>
+					<dt><label for="cor">County of Residence:</label></dt>
+					<dd><input type="text" id="cor" name="cor" class="medium required" /></dd>
+					<dt><label for="zip">Zip Code:</label></dt>
+					<dd><input type="text" id="zip" name="zip" class="zip medium required" /></dd>
+				</dl>
+				<hr />
+				<dl>
+					<dt><label for="home_phone">Home Phone:</label></dt>
+					<dd><input type="text" id="home_phone" name="home_phone" class="phone medium required" /></dd>
+					<dd class="andOr">or</dd>
+					<dt><label for="work_phone">Work Phone:</label></dt>
+					<dd><input type="text" id="work_phone" name="work_phone" class="phone medium required" /></dd>
+				</dl>
+			</fieldset>
+			<fieldset class="threeColumnLayout">
+				<legend>Parent, Guardian or Alternate Contact Information</legend>
+				<a href="help.html" rel="#overlay" class="formHelpTab"><img src="images/icons/help_tab.gif" width="22" height="22" alt="Help" title="Help" /></a>
+				<dl>
+					<dt><label for="pg_firstname">First Name:</label></dt>
+					<dd><input type="text" id="pg_firstname" class="medium" /></dd>
+					<dt><label for="pg_lastname">Last Name:</label></dt>
+					<dd><input type="text" id="pg_lastname" class="medium" /></dd>
+					<dt><label for="pg_mi">Middle Initial:</label></dt>
+					<dd><input type="text" id="pg_mi" class="small" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="pg_phone">Phone:</label></dt>
+					<dd><input type="text" id="pg_phone" class="phone medium" /></dd>
+				</dl>
+			</fieldset>
+			<fieldset>
+				<legend>Hospital or Provider of Requested Service</legend>
+				<a href="help.html" rel="#overlay" class="formHelpTab"><img src="images/icons/help_tab.gif" width="22" height="22" alt="Help" title="Help" /></a>
+				<dl>
+					<dt><label for="pors_name">Name:</label></dt>
+					<dd><input type="text" class="required" id="pors_name" name="pors_name" /></dd>
+					<dt><label for="pors_phone">Phone:</label></dt>
+					<dd><input type="text" class="required" id="pors_phone" name="pors_phone" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="pors_npi">NPI:</label></dt>
+					<dd><input type="text" class="required" id="pors_npi" name="pors_npi" /></dd>
+					<dt><label for="pors_city">City:</label></dt>
+					<dd><input type="text" class="required" id="pors_city" name="pors_city" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="pors_address">Address Line 1:</label></dt>
+					<dd><input type="text" id="pors_address" name="pors_address" class="large required" /></dd>
+					<dt><label for="pors_state">State:</label></dt>
+					<dd>
+						<select id="pors_state" class="required" name="pors_state" title="Select State">
+							<option value=""></option>
+							<option value="AL">AL</option>
+							<option value="AK">AK</option>
+							<option value="AZ">AZ</option>
+							<option value="AR">AR</option>
+							<option value="CA">CA</option>
+							<option value="CO">CO</option>
+							<option value="CT">CT</option>
+							<option value="CT">CT</option>
+							<option value="DE">DE</option>
+							<option value="FL">FL</option>
+							<option value="GA">GA</option>
+							<option value="HI">HI</option>
+							<option value="ID">ID</option>
+							<option value="IL">IL</option>
+							<option value="IN">IN</option>
+							<option value="IA">IA</option>
+							<option value="KS">KS</option>
+							<option value="KY">KY</option>
+							<option value="LA">LA</option>
+							<option value="ME">ME</option>
+							<option value="MD">MD</option>
+							<option value="MA">MA</option>
+							<option value="MI">MI</option>
+							<option value="MN">MN</option>
+							<option value="MS">MS</option>
+							<option value="MO">MO</option>
+							<option value="MT">MT</option>
+							<option value="NE">NE</option>
+							<option value="NV">NV</option>
+							<option value="NH">NH</option>
+							<option value="NJ">NJ</option>
+							<option value="NM">NM</option>
+							<option value="NY">NY</option>
+							<option value="NC">NC</option>
+							<option value="ND">ND</option>
+							<option value="OH">OH</option>
+							<option value="OK">OK</option>
+							<option value="OR">OR</option>
+							<option value="PA">PA</option>
+							<option value="RI">RI</option>
+							<option value="SC">SC</option>
+							<option value="SD">SD</option>
+							<option value="TN">TN</option>
+							<option value="TX">TX</option>
+							<option value="UT">UT</option>
+							<option value="VT">VT</option>
+							<option value="VA">VA</option>
+							<option value="WA">WA</option>
+							<option value="WV">WV</option>
+							<option value="WI">WI</option>
+							<option value="WY">WY</option>
+						</select>
+					</dd>
+				</dl>
+				<dl>
+					<dt><label for="pors_address2">Address Line 2:</label></dt>
+					<dd><input type="text" id="pors_address2" name="pors_address2" class="large" /></dd>
+					<dt><label for="pors_zip">Zip Code:</label></dt>
+					<dd><input type="text" id="pors_zip" name="pors_zip" class="zip required" /></dd>
+				</dl>
+				<fieldset>
+					<h6>Requested Dates for Service</h6>
+					<div class="dataTable">
+						<table>
+						<thead>
+							<tr>
+								<th class="status" scope="col"></th>
+								<th scope="col"><label for="rdfs-form">From</label></th>
+								<th scope="col"><label for="rdfs-to">To</label></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="emphasizeRow">
+								<td><img src="../images/icons/table_add.png" width="16" height="16" alt="New Entry" /></td>
+								<td><input type="text" id="rdfs-form" name="rdfs-form" class="dateInput" /></td>
+								<td><input type="text" id="rdfs-to" name="rdfs-to" class="dateInput" /></td>
+							</tr>
+						</tbody>
+						</table>
+					</div>
+					<div class="btnRow">
+						<button type="submit" class="submitBtn">Add</button>
+					</div>
+				</fieldset>
+			</fieldset>
+			<fieldset>
+				<legend>Medical Information</legend>
+				<a href="help.html" rel="#overlay" class="formHelpTab"><img src="images/icons/help_tab.gif" width="22" height="22" alt="Help" title="Help" /></a>
+				<fieldset>
+					<legend class="required"><span>Diagnostic Code/Diagnosis</span></legend>
+					<dl>
+						<dt><label for="dcd_primary">Primary:</label></dt>
+						<dd><input type="text" id="dcd_primary" name="dcd_primary" /></dd>
+						<dt><label for="dcd_secondary">Secondary:</label></dt>
+						<dd><input type="text" id="dcd_secondary" name="dcd_secondary" /></dd>
+					</dl>
+				</fieldset>
+			</fieldset>
+			<fieldset>
+				<legend>Insurance or 3rd Party Coverage Information</legend>
+				<a href="help.html" rel="#overlay" class="formHelpTab"><img src="images/icons/help_tab.gif" width="22" height="22" alt="Help" title="Help" /></a>
+				<dl>
+					<dt><label for="pi_pn">Policy Number:</label></dt>
+					<dd><input type="text" id="pi_pn" /></dd>
+					<dt><label for="pi_ph">Policy Holder:</label></dt>
+					<dd><input type="text" id="pi_ph" /></dd>
+				</dl>
+				<fieldset class="singleQ labelToRight">
+					<legend class="required"><span>Does This Policy Cover This Service?</span></legend>
+					<dl class="showDetail show-pi_covered-0">
+						<dt>
+							<input id="pi_covered_y" type="radio" value="y" name="pi_covered" />
+							<label for="pi_covered_y">Yes</label>
+						</dt>
+						<dt>
+							<input id="pi_covered_n" type="radio" value="n" name="pi_covered" />
+							<label for="pi_covered_n">No</label>
+						</dt>
+					</dl>
+				</fieldset>
+				<fieldset class="hidden" id="pi_covered-details">
+					<legend>Claims Address</legend>
+					<dl>
+						<dt><label for="pi_claims_addr">Address Line 1:</label></dt>
+						<dd><input type="text" id="pi_claims_addr" name="pi_claims_addr" class="large" /></dd>
+						<dt><label for="pi_city">City:</label></dt>
+						<dd><input type="text" id="pi_city" name="pi_city" /></dd>
+					</dl>
+					<dl>
+						<dt><label for="pi_claims_addr2">Address Line 2:</label></dt>
+						<dd><input type="text" id="pi_claims_addr2" name="pi_claims_addr2" class="large" /></dd>
+						<dt><label for="pi_state">State:</label></dt>
+						<dd>
+							<select id="pi_state" name="pi_state">
+								<option value=""></option>
+								<option value="AL">AL</option>
+								<option value="AK">AK</option>
+								<option value="AZ">AZ</option>
+								<option value="AR">AR</option>
+								<option value="CA">CA</option>
+								<option value="CO">CO</option>
+								<option value="CT">CT</option>
+								<option value="CT">CT</option>
+								<option value="DE">DE</option>
+								<option value="FL">FL</option>
+								<option value="GA">GA</option>
+								<option value="HI">HI</option>
+								<option value="ID">ID</option>
+								<option value="IL">IL</option>
+								<option value="IN">IN</option>
+								<option value="IA">IA</option>
+								<option value="KS">KS</option>
+								<option value="KY">KY</option>
+								<option value="LA">LA</option>
+								<option value="ME">ME</option>
+								<option value="MD">MD</option>
+								<option value="MA">MA</option>
+								<option value="MI">MI</option>
+								<option value="MN">MN</option>
+								<option value="MS">MS</option>
+								<option value="MO">MO</option>
+								<option value="MT">MT</option>
+								<option value="NE">NE</option>
+								<option value="NV">NV</option>
+								<option value="NH">NH</option>
+								<option value="NJ">NJ</option>
+								<option value="NM">NM</option>
+								<option value="NY">NY</option>
+								<option value="NC">NC</option>
+								<option value="ND">ND</option>
+								<option value="OH">OH</option>
+								<option value="OK">OK</option>
+								<option value="OR">OR</option>
+								<option value="PA">PA</option>
+								<option value="RI">RI</option>
+								<option value="SC">SC</option>
+								<option value="SD">SD</option>
+								<option value="TN">TN</option>
+								<option value="TX">TX</option>
+								<option value="UT">UT</option>
+								<option value="VT">VT</option>
+								<option value="VA">VA</option>
+								<option value="WA">WA</option>
+								<option value="WV">WV</option>
+								<option value="WI">WI</option>
+								<option value="WY">WY</option>
+							</select>
+						</dd>
+					</dl>
+					<dl>
+						<dd></dd>
+						<dt><label for="pi_zip">Zip Code:</label></dt>
+						<dd><input type="text" id="pi_zip" name="pi_zip" class="zip" /></dd>
+					</dl>
+				</fieldset>
+				<fieldset class="singleQ labelToRight">
+					<legend class="required"><span>Does This Policy Provide Complete Coverage?</span></legend>
+					<dl>
+						<dt>
+							<input id="fam_hi_child_yes" type="radio" value="y" name="fam_hi_child" />
+							<label for="fam_hi_child_yes">Yes</label>
+						</dt>
+						<dt>
+							<input id="fam_hi_child_no" type="radio" value="n" name="fam_hi_child" />
+							<label for="fam_hi_child_no">No</label>
+						</dt>
+					</dl>
+				</fieldset>
+				<fieldset class="singleQ labelToRight">
+					<legend class="required"><span class="tip" title="If insurance is an HMO, please supply the required documentation.">Is This an HMO?</span></legend>
+					<dl>
+						<dt>
+							<input id="ins_billed_y" type="radio" value="y" name="ins_billed" />
+							<label for="ins_billed_y">Yes</label>
+						</dt>
+						<dt>
+							<input id="ins_billed_n" type="radio" value="n" name="ins_billed" />
+							<label for="ins_billed_n">No</label>
+						</dt>
+					</dl>
+				</fieldset>
+			</fieldset>
+			<fieldset>
+				<legend>Service(s) Requested</legend>
+				<a href="help.html" rel="#overlay" class="formHelpTab"><img src="images/icons/help_tab.gif" width="22" height="22" alt="Help" title="Help" /></a>
+				<dl class="labelToRight">
+					<dt>
+						<input type="checkbox" name="inad" id="inad" class="showDetail show-inad" />
+						<label for="inad">Inpatient Admission</label>
+						<span id="inad-details" class="hidden">
+							<label for="inadDays">Days:</label>
+							<input id="inadDays" size="2" />
+						</span>
+					</dt>
+					<dt>
+						<input type="checkbox" name="app" id="app" class="showDetail show-app" />
+						<label for="app">Appliances/Supplies</label>
+						<span id="app-details" class="hidden">
+							<label for="appCost">Estimated Cost:</label>
+							<input id="appCost" size="2" />
+						</span>
+					</dt>
+					<dt>
+						<input type="checkbox" name="ps" id="ps" class="showDetail show-ps" />
+						<label for="ps">Formula</label>
+						<span id="ps-details" class="hidden">
+							 <input size="2" /> oral <input size="2" /> enteral
+						</span>
+					</dt>
+				</dl>
+				<dl class="labelToRight">
+					<dt>
+						<input type="checkbox" name="inex" id="inex" class="showDetail show-inex" />
+						<label for="inex">Inpatient Extension</label>
+						<span id="inex-details" class="hidden">
+							<label for="inexDays">Days:</label>
+							<input id="inexDays" size="2" />
+						</span>
+					</dt>
+					<dt>
+						<input type="checkbox" name="poff" id="poff" class="showDetail show-poff" />
+						<label for="poff">Physician's Office</label>
+						<span id="poff-details" class="hidden">
+							<label for="poffDays">Visits:</label>
+							<input id="poffDays" size="2" />
+						</span>
+					</dt>
+					<dt>
+						<input type="checkbox" name="cbrs" id="cbrs" class="showDetail show-cbrs" />
+						<label for="cbrs">Residential Care</label>
+						<span id="cbrs-details" class="hidden">
+							<label for="cbrsDays">Days:</label>
+							<input id="cbrsDays" size="2" />
+						</span>
+					</dt>
+				</dl>
+				<dl class="labelToRight">
+					<dt>
+						<input type="checkbox" name="sws" id="sws" class="showDetail show-sws" />
+						<label for="sws">Home Nursing Care</label>
+						<span id="sws-details" class="hidden">
+							<label for="swsTotal">Total #:</label>
+							<input size="2" id="swsTotal" />,
+							<label for="swsFreq">Frequency:</label>
+							<input size="2" id="swsFreq" />
+						</span>
+					</dt>
+					<dt>
+						<input type="checkbox" name="slts" id="slts" class="showDetail show-slts" />
+						<label for="slts">Nutrition Counseling</label>
+						<span id="slts-details" class="hidden">
+							<label for="sltsTotal">Total #:</label>
+							<input size="2" id="sltsTotal" />,
+							<label for="sltsFreq">Frequency:</label>
+							<input size="2" id="sltsFreq" />
+						</span>
+					</dt>
+					<dt>
+						<input type="checkbox" name="outp" class="showDetail show-outp" />
+						<label for="outp">Outpatient (Hosp, Dial, FASC)</label>
+						<span id="outp-details" class="hidden">
+							<label for="outpDays">Days:</label>
+							<input id="outpDays" size="2" />
+						</span>
+					</dt>
+				</dl>
+				<dl class="labelToRight">
+					<dt>
+						<input type="checkbox" name="ther" id="ther" class="showDetail show-ther" />
+						<label for="ther">Therapy (PT, OT, SP)</label>
+						<span id="ther-details" class="hidden">
+							<label for="therTotal">Total #:</label>
+							<input size="2" />,
+							<label for="therFreq">Frequency:</label>
+							<input size="2" />,
+							<label for="therSess">Session Length:</label>
+							<input size="2" />
+						</span>
+					</dt>
+				</dl>
+				<dl class="labelToRight">
+					<dt>
+						<input type="checkbox" name="drugs" id="drugs" />
+						<label for="drugs">Drugs related to  program covered condition</label>
+					</dt>
+				</dl>
+				<fieldset>
+					<legend>Description</legend>
+					<dl>
+						<dt><label for="svc_description" class="tip" title="Required for EHDI Initial Hearing Aid">Give Estimated Cost for Each Appliance:</label></dt>
+						<dd><textarea name="svc_description" id="svc_description" cols="50" rows="10"></textarea></dd>
+					</dl>
+				</fieldset>
+			</fieldset>
+			<fieldset>
+				<legend>Alternate Address</legend>
+				<a href="help.html" rel="#overlay" class="formHelpTab"><img src="images/icons/help_tab.gif" width="22" height="22" alt="Help" title="Help" /></a>
+				<div class="info">
+					<p>Enter the names and addresses of individuals to whom a copy of an approved Authorization Reply should be sent, such as the Service Coordinator, ITP Supervisor, DSS Worker. Do not include hospital, provider of requested service or CDSA.</p>
+				</div>
+				<dl>
+					<dt><label for="sec_name">Name:</label></dt>
+					<dd><input type="text" id="sec_name" name="sec_name" /></dd>
+					<dt><label for="sec_city">City:</label></dt>
+					<dd><input type="text" id="sec_city" name="sec_city" class="medium" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="sec-address">Address Line 1:</label></dt>
+					<dd><input type="text" id="sec-address" name="sec-address" class="large" /></dd>
+					<dt><label for="sec_state">State:</label></dt>
+					<dd>
+						<select id="sec_state" name="sec_state">
+							<option value=""></option>
+							<option value="AL">AL</option>
+							<option value="AK">AK</option>
+							<option value="AZ">AZ</option>
+							<option value="AR">AR</option>
+							<option value="CA">CA</option>
+							<option value="CO">CO</option>
+							<option value="CT">CT</option>
+							<option value="CT">CT</option>
+							<option value="DE">DE</option>
+							<option value="FL">FL</option>
+							<option value="GA">GA</option>
+							<option value="HI">HI</option>
+							<option value="ID">ID</option>
+							<option value="IL">IL</option>
+							<option value="IN">IN</option>
+							<option value="IA">IA</option>
+							<option value="KS">KS</option>
+							<option value="KY">KY</option>
+							<option value="LA">LA</option>
+							<option value="ME">ME</option>
+							<option value="MD">MD</option>
+							<option value="MA">MA</option>
+							<option value="MI">MI</option>
+							<option value="MN">MN</option>
+							<option value="MS">MS</option>
+							<option value="MO">MO</option>
+							<option value="MT">MT</option>
+							<option value="NE">NE</option>
+							<option value="NV">NV</option>
+							<option value="NH">NH</option>
+							<option value="NJ">NJ</option>
+							<option value="NM">NM</option>
+							<option value="NY">NY</option>
+							<option value="NC">NC</option>
+							<option value="ND">ND</option>
+							<option value="OH">OH</option>
+							<option value="OK">OK</option>
+							<option value="OR">OR</option>
+							<option value="PA">PA</option>
+							<option value="RI">RI</option>
+							<option value="SC">SC</option>
+							<option value="SD">SD</option>
+							<option value="TN">TN</option>
+							<option value="TX">TX</option>
+							<option value="UT">UT</option>
+							<option value="VT">VT</option>
+							<option value="VA">VA</option>
+							<option value="WA">WA</option>
+							<option value="WV">WV</option>
+							<option value="WI">WI</option>
+							<option value="WY">WY</option>
+						</select>
+					</dd>
+				</dl>
+				<dl>
+					<dt><label for="sec-address2">Address Line 2:</label></dt>
+					<dd><input type="text" id="sec-address2" name="sec-address2" class="large" /></dd>
+					<dt><label for="sec_zip">Zip Code:</label></dt>
+					<dd><input type="text" id="sec_zip" name="sec_zip" class="zip medium" /></dd>
+				</dl>
+			</fieldset>
+			<a href="#header"><img src="images/icons/return_top.gif" class="returnTop" width="12" height="13" alt="Back to top" title="Return to the top of the page" /></a>
+		</div>
+		<div class="btnRow">
+			<button type="submit" class="submitBtn">Submit</button>
+			<button type="reset">Start Over</button>
+		</div>
+		</form>
+	</div>
+	<ul id="footer" class="linkColor2 rounded">
+		<li><a href="" accesskey="8">Legal</a> |</li>
+		<li><a href="">Privacy Policy</a> |</li>
+		<li><a href="">Accessibility</a> |</li>
+		<li><a href="" accesskey="3">Site Map</a> |</li>
+		<li><a href="" accesskey="9">Contact Us</a> |</li>
+		<li><a href="">Report Fraud</a></li>
+	</ul>
+</div>
+
+<div class="dropShadow" id="tileBtm"></div>
+ <!-- overlayed element --> 
+<div class="overlay" id="overlay"> 
+    <!-- the external content is loaded inside this tag --> 
+    <div class="wrap"></div> 
+</div>
+</body>
+</html>

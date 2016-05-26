@@ -1,0 +1,92 @@
+@import "master.css";
+@import "forms.css";
+
+.portalBrandColor
+{
+	background-color: #68D;
+	color: #EAEAEA;
+}
+#portalTitle
+{
+	color: #68D;
+	border-color: #ACF;
+}
+#navStrip a:hover,
+#subNav a:hover
+{
+	background-color: #79E;
+}
+#navStrip > ul > li > a
+{
+	border-left-color: #9BF;
+	border-right-color: #46B;
+}
+#navStrip > ul > li > a:hover
+{
+	border-bottom-color: #ACF;
+}
+#navStrip > ul > li > a:active,
+#navStrip > ul > li.active > a
+{
+	background-color: #FFF;
+	color: #68D;
+}
+#navStrip > ul li ul
+{
+	background-color: #46B;
+	border-left-color: #79E;
+	border-bottom-color: #79E;
+}
+#navStrip > ul ul a
+{
+	border-bottom-color: #68D;
+}
+#navStrip > ul ul a:hover
+{
+	border-left-color: #9BF;
+}
+
+#subNav
+{
+	background-color: #9BF;
+}
+#subNav a
+{
+	border-top: 1px solid #9BF;
+	border-bottom: 1px solid #46B;
+}
+#subNav .active
+{
+	color: #68D;
+	background: #FFF;
+	border: 1px solid #9BF;
+	border-width: 0 1px;
+}
+
+.formSection,
+.tabs a.current,
+.submitBtn,
+.crossRemove,
+.crossRemoveAll
+{
+	border-left-color: #68D;
+}
+.crossAdd,
+.crossAddAll
+{
+	border-right-color: #68D;
+}
+
+.longFormItemGroup {
+	text-align:right;
+	width:500px;
+}
+
+#splashContent
+{
+	background: url(../images/placeholder/providerPortalHome02.png) left bottom no-repeat;	
+}
+#messageCenter .moduleTitle
+{
+	background: url(../images/icons/alertCenter02.gif) left top no-repeat;	
+}

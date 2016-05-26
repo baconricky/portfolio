@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+	
+	<!-- jQuery UI Stuff -->
+	<link rel="stylesheet" href="../css/jquery-ui-1.8.21.custom.css" type="text/css" media="all" />
+	<script src="../Scripts/jquery-ui-1.8.21.min.js" type="text/javascript"></script>
+	<script src="../Scripts/jquery.ui.datepicker.js" type="text/javascript"></script>
+
+	<!-- Bootstrap Stuff -->
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.css" type="text/css" media="all" />
+	<script src="bootstrap/js/bootstrap.js" type="text/javascript"></script>
+	
+	<!-- ABT Styles -->
+	<link rel="stylesheet" href="style.css" type="text/css" media="all" />
+	
+	<title>New Asset</title>
+
+</head>
+
+<body>
+	<div class="form-wrap">
+		<div class="row-fluid">
+			<div class="span12">
+				<h1>Financial Account Information</h1>
+			</div>
+		</div>
+
+		<form id="account-info">
+			
+			<div class="row-fluid account-type">
+				<div class="span12">
+					<div class="span3">
+						<div class="field select-field field-account-type">
+							<label for="account-type">Account Type</label>
+							<select id="account-type" class="select">
+								<option>Checking</option>
+								<option>Savings</option>
+								<option>Something Else</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class="row-fluid">
+				<div class="span3">
+					<div class="field text-field field-registration-name">
+						<label for="registration-name">Registration Name</label>
+						<input type="text" id="registration-name" class="text" />
+					</div>
+				</div>
+				<div class="span3">
+					<div class="field text-field field-account-number">
+						<label for="account-number">Account Number</label>
+						<input type="text" id="account-number" class="text" />
+					</div>
+				</div>
+				<div class="span3">
+					<div class="field text-field field-routing-number">
+						<label for="routing-number">Routing Number</label>
+						<input type="text" id="routing-number" class="text" />
+					</div>
+				</div>
+				<div class="span3">
+					<fieldset class="fieldset-status">
+						<div class="field select-field">
+							<legend>Status</legend>
+							<select id="status" class="select">
+								<option>Option 1</option>
+								<option>Option 2</option>
+								<option>Option 3</option>
+							</select>
+						</div>
+						<div class="field checkbox-field">
+							<div class="checkbox-wrap">
+								<input type="checkbox" name="status" value="discretionary" id="discretionary" class="checkbox" />
+								<label for="discretionary">Discretionary</label>
+							</div>
+							<div class="checkbox-wrap">
+								<input type="checkbox" name="status" value="managed" id="managed" class="checkbox" />
+								<label for="managed">Managed</label>
+							</div>
+							<div class="checkbox-wrap">
+								<input type="checkbox" name="status" value="commission" id="commission" class="checkbox" />
+								<label for="commission">Commission</label>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+			
+			
+			<div class="row-fluid">
+				<div class="span3">
+					<div class="field text-field field-date-of-account">
+						<label for="date-of-account">Date Of Account</label>
+						<input type="text" id="date-of-account" class="text datepicker" />
+					</div>
+				</div>
+				<div class="span3">
+					<div class="field select-field field-bill-to-account">
+						<label for="bill-to-account">Bill To Account</label>
+						<select id="bill-to-account" class="select">
+							<option>000-000</option>
+							<option>000-001</option>
+							<option>000-002</option>
+						</select>
+					</div>
+				</div>
+				<div class="span3">
+					<fieldset class="fieldset-fees-schedule">
+						<div class="field select-field">
+							<legend>Fees Schedule</legend>
+							<select id="fees-schedule" class="select">
+								<option>888</option>
+								<option>888</option>
+								<option>888</option>
+							</select>%
+						</div>
+						<div class="field checkbox-field">
+							<div class="checkbox-wrap">
+								<input type="checkbox" name="fees-schedule" value="courtesy-account" id="courtesy-account" class="checkbox" />
+								<label for="courtesy-account">Courtesy Account</label>
+							</div>
+							<div class="checkbox-wrap">
+								<input type="checkbox" name="fees-schedule" value="billed-account" id="billed-account" class="checkbox" />
+								<label for="billed-account">Billed Account</label>
+							</div>
+							<div class="checkbox-wrap">
+								<input type="checkbox" name="fees-schedule" value="manual-bill" id="manual-bill" class="checkbox" />
+								<label for="manual-bill">Manual Bill</label>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<div class="span3">
+					<fieldset class="fieldset-apply-to-goal">
+						<div class="field select-field">
+							<legend>Apply to Goal</legend>
+							<select id="fees-schedule" class="select">
+								<option>Option 1</option>
+								<option>Option 2</option>
+								<option>Option 3</option>
+							</select>
+						</div>
+						<div class="field checkbox-field">
+							<div class="checkbox-wrap">
+								<input type="checkbox" name="fees-schedule" value="include-in-estate" id="include-in-estate" class="checkbox" />
+								<label for="include-in-estate">Include In Estate</label>
+							</div>
+							<div class="checkbox-wrap">
+								<input type="checkbox" name="fees-schedule" value="subject-to-probate" id="subject-to-probate" class="checkbox" />
+								<label for="subject-to-probate">Subject To Probate</label>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+			
+			
+			<div class="row-fluid">
+				<div class="span12">
+					<div class="field text-area field-notes">
+						<label for="notes">Notes</label>
+						<textarea id="notes"></textarea>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class="row-fluid">
+				<div class="span3">
+					<fieldset class="fieldset-full-power-of-attorney">
+						<div class="field select-field">
+							<legend>Full Power of Attorney</legend>
+							<div class="field checkbox-field">
+								<div class="checkbox-wrap">
+									<input type="checkbox" name="full-power-of-attorney-active" value="full-power-of-attorney-active" id="full-power-of-attorney-active" class="checkbox" />
+									<label for="full-power-of-attorney-active">Active</label>
+								</div>
+							</div>
+							<div class="field text-field">
+								<input type="text" id="full-power-of-attorney-date" class="text datepicker" />
+							</div>
+							<p>For</p>
+							<select id="full-power-of-attorney-select" class="select">
+								<option>Option 1</option>
+								<option>Option 2</option>
+								<option>Option 3</option>
+							</select>
+						</div>
+					</fieldset>
+				</div>
+				<div class="span3">
+					<fieldset class="fieldset-limited-power-of-attorney">
+						<div class="field select-field">
+							<legend>Limited Power of Attorney</legend>
+							<div class="field checkbox-field">
+								<div class="checkbox-wrap">
+									<input type="checkbox" name="limited-power-of-attorney-active" value="limited-power-of-attorney-active" id="limited-power-of-attorney-active" class="checkbox" />
+									<label for="limited-power-of-attorney-active">Active</label>
+								</div>
+							</div>
+							<div class="field text-field">
+								<input type="text" id="limited-power-of-attorney-date" class="text datepicker" />
+							</div>
+							<p>For</p>
+							<select id="limited-power-of-attorney-select" class="select">
+								<option>Option 1</option>
+								<option>Option 2</option>
+								<option>Option 3</option>
+							</select>
+						</div>
+					</fieldset>
+				</div>
+				<div class="span3">
+					<div class="field select-field field-balance-sheet-category">
+						<label for="balance-sheet-category">Balance Sheet Category</label>
+						<select id="balance-sheet-category" class="select">
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</select>
+					</div>
+				</div>
+				<div class="span3">
+					<div class="field select-field field-balance-sheet-owner">
+						<label for="balance-sheet-owner">Balance Sheet Owner</label>
+						<select id="balance-sheet-owner" class="select">
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+		</form>
+		
+		<div class="row-fluid">
+			<div class="span6">
+				<div id="ownership">
+					<h2>Ownership</h2>
+					<div class="owner-info">
+						<h3>Joint: Ken Golding</h3>
+						<p class="subhead">20% / $40,000</p>
+						<div class="row-fluid-fluid owner-stats">
+							<div class="span6">
+								<strong>Purchase Date:</strong> 01/01/1998
+							</div>
+							<div class="span6">
+								<strong>Purchase Date:</strong> 01/01/1998
+							</div>
+						</div>
+						<div class="row-fluid">
+							<div class="span3">
+								<strong>Purchase Date:</strong> 01/01/1998
+							</div>
+						</div>
+<!--
+						<ul class="clearfix">
+							<li><strong>Purchase Date:</strong> 01/01/1998</li>
+							<li><strong>Last Updated:</strong> 07/01/2012</li>
+							<li><strong>Original Value:</strong> 20% / $20,000</li>
+						</ul>
+-->
+						<p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id tortor est, sed malesuada sapien. Morbi ut gravida dui. Praesent eleifend orci eget leo lacinia blandit. Fusce risus lacus, vehicula vel interdum at, pretium vitae ligula. Aenean vel neque non mauris lacini.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		$(function() {
+			$( ".datepicker" ).datepicker();
+		});
+	</script>
+	
+</body>
+</html>isus lacus, vehicula vel interdum at, pretium vitae ligula. Aenean vel neque non mauris lacini.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		$(function() {
+			$( ".datepicker" ).datepicker();
+		});
+	</script>
+	
+</body>
+</html>

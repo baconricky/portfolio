@@ -1,0 +1,26 @@
+/* this style sheet shrinks the site header for power-user applications like mPAS */
+
+html
+{
+	background-position: 0 -40px;
+}
+.dropShadow
+{
+	margin-top: 136px;
+}
+#header
+{
+	height: 60px;
+}
+#skipNav
+{
+	top: -2px;
+}
+#logo
+{
+	margin-top: 0;
+}
+#siteSearch
+{
+	margin-top: 36px;
+}

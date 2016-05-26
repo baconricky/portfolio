@@ -1,0 +1,107 @@
+/*<!--*/
+/* YAHOO RESET ---------------------------------------------------------- */
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul {list-style:none;}caption,th {text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym {border:0;}
+
+/* STANDARD STYLES ---------------------------------------------------------- */
+html {
+	height: 100%;
+}
+
+body {
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:0.8em;
+	color: #222;
+	background:#F7F0D0 url(../images/bg_tile.gif) repeat-x scroll 0 -37px;
+	height: 100%;
+}
+
+h1 {
+	color: #035;
+	font-family:Trebuchet MS, Helvetica;
+	font-size: 1.6em;
+	font-weight: bolder;
+	border-bottom: 1px solid #4a819d;
+}
+
+h2 {
+	color: #035;
+	font-family:Trebuchet MS, Helvetica;
+	font-size: 1em;
+	font-weight: bolder;
+}
+
+h3 {
+	color: #035;
+	font-family:Trebuchet MS, Helvetica;
+	font-weight: bolder;
+}
+
+a {
+	color:#39e;
+}
+
+a img {
+	border: none;
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+	margin: 5px 3px;
+	padding-bottom: 20px;
+}
+
+li {
+	padding: 2px;
+}
+
+
+.mockups {
+	border: 2px solid #4a819d;
+	margin:10px 20px;
+}
+	
+#container {
+	padding:10px 20px;
+	text-align: center;
+	position:relative;
+	height: 100%;
+}
+
+#header {
+	padding:10px 20px;
+	color:#fff;
+	height: 150px;
+}
+
+#content {
+	padding: 10px;
+	margin:5px;
+}
+
+.boxWrap {
+	background-color:#FFF;
+	float:left;
+	margin-top:20px;
+	padding: 5px;
+}
+
+.box {
+	float:left;
+	background:#fff;
+}
+
+.boxPad {
+	position:relative;
+	float:right;
+	overflow:hidden;
+	background-color:#FFF;
+}
+
+#footer {
+	clear:left;
+	padding:10px 20px;
+	display:relative;
+}
+/*-->*/

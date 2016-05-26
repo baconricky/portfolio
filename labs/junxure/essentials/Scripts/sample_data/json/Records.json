@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<feed xml:base="http://demos.kendoui.com/service/Northwind.svc/" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">Employees</title>
+  <id>http://demos.kendoui.com/service/Northwind.svc/Employees</id>
+  <updated>2012-08-25T18:10:35Z</updated>
+  <link rel="self" title="Employees" href="Employees" />
+  <entry>
+    <id>http://demos.kendoui.com/service/Northwind.svc/Employees(1)</id>
+    <title type="text"></title>
+    <updated>2012-08-25T18:10:35Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="Employee" href="Employees(1)" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Employees1" type="application/atom+xml;type=feed" title="Employees1" href="Employees(1)/Employees1" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Employee1" type="application/atom+xml;type=entry" title="Employee1" href="Employees(1)/Employee1" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Orders" type="application/atom+xml;type=feed" title="Orders" href="Employees(1)/Orders" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Territories" type="application/atom+xml;type=feed" title="Territories" href="Employees(1)/Territories" />
+    <category term="NorthwindModel.Employee" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:RecordID m:type="Edm.Int32">1</d:RecordID>
+        <d:LastName>Davolio</d:LastName>
+        <d:FirstName>Nancy</d:FirstName>
+        <d:Title>Sales Representative</d:Title>
+        <d:TitleOfCourtesy>Ms.</d:TitleOfCourtesy>
+        <d:BirthDate m:type="Edm.DateTime">1948-12-08T00:00:00</d:BirthDate>
+        
+        <d:Address>507 - 20th Ave. E.&#xD;
+        Apt. 2A</d:Address>
+        <d:City>Seattle</d:City>
+        <d:Region>WA</d:Region>
+        <d:PostalCode>98122</d:PostalCode>
+        <d:Country>USA</d:Country>
+        <d:HomePhone>(206) 555-9857</d:HomePhone>
+        <d:Extension>5467</d:Extension>
+        
+        <d:Alert></d:Alert><d:Notes>Education includes a BA in psychology from Colorado State University in 1970.  She also completed "The Art of the Cold Call."  Nancy is a member of Toastmasters International.</d:Notes>
+        <d:ReportsTo m:type="Edm.Int32">2</d:ReportsTo>
+        <d:PhotoPath>http://accweb/emmployees/davolio.bmp</d:PhotoPath>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://demos.kendoui.com/service/Northwind.svc/Employees(2)</id>
+    <title type="text"></title>
+    <updated>2012-08-25T18:10:35Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="Employee" href="Employees(2)" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Employees1" type="application/atom+xml;type=feed" title="Employees1" href="Employees(2)/Employees1" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Employee1" type="application/atom+xml;type=entry" title="Employee1" href="Employees(2)/Employee1" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Orders" type="application/atom+xml;type=feed" title="Orders" href="Employees(2)/Orders" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Territories" type="application/atom+xml;type=feed" title="Territories" href="Employees(2)/Territories" />
+    <category term="NorthwindModel.Employee" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:RecordID m:type="Edm.Int32">2</d:RecordID>
+        <d:LastName>Fuller</d:LastName>
+        <d:FirstName>Andrew</d:FirstName>
+        <d:Title>Vice President, Sales</d:Title>
+        <d:TitleOfCourtesy>Dr.</d:TitleOfCourtesy>
+        <d:BirthDate m:type="Edm.DateTime">1952-02-19T00:00:00</d:BirthDate>
+        
+        <d:Address>908 W. Capital Way</d:Address>
+        <d:City>Tacoma</d:City>
+        <d:Region>WA</d:Region>
+        <d:PostalCode>98401</d:PostalCode>
+        <d:Country>USA</d:Country>
+        <d:HomePhone>(206) 555-9482</d:HomePhone>
+        <d:Extension>3457</d:Extension>
+        
+        <d:Alert></d:Alert><d:Notes>Andrew received his BTS commercial in 1974 and a Ph.D. in international marketing from the University of Dallas in 1981.  He is fluent in French and Italian and reads German.  He joined the company as a sales representative, was promoted to sales manager in January 1992 and to vice president of sales in March 1993.  Andrew is a member of the Sales Management Roundtable, the Seattle Chamber of Commerce, and the Pacific Rim Importers Association.</d:Notes>
+        <d:ReportsTo m:type="Edm.Int32" m:null="true" />
+        <d:PhotoPath>http://accweb/emmployees/fuller.bmp</d:PhotoPath>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://demos.kendoui.com/service/Northwind.svc/Employees(3)</id>
+    <title type="text"></title>
+    <updated>2012-08-25T18:10:35Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="Employee" href="Employees(3)" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Employees1" type="application/atom+xml;type=feed" title="Employees1" href="Employees(3)/Employees1" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Employee1" type="application/atom+xml;type=entry" title="Employee1" href="Employees(3)/Employee1" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Orders" type="application/atom+xml;type=feed" title="Orders" href="Employees(3)/Orders" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Territories" type="application/atom+xml;type=feed" title="Territories" href="Employees(3)/Territories" />
+    <category term="NorthwindModel.Employee" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:RecordID m:type="Edm.Int32">3</d:RecordID>
+        <d:LastName>Leverling</d:LastName>
+        <d:FirstName>Janet</d:FirstName>
+        <d:Title>Sales Representative</d:Title>
+        <d:TitleOfCourtesy>Ms.</d:TitleOfCourtesy>
+        <d:BirthDate m:type="Edm.DateTime">1963-08-30T00:00:00</d:BirthDate>
+        
+        <d:Address>722 Moss Bay Blvd.</d:Address>
+        <d:City>Kirkland</d:City>
+        <d:Region>WA</d:Region>
+        <d:PostalCode>98033</d:PostalCode>
+        <d:Country>USA</d:Country>
+        <d:HomePhone>(206) 555-3412</d:HomePhone>
+        <d:Extension>3355</d:Extension>
+        
+        <d:Alert></d:Alert><d:Notes>Janet has a BS degree in chemistry from Boston College (1984).  She has also completed a certificate program in food retailing management.  Janet was hired as a sales associate in 1991 and promoted to sales representative in February 1992.</d:Notes>
+        <d:ReportsTo m:type="Edm.Int32">2</d:ReportsTo>
+        <d:PhotoPath>http://accweb/emmployees/leverling.bmp</d:PhotoPath>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://demos.kendoui.com/service/Northwind.svc/Employees(4)</id>
+    <title type="text"></title>
+    <updated>2012-08-25T18:10:35Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="Employee" href="Employees(4)" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Employees1" type="application/atom+xml;type=feed" title="Employees1" href="Employees(4)/Employees1" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Employee1" type="application/atom+xml;type=entry" title="Employee1" href="Employees(4)/Employee1" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Orders" type="application/atom+xml;type=feed" title="Orders" href="Employees(4)/Orders" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Territories" type="application/atom+xml;type=feed" title="Territories" href="Employees(4)/Territories" />
+    <category term="NorthwindModel.Employee" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:RecordID m:type="Edm.Int32">4</d:RecordID>
+        <d:LastName>Peacock</d:LastName>
+        <d:FirstName>Margaret</d:FirstName>
+        <d:Title>Sales Representative</d:Title>
+        <d:TitleOfCourtesy>Mrs.</d:TitleOfCourtesy>
+        <d:BirthDate m:type="Edm.DateTime">1937-09-19T00:00:00</d:BirthDate>
+        
+        <d:Address>4110 Old Redmond Rd.</d:Address>
+        <d:City>Redmond</d:City>
+        <d:Region>WA</d:Region>
+        <d:PostalCode>98052</d:PostalCode>
+        <d:Country>USA</d:Country>
+        <d:HomePhone>(206) 555-8122</d:HomePhone>
+        <d:Extension>5176</d:Extension>
+        
+        <d:Alert></d:Alert><d:Notes>Margaret holds a BA in English literature from Concordia College (1958) and an MA from the American Institute of Culinary Arts (1966).  She was assigned to the London office temporarily from July through November 1992.</d:Notes>
+        <d:ReportsTo m:type="Edm.Int32">2</d:ReportsTo>
+        <d:PhotoPath>http://accweb/emmployees/peacock.bmp</d:PhotoPath>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://demos.kendoui.com/service/Northwind.svc/Employees(5)</id>
+    <title type="text"></title>
+    <updated>2012-08-25T18:10:35Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="Employee" href="Employees(5)" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Employees1" type="application/atom+xml;type=feed" title="Employees1" href="Employees(5)/Employees1" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Employee1" type="application/atom+xml;type=entry" title="Employee1" href="Employees(5)/Employee1" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Orders" type="application/atom+xml;type=feed" title="Orders" href="Employees(5)/Orders" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Territories" type="application/atom+xml;type=feed" title="Territories" href="Employees(5)/Territories" />
+    <category term="NorthwindModel.Employee" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:RecordID m:type="Edm.Int32">5</d:RecordID>
+        <d:LastName>Buchanan</d:LastName>
+        <d:FirstName>Steven</d:FirstName>
+        <d:Title>Sales Manager</d:Title>
+        <d:TitleOfCourtesy>Mr.</d:TitleOfCourtesy>
+        <d:BirthDate m:type="Edm.DateTime">1955-03-04T00:00:00</d:BirthDate>
+        
+        <d:Address>14 Garrett Hill</d:Address>
+        <d:City>London</d:City>
+        <d:Region m:null="true" />
+        <d:PostalCode>SW1 8JR</d:PostalCode>
+        <d:Country>UK</d:Country>
+        <d:HomePhone>(71) 555-4848</d:HomePhone>
+        <d:Extension>3453</d:Extension>
+        
+        <d:Alert></d:Alert><d:Notes>Steven Buchanan graduated from St. Andrews University, Scotland, with a BSC degree in 1976.  Upon joining the company as a sales representative in 1992, he spent 6 months in an orientation program at the Seattle office and then returned to his permanent post in London.  He was promoted to sales manager in March 1993.  Mr. Buchanan has completed the courses "Successful Telemarketing" and "International Sales Management."  He is fluent in French.</d:Notes>
+        <d:ReportsTo m:type="Edm.Int32">2</d:ReportsTo>
+        <d:PhotoPath>http://accweb/emmployees/buchanan.bmp</d:PhotoPath>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://demos.kendoui.com/service/Northwind.svc/Employees(6)</id>
+    <title type="text"></title>
+    <updated>2012-08-25T18:10:35Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="Employee" href="Employees(6)" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Employees1" type="application/atom+xml;type=feed" title="Employees1" href="Employees(6)/Employees1" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Employee1" type="application/atom+xml;type=entry" title="Employee1" href="Employees(6)/Employee1" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Orders" type="application/atom+xml;type=feed" title="Orders" href="Employees(6)/Orders" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Territories" type="application/atom+xml;type=feed" title="Territories" href="Employees(6)/Territories" />
+    <category term="NorthwindModel.Employee" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:RecordID m:type="Edm.Int32">6</d:RecordID>
+        <d:LastName>Suyama</d:LastName>
+        <d:FirstName>Michael</d:FirstName>
+        <d:Title>Sales Representative</d:Title>
+        <d:TitleOfCourtesy>Mr.</d:TitleOfCourtesy>
+        <d:BirthDate m:type="Edm.DateTime">1963-07-02T00:00:00</d:BirthDate>
+        
+        <d:Address>Coventry House&#xD;
+Miner Rd.</d:Address>
+        <d:City>London</d:City>
+        <d:Region m:null="true" />
+        <d:PostalCode>EC2 7JR</d:PostalCode>
+        <d:Country>UK</d:Country>
+        <d:HomePhone>(71) 555-7773</d:HomePhone>
+        <d:Extension>428</d:Extension>
+        
+        <d:Alert></d:Alert><d:Notes>Michael is a graduate of Sussex University (MA, economics, 1983) and the University of California at Los Angeles (MBA, marketing, 1986).  He has also taken the courses "Multi-Cultural Selling" and "Time Management for the Sales Professional."  He is fluent in Japanese and can read and write French, Portuguese, and Spanish.</d:Notes>
+        <d:ReportsTo m:type="Edm.Int32">5</d:ReportsTo>
+        <d:PhotoPath>http://accweb/emmployees/davolio.bmp</d:PhotoPath>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://demos.kendoui.com/service/Northwind.svc/Employees(7)</id>
+    <title type="text"></title>
+    <updated>2012-08-25T18:10:35Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="Employee" href="Employees(7)" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Employees1" type="application/atom+xml;type=feed" title="Employees1" href="Employees(7)/Employees1" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Employee1" type="application/atom+xml;type=entry" title="Employee1" href="Employees(7)/Employee1" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Orders" type="application/atom+xml;type=feed" title="Orders" href="Employees(7)/Orders" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Territories" type="application/atom+xml;type=feed" title="Territories" href="Employees(7)/Territories" />
+    <category term="NorthwindModel.Employee" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:RecordID m:type="Edm.Int32">7</d:RecordID>
+        <d:LastName>King</d:LastName>
+        <d:FirstName>Robert</d:FirstName>
+        <d:Title>Sales Representative</d:Title>
+        <d:TitleOfCourtesy>Mr.</d:TitleOfCourtesy>
+        <d:BirthDate m:type="Edm.DateTime">1960-05-29T00:00:00</d:BirthDate>
+        
+        <d:Address>Edgeham Hollow&#xD;
+Winchester Way</d:Address>
+        <d:City>London</d:City>
+        <d:Region m:null="true" />
+        <d:PostalCode>RG1 9SP</d:PostalCode>
+        <d:Country>UK</d:Country>
+        <d:HomePhone>(71) 555-5598</d:HomePhone>
+        <d:Extension>465</d:Extension>
+        
+        <d:Alert></d:Alert><d:Notes>Robert King served in the Peace Corps and traveled extensively before completing his degree in English at the University of Michigan in 1992, the year he joined the company.  After completing a course entitled "Selling in Europe," he was transferred to the London office in March 1993.</d:Notes>
+        <d:ReportsTo m:type="Edm.Int32">5</d:ReportsTo>
+        <d:PhotoPath>http://accweb/emmployees/davolio.bmp</d:PhotoPath>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://demos.kendoui.com/service/Northwind.svc/Employees(8)</id>
+    <title type="text"></title>
+    <updated>2012-08-25T18:10:35Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="Employee" href="Employees(8)" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Employees1" type="application/atom+xml;type=feed" title="Employees1" href="Employees(8)/Employees1" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Employee1" type="application/atom+xml;type=entry" title="Employee1" href="Employees(8)/Employee1" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Orders" type="application/atom+xml;type=feed" title="Orders" href="Employees(8)/Orders" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Territories" type="application/atom+xml;type=feed" title="Territories" href="Employees(8)/Territories" />
+    <category term="NorthwindModel.Employee" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:RecordID m:type="Edm.Int32">8</d:RecordID>
+        <d:LastName>Callahan</d:LastName>
+        <d:FirstName>Laura</d:FirstName>
+        <d:Title>Inside Sales Coordinator</d:Title>
+        <d:TitleOfCourtesy>Ms.</d:TitleOfCourtesy>
+        <d:BirthDate m:type="Edm.DateTime">1958-01-09T00:00:00</d:BirthDate>
+        
+        <d:Address>4726 - 11th Ave. N.E.</d:Address>
+        <d:City>Seattle</d:City>
+        <d:Region>WA</d:Region>
+        <d:PostalCode>98105</d:PostalCode>
+        <d:Country>USA</d:Country>
+        <d:HomePhone>(206) 555-1189</d:HomePhone>
+        <d:Extension>2344</d:Extension>
+        
+        <d:Alert></d:Alert><d:Notes>Laura received a BA in psychology from the University of Washington.  She has also completed a course in business French.  She reads and writes French.</d:Notes>
+        <d:ReportsTo m:type="Edm.Int32">2</d:ReportsTo>
+        <d:PhotoPath>http://accweb/emmployees/davolio.bmp</d:PhotoPath>
+      </m:properties>
+    </content>
+  </entry>
+  <entry>
+    <id>http://demos.kendoui.com/service/Northwind.svc/Employees(9)</id>
+    <title type="text"></title>
+    <updated>2012-08-25T18:10:35Z</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="Employee" href="Employees(9)" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Employees1" type="application/atom+xml;type=feed" title="Employees1" href="Employees(9)/Employees1" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Employee1" type="application/atom+xml;type=entry" title="Employee1" href="Employees(9)/Employee1" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Orders" type="application/atom+xml;type=feed" title="Orders" href="Employees(9)/Orders" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Territories" type="application/atom+xml;type=feed" title="Territories" href="Employees(9)/Territories" />
+    <category term="NorthwindModel.Employee" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:RecordID m:type="Edm.Int32">9</d:RecordID>
+        <d:LastName>Dodsworth</d:LastName>
+        <d:FirstName>Anne</d:FirstName>
+        <d:Title>Sales Representative</d:Title>
+        <d:TitleOfCourtesy>Ms.</d:TitleOfCourtesy>
+        <d:BirthDate m:type="Edm.DateTime">1966-01-27T00:00:00</d:BirthDate>
+        
+        <d:Address>7 Houndstooth Rd.</d:Address>
+        <d:City>London</d:City>
+        <d:Region m:null="true" />
+        <d:PostalCode>WG2 7LT</d:PostalCode>
+        <d:Country>UK</d:Country>
+        <d:HomePhone>(71) 555-4444</d:HomePhone>
+        <d:Extension>452</d:Extension>
+        
+        <d:Alert></d:Alert><d:Notes>Anne has a BA degree in English from St. Lawrence College.  She is fluent in French and German.</d:Notes>
+        <d:ReportsTo m:type="Edm.Int32">5</d:ReportsTo>
+        <d:PhotoPath>http://accweb/emmployees/davolio.bmp</d:PhotoPath>
+      </m:properties>
+    </content>
+  </entry>
+</feed>

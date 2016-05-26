@@ -1,0 +1,94 @@
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("a.expander-white").click(function (e) {
+            var $Section = $(this).parent().parent().nextAll('div.maximized-content:first'), isVisible = $Section.is(":visible");
+            $(this).removeClass('expand-btn-white minimize-btn-white');
+            $(this).addClass(isVisible ? "expand-btn-white" : "minimize-btn-white")
+            if (isVisible) {
+                $Section.slideUp("slow");
+            } else {
+                $Section.slideDown("slow");
+            }
+        });
+
+        //radio buttons and checkboxes
+        $('#record-personal-information input[type=checkbox]').checkbox().bind('ui-checkbox-changed ui-checkbox-enabled ui-checkbox-disabled ui-checkbox-focus ui-checkbox-blur',
+            function (event, info) { $('#log').prepend('[' + $(this).attr('id') + '] ' + $('label[for=' + $(this).attr('id') + ']').text() + ': ' + event.type + '<br />'); }
+        );
+
+        $('#record-personal-information input[type=radio]').radiobutton().bind('ui-radiobutton-changed ui-radiobutton-enabled ui-radiobutton-disabled ui-radiobutton-focus ui-radiobutton-blur',
+            function (event, info) { $('#log').prepend('[' + $(this).attr('id') + '] ' + $('label[for=' + $(this).attr('id') + ']').text() + ': ' + event.type + '<br />'); }
+         );
+
+        $('#record-personal-information input[type=radio][name=radiogroup3]').radiobutton('option', 'highlightGroup', true);
+
+        // Tooltips	
+        $('.field-help').cluetip({
+            splitTitle: '|', // use the invoking element's title attribute to populate the clueTip...
+            // ...and split the contents into separate divs where there is a "|"
+            showTitle: false, // hide the clueTip's heading
+            cluetipClass: 'rounded',
+            waitImage: false,
+            arrows: true,
+            cursor: 'pointer',
+            dropShadowSteps: 4,
+            positionBy: 'mouse',
+            topOffset: 17
+        });
+    });
+ </script>
+
+ 
+
+<div id="record-personal-information" class="form-block ui-widget">
+    <div class="form-header ui-widget-header clearfix">
+        <h3 class="form-title"><a href="javascript:void(0)" title="Minimize/Maximize Personal Information Details" class="expander-white minimize-btn-white"></a>Personal Information</h3>
+        <div class='edit-form' onclick='NavigateView("record-personal-information","/Record/Record/PersonalFields?event=edit&RecordID=e736a2b2-1330-4191-9d47-190630666c27&ModelName=RecordPersonalInformationModel")'><a title='Edit' class='edit-link' href='javascript:void(0)'> Edit</a></div>
+    </div>
+    <div class="clear"></div>
+    <div class="form-content maximized-content multiple-blocks">
+        <!--TODO: Implement List Card HERE-->
+        <div id="record-personal">
+
+<div class="span-12 first last">
+     <div class="first last span-24">
+        <div class="first span-21 address-desc">Fred's Personal Information </div>
+        <div class="span-2 last"><div class="settings-btn"><a href="" title="Configure Custom Form Fields"></a></div></div>
+        <div class="clear"></div>        
+        <label onchange='MarkDirty(this);' isDirty='False' class='span-5 prepend-1' for="recordPerson_SSN">SSN</label>  
+        <div class='span-5 append-1 JxEditorFor' id='tblPersons.tblPerson_PersonalFields::someGuid:-SSN' >777-77-7777</div>
+        <label onchange='MarkDirty(this);' isDirty='False' class='span-5' for="recordPerson_PassportNum">PassportNum</label>  
+        <div class='span-5 JxEditorFor' id='tblPersons.tblPerson_PersonalFields::someGuid:-PassportNum' ></div>
+        <div class="clear"></div> 
+        <label onchange='MarkDirty(this);' isDirty='False' class='span-5 prepend-1' for="recordPerson_DriverLicNum">DriverLicNum</label>   
+        <div class='span-5 append-1 JxEditorFor' id='tblPersons.tblPerson_PersonalFields::someGuid:-DriverLicNum' ></div>       
+        <label onchange='MarkDirty(this);' isDirty='False' class='span-5' for="recordPerson_PassportIssueDate">PassportIssueDate</label>   
+        <div class='span-5 datefield datefield' id='tblPersons.tblPerson_PersonalFields::someGuid:-PassportIssueDate' ></div> 
+        <div class="clear"></div>
+        <label onchange='MarkDirty(this);' isDirty='False' class='span-5 prepend-1' for="recordPerson_DriverLicIssueDate">DriverLicIssueDate</label>
+        <div class='span-5 append-1 datefield datefield' id='tblPersons.tblPerson_PersonalFields::someGuid:-DriverLicIssueDate' ></div> 
+        <label onchange='MarkDirty(this);' isDirty='False' class='span-5' for="recordPerson_PassportIssueLocation">PassportIssueLocation</label>
+        <div class='span-5 JxEditorFor' id='tblPersons.tblPerson_PersonalFields::someGuid:-PassportIssueLocation' ></div> 
+        <div class="clear"></div>
+        <label onchange='MarkDirty(this);' isDirty='False' class='span-5 prepend-1' for="recordPerson_DriverLicExpDate">DriverLicExpDate</label>
+        <div class='span-5 append-1 datefield datefield' id='tblPersons.tblPerson_PersonalFields::someGuid:-DriverLicExpDate' ></div> 
+        <label onchange='MarkDirty(this);' isDirty='False' class='span-5' for="recordPerson_PassportExp">PassportExp</label>
+        <div class='span-5 datefield datefield' id='tblPersons.tblPerson_PersonalFields::someGuid:-PassportExp' ></div> 
+        <div class="clear"></div>
+        <label onchange='MarkDirty(this);' isDirty='False' class='span-5 prepend-1' for="recordPerson_tblLookTypeOf_State1_StateName">StateName</label>
+        <div onchange='MarkDirty(this);' isDirty='False' class='span-5 append-1 chzn-select JxDropDownList' id='DLState_9c4c2d59-5132-4a08-a508-7831cd88f576' ></div>
+        <label onchange='MarkDirty(this);' isDirty='False' class='span-5' for="recordPerson_tblLookTypeOf_Country1_Country">Country</label>
+        <div onchange='MarkDirty(this);' isDirty='False' class='span-5 chzn-select JxDropDownList' id='PPCountry_9c4c2d59-5132-4a08-a508-7831cd88f576' >United States</div>
+        <div class="clear"></div>
+        <label onchange='MarkDirty(this);' isDirty='False' class='span-5 prepend-1' for="recordPerson_tblLookTypeOf_State_StateName">StateName</label>
+        <div onchange='MarkDirty(this);' isDirty='False' class='span-5 append-1 chzn-select JxDropDownList' id='SRState_9c4c2d59-5132-4a08-a508-7831cd88f576' ></div>
+        <label onchange='MarkDirty(this);' isDirty='False' class='span-5' for="recordPerson_tblLookTypeOf_Country_Country">Country</label>
+        <div onchange='MarkDirty(this);' isDirty='False' class='span-5 chzn-select JxDropDownList' id='Citizen_9c4c2d59-5132-4a08-a508-7831cd88f576' >United States</div>
+        <div class="clear"></div>
+    </div>
+</div>        </div>
+        <div class="clear"></div>
+    </div>
+</div>

@@ -1,0 +1,400 @@
+#siteSearch
+{
+	margin-top: 66px;
+}
+#rightColumn p
+{
+	font-size: .85em;
+	clear: left;	
+}
+#rightColumn > h3
+{
+	font-size: 1.3em;
+	margin-top: 4px;
+	float: left;
+}
+#mainContent li,
+#rightColumn li
+{
+	padding: 6px 0 8px 0;
+	margin: 0;
+	background-position: left;
+	background-repeat: no-repeat;
+	line-height: 1.2em;
+	border-bottom: 1px dotted #cccccc;
+}
+#rightNav li:hover
+{
+	background-color: #ebf0f4;	
+}
+#rightNav li img
+{
+	float: left;
+	margin-top: -5px;
+	margin-right: 5px;
+}
+fieldset.noFormSection
+{
+	margin: 0 0 13px 0;	
+}
+#locationsNav
+{
+	max-height: 15.5em;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+#locationsNav tbody tr
+{
+	font-size: .85em !important;	
+}
+.peNavHelp img
+{
+	margin-bottom: -5px;
+}
+.refid
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-weight: bold;
+	font-size: 1.5em;
+	color: #000000;
+}
+dl#peContact dt, dl#peContact dd
+{
+	float: left;	
+}
+dl#peContact dt
+{
+	width: 65px;	
+}
+dl#peContact dd
+{
+	white-space: nowrap;	
+}
+/* *********************************
+			FORM STYLES
+********************************** */
+.formItemGroup
+{
+	text-align: right;
+	width: 285px;
+	margin-top: 8px;
+}
+.formItemGroup label
+{
+	margin-right: 20px;
+}
+#prevNext
+{
+	height: 42px;
+	border-bottom: 1px solid #dddddd;	
+}
+.btnRow p
+{
+	float: left;
+	font-size: .8em;
+	margin: -2px 5px 0 0;	
+}
+.btnRow p#review
+{
+	float: right;
+	font-size: 1em;
+	margin: 0 10px 0 0;
+}
+button.linkBtn
+{
+	background: none;
+	border: none;
+	font-family: Verdana, sans-serif;
+	font-weight: normal;
+	font-size: 1em;
+	letter-spacing: normal;
+	color: #2288DD;
+	margin-top: -2px;
+	padding: 0;
+	overflow: visible; /* Fix for left/right padding 0 in ie */
+}
+button.linkBtn::-moz-focus-inner { 
+    border: 0;
+    padding: 0;
+}
+button.linkBtn span
+{
+	text-decoration: underline;	
+}
+button.linkBtn:hover
+{
+	cursor: pointer;
+	color: #BB9955;
+}
+/* ********* Tooltip icon temporary fix (11/6/09) ********* */
+.tooltip_icon
+{
+	vertical-align: top;
+}
+/* *********************************
+		HOURS TABLE STYLES
+********************************** */
+#hoursTable
+{
+	border-spacing:1px;
+	/*width: 80%;*/
+	margin-left: 8%;
+	background-color: #ffffff;
+	border: solid #999999;
+	border-width: 2px 4px;
+}
+#hoursTable th {
+	font-size:0.8em;
+	font-weight: bold;
+	text-align:left;
+	/*background-color:#e3e3e3;
+	border: solid 1px #cccccc;*/
+}
+#hoursTable th, #hoursTable td {
+	padding:3px 5px 0;
+}
+#hoursTable select {
+	font-size:0.7em;
+	/*width: 100%;*/
+}
+#totalHrs{
+	text-align:right;
+}
+a#copyToWeekdays{
+	font-size:0.8em;
+}
+
+/* *********************************
+	TERMS AND CONDITONS STYLES
+********************************** */
+
+#terms ol li {
+	margin-left: 50px;
+	margin-bottom: 5px;
+	list-style-type:upper-alpha;	
+}
+#terms ol ol li {
+	margin-top:5px;
+	margin-bottom: 5px;
+	list-style-type:upper-roman;
+}
+#baterms ol li {
+	margin-left: 50px;
+	margin-bottom: 5px;
+	list-style-type:decimal;	
+}
+
+/* ************************************************
+	Temporary Styles (will be integrated globally)
+*************************************************** */
+.hideLegend
+{
+	margin: 0;	
+}
+.hideLegend legend span
+{
+	position: absolute;
+	left: -999em;
+}
+p.blockquote
+{
+	margin-left: 15px;	
+}
+table
+{
+	margin-bottom: 13px;
+}
+.dataTable table
+{
+	margin-bottom: 0;	
+}
+td
+{
+	padding-bottom: 5px;
+	padding-right: 35px;
+}
+#mainContent ul
+{
+ margin-left:10px;
+}
+#mainContent ul li
+{
+	list-style: none;
+	margin-bottom: 5px;
+}
+.valid
+{
+	color: #FFFFFF !important;
+	background-color: #6edb5f;
+	border: 1px solid #2ba741;
+}
+#quickLinks
+{
+	margin-top: 2.4em;
+	margin-bottom: 20px;
+	padding: 7px 10px;
+	border: 1px solid #DDDDDD;
+}
+#quickLinks li
+{
+	padding: 7px 0;
+}
+.labelToRight .twoColChk dt
+{
+	width: 45%;
+}
+.labelToRight dt
+{
+	width: 33%;
+}
+#formLegend + p, #requiredLegend + p, #formLegend + h2, #requiredLegend + h2
+{
+	clear: both;
+	margin-top: 0;
+}
+.formSection dl + .info
+{
+	margin-top: 7px;	
+}
+strong
+{
+	font-weight: bold;	
+}
+#rightColumn
+{
+	clear: none;
+	width: 19%;
+	margin: 0 15px 20px;
+	float: right;
+}
+#mainContent
+{
+	float: left;
+	clear: none;
+	width: 76%;
+}
+	#mainContent h2
+	{
+		font-size: 1.3em;
+	}
+	#mainContent h3
+	{
+		font-size: 1.1em;	
+	}
+.info h3, .error h3
+{
+	margin: 0;	
+}
+.subtext
+{
+	font-size: .8em;
+	padding: 5px 10px 0px;
+}
+#formSubmitLabelInner
+{
+	margin: 3px 15px 0;
+	font-size: .8em;
+	text-align: right;
+	width: 250px;
+	float: right;
+}
+
+.andOr
+{
+	top: -1.3em;
+	margin-left: 2.5em;
+}
+
+input.largeRef, select.largeRef
+{
+	width: 265px;
+}
+
+.radioSpace {
+	margin-left:25px;
+}
+
+.button  { margin: 0 0 0 20px; text-align: center; display: block; position: relative; background: #aaa; padding: 5px; color: #fff; text-decoration: none; cursor: pointer; }
+.big { font-size: x-large; }
+.button * { font-style: normal; background-image: url(../images/buttons/btn2.png); background-repeat: no-repeat; display: block; position: relative; }
+.button i { background-position: top left; position: absolute; margin-bottom: -5px;  top: 0; left: 0; width: 5px; height: 5px; }
+.button span { background-position: bottom left; left: -5px; padding: 5px 50px 10px 50px; margin-bottom: -5px; }
+.button span i { background-position: bottom right; margin-bottom: 0; position: absolute; left: 100%; width: 10px; height: 100%; top: 0; }
+.button span span { background-position: top right; position: absolute; right: -10px; margin-left: 10px; top: -5px; height: 0; }
+
+* html .button span,
+* html .button i { float: left; width: auto; background-image: none; cursor: pointer; }
+
+.button { background: #eee; color: #000; }
+.button:hover { background-color: #ccc; color: #000; }
+.button:active { background-color: #eee; color: #000; }
+.button[class] {  background-image: url(../images/buttons/shade.png); background-position: bottom; }
+
+.button.green { background-color: #9d4; color: #fff; }
+.button.green:hover { background-color: #9d4; color: #000; }
+.button.green:active { background-color: #9d4; color: #000; }
+
+* html .button { border: 3px double #eee; }
+* html .button.green { border-color: #9d4; }
+
+.unread { font-weight: bold; }
+.message {color: #000; float:left; }
+.msgDate {color: #000; font-size:smaller; float:right; margin-right:10px; }
+
+
+//Announcement Pagination and display
+#moreAnnouncements {
+	padding:10px;
+	clear:both;
+	margin:10px;
+	font-weight:bold;
+	border:collapse;
+}
+
+.announcement {
+	border: 1px solid #CCC;
+	border-bottom-width:2px;
+	margin:7px;
+	padding: 0 5px 5px;
+	width:auto;
+	float:none;
+}
+
+.more{
+	text-decoration:none;
+	outline:none;
+	display:block;
+	padding:6px 0;
+	text-align:center;
+	border:1px solid #ddd;
+	border-bottom:1px solid #aaa;
+	border-right:1px solid #aaa;
+	background-color:#fff;
+	background-repeat:repeat-x;
+	background-position:left top;
+	text-shadow:1px 1px 1px #fff;
+	font-weight:bold;
+	margin-bottom:6px;
+}
+	
+.more:hover{
+	border:1px solid #bbb;
+	text-decoration:none;
+}
+
+.more.loading{
+	cursor:default!important;
+	background-color:#fff;
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	border:1px solid #eee;
+	background-image:url('http://s.twimg.com/a/1268266151/images/ajax.gif');
+}
+
+.more::-moz-focus-inner{
+	border:0;
+}
+
+.half {
+	width: 49%;
+}

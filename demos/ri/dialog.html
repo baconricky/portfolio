@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+        <meta charset="UTF-8">
+        <title>Railinc - Dialog Example</title>
+        <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.8.12.custom.css"/>
+        <link rel="stylesheet" type="text/css" href="css/standard.css"/>
+	</head>
+
+	<body>
+        <h1>Dialog Box Example</h1>
+        <p>Implementation documentation can be found here: <a href="http://jqueryui.com/demos/dialog/">jQuery UI Dialog Documentation</a></p>
+        <button onclick="dialogOpen()">Open Dialog</button>
+        <div id="dialog" title="Basic dialog">
+        	<p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+        </div>
+		<script src="js/jquery-1.6.2.min.js" type="text/javascript"></script>
+        <script src="js/jquery-ui-1.8.12.custom.min.js" type="text/javascript"></script>
+        <script>
+            $(function() {
+                $( "#dialog" ).dialog({ 
+                    title: "Sample Dialog",
+                    modal:true, 
+                    buttons: [
+                    {
+                        text: "Yes",
+                        click: function() { $(this).dialog("close"); }
+                    },
+                    {
+                        text: "No",
+                        click: function() { $(this).dialog("close"); }
+                    },
+                    {
+                        text: "Maybe",
+                        click: function() { $(this).dialog("close"); }
+                    }
+                    ] 
+                });
+            });
+            
+            var dialogOpen = function(){
+                $( "#dialog" ).dialog();
+            };
+        </script>
+	</body>
+</html>

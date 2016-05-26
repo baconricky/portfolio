@@ -1,0 +1,95 @@
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        //expand and miminize bottom blocks
+        $("#record-email a.expander-white").click(
+            function (e) {
+                var $Section = $(this).parent().parent().nextAll('div.maximized-content:first'), isVisible = $Section.is(":visible");
+                $(this).removeClass('expand-btn-white minimize-btn-white');
+                $(this).addClass(isVisible ? "expand-btn-white" : "minimize-btn-white")
+                if (isVisible) {
+                    $Section.slideUp("slow");
+                }
+                else {
+                    $Section.slideDown("slow");
+                }
+            }
+         );
+
+        //radio buttons and checkboxes
+        $(function ($) {
+            $('#record-email input[type=checkbox]').checkbox().bind('ui-checkbox-changed'
+				+ ' ui-checkbox-enabled ui-checkbox-disabled'
+				+ ' ui-checkbox-focus ui-checkbox-blur',
+                function (event, info) {
+                    $('#log').prepend('[' + $(this).attr('id') + '] ' + $('label[for=' + $(this).attr('id') + ']').text() + ': ' + event.type + '<br />');
+                });
+        });
+
+        $(function ($) {
+            $('#record-email input[type=radio]').radiobutton().bind('ui-radiobutton-changed'
+					+ ' ui-radiobutton-enabled ui-radiobutton-disabled'
+					+ ' ui-radiobutton-focus ui-radiobutton-blur',
+
+				function (event, info) {
+				    $('#log').prepend('[' + $(this).attr('id') + '] ' + $('label[for=' + $(this).attr('id') + ']').text() + ': ' + event.type
+					+ '<br />');
+				});
+
+				$('#record-email input[type=radio][name=radiogroup3]').radiobutton('option', 'highlightGroup', true);
+        });
+
+        // Tooltips
+        $('.field-help').cluetip({
+            splitTitle: '|', // use the invoking element's title attribute to populate the clueTip...
+            // ...and split the contents into separate divs where there is a "|"
+            showTitle: false, // hide the clueTip's heading
+            cluetipClass: 'rounded',
+            waitImage: false,
+            arrows: true,
+            cursor: 'pointer',
+            dropShadowSteps: 4,
+            positionBy: 'mouse',
+            topOffset: 17
+        });
+
+    });
+</script>
+
+<div id="record-email" class="form-block ui-widget">
+   
+    <div class="form-header ui-widget-header clearfix">
+        <h3 class="form-title"><a href="javascript:void(0)" title="Minimize/Maximize Email Address Details" class="expander-white minimize-btn-white"></a>Email Addresses</h3>
+        <div class='edit-form' onclick='NavigateView("record-email","/Record/Record/EmailAddresses?event=edit&RecordID=e736a2b2-1330-4191-9d47-190630666c27&ModelName=RecordEmailAddressesModel")'><a title='Edit' class='edit-link' href='javascript:void(0)'> Edit</a></div>
+    </div>
+    Record Emails
+    <div class="clear"></div>
+    <div class="form-content maximized-content grid-like">
+        <label for="EmailType" class="span-4">Type:</label>
+        <label for="Email" class="span-4">Email:</label>
+        <label for="EmailLabel" class="span-4">Label:</label>
+        
+        <label for="PrimaryEmail" class="span-2">Primary<img src="/Content/Images/icons/form-field-help-icon.png" height="10" width="10" class="field-help" title="Primary Email:|Please select an email address that you would like to be the primary contact email address for us to reach you."></label>
+        <label for="AdditionalEmail" class="span-2">Additional:<img src="/Content/Images/icons/form-field-help-icon.png" height="10" width="10" class="field-help" title="Additional:|Please select additional methods that you would like to be the primary method for us to reach you."></label>
+        <div class="settings-btn"><a href="" title="Configure Custom Form Fields"></a></div>
+        <div class="clear"></div>
+        <!--TODO: Implement List Card HERE-->
+        <div class="clear"></div>
+    </div>
+
+    Record Person Emails
+    <div class="clear"></div>
+    <div class="form-content maximized-content grid-like">
+        <label for="EmailType" class="span-4">Type:</label>
+        <label for="Email" class="span-4">Email:</label>
+        <label for="EmailLabel" class="span-4">Label:</label>
+        
+        <label for="PrimaryEmail" class="span-2">Primary<img src="/Content/Images/icons/form-field-help-icon.png" height="10" width="10" class="field-help" title="Primary Email:|Please select an email address that you would like to be the primary contact email address for us to reach you."></label>
+        <label for="AdditionalEmail" class="span-2">Additional:<img src="/Content/Images/icons/form-field-help-icon.png" height="10" width="10" class="field-help" title="Additional:|Please select additional methods that you would like to be the primary method for us to reach you."></label>
+        <div class="settings-btn"><a href="" title="Configure Custom Form Fields"></a></div>
+        <div class="clear"></div>
+        <!--TODO: Implement List Card HERE-->
+        <div class="clear"></div>
+    </div>
+</div>

@@ -1,0 +1,104 @@
+<h1 class="sectionHeaders">
+	Actions &gt; Workspace
+</h1><!--welcome-->
+<script type="text/x-kendo-template" id="workspaceGridToolbarTemplate">
+                <div class="toolbar">
+                    <label class="category-label" for="gridViewBy">View by </label>
+                    <input type="search" id="gridViewBy" style="width: 230px"></input>
+                </div>
+            </script>
+
+<div id="wsActionGrid"></div>
+
+
+<div id="essentials-actions-toolbar" data-url="actions-toolbar.html"></div>
+<div id="essentials-actions-grid"></div>
+
+<script type="text/javascript">
+    function setupSummary() {
+        setTimeout(function() {
+            if ($("#essentials-actions-grid").data("kendoGrid")) {
+                var grid = $("#essentials-actions-grid").data("kendoGrid");
+                
+                var tplSummary = kendo.template($("#essentials-actions-summary-template").html());
+                
+                grid.bind("change", function(e) {
+                    e.preventDefault();
+                    var selected = grid.select(),
+                        dataItem = grid.dataItem(selected);
+                    
+                    $("#essentials-actions-summary").html(tplSummary(dataItem));
+                });
+    
+            } else {
+                setupSummary();
+            }
+        }, 5);
+    
+        $(".toggle").on("click", function() {
+            $(this).next().toggle(150, function() {
+                if ($(this).is(":hidden")) {
+                    $("#summary-toggle-img").attr("src", "Content/MetroBlue/icons/down_circular.png");
+                } else {
+                    $("#summary-toggle-img").attr("src", "Content/MetroBlue/icons/up_circular.png");
+                }
+            });
+            return false;
+        });
+    }
+
+    $(document).ready(function() {
+        $("#essentials-actions-view-by").kendoDropDownList({
+            dataTextField: "name",
+            dataValueField: "value",
+            autoBind: false,
+            optionLabel: "All",
+            dataSource: jxSampleData.ViewByDS("records"),
+            change: function() {
+                var value = this.value();
+                if (value) {
+                    //console.log("value: " + value);
+                } else {
+                    $("#essentials-actions-grid").data("kendoGrid").dataSource.filter({});
+                }
+            }
+        });
+        
+        jxSampleData.RecordWorkspaceGrid();
+        /** 
+        
+        var grid = $("#essentials-records-grid").data("kendoGrid");
+                
+        grid.bind("change", function(e) {
+            e.preventDefault();
+                    
+            var selected = grid.select(),
+                dataItem = grid.dataItem(selected);
+
+           	$('#ribbon .multi-select, #ribbon .single-select').disable()
+
+            if (selected.length > 1 ) {
+                $("#ribbon .multi-select").enable()
+            } 
+
+            if (selected.length === 1 ) {
+                $("#ribbon .single-select").enable();
+            }
+
+        });
+        
+        **/
+
+        setupSummary();
+
+        $('.summary-toggle').next().hide();
+    
+        $("#essentials-actions-edit").on("click", function() {
+            if (this.isEnabled()) {
+                window.location = 'actions-edit.html';
+            }
+        });
+        
+        
+    });    
+</script>

@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+	<head> 
+		<title>Typecast 1.4 (release)--The Input Field Augmentation Library</title> 
+		<meta http-equiv="Content-type" content='text/html; charset="utf-8"' />
+		
+		<script type="text/javascript" language="JavaScript" src="jquery.tools.min.js"></script> 
+		<script type="text/javascript" language="JavaScript" src="date.js"></script>
+		<script type="text/javascript" language="JavaScript" src="jquery.datePicker.js"></script>
+		
+		<script type="text/javascript" language="JavaScript" src="typecast_1.4.js"></script> 
+		<script type="text/javascript" language="JavaScript" src="typecast.config.js"></script> 
+		<script type="text/javascript" language="JavaScript"> 
+			window.onload = go;
+			function go(){
+				Typecast.Init();
+			}
+		</script> 
+		
+		<link rel="stylesheet" href="typecast.css" type="text/css" /> 
+		<link rel="stylesheet" href="datepicker.css" type="text/css" /> 
+	</head> 
+	<body> 
+		<div id="main"> 
+			<h1>Typecast 1.4 (release)</h1> 
+			<p><strong>The Input Field Augmentation Library</strong></p> 
+			<h2 id="demo">Demo</h2> 
+			<form id="myform" action=""> 
+				<fieldset id="typecasttest"> 
+					<legend>Typecast Test</legend> 
+					<fieldset> 
+						<legend>Realtime Masking</legend> 
+						<p> 
+							<label for="phone">Phone: </label> 
+							<input type="text" id="phone" class="TCMask[(###) ###-####,(___) ___-____]" /> 
+						</p> 
+						<p> 
+							<label for="fax">Fax: </label> 
+							<input type="text" id="fax" class="TCMask" /> 
+						</p> 
+						<p> 
+							<label for="dob">Date of birth: </label> 
+							<input type="text" id="dob" class="date TCMask[##/##/####,mm/dd/yyyy]" /> 
+						</p> 
+						<p> 
+							<label for="ccard">Credit Card: </label> 
+							<input type="text" id="ccard" class="TCMask[#### #### #### ####]" /> 
+						</p> 
+						<p> 
+							<label for="ccard2">Credit Card 2: </label> 
+							<input type="text" id="ccard2" class="TCMask[#### #### #### ####,nnnn-nnnn-nnnn-nnnn]" /> 
+						</p> 
+						<p> 
+							<label for="postal">Postal Code: </label> 
+							<input type="text" id="postal" class="TCMask[A#A #A#]" /> 
+						</p> 
+					</fieldset> 
+				</fieldset> 
+			</form> 
+		</div> 
+		<script language="javascript" type="text/javascript">
+		<!--
+			$(document).ready(function() {
+				$('a.dp-choose-date')
+				.bind('click', function() { $('.date').trigger('click'); })
+				.bind('focus', function() { $('.date').trigger('click'); })
+				.bind('blur', function() { $('#dp-popup').hide(); });
+				
+				$('.date')
+				.bind('focus', function() { $('.date').trigger('click'); })
+				.bind('blur', function() { $('#dp-popup').hide(); });
+				
+				$('.date').datePicker({
+					clickInput:$('.date'),
+					verticalOffset: 22,
+					startDate:'01/01/1900'});
+		   });
+		//-->
+		</script> 
+	</body> 
+</html> 

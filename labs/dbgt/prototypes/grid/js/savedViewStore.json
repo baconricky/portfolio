@@ -1,0 +1,56 @@
+{
+	"success":"true",
+	"total":"3",
+	"fields": [
+		{
+			name: 'id', 
+			type: 'int'
+		},
+		{
+			name: 'display', 
+			type: 'string'
+		},
+		{
+			name: 'value', 
+			type: 'string'
+		},
+		{
+			name: 'keywords', 
+			type: 'string'
+		},
+		{
+			name: 'filters', 
+			type: 'object'
+		}
+	],
+	"results": [
+		{
+			"id":"0",
+			"display_name":"Declined",
+			"value":"declined",
+			"is_active":"true",
+			"keywords":["Declined","WalMart"],
+			"filters":{
+				"cbgAuthorizers":"Declined"
+			}
+		},
+		{
+			"id":"1",
+			"display_name":"Bulk",
+			"value":"bulk",
+			"is_active":"true",
+			"keywords":["Bulk","Apple"],
+			"filters":{
+				"cbgAuthorizers":"Bulk"
+			}
+		},
+		{
+			"id":"2",
+			"display_name":"Greater than 15k",
+			"value":"gt15k",
+			"is_active":"true",
+			"keywords":["> 15/,000"],
+			"filters":{}
+		}
+	]
+}

@@ -1,0 +1,281 @@
+
+<!-- ============================================================================== -->
+<!-- ============================ BEGIN ABT MARKUP ================================ -->
+<!-- ============================================================================== -->
+
+	<div class="container-fluid" id="net_value">
+		<div class="page-header">
+	    	<h1>Net Liability <span class="negative-value pull-right">$228,600.00</span></h1>
+	    </div>
+	</div>
+
+	<div class="container-fluid">
+	
+		<!-- ROW -->
+		<div class="row-fluid">
+			<div class="control-group span3">
+				<div class="entry">
+					<label class="control-label" for="rei-">Loan Amount</label>
+						<div class="controls input-append">
+							<span class="add-on">$</span>
+							<!-- Dynamic Element: XX -->
+							<input id="" value="278,554" type="text" class="text" />
+							<!-- /Dynamic Element: XX -->
+						</div>
+				</div>
+			</div>
+			<div class="control-group span3">	
+				<div class="entry">
+					<label class="control-label" for="rei-">Loan Balance</label>
+						<div class="controls input-append">
+							<span class="add-on">$</span>
+							<!-- Dynamic Element: XX -->
+							<input id="" value="278,554" type="text" class="text" />
+							<!-- /Dynamic Element: XX -->
+						</div>
+				</div>
+			</div>
+			<div class="control-group span3">	
+				<div class="entry">
+					<label class="control-label" for="rei-">Last Updated</label>
+						<div class="controls">
+							<!-- Dynamic Element: XX -->
+							<input type="text" class="text datepicker" id="" value="05/01/2012" />
+							<!-- /Dynamic Element: XX -->
+						</div>
+				</div>
+			</div>
+		</div>
+		<!-- /ROW -->
+	
+		<!-- ROW -->
+		<div class="row-fluid">
+					<div class="accordion span6" id="ownership-val-wrapper">
+						<div class="accordion-group">
+							<div class="accordion-heading">
+								<div class="accordion-toggle" data-toggle="collapse" data-parent="#ownership-val-wrapper" href="#ownership-val">
+									<!-- Static Element: 12 -->
+									<h4>Ownership Value <span class="pull-right amount">90% / $206,640.00</span></h4>
+									<!-- Static Element: 12 -->
+								</div>
+							</div>
+							<div id="ownership-val" class="accordion-body collapse">
+								<div class="accordion-inner" id="ownershipvalue">
+									<h4>Owners</h4>
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<div class="accordion-toggle" data-toggle="collapse" data-parent="#ownership-val" href="#ownership-jd1">
+												<!-- Static Element: 1 -->
+												<h4>Joint: <a href="#edit-user">John Doe</a>  <span class="pull-right amount">90% / $206,640.00</span></h4>
+												<!-- /Static Element: 1 -->
+											</div>
+										</div>
+										<div id="ownership-jd1" class="accordion-body collapse">
+											<div class="accordion-inner container-fluid">
+												<div class="span3">
+													<label class="control-label" for="ownership-jd1-purchase-dt">Purchase Date</label>  
+													<!-- Static Element: 2 -->
+													<div data-editable="true" class="controls editable" id="ownership-jd1-purchase-dt">5/19/2005</div>
+													<!-- /Static Element: 2 -->
+												</div>
+						
+												<div class="span3">
+													<label class="control-label" for="ownership-jd1-last-updated">Last Updated</label>  
+													<!-- Static Element: 3 -->
+													<div data-editable="true" class="controls editable" id="ownership-jd1-last-updated">5/19/2005</div>
+													<!-- /Static Element: 3 -->
+												</div>
+						
+												<div class="span4">
+													<label class="control-label" for="ownership-jd1-orig-val">Original Value</label>  
+													<!-- Static Element: 4 -->
+													<div class="controls"><span data-editable="true" class="editable" id="ownership-jd1-orig-val">20%</span> / $20,000.00</div>
+													<!-- /Static Element: 4 -->
+												</div>
+						
+												<div class="span12">
+													<!-- Static Element: 5 -->
+													<label class="control-label" for="ownership-jd1-note">Note</label>
+													<div data-editable="true" class="controls editable" id="ownership-jd1-note">A lengthy note about John. He's a guy and owns less stuff. We should still try to get as much of it as we can.</div>
+													<!-- /Static Element: 5 -->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /ROW -->
+	</div>
+	
+<!-- ============================================================ -->
+		
+	<div class="container-fluid">
+		
+		<!-- ROW -->
+		<div class="row-fluid">
+			<div class="control-group span12">
+				<h4>Liability Information</h4>
+			</div>
+		</div>	
+		<!-- /ROW -->
+		
+		<!-- ROW -->
+		<div class="row-fluid">
+			<div class="control-group span3">
+				<div class="entry">
+					<label class="control-label" for="rei-">Name</label>
+						<div class="controls">
+							<!-- Dynamic Element: XX -->
+							<input type="text" class="text" id="" value="Mortgage on Property" />
+							<!-- /Dynamic Element: XX -->
+						</div>
+				</div>
+			</div>
+			<div class="control-group span3">	
+				<div class="entry">
+					<label class="control-label" for="rei-">Balance Sheet Category</label>
+						<div class="controls">
+							<!-- Dynamic Element: XX -->
+							<input type="text" class="text" id="" value="Liablity" />
+							<!-- /Dynamic Element: XX -->
+						</div>
+				</div>
+			</div>
+			<div class="control-group span3">	
+				<div class="entry">
+					<label class="control-label" for="rei-">Balance Sheet Owner</label>
+						<div class="controls">
+							<!-- Dynamic Element: XX -->
+							<input type="text" class="text" id="" value="Client" />
+							<!-- /Dynamic Element: XX -->
+						</div>
+				</div>
+			</div>
+		</div>
+		<!-- /ROW -->
+		
+		<!-- ROW -->
+		<div class="row-fluid">
+			<div class="control-group span6">
+				<label class="control-label" for="">Note</label>
+					<div class="controls">
+						<!-- Dynamic Element: XX -->
+						<textarea class="autoResize" id="notes"></textarea>
+						<!-- /Dynamic Element: XX -->
+					</div>
+			</div>
+		</div>	
+		<!-- /ROW -->
+		
+		<!-- ROW -->
+		<div class="row-fluid">
+			<div class="control-group span12">
+				<h4>Loan Information</h4>
+			</div>
+		</div>	
+		<!-- /ROW -->
+				
+		<!-- ROW -->
+		<div class="row-fluid">
+			<div class="control-group span3">	
+				<div class="entry">
+					<label class="control-label" for="rei-">Lien Holder</label>
+						<div class="controls">
+							<!-- Dynamic Element: XX -->
+							<input type="text" class="text" id="" value="Wells Fargo" />
+							<!-- /Dynamic Element: XX -->
+						</div>
+				</div>
+			</div>
+			<div class="control-group span3">	
+				<div class="entry">
+					<label class="control-label" for="rei-">Account Number</label>
+						<div class="controls">
+							<!-- Dynamic Element: XX -->
+							<input type="text" class="text" id="" value="5544554" />
+							<!-- /Dynamic Element: XX -->
+						</div>
+				</div>
+			</div>
+			<div class="control-group span3">	
+				<div class="entry">
+					<label class="control-label" for="rei-">Start Date</label>
+						<div class="controls">
+							<!-- Dynamic Element: XX -->
+							<input type="text" class="text datepicker" id="" value="04/04/2012" />
+							<!-- /Dynamic Element: XX -->
+						</div>
+				</div>
+			</div>
+			<div class="control-group span3">	
+				<div class="entry">
+					<label class="control-label" for="rei-">End Date</label>
+						<div class="controls">
+							<!-- Dynamic Element: XX -->
+							<input type="text" class="text datepicker" id="" value="03/03/2016" />
+							<!-- /Dynamic Element: XX -->
+						</div>
+				</div>
+			</div>		
+		</div>
+		<!-- /ROW -->
+		
+		<!-- ROW -->
+		<div class="row-fluid">
+			<div class="control-group span3">
+					<label class="control-label" for="rei-">Type</label>
+					<div class="controls">
+						<!-- Dynamic Element: XX -->
+						<input type="text" class="text" id="" value="30-Year Fixed Interest Only" />
+						<!-- /Dynamic Element: XX -->
+					</div>
+			</div>
+			<div class="control-group span3">	
+					<label class="control-label" for="rei-">Original Amount</label>
+						<div class="controls input-append">
+							<span class="add-on">$</span>
+							<!-- Dynamic Element: XX -->
+							<input id="" value="300,000" type="text" class="text" />
+							<!-- /Dynamic Element: XX -->
+						</div>
+			</div>
+			<div class="control-group span3">	
+					<label class="control-label" for="rei-">Payment Info</label>
+					<div class="controls input-append">
+						<span class="add-on">$</span>
+						<!-- Dynamic Element: XX -->
+						<input id="" value="278,554 Monthly" type="text" class="text" />
+						<!-- /Dynamic Element: XX -->
+					</div>
+			</div>
+			<div class="control-group span3">				
+					<label class="control-label" for="rei-">Rate</label>
+					<div class="controls input-append">
+						<span class="add-on">%</span>
+						<!-- Dynamic Element: XX -->
+						<input id="" value="000" type="text" class="text" />
+						<!-- /Dynamic Element: XX -->
+					</div>
+			</div>
+		</div>
+		<!-- /ROW -->
+		
+		<!-- ROW -->
+		<div class="row-fluid">
+			<div class="control-group span3">				
+					<label class="control-label" for="rei-">Period</label>
+					<div class="controls">
+						<!-- Dynamic Element: XX -->
+						<input type="text" class="text" id="" value="30 Months" />
+						<!-- /Dynamic Element: XX -->
+					</div>
+			</div>
+		</div>
+		<!-- /ROW -->
+	</div>
+<!-- ============================================================================== -->
+<!-- ============================ END ABT MARKUP ================================== -->
+<!-- ============================================================================== -->

@@ -1,0 +1,170 @@
+@import "master.css";
+
+body
+{
+	max-width: 1259px;
+}
+.dropShadow
+{
+	max-width: 1258px;
+}
+#siteSearch
+{
+	margin-top: 49px;
+}
+#mainContent
+{
+	margin-bottom: 15px;
+}
+#mainContent:after																		/* clear fix for floated elements in mainContent */
+{
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/* page content */
+h2
+{
+	font-size: 1.4em;
+	color: #225588;
+	border-bottom: 1px solid #CCCCCC;
+}
+#promoContainer
+{
+	background: url("../images/layout/round_top_right.png") no-repeat top right;		/* rounded corner (top-right) for content background */
+}
+#promoBar
+{
+	height: 298px;
+	padding: 7px 7px 0;
+	background: url("../images/home/splash_providers.jpg") no-repeat 192px 12px;
+}
+#promoBar #tabs
+{
+	height: 298px;
+	float: left;
+}
+#promoBar #tabs li
+{
+	margin-bottom: -1px;
+}
+#promoBar #tabs #members
+{
+	background-color: #DD4455;
+}
+#promoBar #tabs #providers
+{
+	background-color: #6688DD;
+}
+#promoBar #tabs #agents
+{
+	background-color: #55CC33;
+}
+#promoBar #tabs #state
+{
+	background-color: #FFCC00;
+}
+
+	#promoBar .splash
+	{
+		display:none;
+		float:left;
+		width:17em;
+		padding:20px 37px;
+	}
+	#promoBar .splash ul
+	{
+		margin-left: 15px;
+		line-height: 220%;
+		list-style: disc;
+		color: #888888;
+	}
+	
+#pageTools
+{
+	float: right;
+	clear: none;
+	margin: 5px;
+}
+#pageTools li
+{
+	display: inline;
+}
+#quickLogin
+{
+	float: right;
+	width: 208px;
+	height: 298px;
+}
+#quickLogin form
+{	
+	height: 274px;
+	margin: 8px 21px 0;
+}
+#quickLogin legend
+{
+	margin-bottom: 12px;
+	font-family: Trebuchet MS, Helvetica, sans-serif;
+	font-size: 1.25em;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+#quickLogin p
+{
+	font-size: 0.7em;
+}
+#quickLogin .medium
+{
+	width: 97.5%;
+	margin-bottom: 10px;
+}
+
+#signInBtn
+{
+	text-align: right;
+}
+#welcome
+{
+	float: left;
+	width: 57.5%;
+	margin: 0.7em 10px;
+}
+#welcome p
+{
+	margin-left: 14px;
+}
+#news
+{
+	float: right;
+	width: 21%;
+	max-width: 208px;
+	margin: 0.7em 0;
+}
+#news h3
+{
+	margin-top: 15px;
+	margin-bottom: 0;
+	font-size: 0.75em;
+}
+#news ol
+{
+	padding: 0 10px 0 10px;
+}
+#news p
+{
+	font-size: 0.7em;
+	margin: 3px 0;
+}
+#news a
+{
+	display: block;
+	font-size: 0.7em;
+	text-align: right;
+}
+#footer
+{
+	margin: 0 7px -1px;
+}

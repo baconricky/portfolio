@@ -1,0 +1,27 @@
+{
+    "records": [
+        {
+            "id": "0",
+            "name": "Record"
+        },
+        {
+            "id": "1",
+            "name": "Person"
+        }
+    ],
+    "actions": [
+        {
+            "id": "0",
+            "name": "Action"
+        },
+        {
+            "id": "1",
+            "name": "Workflow"
+        },
+        {
+            "id": "2",
+            "name": "Timeline"
+        }
+    ]
+
+}

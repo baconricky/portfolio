@@ -1,0 +1,78 @@
+.ui-widget-header {
+  border:2px solid @inputBorder;
+  background: @bodyBackground;
+  color: @blue;
+  font-weight:bold;
+  a {
+    color: @blue;
+  }
+  .ui-icon {
+    background-image:url("@{imagesPath}/ui-icons_222222_256x240.png");
+  }
+}
+
+.ui-widget-header .ui-state-default {
+	border:2px solid @inputBorder;
+	background:@inputBackground;
+	font-weight:normal;
+	color:@textColor;
+}
+
+.ui-widget-header .ui-state-hover, 
+.ui-widget-header .ui-state-focus {
+	border:2px solid @inputBorder;
+	background:@inputBackground;
+	font-weight:normal;
+	color: @white;
+	a {
+		color: @white;
+		a:hover {
+			color: @white;
+		}
+	}
+}
+
+.ui-widget-header .ui-state-active {
+	border:2px solid @inputBorder;
+	background:@blueLighter;
+	font-weight:normal;
+	color: @white;
+}
+
+.ui-widget-header .ui-state-highlight {
+	border:2px solid @inputBorder;
+	background:@inputBackground;
+	color:#363636;
+}
+
+.ui-widget-header .ui-state-highlight a {
+	color:#363636;
+}
+
+.ui-widget-header .ui-state-error {
+	border:2px solid @errorBorder;
+	background: @errorBackground;
+	color: @errorText;
+}
+
+.ui-widget-header .ui-state-error a {
+	color: @errorText;
+}
+.ui-widget-header .ui-state-error-text {
+	color: @errorText;
+}
+.ui-widget-header .ui-priority-primary {
+	font-weight:bold;
+}
+.ui-widget-header .ui-priority-secondary {
+	opacity:.7;
+	/* filter:Alpha(Opacity=70) */
+	font-weight:normal;
+}
+.ui-widget-header .ui-state-disabled {
+	opacity:.35;
+	/* filter:Alpha(Opacity=35) */
+	background-image:none;
+}
+
+

@@ -1,0 +1,156 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><title>
+	
+	Verify Eligibility Batch
+
+</title>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="http://localhost/css/portal_provider.css" />   
+    
+	<script type="text/javascript" src="../../js/jquery.tools.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery.dump.js"></script>
+    <script type="text/javascript" src="../../js/DD_roundies.min.js"></script>
+	<script type="text/javascript" src="../../js/suckerfish.js"></script>
+	<script type="text/javascript" src="../../js/jCal.js"></script>
+	<script type="text/javascript" src="../../js/jquery.coolinput.min.js"></script>
+
+	<script type="text/javascript">
+		var ajaxUploadActionURL = 'BatchVerify.json';
+		var fileMask = ["txt","xls"];
+	</script>
+	<script type="text/javascript" src="../../js/ajaxupload.js"></script>
+	<script type="text/javascript" src="../../js/ajax_init.js"></script>
+	<script type="text/javascript" src="../../js/nctracks_init.js"></script>
+
+    <script language="javascript" type="text/javascript">
+        //Update Images URLs to shared server.
+        var Glopal_Images_Relative_Path = 'http://20.20.154.106:8180/transcend/dms/images/icons/';
+        $(document).ready(function() {
+            $("img[src*='_SharedPath_/']").each(function() {
+                var src_parts = $(this).attr('src').split('/');
+                $(this).attr('src', Glopal_Images_Relative_Path + src_parts[1]);
+            });
+        });
+    </script>
+
+</head>
+<body>
+    
+
+
+
+
+<div id="header">
+    <div id="logo">
+        <a href="../website/home_page.html" accesskey="1">
+            <img src="http://20.20.154.106:8180/transcend/.resources/csc-template/images/layout/logo_main.png"
+                alt="NCTracks" width="596" height="60" /></a>
+    </div>
+    <form method="get" id="siteSearch" action="/transcend/en/home/searchPage.html">
+		<input name="queryStr" type="text" name="search" class="hint" title="search......" accesskey="4" />
+		<button type="submit">Search</button>
+		| <a href="help/Default.htm" class="help" class="linkColor2" accesskey="6">Help</a>
+    </form>
+	
+
+
+</div>
+
+
+
+    <div id="contentBackground">
+        <h1 id="portalTitle">
+            Provider Portal</h1>
+        <div class="portalBrandColor" id="navStrip">
+            
+            <ul id="mainNav"><li><a href="/DirectConnect/Eligibility/Inquiry" >Eligibility</a><ul><li><a href="/DirectConnect/Eligibility/Inquiry" >Inquiry</a></li><li><a href="/DirectConnect/Eligibility/BatchVerify" >Batch Verify</a></li></ul></li></ul>
+        </div>
+        <!-- breadcrumb navigation -->
+        
+        <ol id="breadcrumb"></ol>
+        <div id="mainContent">
+            
+
+		<div id="pageTitle">
+			<h1>Verify Eligibility Batch</h1>
+			
+			<!-- page tools -->
+			<ul>
+				<li><a href="#"><img src="._SharedPath_/printer.png" width="24" height="24" alt="Print this page" /></a> |</li>
+				<li><a href="#" id="decreaseFont" class="textscaling"><img src="_SharedPath_/text_decrease.gif" width="24" height="24" alt="Decrease text size" /></a></li>
+				<li><a href="#" id="increaseFont" class="textscaling"><img src="_SharedPath_/text_increase.gif" width="24" height="24" alt="Increase text size" /></a>  |</li>
+				<li><a href="#">Help</a></li>
+			</ul>
+		</div>
+		
+		<!-- <form method="post" action="BatchVerify" enctype="multipart/form-data">-->
+		<form method="get" action="BatchVerify.json">
+			
+		<div id="requiredLegend"><img src="_SharedPath_/icon_required.gif" width="14" height="9" alt="Required Field" /> 
+		indicates a required field</div>
+		<div class="formSection" id="fileUpload">
+			<fieldset>
+				<legend>Upload Batch File</legend>
+				<a href="help.html" rel="#overlay" class="formHelpTab"><img src="_SharedPath_/help_tab.gif" width="22" height="22" alt="Help"
+                        title="Help" /></a>
+				
+				<div class="info">
+					<p>The following templates are available:
+					<a href="">.TXT</a> | <a href="">
+					.CSV</a></p>
+				</div>
+				<dl>
+					<dt><label for="dataFile" class="tip" title="A .TXT or .CSV file containing the batch data you wish to verify.">Data File:</label></dt>
+					<dd><ol class="files"></ol><button type="button" id="fileUploadBtn" name="fileUploadBtn">Choose File</button></dd>
+					
+					<dt><label class="required">Verify By:</label></dt>
+					<dd class="labelToRight">
+						<input type="radio" name="VerifyBy" id="memberID" class="required" value="MemberID">
+						<label for="memberID">Member ID</label>
+						<input type="radio" name="VerifyBy" id="ssnDOB" class="required" value="SSNDateOfBirth">
+						<label for="ssnDOB">SSN / Date of Birth</label>
+					</dd>
+					
+				</dl>
+				<hr />
+				<div class="btnRow">								  
+					<button type="button" class="submitBtn ajaxSubmit">Load from File</button>
+				</div>
+			</fieldset>
+			<a href="#header"><img src="_SharedPath_/return_top.gif" class="returnTop" width="12" height="13" alt="Back to top"
+                title="Return to the top of the page" /></a>
+		</div>
+		</form>
+
+
+        </div>
+        
+
+<div>
+	<ul class="linkColor2 rounded" id="footer">
+		
+		<li><a href="" accesskey="8">Legal</a> |</li>
+		<li><a href="">Privacy Policy</a> |</li>
+		<li><a href="accessibility.html">Accessibility</a> |</li>
+		<li><a href="" accesskey="3">Site Map</a> |</li>
+		<li><a href="" accesskey="9">Contact Us</a> |</li>
+		<li><a href="">Report Fraud</a></li>
+	</ul>
+</div>
+
+        
+        <div class="dropShadow" id="tileBtm">
+        </div>
+        <!-- overlayed element -->
+        <div class="overlay" id="overlay">
+            <!-- the external content is loaded inside this tag -->
+            <div class="wrap">
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

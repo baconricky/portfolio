@@ -1,0 +1,652 @@
+<html lang="en">
+    <head>
+        <meta content="HTML Tidy for Mac OS X (vers 25 March 2009), see www.w3.org" name="generator">
+        <meta content="IE=9,IE=8,IE=7,IE=6,IE=EDGE,chrome=1" http-equiv="X-UA-Compatible">
+        <link href="images/favicon.ico" rel="shortcut icon">
+        <title>
+            Interline Service Agreement
+        </title>
+        <meta content="width=device-width,initial-scale=1" name="viewport">
+        <meta content="Inter Service Agreement" name="description">
+        <meta content="Railinc Corporation" name="author">
+        <link href="css/standard.css" rel="stylesheet" type="text/css">
+        <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
+        <link href="css/app.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="rail-header">
+            <div id="util-nav-wrapper">
+                <ul id="util-nav">
+                    <li>
+                        <span id="rail-app-user">Role03 :</span> <span id="rail-app-user-company">RAIL - RAILINC CORPORATION</span>
+                    </li>
+                    <li>
+                        <a class="launchPad" href="#">Launch Pad</a>
+                        <div id="rail-launch-pad">
+                            <ul>
+                                <li>
+                                    <h2>
+                                        Applications
+                                    </h2>
+                                    <ul id="appList">
+                                        <li>
+                                            <a href="#" target="_blank">AAR Embargo/OPSL Permit System</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">CIF</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">CIF61</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">HAZMAT</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">ISA</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">ISA 61</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">ISA Repository QA</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">ISA Repository-Dev</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">QA Embargo and Permit System</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">Reciprocal Switch Web</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <h2>
+                                        User Services
+                                    </h2>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Edit Profile</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Change Password</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">View / Request Permissions</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Permission Request Status</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Launch Pad</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">Contact Us</a>
+                    </li>
+                    <li class="lastLK">
+                        <a href="#">Sign Out</a>
+                    </li>
+                </ul>
+            </div><a href="#" id="railinc-logo"><img alt="Go to www.railinc.com" height="26" src="images/logo.png" width="150"></a>
+            <div id="rail-app-name">
+                Interline Service Agreement
+            </div>
+            <div class="clear"></div>
+        </div>
+        <ul id="rail-app-nav">
+            <li>
+                <a class="current" href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="create_isa.html">Create ISA</a>
+            </li>
+            <li>
+                <a href="list_isa.html#">View ISAs</a>
+                <ul>
+                    <li>
+                        <a href="list_isa.html#">All</a>
+                    </li>
+                    <li>
+                        <a href="list_isa.html#ACTIVE">Active</a>
+                    </li>
+                    <li>
+                        <a href="list_isa.html#DRAFT">Draft</a>
+                    </li>
+                    <li>
+                        <a href="list_isa.html#PENDING">Pending</a>
+                    </li>
+                    <li>
+                        <a href="list_isa.html#REJECTED">Rejected</a>
+                    </li>
+                    <li>
+                        <a href="list_isa.html#ARCHIVED">Archived</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Export ISAs (csv)</a>
+            </li>
+            <li>
+                <a href="#">Documentation</a>
+            </li>
+        </ul>
+        <div id="rail-app-container">
+            <form action="saveEdit" id="isaForm" method="post">
+                <h1 class="sectionHeader">
+                    Edit Interline Service Agreement: 567500-300-010
+                </h1><input id="isa.id" name="isa.id" type="hidden" value="617"> <input id="draftStatus" name="draftStatus" type="hidden" value=""> <input id="creator" name="creator" type="hidden" value="OPSL01"> <input id="createdTimestamp" name="createdTimestamp" type="hidden" value="03/16/2012 18:18:30.127">
+                <div class="rail-wizard-loading" id="rail-wizard-loading">
+                    <img alt="Please wait..." src="images/loading_progress.gif"> Please wait while we load your application...
+                </div>
+                <div id="rail-wizard">
+                    <div id="rail-wizard-nav">
+                        <ul class="nav">
+                            <li>
+                                <a href="#isa-basic-info">Basic Information</a>
+                            </li>
+                            <li>
+                                <a href="#isa-description">Description Information</a>
+                            </li>
+                            <li>
+                                <a href="#isa-tpas">Train Plan Addendum</a>
+                            </li>
+                            <li>
+                                <a href="#isa-contacts">ISA Contacts</a>
+                            </li>
+                            <li>
+                                <a href="#wizard-review">Review</a>
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="wizard-step" id="isa-basic-info">
+                        <h2 class="sectionHeader">
+                            Basic Information
+                        </h2>
+                        <div class="half">
+                            <dl>
+                                <dt>
+                                    <label for="railroad1">Your Railroad</label>
+                                </dt>
+                                <dd>
+                                    <input class="validate[required,custom[mark]] uc" id="railroad1" maxlength="4" name="railroad1" placeholder="MARK" readonly="readonly" size="4" type="text" value="CSXT">
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    <label for="splc">ISA Number</label>
+                                </dt>
+                                <dd>
+                                    <input class="validate[required,custom[splc]] splc" id="splc" maxlength="6" name="splc" placeholder="SPLC" size="6" type="text" value="567500"> - <input class="validate[required,custom[r260]] r260" id="r260ForOrigin" maxlength="3" name="r260ForOrigin" placeholder="000" size="3" type="text" value="300"> - <input class="validate[required,custom[r260]] r260" id="r260ForPartner" maxlength="3" name="r260ForPartner" placeholder="000" size="3" type="text" value="010"> - <input class="validate[custom[onlyLetterNumber]] trafficDesc uc" id="trafficdescriptor" maxlength="2" name="trafficdescriptor" placeholder="A0" size="2" type="text" value="">
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    <label for="railroad2">Partner Railroad</label>
+                                </dt>
+                                <dd>
+                                    <input class="validate[required,custom[mark]] uc" id="railroad2" maxlength="4" name="railroad2" placeholder="MARK" readonly="readonly" size="4" type="text" value="UP">
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    <label for="effectiveDate">Effective Date</label>
+                                </dt>
+                                <dd>
+                                    <input class="validate[required,future[now],custom[dateFormat]] datepicker dpField" id="effectiveDate" name="effectiveDate" placeholder="MM/DD/YYYY" size="10" type="text" value="03/25/2012">
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="half">
+                            <dl>
+                                <dt>
+                                    <label for="reason">Reason for ISA</label>
+                                </dt>
+                                <dd>
+                                    <textarea class="validate[required,maxSize[256]]" cols="30" id="reason" name="reason" rows="8">
+TEST
+</textarea>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    <label for="interchangeGateway">Interchange Gateway</label>
+                                </dt>
+                                <dd>
+                                    <textarea class="validate[required,maxSize[256]]" cols="30" id="interchangeGateway" name="interchangeGateway" rows="8">
+02/25/2012 TEST
+</textarea>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="wizard-step" id="isa-description">
+                        <h2 class="sectionHeader">
+                            Description Information
+                        </h2><em class="info">Please provide description information for one or more description information elements below. Each description is limited to 2500 characters.</em>
+                        <div class="userMessage"></div>
+                        <dl>
+                            <dt>
+                                <label for="propertyList0.propertyDesc">Agreement Conflicts</label>
+                            </dt>
+                            <dd>
+                                <textarea class="validate[maxSize[2500]]" cols="30" id="propertyList0.propertyDesc" name="propertyList[0].propertyDesc" rows="8">
+</textarea> <input id="propertyList[0].isaProperty.id" name="propertyList[0].isaProperty.id" type="hidden" value="48"> <input id="propertyList[0].isaProperty.propertyName" name="propertyList[0].isaProperty.propertyName" type="hidden" value="Agreement Conflicts">
+                            </dd>
+                            <dt>
+                                <label for="propertyList1.propertyDesc">Mechanical Inspection Requirements</label>
+                            </dt>
+                            <dd>
+                                <textarea class="validate[maxSize[2500]]" cols="30" id="propertyList1.propertyDesc" name="propertyList[1].propertyDesc" rows="8">
+</textarea> <input id="propertyList[1].isaProperty.id" name="propertyList[1].isaProperty.id" type="hidden" value="40"> <input id="propertyList[1].isaProperty.propertyName" name="propertyList[1].isaProperty.propertyName" type="hidden" value="Mechanical Inspection Requirements">
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <label for="propertyList2.propertyDesc">Actual Interchange Reporting</label>
+                            </dt>
+                            <dd>
+                                <textarea class="validate[maxSize[2500]]" cols="30" id="propertyList2.propertyDesc" name="propertyList[2].propertyDesc" rows="8">
+</textarea> <input id="propertyList[2].isaProperty.id" name="propertyList[2].isaProperty.id" type="hidden" value="43"> <input id="propertyList[2].isaProperty.propertyName" name="propertyList[2].isaProperty.propertyName" type="hidden" value="Actual Interchange Reporting">
+                            </dd>
+                            <dt>
+                                <label for="propertyList3.propertyDesc">Schedule Changes</label>
+                            </dt>
+                            <dd>
+                                <textarea class="validate[maxSize[2500]]" cols="30" id="propertyList3.propertyDesc" name="propertyList[3].propertyDesc" rows="8">
+</textarea> <input id="propertyList[3].isaProperty.id" name="propertyList[3].isaProperty.id" type="hidden" value="46"> <input id="propertyList[3].isaProperty.propertyName" name="propertyList[3].isaProperty.propertyName" type="hidden" value="Schedule Changes">
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <label for="propertyList4.propertyDesc">Revision of ISA</label>
+                            </dt>
+                            <dd>
+                                <textarea class="validate[maxSize[2500]]" cols="30" id="propertyList4.propertyDesc" name="propertyList[4].propertyDesc" rows="8">
+</textarea> <input id="propertyList[4].isaProperty.id" name="propertyList[4].isaProperty.id" type="hidden" value="47"> <input id="propertyList[4].isaProperty.propertyName" name="propertyList[4].isaProperty.propertyName" type="hidden" value="Revision of ISA">
+                            </dd>
+                            <dt>
+                                <label for="propertyList5.propertyDesc">Interchange Event</label>
+                            </dt>
+                            <dd>
+                                <textarea class="validate[maxSize[2500]]" cols="30" id="propertyList5.propertyDesc" name="propertyList[5].propertyDesc" rows="8">
+</textarea> <input id="propertyList[5].isaProperty.id" name="propertyList[5].isaProperty.id" type="hidden" value="37"> <input id="propertyList[5].isaProperty.propertyName" name="propertyList[5].isaProperty.propertyName" type="hidden" value="Interchange Event">
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <label for="propertyList6.propertyDesc">Train or Traffic Restrictions</label>
+                            </dt>
+                            <dd>
+                                <textarea class="validate[maxSize[2500]]" cols="30" id="propertyList6.propertyDesc" name="propertyList[6].propertyDesc" rows="8">
+</textarea> <input id="propertyList[6].isaProperty.id" name="propertyList[6].isaProperty.id" type="hidden" value="39"> <input id="propertyList[6].isaProperty.propertyName" name="propertyList[6].isaProperty.propertyName" type="hidden" value="Train or Traffic Restrictions">
+                            </dd>
+                            <dt>
+                                <label for="propertyList7.propertyDesc">Advance Consist Requirements</label>
+                            </dt>
+                            <dd>
+                                <textarea class="validate[maxSize[2500]]" cols="30" id="propertyList7.propertyDesc" name="propertyList[7].propertyDesc" rows="8">
+</textarea> <input id="propertyList[7].isaProperty.id" name="propertyList[7].isaProperty.id" type="hidden" value="42"> <input id="propertyList[7].isaProperty.propertyName" name="propertyList[7].isaProperty.propertyName" type="hidden" value="Advance Consist Requirements">
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <label for="propertyList8.propertyDesc">Performance Evaluation</label>
+                            </dt>
+                            <dd>
+                                <textarea class="validate[maxSize[2500]]" cols="30" id="propertyList8.propertyDesc" name="propertyList[8].propertyDesc" rows="8">
+</textarea> <input id="propertyList[8].isaProperty.id" name="propertyList[8].isaProperty.id" type="hidden" value="45"> <input id="propertyList[8].isaProperty.propertyName" name="propertyList[8].isaProperty.propertyName" type="hidden" value="Performance Evaluation">
+                            </dd>
+                            <dt>
+                                <label for="propertyList9.propertyDesc">Interchange Locations</label>
+                            </dt>
+                            <dd>
+                                <textarea class="validate[maxSize[2500]]" cols="30" id="propertyList9.propertyDesc" name="propertyList[9].propertyDesc" rows="8">
+TESTING Desc * - only 1 field
+</textarea> <input id="propertyList[9].isaProperty.id" name="propertyList[9].isaProperty.id" type="hidden" value="36"> <input id="propertyList[9].isaProperty.propertyName" name="propertyList[9].isaProperty.propertyName" type="hidden" value="Interchange Locations">
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <label for="propertyList10.propertyDesc">Locomotive Requirements</label>
+                            </dt>
+                            <dd>
+                                <textarea class="validate[maxSize[2500]]" cols="30" id="propertyList10.propertyDesc" name="propertyList[10].propertyDesc" rows="8">
+</textarea> <input id="propertyList[10].isaProperty.id" name="propertyList[10].isaProperty.id" type="hidden" value="41"> <input id="propertyList[10].isaProperty.propertyName" name="propertyList[10].isaProperty.propertyName" type="hidden" value="Locomotive Requirements">
+                            </dd>
+                            <dt>
+                                <label for="propertyList11.propertyDesc">Temporary and Emergency Plans</label>
+                            </dt>
+                            <dd>
+                                <textarea class="validate[maxSize[2500]]" cols="30" id="propertyList11.propertyDesc" name="propertyList[11].propertyDesc" rows="8">
+</textarea> <input id="propertyList[11].isaProperty.id" name="propertyList[11].isaProperty.id" type="hidden" value="44"> <input id="propertyList[11].isaProperty.propertyName" name="propertyList[11].isaProperty.propertyName" type="hidden" value="Temporary and Emergency Plans">
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <label for="propertyList12.propertyDesc">Interchanging Trains, Blocks and Handling</label>
+                            </dt>
+                            <dd>
+                                <textarea class="validate[maxSize[2500]]" cols="30" id="propertyList12.propertyDesc" name="propertyList[12].propertyDesc" rows="8">
+TEST
+</textarea> <input id="propertyList[12].isaProperty.id" name="propertyList[12].isaProperty.id" type="hidden" value="38"> <input id="propertyList[12].isaProperty.propertyName" name="propertyList[12].isaProperty.propertyName" type="hidden" value="Interchanging Trains, Blocks and Handling">
+                            </dd>
+                        </dl>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="wizard-step" id="isa-tpas">
+                        <h2 class="sectionHeader">
+                            Train Plan Addendum
+                        </h2><em class="info">Please provide the Train Plan Addendum information below. To successfully complete an ISA, one or more Train Plan Addendums must be completed.</em>
+                        <div id="tpa-list">
+                            <div class="panel tpa-panel" data-tpa-index="0" id="tpa-618">
+                                <h3 class="sectionHeader">
+                                    Train Plan Addendum for SPLC 567500
+                                </h3><input id="tpaFormList0.id" name="tpaFormList[0].id" type="hidden" value="618">
+                                <dl class="threeColumnLayout">
+                                    <dt>
+                                        <label for="tpaFormList0.timeZoneCode">Time Zone</label>
+                                    </dt>
+                                    <dd>
+                                        <select class="validate[required]" id="tpaFormList0.timeZoneCode" name="tpaFormList[0].timeZoneCode">
+                                            <option value="AT">
+                                                ALASKAN TIME ZONE
+                                            </option>
+                                            <option selected="selected" value="CT">
+                                                CENTRAL TIME ZONE
+                                            </option>
+                                            <option value="ET">
+                                                EASTERN TIME ZONE
+                                            </option>
+                                            <option value="MT">
+                                                MOUNTAIN TIME ZONE
+                                            </option>
+                                            <option value="NT">
+                                                NEWFOUNDLAND TIME ZONE
+                                            </option>
+                                            <option value="PT">
+                                                PACIFIC TIME ZONE
+                                            </option>
+                                            <option value="TT">
+                                                TORONTO TIME ZONE
+                                            </option>
+                                            <option value="SPLC">
+                                                USE SPLC
+                                            </option>
+                                        </select>
+                                    </dd>
+                                    <dt>
+                                        <label for="tpaFormList0.direction">From Road =&gt; To Road</label>
+                                    </dt>
+                                    <dd>
+                                        <select class="tpaDirection" id="tpaFormList0.direction" name="tpaFormList[0].direction">
+                                            <option value="CSXT &gt; UP">
+                                                CSXT &gt; UP
+                                            </option>
+                                            <option selected="selected" value="UP &gt; CSXT">
+                                                UP &gt; CSXT
+                                            </option>
+                                        </select>
+                                    </dd>
+                                    <dt>
+                                        <label for="tpaFormList0.interchangeLocn">Interchange Location</label>
+                                    </dt>
+                                    <dd>
+                                        <input class="validate[required,maxSize[30]]" id="tpaFormList0.interchangeLocn" maxlength="30" name="tpaFormList[0].interchangeLocn" type="text" value="MARXVILLE, IL">
+                                    </dd>
+                                </dl>
+                                <dl class="threeColumnLayout">
+                                    <dt>
+                                        <label for="tpaFormList0.trainIdFrom">From Train ID</label>
+                                    </dt>
+                                    <dd>
+                                        <input class="validate[groupRequired[trainId0],maxSize[10]]" id="tpaFormList0.trainIdFrom" maxlength="10" name="tpaFormList[0].trainIdFrom" type="text" value="70 - RYU">
+                                    </dd>
+                                    <dt>
+                                        <label for="tpaFormList0.trainIdTo">To Train ID</label>
+                                    </dt>
+                                    <dd>
+                                        <input class="validate[groupRequired[trainId0],maxSize[10]]" id="tpaFormList0.trainIdTo" maxlength="10" name="tpaFormList[0].trainIdTo" type="text" value="TPA 1ST">
+                                    </dd>
+                                    <dt>
+                                        <label for="tpaFormList0.splc">SPLC</label>
+                                    </dt>
+                                    <dd>
+                                        <input class="validate[required,custom[splc]] splc" id="tpaFormList0.splc" maxlength="6" name="tpaFormList[0].splc" placeholder="SPLC" size="9" type="text" value="567500   ">
+                                    </dd>
+                                </dl>
+                                <dl class="threeColumnLayout">
+                                    <dt>
+                                        <label class="required" id="tpa-freq-0">Frequency</label>
+                                    </dt>
+                                    <dd class="tpa-freq">
+                                        <span><input class="validate[groupRequired[tpaFormList[0].frequency],minCheckbox[1]]" data-input-group-label="tpa-freq-0" id="tpaFormList0.frequency1" name="tpaFormList[0].frequency" type="checkbox" value="1"><label for="tpaFormList0.frequency1">Sun</label></span><span><input class="validate[groupRequired[tpaFormList[0].frequency],minCheckbox[1]]" data-input-group-label="tpa-freq-0" id="tpaFormList0.frequency2" name="tpaFormList[0].frequency" type="checkbox" value="2"><label for="tpaFormList0.frequency2">Mon</label></span><span><input class="validate[groupRequired[tpaFormList[0].frequency],minCheckbox[1]]" data-input-group-label="tpa-freq-0" id="tpaFormList0.frequency3" name="tpaFormList[0].frequency" type="checkbox" value="3"><label for="tpaFormList0.frequency3">Tue</label></span><span><input class="validate[groupRequired[tpaFormList[0].frequency],minCheckbox[1]]" data-input-group-label="tpa-freq-0" id="tpaFormList0.frequency4" name="tpaFormList[0].frequency" type="checkbox" value="4"><label for="tpaFormList0.frequency4">Wed</label></span><span><input class="validate[groupRequired[tpaFormList[0].frequency],minCheckbox[1]]" data-input-group-label="tpa-freq-0" id="tpaFormList0.frequency5" name="tpaFormList[0].frequency" type="checkbox" value="5"><label for="tpaFormList0.frequency5">Thu</label></span><span><input class="validate[groupRequired[tpaFormList[0].frequency],minCheckbox[1]]" data-input-group-label="tpa-freq-0" id="tpaFormList0.frequency6" name="tpaFormList[0].frequency" type="checkbox" value="6"><label for="tpaFormList0.frequency6">Fri</label></span><span><input class="validate[groupRequired[tpaFormList[0].frequency],minCheckbox[1]]" data-input-group-label="tpa-freq-0" id="tpaFormList0.frequency7" name="tpaFormList[0].frequency" type="checkbox" value="7"><label for="tpaFormList0.frequency7">Sat</label></span><input name="_tpaFormList[0].frequency" type="hidden" value="on">
+                                    </dd>
+                                </dl>
+                                <dl class="threeColumnLayout">
+                                    <dt>
+                                        <label for="tpaFormList0.powerThruInd">Power Through</label>
+                                    </dt>
+                                    <dd>
+                                        <input class="validate[custom[onlyYN]] onlyYN" id="tpaFormList0.powerThruInd" name="tpaFormList[0].powerThruInd" placeholder="N" size="1" type="text" value=""> (Y/N)
+                                    </dd>
+                                    <dt>
+                                        <label for="tpaFormList0.rssmPermitInd">RSSM Permitted</label>
+                                    </dt>
+                                    <dd>
+                                        <input class="validate[custom[onlyYN]] onlyYN" id="tpaFormList0.rssmPermitInd" name="tpaFormList[0].rssmPermitInd" placeholder="N" size="1" type="text" value="Y  "> (Y/N)
+                                    </dd>
+                                </dl>
+                                <dl class="threeColumnLayout">
+                                    <dt>
+                                        <label for="tpaFormList0.graceHrsPrior">Window Low</label>
+                                    </dt>
+                                    <dd>
+                                        <input class="tpaWindow validate[required,custom[24hrClock]]" id="tpaFormList0.graceHrsPrior" maxlength="4" name="tpaFormList[0].graceHrsPrior" placeholder="HHMM" size="4" type="text" value="0001">
+                                    </dd>
+                                    <dt>
+                                        <label for="tpaFormList0.interchangeTime">Interchange Time</label>
+                                    </dt>
+                                    <dd>
+                                        <input class="tpaWindow validate[required,custom[24hrClock]]" id="tpaFormList0.interchangeTime" maxlength="4" name="tpaFormList[0].interchangeTime" placeholder="HHMM" size="4" type="text" value="1100">
+                                    </dd>
+                                    <dt>
+                                        <label for="tpaFormList0.graceHrsPost">Window High</label>
+                                    </dt>
+                                    <dd>
+                                        <input class="tpaWindow validate[required,custom[24hrClock]]" id="tpaFormList0.graceHrsPost" maxlength="4" name="tpaFormList[0].graceHrsPost" placeholder="HHMM" size="4" type="text" value="1300">
+                                    </dd>
+                                </dl>
+                                <dl class="threeColumnLayout">
+                                    <dt>
+                                        <label for="tpaFormList0.maxWeight">Tons</label>
+                                    </dt>
+                                    <dd>
+                                        <input class="validate[custom[integer]] weight" id="tpaFormList0.maxWeight" maxlength="6" name="tpaFormList[0].maxWeight" type="text" value="1000">
+                                    </dd>
+                                    <dt>
+                                        <label for="tpaFormList0.maxLength">Feet</label>
+                                    </dt>
+                                    <dd>
+                                        <input class="validate[custom[integer]] length" id="tpaFormList0.maxLength" maxlength="6" name="tpaFormList[0].maxLength" type="text" value="500">
+                                    </dd>
+                                    <dt>
+                                        <label for="tpaFormList0.offsetCode">Offset</label>
+                                    </dt>
+                                    <dd>
+                                        <input class="validate[maxSize[2],custom[integer]] offset" id="tpaFormList0.offsetCode" maxlength="2" name="tpaFormList[0].offsetCode" size="2" type="text" value="02">
+                                    </dd>
+                                </dl>
+                                <dl class="threeColumnLayout">
+                                    <dt>
+                                        <label for="tpaFormList0.trainBlkFrom">From Block Id</label>
+                                    </dt>
+                                    <dd>
+                                        <input class="validate[maxSize[30],custom[onlyLetterNumber]]" id="tpaFormList0.trainBlkFrom" maxlength="30" name="tpaFormList[0].trainBlkFrom" type="text" value="YKS10">
+                                    </dd>
+                                    <dt>
+                                        <label for="tpaFormList0.trainBlkTo">To Block Id</label>
+                                    </dt>
+                                    <dd>
+                                        <input class="validate[maxSize[30],custom[onlyLetterNumber]]" id="tpaFormList0.trainBlkTo" maxlength="30" name="tpaFormList[0].trainBlkTo" type="text" value="YKS94">
+                                    </dd>
+                                </dl>
+                                <dl class="threeColumnLayout">
+                                    <dt>
+                                        <label for="tpaFormList0.blockdesc">Block Description</label>
+                                    </dt>
+                                    <dd>
+                                        <textarea class="validate[maxSize[30]]" cols="30" id="tpaFormList0.blockdesc" name="tpaFormList[0].blockdesc" rows="8">
+ANDERSON - TEST
+</textarea>
+                                    </dd>
+                                </dl>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="wizard-step" id="isa-contacts">
+                        <h2 class="sectionHeader">
+                            Contacts
+                        </h2><em class="info">Please provide the contact information for all parties involved. To successfully submit an ISA, an email address contact information for an approver for each railroad is required.</em>
+                        <div id="contact-list">
+                            <div class="panel contact-panel" data-contact-index="0" id="contact-6530">
+                                <input id="contactFormList0.id" name="contactFormList[0].id" type="hidden" value="6530"> <input id="contactFormList0.creator" name="contactFormList[0].creator" type="hidden" value="OPSL01"> <input id="contactFormList0.createdTimestamp" name="contactFormList[0].createdTimestamp" type="hidden" value="03/16/2012 18:18:30.134">
+                                <h3 class="sectionHeader">
+                                    Koffi, Cole
+                                </h3>
+                                <dl class="threeColumnLayout">
+                                    <dt>
+                                        <label for="contactFormList0.firstName">First Name</label>
+                                    </dt>
+                                    <dd>
+                                        <input class="validate[required]" id="contactFormList0.firstName" maxlength="50" name="contactFormList[0].firstName" type="text" value="Cole">
+                                    </dd>
+                                    <dt>
+                                        <label for="contactFormList0.lastName">Last Name</label>
+                                    </dt>
+                                    <dd>
+                                        <input class="validate[required]" id="contactFormList0.lastName" maxlength="50" name="contactFormList[0].lastName" type="text" value="Koffi">
+                                    </dd>
+                                    <dt>
+                                        <label for="contactFormList0.telNumber">Phone</label>
+                                    </dt>
+                                    <dd>
+                                        <input class="validate[custom[phone]] phone" id="contactFormList0.telNumber" maxlength="50" name="contactFormList[0].telNumber" placeholder="999-999-9999" type="text" value="909-090-9000">
+                                    </dd>
+                                </dl>
+                                <dl class="threeColumnLayout">
+                                    <dt>
+                                        <label for="contactFormList0.emailAddress">Email</label>
+                                    </dt>
+                                    <dd>
+                                        <input class="validate[custom[email]]" id="contactFormList0.emailAddress" name="contactFormList[0].emailAddress" placeholder="user@railinc.com" type="text" value="cole.koffi@railinc.com">
+                                    </dd>
+                                    <dt>
+                                        <label for="contactFormList0.markName">Railroad</label>
+                                    </dt>
+                                    <dd>
+                                        <select class="validate[required] contactMarkList" id="contactFormList0.markName" name="contactFormList[0].markName">
+                                            <option selected="selected" value="CSXT">
+                                                CSXT
+                                            </option>
+                                            <option value="UP">
+                                                UP
+                                            </option>
+                                        </select>
+                                    </dd>
+                                    <dt>
+                                        <label for="contactFormList0.deptDesc">Area</label>
+                                    </dt>
+                                    <dd>
+                                        <input id="contactFormList0.deptDesc" maxlength="50" name="contactFormList[0].deptDesc" type="text" value="">
+                                    </dd>
+                                </dl>
+                                <dl class="threeColumnLayout">
+                                    <dt>
+                                        <label for="contactFormList0.titleDesc">Title</label>
+                                    </dt>
+                                    <dd>
+                                        <input id="contactFormList0.titleDesc" maxlength="50" name="contactFormList[0].titleDesc" type="text" value="">
+                                    </dd>
+                                    <dt>
+                                        <label for="contactFormList0.roleType">Role</label>
+                                    </dt>
+                                    <dd>
+                                        <select class="validate[required]" id="contactFormList0.roleType" name="contactFormList[0].roleType">
+                                            <option selected="selected" value="Approver">
+                                                Approver
+                                            </option>
+                                            <option value="Secondary Contact">
+                                                Secondary Contact
+                                            </option>
+                                            <option value="Interested Party">
+                                                Interested Party
+                                            </option>
+                                        </select>
+                                    </dd>
+                                </dl>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="wizard-step" id="wizard-review">
+                        <h2 class="sectionHeader">
+                            Review ISA
+                        </h2>
+                        <div class="userMessage"></div>
+                        <div id="review-content"></div>
+                    </div>
+                    <div class="buttons">
+                        <div class="rightSide">
+                            <button class="action blue" id="saveISA">Save ISA</button> <button class="action blue" id="saveISAAsDraft">Save ISA As Draft</button> <button class="action red" id="cancelIsaEdit">Cancel</button>
+                        </div>
+                    </div>
+                </div><!-- jQuery Dialogs -->
+                <div id="dialog-confirm" title="">
+                    <p></p>
+                </div>
+            </form>
+        </div>
+        <div class="clear"></div>
+        <div id="rail-footer">
+            <ul class="horizontal-menu">
+                <li>
+                    <a class="first" href="#">legal notices</a>
+                </li>
+                <li>
+                    <a href="#">privacy rights</a>
+                </li>
+                <li>
+                    <a href="#">terms of service</a>
+                </li>
+                <li>
+                    <a href="#">contact us</a>
+                </li>
+            </ul>
+        </div>
+        
+        <script type="text/javascript">
+		    var images = "images";
+            var contextPath = "/~nick/railinc/Railinc_ISA/";
+        </script>
+        <!-- jquery libs -->
+		<script src="js/jquery.min.js" type="text/javascript"></script>
+        <!-- Railinc libs -->
+        <script src="js/standard.js" type="text/javascript"></script>
+		<script src="js/wizard.js" type="text/javascript"></script>
+		<script src="js/validation.js" type="text/javascript"></script>
+		<script src="js/app.js" type="text/javascript"></script>
+    </body>
+</html>

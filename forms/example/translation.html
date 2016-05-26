@@ -1,0 +1,109 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js ie6 oldie" lang="en"><![endif]-->
+<!--[if IE 7]><html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]><html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+        <head id="head">
+        <title>Red Hat | DynamicForm Examples</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="shortcut icon" href="/favicon.ico" />
+
+        <link type="text/css" rel="stylesheet" href="/forms/css/redhat/bootstrap.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="/forms/css/redhat/overpass.css" media="all" />
+
+        <script src="/forms/scripts/lib/jquery/1.10/jquery.min.js"></script>
+        <script src="/j/js18n-bundles/messages_en.js"></script>
+        <!--[if IE 8]>
+            <link id="style" rel="stylesheet" type="text/css" href= "/rh-resources/skin/RedhatStyle/Redhat/css/ie8.css" />
+        <![endif]-->
+        <!--[if IE 7]>
+            <link id="style" rel="stylesheet" type="text/css" href= "/rh-resources/skin/RedhatStyle/Redhat/css/ie7.css" />
+        <![endif]-->
+    </head>
+      <body>
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="hero">
+                        <h1>Translation Bundles</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <table id="translations" class="table table-responsive table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>English</th>
+                                <th>
+                                    <select id="languageList">
+                                        <option value="">-- Select Locale --</option>
+                                        <option value="messages_bg.js">BG</option>
+                                        <option value="messages_es.js">ES</option>
+                                        <option value="messages_it.js">IT</option>
+                                        <option value="messages_pt_br.js">PT_BR</option>
+                                        <option value="messages_cz.js">CZ</option>
+                                        <option value="messages_es_ar.js">ES_AR</option>
+                                        <option value="messages_ja.js">JA</option>
+                                        <option value="messages_pt_pt.js">PT_PT</option>
+                                        <option value="messages_de.js">DE</option>
+                                        <option value="messages_es_es.js">ES_ES</option>
+                                        <option value="messages_ko.js">KO</option>
+                                        <option value="messages_ru.js">RU</option>
+                                        <option value="messages_el.js">EL</option>
+                                        <option value="messages_fr.js">FR</option>
+                                        <option value="messages_pl.js">PL</option>
+                                        <option value="messages_sk.js">SK</option>
+                                        <option value="messages_hu.js">HU</option>
+                                        <option value="messages_pt.js">PT</option>
+                                        <option value="messages_zh.js">ZH</option>
+                                    </select>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var english = d, out = "";
+
+            function updateTranslation(d) {
+                var key = "", showWarning = false;
+                if (typeof d === "undefined") {
+                    d = {};
+                } else {
+                    showWarning = true;
+                }
+
+                out = "";
+
+
+                for (key in english) {
+                    englishStr = english[key] || "";
+                    transStr = d[key] || "";
+                    rowClass = (transStr === "" && showWarning ) ? "danger bg-danger" : "";
+                    out = out + '<tr class="'+rowClass+'"><td>' + englishStr + '</td><td>' + transStr + '</td></tr>';
+                }
+
+                $("#translations > tbody").html(out);
+            }
+
+            $("#languageList").on("change", function() {
+                $.get("/j/js18n-bundles/" + $(this).val() ).done(function() {
+                    updateTranslation(d);
+                }).fail(function() {
+                    updateTranslation();
+                });
+            });
+
+            $(function() {
+                updateTranslation();
+            });
+
+        </script>
+    </body>
+</html>

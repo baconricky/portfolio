@@ -1,0 +1,490 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>essentials : home // J. Doe &amp; Sons // assets // personal property</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.css" />
+    <link rel="stylesheet" href="bootstrap/css/jquery-ui-1.8.16.custom.css" />
+
+    <link rel="stylesheet" href="bootstrap/css/kendo.common.min.css" />
+    <link rel="stylesheet" href="bootstrap/css/kendo.metro.min.css" />
+    
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.essentials.css" />
+
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="bootstrap/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="bootstrap/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="bootstrap/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="bootstrap/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="bootstrap/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+  
+    <body>
+    <!--<body data-spy="scroll" data-target=".subnav" data-offset="50">-->
+        <!--[if IE]>
+        <link rel="stylesheet" type="text/css" href="Styles/custom-theme/jquery.ui.1.8.16.ie.css"/>
+        <![endif]-->
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner container-fluid">
+                <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+                    <span class="icon-bar icon-white"></span>
+                    <span class="icon-bar icon-white"></span>
+                    <span class="icon-bar icon-white"></span>
+                </a>
+                <a class="brand" href="//junxure.com">essentials</b></a>
+                <div class="nav-collapse">
+                    <div class="btn-group pull-right">
+                        <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">
+                            <i class="icon-user icon-white"></i> John Doe
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">Import</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Sign Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+	<div class="container-fluid">
+		<header class="subhead" id="overview">
+			<div id="jx-app-ribbon" class="officebar">
+			    <ul class="group">
+			      <li class="current">
+			        <ul>
+			          <li>
+			            <span>Assets</span>
+			            <div class="button split">
+			              <a href="#" rel="paste">
+			                <img src="bootstrap/img/tango/32x32/printer.png" alt="" /><span>Print</span>
+			              </a>
+			              <div>
+			                <ul>
+			                  <li><a href="#"><img src="bootstrap/img/tango/16x16/document-print-preview.png">Preview Selected</a></li>
+			                  <li><a href="#"><img src="bootstrap/img/tango/16x16/document-print.png">Print Selected</a></li>
+			                  <li class="separator"><a href="#"><img src="bootstrap/img/tango/16x16/printer.png">Print All...</a></li>
+			                </ul>
+			              </div>
+			            </div>
+			            <div class="button">
+			              	<a href="#" rel="Edit">
+				                <img src="bootstrap/img/tango/32x32/document-settings.png" alt="" /><span>Edit</span>
+				              </a>
+			            </div>
+			            <div class="button">
+			              	<a href="#" rel="Delete">
+				                <img src="bootstrap/img/tango/32x32/edit-delete.png" alt="" /><span>Delete</span>
+				              </a>
+			            </div>
+			            <div class="button">
+			              	<a href="#" rel="CorrespondenceWizard">
+				                <img src="bootstrap/img/tango/32x32/message-new.png" alt="" /><span>Correspondence Wizard</span>
+				              </a>
+			            </div>
+			
+			            <div class="button textlist separator">
+			              <ul>
+			                <li class="dropdown"><a href="#"><img src="bootstrap/img/tango/16x16/observe.png">Favorites</a>
+								<div>
+									<ul>
+										<li><a href="#">Favorites 1</a></li>
+										<li><a href="#">Favorites 2</a></li>
+										<li><a href="#">Favorites 3</a></li>
+										<li><a href="#">Favorites 4</a></li>
+										<li><a href="#">Favorites 5</a></li>
+										<li class="separator">Add to Favorites...</li>
+									</ul>
+								</div>
+							</li>
+							
+							<li class="dropdown"><a href="#"><img src="bootstrap/img/tango/16x16/tree-diagramm.png">Actions</a>
+								<div>
+									<ul>
+										<li class="menutitle">Action Workflows</li>
+										<li><a href="#">Action Workflow 1</a></li>
+										<li><a href="#">Action Workflow 2</a></li>
+										<li><a href="#">Action Workflow 3</a></li>
+										<li><a href="#">Action Workflow 4</a></li>
+										<li><a href="#">Action Workflow 5</a></li>
+										<li class="separator"><a href="#">Other Action Workflow...</a></li>
+										<li class="menutitle">Actions</li>
+										<li><a href="#">Email</a></li>
+										<li><a href="#">Letter</a></li>
+										<li><a href="#">Fax</a></li>
+										<li><a href="#">Call</a></li>
+										<li><a href="#">Meeting</a></li>
+									</ul>
+								</div>
+							</li>
+			                
+							<li class="dropdown"><a href="#"><img src="bootstrap/img/tango/16x16/report.png">Reports</a>
+								<div>
+					                <ul>
+									  <li class="menutitle">Essential Reports</li>
+					                  <li><a href="#">Report 1</a></li>
+					                  <li><a href="#">Report 2</a></li>
+					                  <li><a href="#">Report 3</a></li>
+					                  <li><a href="#">Report 4</a></li>
+					                  <li><a href="#">Report 5</a></li>
+									  <li class="menutitle">My Reports</li>
+					                  <li><a href="#">User-Defined Report 1</a></li>
+					                  <li><a href="#">User-Defined Report 2</a></li>
+					                  <li><a href="#">User-Defined Report 3</a></li>
+									  <li class="separator">New Report...</li>
+					                </ul>
+					              </div>
+							</li>
+			              </ul>
+			            </div>
+			          </li>
+			          <li>
+			            <span>New</span>
+			            <div class="button">
+			              <a href="#" rel="table"><img src="bootstrap/img/tango/32x32/add-participant.png" alt="" />Record</a>
+			            </div>
+			          </li>
+			          <li>
+			            <span>Search</span>
+			            <div class="textboxlist">
+			              <ul>
+			                <li><img src="bootstrap/img/tango/16x16/system-search.png" alt="" /><input type="search" placeholder="Records and People"/></li>
+						</ul>
+						</div>
+			            <div class="button separator">
+			              <a href="#" rel="AdvSearch"><img src="bootstrap/img/tango/32x32/system-search.png" alt="" />Advanced Search</a>
+			            </div>
+			          </li>
+					<li>
+			            <span>Global</span>
+			            <div class="button">
+			              <a href="#" rel="AdvSearch"><img src="bootstrap/img/tango/32x32/document-save.png" alt="" />Import</a>
+			            </div>
+			            <div class="button">
+			              <a href="#" rel="AdvSearch"><img src="bootstrap/img/tango/32x32/emblem-system.png" alt="" />Control Panel</a>
+			            </div>
+			            <div class="button">
+			              <a href="#" rel="AdvSearch"><img src="bootstrap/img/tango/32x32/office-calendar.png" alt="" />Calendar</a>
+			            </div>
+			          </li>
+			        </ul>
+			      </li>
+			    </ul>
+			  </div>
+	      	<ul class="breadcrumb">
+			  <li><a href="#home">home</a></li>
+			  <li class="divider-vertical"><span class="divider"><i class="icon-chevron-right"></i></span></li>
+			  <li><a href="#record">J. Doe &amp; Sons</a></li>
+			  <li class="divider-vertical"><span class="divider"><i class="icon-chevron-right"></i></span></li>
+			  <li><a href="#assets">assets</a></li>
+			  <li class="divider-vertical"><span class="divider"><i class="icon-chevron-right"></i></span></li>
+			  <li class="active">personal property</li>
+			</ul>
+		</header>
+		
+		<div class="page-header">
+			<!-- Static Element: 11 -->
+        	<h1>net value <small class="pull-right">$200,600.00</small></h1>
+        	<!-- Static Element: 11 -->
+        </div>
+      
+		<div class="row-fluid">
+			<div class="accordion span6" id="ownership-val-wrapper">
+				<div class="accordion-group">
+					<div class="accordion-heading">
+						<div class="accordion-toggle" data-toggle="collapse" data-parent="#ownership-val-wrapper" href="#ownership-val">
+							<!-- Static Element: 12 -->
+							<h4>ownership value <small class="pull-right amount">90% / $206,640.00</small></h4>
+							<!-- Static Element: 12 -->
+						</div>
+					</div>
+					<div id="ownership-val" class="accordion-body collapse in">
+						<div class="accordion-inner" id="ownershipvalue">
+							<h4>owners</h4>
+							<div class="accordion-group">
+								<div class="accordion-heading">
+									<div class="accordion-toggle" data-toggle="collapse" data-parent="#ownership-val" href="#ownership-jd1">
+										<!-- Static Element: 1 -->
+										<h4>joint: <a href="#edit-user">John Doe</a>  <small class="pull-right amount">90% / $206,640.00</small></h4>
+										<!-- /Static Element: 1 -->
+									</div>
+								</div>
+								<div id="ownership-jd1" class="accordion-body collapse in">
+									<div class="accordion-inner container-fluid">
+										<div class="span3">
+											<label class="control-label" for="ownership-jd1-purchase-dt">Purchase Date</label>  
+											<!-- Static Element: 2 -->
+											<div data-editable="true" class="controls editable" id="ownership-jd1-purchase-dt">5/19/2005</div>
+											<!-- /Static Element: 2 -->
+										</div>
+				
+										<div class="span3">
+											<label class="control-label" for="ownership-jd1-last-updated">Last Updated</label>  
+											<!-- Static Element: 3 -->
+											<div data-editable="true" class="controls editable" id="ownership-jd1-last-updated">5/19/2005</div>
+											<!-- /Static Element: 3 -->
+										</div>
+				
+										<div class="span4">
+											<label class="control-label" for="ownership-jd1-orig-val">Original Value</label>  
+											<!-- Static Element: 4 -->
+											<div class="controls"><span data-editable="true" class="editable" id="ownership-jd1-orig-val">20%</span> / $20,000.00</div>
+											<!-- /Static Element: 4 -->
+										</div>
+				
+										<div class="span12">
+											<!-- Static Element: 5 -->
+											<label class="control-label" for="ownership-jd1-note">Note</label>
+											<div data-editable="true" class="controls editable" id="ownership-jd1-note">A lengthy note about John. He's a guy and owns less stuff. We should still try to get as much of it as we can.</div>
+											<!-- /Static Element: 5 -->
+										</div>
+									</div>
+								</div>
+
+								<div class="accordion-heading">
+									<div class="accordion-toggle" data-toggle="collapse" data-parent="#ownershipvalue" href="#ownership-jd2">
+										<!-- Static Element: 6 -->
+										<h4>joint: <a href="#edit-user">Jayne Doe</a>  <small class="pull-right amount">10% / $22,960.00</small></h4>
+										<!-- /Static Element: 6 -->
+									</div>
+								</div>
+								<div id="ownership-jd2" class="accordion-body collapse in">
+									<div class="accordion-inner container-fluid">
+										<div class="span3">
+											<label class="control-label" for="ownership-jd2-purchase-dt">Purchase Date</label>  
+											<!-- Static Element: 7 -->
+											<div data-editable="true" class="controls editable" id="ownership-jd2-purchase-dt">5/19/2005</div>
+											<!-- /Static Element: 7 -->
+										</div>
+				
+										<div class="span3">
+											<label class="control-label" for="ownership-jd2-">Last Updated</label>  
+											<!-- Static Element: 8 -->
+											<div data-editable="true" class="controls editable" id="ownership-jd2-">5/19/2005</div>
+											<!-- /Static Element: 8 -->
+										</div>
+				
+										<div class="span4">
+											<label class="control-label" for="ownership-jd2-">Original Value</label>  
+											<!-- Static Element: 9 -->
+											<div data-editable="true" class="controls editable"><span data-editable="true" class="editable" id="ownership-jd2-">20%</span> / $20,000.00</div>
+											<!-- /Static Element: 9 -->
+										</div>
+				
+										<div class="span12">
+											<label class="control-label" for="ownership-jd2-note">Note</label>  
+											<!-- Static Element: 10 -->
+											<div data-editable="true" class="controls editable" id="ownership-jd2-note">A lengthy note about Jayne. She's a lady and owns less stuff. We should still try to get as much of it as we can.</div>
+											<!-- /Static Element: 10 -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="accordion span6" id="liability-val-wrapper">
+				<div class="accordion-group">
+					<div class="accordion-heading">
+						<div class="accordion-toggle" data-toggle="collapse" data-parent="#liability-val-wrapper" href="#liability-val">
+							<!-- Static Element: 12 -->
+							<h4>liabilities <small class="jx-negative-value pull-right amount">$6,000.00</small></h4>
+							<!-- Static Element: 12 -->
+						</div>
+					</div>
+					<div id="liability-val" class="accordion-body collapse in">
+						<div class="accordion-inner">
+							<div class="accordion-group">
+								<div class="accordion-heading">
+									<div class="accordion-toggle" data-toggle="collapse" data-parent="#liability-val" href="#liability-jd1">
+										<!-- Static Element: 1 -->
+										<h4><a href="#liability">Mortgage on Property</a> <small class="jx-negative-value pull-right amount">$6,000.00</small></h4>
+										<!-- /Static Element: 1 -->
+									</div>
+								</div>
+								<div id="liability-jd1" class="accordion-body collapse in">
+									<div class="accordion-inner container-fluid">
+										<div class="span4">
+											<label class="control-label" for="liability-1-purchase-dt">Account</label>  
+											<!-- Static Element: 2 -->
+											<div data-editable="true" class="controls editable" id="liability-1-purchase-dt">Wells Fargo - 554-43323</div>
+											<!-- /Static Element: 2 -->
+										</div>
+				
+										<div class="span4">
+											<label class="control-label" for="liability-1-last-updated">Last Updated</label>  
+											<!-- Static Element: 3 -->
+											<div data-editable="true" class="controls editable" id="liability-1-last-updated">5/19/2005</div>
+											<!-- /Static Element: 3 -->
+										</div>
+				
+										<div class="span12">
+											<!-- Static Element: 5 -->
+											<label class="control-label" for="liability-1-note">Note</label>
+											<div data-editable="true" class="controls editable" id="liability-1-note">This is a note about the mortgage liability. This covers the purchase of the office property in S. America..</div>
+											<!-- /Static Element: 5 -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+		
+	<div id="real-estate-information">  
+		<div class="container-fluid">
+			<h3 class="section-heading">real estate information</h3>
+		</div>
+		<div class="container-fluid">
+		
+			<div class="span3">
+				<label class="control-label" for="rei-name">Name</label>  
+				<!-- Editable Form Element: 1 -->	
+				<div data-editable="true" data-type="text" class="controls editable" id="rei-name">Condo</div>
+				<!-- /Editable Form Element: 1 -->	
+			</div>
+			
+			<div class="span3">
+				<label class="control-label" for="rei-type">Type</label>  
+				<!-- Editable Form Element: 2 -->	
+				<div data-editable="true" data-type="text" class="controls editable" id="rei-type">Primary Residence</div>
+				<!-- /Editable Form Element: 2 -->	
+			</div>
+			
+			<div class="span3">
+				<label class="control-label" for="rei-address">Address</label>  
+				<div class="controls">  
+					<!-- Editable Form Element: 3 -->  
+					<address class="editable" data-type="textarea" id="rei-address">
+						<a target="jx-map" href="https://maps.google.com/maps?q=3344+N+Flagler+Dr,+West+Palm+Beach,+Florida+33407&z=17">3344 Flagler Dr.<br>West Palm Beach, FL 33407 <i class="icon-share"></i></a>
+					</address>
+					<!-- /Editable Form Element: 3 -->	
+				</div>
+			</div>
+	
+			
+			<div class="span3">
+				<label class="control-label" for="rei-prop-taxes">Property Taxes</label>  
+				<!-- Editable Form Element: 4 -->	
+				<div data-editable="true" data-type="text" class="controls editable" id="rei-prop-taxes">$2,700.00</div>
+				<!-- /Editable Form Element: 4 -->	
+			</div>
+	
+			<div class="span3">
+				<label class="control-label" for="rei-pur-price">Purchase Price</label>  
+				<!-- Editable Form Element: 5 -->	
+				<div data-editable="true" data-type="text"  class="controls editable" id="rei-pur-price"> $450,000.00</div>
+				<!-- /Editable Form Element: 5 -->	
+			</div>
+	
+			<div class="span3">
+				<label class="control-label" for="rei-cost-basis">Cost Basis</label>  
+				<!-- Editable Form Element: 6 -->	
+				<div data-editable="true" data-type="text" class="controls editable" id="rei-cost-basis">$500,000.00</div>
+				<!-- /Editable Form Element: 6 -->	
+			</div>
+	
+			<div class="span3">
+				<label class="control-label" for="rei-curr-val">Current Value</label>  
+				<!-- Editable Form Element: 7 -->	
+				<div data-editable="true" data-type="text" class="controls editable" id="rei-curr-val">$200,000.00</div>
+				<!-- /Editable Form Element: 7 -->	
+			</div>
+	
+			<div class="span3">
+				<label class="control-label" for="rei-src">Source</label>  
+				<!-- Editable Form Element: 8 -->	
+				<div data-editable="true" data-type="text" class="controls editable" id="rei-src">Estimate (1997)</div>
+				<!-- /Editable Form Element: 8 -->	
+			</div>
+	
+			<div class="span3">
+				<label class="control-label" for="rei-last-updated">Last Updated</label>  
+				<!-- Editable Form Element: 9 -->	
+				<div data-editable="true" data-type="datepicker" class="controls editable" id="rei-last-updated">1/1/2000</div>
+				<!-- /Editable Form Element: 9 -->	
+			</div>
+	
+			<div class="span3">
+				<label class="control-label" for="rei-bs-cat">Balance Sheet Category</label>  
+				<!-- Editable Form Element: 10 -->	
+				<div data-editable="true" data-type="select" data-src="cboBSLiability" class="controls editable" id="rei-bs-cat">Liability</div>
+				<!-- /Editable Form Element: 10 -->	
+			</div>
+			
+			<div class="span3">
+				<label class="control-label" for="rei-bs-owner">Balance Sheet Owner</label>  
+				<!-- Editable Form Element: 11 -->	
+				<div data-editable="true" data-type="select" data-src="cboBSOwner" class="controls editable" for="rei-bs-owner">Client</div>
+				<!-- /Editable Form Element: 11 -->	
+			</div>
+	
+			<div class="span12">
+				<label class="control-label" for="rei-note">Note</label>  
+				<!-- Editable Form Element: 12 -->	
+				<div data-editable="true" data-type="textarea" class="controls editable" id="rei-note">This is a note about this property</div>
+				<!-- /Editable Form Element: 12 -->	
+			</div>
+		</div>
+		
+		<div class="form-actions">
+			<button class="btn">select liability</button>
+			<button class="btn">select owner</button>
+			<button class="btn btn-primary">edit</button>
+		</div>
+							
+    </div> <!-- /container -->
+
+	
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="bootstrap/js/jquery-1.7.2.js"></script>
+	<script src="bootstrap/js/jquery-ui-1.8.21.js"></script>
+	
+    <script src="bootstrap/js/kendo.web.js"></script>
+    
+    <script src="bootstrap/js/bootstrap.js"></script>
+
+    <script src="bootstrap/js/Nonsense.js"></script>
+    <script src="bootstrap/js/localdata.js"></script>
+
+    <script src="bootstrap/js/jquery.officebar.js"></script>
+	
+	<script src="bootstrap/js/jquery.bgiframe.min.js"></script>
+    <script src="bootstrap/js/jquery.dimensions.js"></script>
+    <script src="bootstrap/js/jquery.autocomplete.js"></script>
+    <script src="bootstrap/js/jquery.autocompletefb.js"></script>
+
+    <script src="bootstrap/js/application.js"></script>
+  </body>
+</html>

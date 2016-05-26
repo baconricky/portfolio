@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Nick's Workspace | NC Tracks Sandbox</title>
+
+	<!-- load stylesheet -->
+	<link href="css/main.css" media="screen" rel="stylesheet" type="text/css" />
+
+	<!-- load needed jQuery and supporting elements -->
+	<script language="JavaScript" src="js/jquery.tools.min.js" type="text/javascript"></script>
+	<script language="JavaScript" src="js/jquery.corner.js" type="text/javascript"></script>
+    <style type="text/css">
+		body {
+			color: #555555;	
+		}
+		#header {
+			margin-bottom: 0px;
+			height: 145px;
+		}
+		#content {
+			display: block;
+			margin-top: 0px;
+			background: #fbf9f1;
+			width: 950px;
+			margin: 0px auto;
+		}
+		#bottom {
+			width: 950px;
+			margin: 0px auto;
+			padding: 0 10px;
+			background-color: #666666;
+		}
+		.module {
+			display: block;
+			float: left;
+			width: 250px;
+			background-color: #ffffff;
+			border: 2px solid #cccccc;
+			padding: 4px 10px 10px 10px;
+			margin-left: 10px;
+		}
+		h1 {
+			font-size: 2em;
+			color: #666666;
+			border: 0;
+		}
+		h2, h3, h4 {
+			text-align: left;
+			color: #666666;
+		}
+		h2 {
+			font-size: 1.35em;	
+		}
+		p {
+			text-align: left;
+			margin-bottom: 8px;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<a href="/"><img alt="NC Tracks Sandbox" src="images/nctracks_sandbox_logo.png" /></a>
+	  </div>
+		<div id="content">
+        	<div style="margin: 0px auto; margin-bottom: 12px; width: 225px; border-bottom: 1px solid #666666;">
+            	<h1>Nick's Workspace</h1>
+            </div>
+            <div class="module">
+                <h2>AJAX</h2>
+                <p><a href="ajax/RecipientTimeLimitOverride.htm">so easy, even Joel can do it</a>.</p>
+            </div><!-- END module -->
+            <div class="module">
+                <h2>Messages</h2>
+                <p><a href="error.html">check it</a>.</p>
+            </div><!-- END module -->
+            <div class="module">
+                <h2>TypeCast Input masking</h2>
+                <p><a href="typecast/index.html">mask it</a>.</p>
+            </div><!-- END module -->
+            <div class="module">
+                <h2>ajax_upload</h2>
+                <p><a href="ajax_upload/index.html">upload with the power of AJAX</a>.</p>
+            </div><!-- END module -->
+            <div class="module">
+                <h2>Validation</h2>
+                <p><a href="validation/validation.html">give the user the proper amount of rope to hang themselves</a>.</p>
+            </div><!-- END module -->
+			<br clear="all" />
+		</div>
+        <div id="bottom">&nbsp;</div>
+		<div id="footer">thanks for the CSS, <a href="../joel/index.html">Joel</a><br />
+	    &copy; 2009 Computer Sciences Corporation</div>
+	</div>
+	<script type="text/javascript" language="javascript">
+	$(document).ready(function() {
+		$(".mockups").corner();
+		$(".module").corner();
+		<!--$("#footer").corner();-->
+	});
+	</script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>Junxure Essentials &raquo; Assets</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		
+		<!-- Le style -->
+		
+		<!-- DO NOT EDIT - generate from ../Content/less/application.less -->
+		<!-- SEE http://lesscss.org/ -->
+		<!--
+		<link rel="stylesheet" href="assets/css/essentials.css" />
+		-->
+		
+		<link rel="stylesheet" type="text/css" href="../Content/css/application.css" />
+		
+		<!-- LESS - ONLY FOR DEVELOPMENT
+		<link rel="stylesheet/less" type="text/css" href="../../../assets/less/application.less"/>
+		<script type="text/javascript">less = { env: 'development' };</script>
+		<script src="../Scripts/plugins/less-1.3.0.min.js"></script>
+		<script type="text/javascript">less.watch();</script>
+		/LESS -->
+		
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!-- Le fav and touch icons -->
+		<link rel="shortcut icon" href="http://www.junxure.com/public/sites/default/files/imgs/favicon.png">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.junxure.com/public/sites/default/files/imgs/favicon.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://www.junxure.com/public/sites/default/files/imgs/favicon.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://www.junxure.com/public/sites/default/files/imgs/favicon.png">
+		<link rel="apple-touch-icon-precomposed" href="http://www.junxure.com/public/sites/default/files/imgs/favicon.png">
+	</head>
+	
+	<body data-spy="scroll" data-target=".subnav" data-offset="50">
+	
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<a class="brand" href="//junxure.com/"><img src="../Content/Images/junxure-logo.png" alt="Junxure Essentials" width="180" height="23" /></a>
+				<ul class="nav pull-right">
+					<li><a href="#Profile"><i class="icon-user">&nbsp;</i> Shawn Ethridge</a></li>
+					<li><a href="#Logout"><i class="icon-signout">&nbsp;</i> Log Out</a></li>
+				</ul>
+			</div>
+			<!-- generated breadcrumb trail -->
+			<div class="navbar-inner" id="breadcrumb">&nbsp;</div>
+			<!-- /generated breadcrumb trail -->
+		</div>
+		
+		<!-- record summary -->
+		<div class="remote-content container-fluid record_summary" data-src="../records/summary.html">&nbsp;</div>
+		<!-- /record summary -->
+
+
+		<!-- page content -->
+		<div class="form-wrap">
+			<form data-actions="asset_actions" id="asset_view">
+				&nbsp;
+			</form>
+		</div>
+		<!-- /tab bar -->
+	    
+	    <div id="asset_list" style="display:none">
+	    	<h3>New Asset</h3>
+			<ul>
+				<li><a href="#/new/account">Financial Account</a></li>
+				<li><a href="#/new/personal-property">Personal Property</a></li>
+				<li><a href="#/new/real-estate">Real Estate</a></li>
+				<li><a href="#/new/stock-option">Stock Option</a></li>
+				<li><a href="#/new/business">Business</a></li>
+				<li><a href="#/new/liability">Liability</a></li>
+			</ul>
+			
+			<h3>View Asset Details</h3>
+			
+			<ul>
+				<li><a href="#/view/account">Financial Account</a></li>
+				<li><a href="#/view/personal-property">Personal Property</a></li>
+				<li><a href="#/view/real-estate">Real Estate</a></li>
+				<li><a href="#/view/stock-option">Stock Option</a></li>
+				<li><a href="#/view/business">Business</a></li>
+				<li><a href="#/view/liability">Liability</a></li>
+			</ul>
+			
+			<h3>Edit Asset Details</h3>
+			
+			<ul>
+				<li><a href="#/edit/account">Financial Account</a></li>
+				<li><a href="#/edit/personal-property">Personal Property</a></li>
+				<li><a href="#/edit/real-estate">Real Estate</a></li>
+				<li><a href="#/edit/stock-option">Stock Option</a></li>
+				<li><a href="#/edit/business">Business</a></li>
+				<li><a href="#/edit/liability">Liability</a></li>
+			</ul>
+	    </div>
+	    
+		<div class="navbar-fixed-bottom" id="bottom_nav">
+			<!-- actions bar -->
+			<div class="form-actions" id="asset_actions">
+			    <span class="pull-left">
+			    	<button data-display="all" data-intent="select['liability']" class="btn">Select Liability</button>
+			    	<button data-display="all" data-intent="select['owner']" class="btn">Select Owner</button>
+			    </span>
+			    <span class="pull-right">
+				    <button data-display="all"		data-hide="new" 		data-intent="delete"	class="btn">Delete</button>
+				    <button data-display="view" 	data-hide="edit" 		data-intent="edit"		class="btn btn-primary">Edit</button>
+				    
+				    <button data-display="all"		data-hide="view" 		data-intent="cancel"	class="btn" id="form_cancel" >Cancel</button>
+				    <button data-display="all"		data-hide="view" 		data-intent="save"		class="btn btn-primary">Save</button>
+				</span>
+			</div>
+			<!-- /actions bar -->
+			<div class="navbar-inner">
+			    <ul class="nav nav-pills centered" id="app_nav">
+				    <li><div class="nav-option"><a href="../records/"><i class="icon-group">&nbsp;</i> Records</a></div></li>
+					<li><div class="nav-option"><a href="../actions/"><i class="icon-sitemap">&nbsp;</i> Actions</a></div></li>
+					<li class="active"><div class="nav-option"><a href="../assets/"><i class="icon-briefcase">&nbsp;</i> Assets</a></div></li>
+					<li class="home img-circle"><button class="btn btn-home"><i class="icon-home icon-large">&nbsp;</i></button></li>
+					<li><div class="nav-option"><a href="../insurance/"><i class="icon-umbrella">&nbsp;</i> Insurance</a></div></li>
+					<li><div class="nav-option"><a href="../dashboards/"><i class="icon-dashboard">&nbsp;</i> Dashboards</a></div></li>
+					<li><div class="nav-option"><a href="../reports/"><i class="icon-files">&nbsp;</i> Reports</a></div></li>
+				</ul>
+			</div>
+		</div>
+	    
+	    <div id="dialog-confirm" class="warning" title="Delete the asset?" style="height: 100px;display:none">
+		    <p>This asset will be removed. Are you sure?</p>
+		</div>
+	    
+		<div id="new-window" style="display:none">&nbsp;</div>
+	    
+		<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script type="text/javascript" src="../Scripts/jquery/jquery-1.7.2.js"></script>
+		<script type="text/javascript" src="../Scripts/jquery/jquery-ui-1.8.21.js"></script>
+		
+		<script type="text/javascript" src="../Scripts/bootstrap/bootstrap.js"></script>
+		<script type="text/javascript" src="../Scripts/bootstrap/bootstrap-affix.js"></script>
+				
+		<script type="text/javascript" src="../Scripts/kendo/kendo.core.js"></script>
+		<script type="text/javascript" src="../Scripts/kendo/kendo.web.js"></script>
+		<script type="text/javascript" src="../Scripts/kendo/kendo.dataviz.min.js"></script>
+		
+		<script type="text/javascript" src="../Scripts/plugins/path.js"></script>
+		<script type="text/javascript" src="../Scripts/plugins/jquery.officebar.js"></script>
+		<script type="text/javascript" src="../Scripts/plugins/chosen.jquery.js"></script>
+		<script type="text/javascript" src="../Scripts/plugins/ui.checkbox-ui.radiobutton.js"></script>
+		<script type="text/javascript" src="../Scripts/plugins/jquery.autoresize.js"></script>
+		<script type="text/javascript" src="../Scripts/plugins/jquery.cluetip.js"></script>
+		<script type="text/javascript" src="../Scripts/plugins/fullcalendar.js"></script>
+		
+		<script type="text/javascript" src="../Scripts/essentials/base.js"></script>
+
+		<script type="text/javascript" src="../Scripts/sample_data/Nonsense.js"></script>
+		<script type="text/javascript" src="../Scripts/sample_data/localdata.js"></script>
+		
+		<script type="text/javascript">
+            $(document).ready(function () {
+            
+	        	var bct = ["Home","Records","Fred Walters Family"],
+		        	asset_map = {
+			        	"account": "Financial Account",
+			        	"personal-property": "Personal Property",
+			        	"real-estate": "Real Estate",
+			        	"stock-option": "Stock Option",
+			        	"business": "Business",
+			        	"liability": "Liability"
+		        	},
+		        	mode_map = {
+			        	"new": "New",
+			        	"view": "Detail for ",
+			        	"edit": "Editing "
+		        	};
+	            	
+
+	            Essentials.init();
+
+
+            	//Mimic MVC with jQuery
+		        Path.map("#/list/:filter").to(function(){
+		            $("#asset_view, .record_summary").hide();
+		            $("#asset_list").show();
+		        });
+        
+		        Path.map("#/:mode/:type").to(function(){
+		            $("#asset_list, #asset_view, #asset_actions").hide();
+		            
+		            Essentials.updateBreadcrumb(['<i class="icon-group">&nbsp;</i> Records Workspace','<i class="icon-user">&nbsp;</i> Fred Walters Family', '<i class="icon-briefcase">&nbsp;</i> Assets', mode_map[ this.params["mode"] ] + " " + asset_map[this.params["type"]] ]);
+		            
+		            $("#asset_view").attr("data-mode", this.params["mode"]);
+		            
+		            
+		            //Essentials.setParams(this.params);
+		            //this.params['mode'] = 
+		            Essentials.params(this.params);
+		            
+		            Essentials.loadPview("#asset_view", "pviews/"+this.params["type"]+".html#/"+this.params["mode"]);
+		            
+		         
+		            $("#asset_view, #asset_actions, .record_summary").show();
+		            Essentials.init();
+		        });
+        
+		        Path.root("#/list/all");
+				
+				Path.listen();
+				
+				
+            });
+        </script>
+	</body>
+</html>

@@ -1,0 +1,2458 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=9,IE=8,IE=7,IE=6,IE=EDGE,chrome=1" />
+		<link rel="shortcut icon" href="images/favicon.ico" />
+		<title>Interline Service Agreement</title>
+		
+
+
+
+
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="description" content="Inter Service Agreement">
+		<meta name="author" content="Railinc Corporation">
+		
+		<link rel="stylesheet" type="text/css" href="css/standard.css"/>
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
+		<link rel="stylesheet" type="text/css" href="css/app.css"/>
+	</head>
+	<body>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="rail-header">
+	<div id="util-nav-wrapper">
+	  <ul id="util-nav">
+	    <li>
+	      	
+			    <span id="rail-app-user">Role03 :</span> <span id="rail-app-user-company">RAIL - RAILINC CORPORATION</span>
+			 
+	    </li>
+	    
+	    <li><a href="#" class="launchPad">Launch Pad</a>
+	      <div id="rail-launch-pad">
+	        <ul> 
+	          <li><h2>Applications</h2>
+	            <ul id="appList"> 
+					<li><a href="#" target="_blank">AAR Embargo/OPSL Permit System</a></li>
+					<li><a href="#" target="_blank">CIF</a></li>
+					<li><a href="#" target="_blank">CIF61</a></li>
+					<li><a href="#" target="_blank">HAZMAT</a></li>
+					<li><a href="#" target="_blank">ISA</a></li>
+					<li><a href="#" target="_blank">ISA 61</a></li>
+					<li><a href="#" target="_blank">ISA Repository QA</a></li>
+					<li><a href="#" target="_blank">ISA Repository-Dev</a></li>
+					<li><a href="#" target="_blank">QA Embargo and Permit System</a></li>
+					<li><a href="#" target="_blank">Reciprocal Switch Web</a></li>            
+	              </ul> 
+	            </li> 
+	          
+	          </ul>
+	        
+	        <ul> 
+	          <li><h2>User Services</h2>
+	            <ul>
+	              <li><a href="#">Edit Profile</a></li>
+	              <li><a href="#">Change Password</a></li>
+	              <li><a href="#">View / Request Permissions</a></li>
+	              <li><a href="#">Permission Request Status</a></li>
+	              <li><a href="#">Launch Pad</a></li>
+	              
+	              </ul> 
+	            </li> 
+	          </ul>
+	        </div> 
+	      
+	      </li>
+	    <li><a href="#">Contact Us</a></li>
+	    <li class="lastLK"><a href="#">Sign Out</a></li> 
+	    
+	  
+	  </ul>
+	</div>
+	<a href="http://www.railinc.com" id="railinc-logo"><img src="images/logo.png" alt="Go to www.railinc.com" width="150" height="26" /></a>
+	<div id="rail-app-name">Interline Service Agreement</div>
+	<div class="clear"></div>  
+</div>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul id="rail-app-nav">
+	
+		<li><a class="current" href="/isarepo/index.jsp">Home
+		</a>
+		</li>
+	
+	
+		<li><a href="create.html">Create ISA
+		</a>
+		</li>
+	
+	
+		<li><a href="list-all.html">View ISAs
+		</a>
+			<ul>
+				<li><a href="list-all.html">All</a>
+				</li>
+				<li><a href="list-active.html">Active</a>
+				</li>
+				<li><a href="list-all.html">Draft</a>
+				</li>
+				<li><a href="list-all.html">Pending</a>
+				</li>
+				<li><a href="list-all.html">Rejected</a>
+				</li>
+				<li><a href="list-all.html">Archived</a>
+				</li>
+			</ul></li>
+	
+	
+</ul>
+
+
+
+		<div id="rail-app-container">
+			
+
+
+
+
+
+
+
+
+
+
+
+
+	<h1>View Interline Service Agreements </h1>
+	<em class="info">Please click on an ISA to view the details in a new window.</em>
+		
+			<em class="info" id="rowCount"></em>
+		    <div class="ui-helper-clearfix">&nbsp;</div>
+			<table id="isaDataTable" class="tablesorter" >
+				<thead>
+					<th>ISA Number</th>
+					<th>Origin Railroad</th>
+					<th>Partner Railroad</th>
+					<th>Location</th>
+					<th>Effective Date</th>
+					<th>Date of Last Action</th>
+					<th>ISA Status</th>
+				</thead>
+				<tbody>
+					
+						<tr id="996196" data-rail-status="" class="clickable">
+							<td class="nowrap">373440-712-780</td>
+						    <td>CSXT</td>
+						    <td>INRD</td>
+						    <td>Terre Haute, IN.  SPLC 373440</td>
+						    <td>03/16/2007</td>
+						    <td>02/16/2012</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="995860" data-rail-status="" class="clickable">
+							<td class="nowrap">148143-712-496</td>
+						    <td>CSXT</td>
+						    <td>NECR</td>
+						    <td>Palmer, MA.  SPLC 148143</td>
+						    <td>02/22/2002</td>
+						    <td>01/17/2012</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="995656" data-rail-status="" class="clickable">
+							<td class="nowrap">380433-083-712</td>
+						    <td>BRC</td>
+						    <td>CSXT</td>
+						    <td>Clearing IL. 380433</td>
+						    <td>10/30/2006</td>
+						    <td>01/13/2012</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="995671" data-rail-status="" class="clickable">
+							<td class="nowrap">381380-712-357</td>
+						    <td>CSXT</td>
+						    <td>IHB</td>
+						    <td>Chicago, IL.</td>
+						    <td>04/13/2003</td>
+						    <td>12/13/2011</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="994500" data-rail-status="" class="clickable">
+							<td class="nowrap">439900-777-712</td>
+						    <td>BNSF</td>
+						    <td>CSXT</td>
+						    <td>Memphis including:
+ Memphis, TN - SPLC 439900</td>
+						    <td>10/24/2007</td>
+						    <td>12/13/2011</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="995082" data-rail-status="" class="clickable">
+							<td class="nowrap">647000-777-712</td>
+						    <td>CSXT</td>
+						    <td>BNSF</td>
+						    <td>New Orleans, LA</td>
+						    <td>06/24/2008</td>
+						    <td>12/08/2011</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="959898" data-rail-status="" class="clickable">
+							<td class="nowrap">173360-712-105</td>
+						    <td>CSXT</td>
+						    <td>CPRS</td>
+						    <td>Albany, NY SPLC 173360</td>
+						    <td>12/18/2006</td>
+						    <td>11/28/2011</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="995049" data-rail-status="" class="clickable">
+							<td class="nowrap">380000-777-712-IM</td>
+						    <td>BNSF</td>
+						    <td>CSXT</td>
+						    <td>Chicago including:
+ Bedford Park, IL - SPLC 381315
+ Chicago, IL - SPLC 380000
+ Cicero, IL - SPLC 381280
+ Mc Cook, IL - SPLC 381297
+ Willow Springs, IL - SPLC 381299
+ Chicago 59th St, IL - SPLC 380639</td>
+						    <td>05/21/2007</td>
+						    <td>11/18/2011</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="994042" data-rail-status="" class="clickable">
+							<td class="nowrap">472600-712-555</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>Birmingham, AL SPLC 472600</td>
+						    <td>04/27/2007</td>
+						    <td>09/30/2011</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="993439" data-rail-status="" class="clickable">
+							<td class="nowrap">028850-103-712</td>
+						    <td>CN</td>
+						    <td>CSXT</td>
+						    <td>Huntingdon - SPLC 028850</td>
+						    <td>01/01/2006</td>
+						    <td>09/09/2011</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="991896" data-rail-status="" class="clickable">
+							<td class="nowrap">381248-802-712-GM</td>
+						    <td>UP</td>
+						    <td>CSXT</td>
+						    <td>Proviso, IL SPLC 0381248, Barr yard 0380639</td>
+						    <td>02/01/2003</td>
+						    <td>08/01/2011</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="990240" data-rail-status="" class="clickable">
+							<td class="nowrap">318100-105-712</td>
+						    <td>CPRS</td>
+						    <td>CSXT</td>
+						    <td>Detroit, Michigan</td>
+						    <td>04/05/2006</td>
+						    <td>07/06/2011</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="982628" data-rail-status="" class="clickable">
+							<td class="nowrap">478270-712-102</td>
+						    <td>CSXT</td>
+						    <td>TNHR</td>
+						    <td>Georgiana, AL - R260 GERGN - SPLC  478270</td>
+						    <td>11/29/2009</td>
+						    <td>07/05/2011</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="974593" data-rail-status="" class="clickable">
+							<td class="nowrap">289533-712-970</td>
+						    <td>CSXT</td>
+						    <td>RJCR</td>
+						    <td>Bardstown Jct, KY.  SPLC 289533</td>
+						    <td>11/03/2006</td>
+						    <td>05/26/2011</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="988640" data-rail-status="" class="clickable">
+							<td class="nowrap">342843-555-000</td>
+						    <td>CSXT</td>
+						    <td>NOW</td>
+						    <td>Woodville, OH</td>
+						    <td>07/21/2010</td>
+						    <td>04/29/2011</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="984624" data-rail-status="" class="clickable">
+							<td class="nowrap">472600-777-712</td>
+						    <td>BNSF</td>
+						    <td>CSXT</td>
+						    <td>Birmingham, AL</td>
+						    <td>05/22/2008</td>
+						    <td>04/20/2011</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="987454" data-rail-status="" class="clickable">
+							<td class="nowrap">472600-712-853</td>
+						    <td>CSXT</td>
+						    <td>ATN</td>
+						    <td>Birmingham, AL.  SPLC 472600</td>
+						    <td>10/31/2006</td>
+						    <td>02/10/2011</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="981761" data-rail-status="" class="clickable">
+							<td class="nowrap">343100-712-555</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>Toledo Stanley Yard, SPLC 343100</td>
+						    <td>05/10/2006</td>
+						    <td>11/28/2010</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="982617" data-rail-status="" class="clickable">
+							<td class="nowrap">404534-712-776</td>
+						    <td>CSXT</td>
+						    <td>NCYR</td>
+						    <td>Rocky Mount, NC - R260 RKYMT - SPLC 404534</td>
+						    <td>09/16/2003</td>
+						    <td>09/28/2010</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="980795" data-rail-status="" class="clickable">
+							<td class="nowrap">381279-103-712</td>
+						    <td>CN</td>
+						    <td>CSXT</td>
+						    <td>Hawthorne, IL - SPLC 381279
+Rockwell, IL - SPLC 384830</td>
+						    <td>08/01/2003</td>
+						    <td>09/24/2010</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="980339" data-rail-status="" class="clickable">
+							<td class="nowrap">395140-103-712</td>
+						    <td>CN</td>
+						    <td>CSXT</td>
+						    <td>Effingham, IL - SPLC 395140</td>
+						    <td>02/06/2003</td>
+						    <td>06/16/2010</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="955556" data-rail-status="" class="clickable">
+							<td class="nowrap">214130-712-154</td>
+						    <td>BPRR</td>
+						    <td>CSXT</td>
+						    <td>Erie, PA</td>
+						    <td>11/07/2006</td>
+						    <td>12/02/2008</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="970919" data-rail-status="" class="clickable">
+							<td class="nowrap">183300-712-941</td>
+						    <td>RSR</td>
+						    <td>CSXT</td>
+						    <td>Goodman Street Yard Rochester, NY</td>
+						    <td>11/07/2006</td>
+						    <td>12/02/2008</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="969481" data-rail-status="" class="clickable">
+							<td class="nowrap">233430-555-712</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>Hagerstown, MD 233430</td>
+						    <td>09/11/2008</td>
+						    <td>10/28/2008</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="959895" data-rail-status="" class="clickable">
+							<td class="nowrap">207832-712-105-IM</td>
+						    <td>CSXT</td>
+						    <td>CPRS</td>
+						    <td>Philadelphia, PA (Greenwich). SPLC 207832</td>
+						    <td>08/21/2006</td>
+						    <td>05/07/2008</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="960139" data-rail-status="" class="clickable">
+							<td class="nowrap">475630-712-555</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>Montgomery, AL. SPLC 475630</td>
+						    <td>05/17/2007</td>
+						    <td>05/07/2008</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="956313" data-rail-status="" class="clickable">
+							<td class="nowrap">488870-712-400</td>
+						    <td>CSXT</td>
+						    <td>KCS</td>
+						    <td>Gulfport MS.</td>
+						    <td>03/14/2003</td>
+						    <td>04/02/2008</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="957871" data-rail-status="" class="clickable">
+							<td class="nowrap">647000-712-400</td>
+						    <td>CSXT</td>
+						    <td>KCS</td>
+						    <td>New Orleans, LA SPLC 647000</td>
+						    <td>07/30/2003</td>
+						    <td>04/02/2008</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="955553" data-rail-status="" class="clickable">
+							<td class="nowrap">216433-712-154</td>
+						    <td>BPRR</td>
+						    <td>CSXT</td>
+						    <td>CSXT New Castle, PA  SPLC 216433  R260 NEWCA</td>
+						    <td>11/06/2006</td>
+						    <td>07/23/2007</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="960290" data-rail-status="" class="clickable">
+							<td class="nowrap">488680-712-506</td>
+						    <td>CSXT</td>
+						    <td>MSE</td>
+						    <td>Pascagoula, MS. SPLC 488680</td>
+						    <td>03/09/2000</td>
+						    <td>06/22/2007</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="955668" data-rail-status="" class="clickable">
+							<td class="nowrap">047600-712-103</td>
+						    <td>CN</td>
+						    <td>CSXT</td>
+						    <td>Sarnia, ON.- SPLC 047600</td>
+						    <td>05/09/2006</td>
+						    <td>05/07/2007</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="958263" data-rail-status="" class="clickable">
+							<td class="nowrap">183423-712-398</td>
+						    <td>CSXT</td>
+						    <td>LAL</td>
+						    <td>Genesee Jct, NY. SPLC 183423</td>
+						    <td>02/01/2000</td>
+						    <td>04/02/2007</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="958161" data-rail-status="" class="clickable">
+							<td class="nowrap">359900-712-969</td>
+						    <td>CSXT</td>
+						    <td>IORY</td>
+						    <td>Cincinnati, OH. R260 LCIIOR, SPLC 359900</td>
+						    <td>05/31/2002</td>
+						    <td>03/29/2007</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="957628" data-rail-status="" class="clickable">
+							<td class="nowrap">149290-712-782</td>
+						    <td>HRRC</td>
+						    <td>CSXT</td>
+						    <td>Pittsfield, MA SPLC 149290</td>
+						    <td>08/15/2006</td>
+						    <td>03/12/2007</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="11612" data-rail-status="" class="clickable">
+							<td class="nowrap">479800-712-127</td>
+						    <td>CSXT</td>
+						    <td>AGR</td>
+						    <td>Mobile, AL. SPLC 479800</td>
+						    <td>06/10/2006</td>
+						    <td>02/26/2007</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="956834" data-rail-status="" class="clickable">
+							<td class="nowrap">317500-712-292</td>
+						    <td>CSXT</td>
+						    <td>GR</td>
+						    <td>Grand Rapids, MI.  SPLC 317500</td>
+						    <td>02/13/2006</td>
+						    <td>02/13/2007</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="956597" data-rail-status="" class="clickable">
+							<td class="nowrap">494942-712-127</td>
+						    <td>CSXT</td>
+						    <td>AGR</td>
+						    <td>Cantonment, FL.  SPLC 494942
+</td>
+						    <td>09/02/2005</td>
+						    <td>01/31/2007</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="956588" data-rail-status="" class="clickable">
+							<td class="nowrap">346740-712-612</td>
+						    <td>CSXT</td>
+						    <td>CFE</td>
+						    <td>Lima, OH.  SPLC 346740</td>
+						    <td>08/17/2004</td>
+						    <td>01/31/2007</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="956585" data-rail-status="" class="clickable">
+							<td class="nowrap">345843-712-612</td>
+						    <td>CSXT</td>
+						    <td>CFE</td>
+						    <td>Crestline, OH.  SPLC 345843</td>
+						    <td>12/22/2006</td>
+						    <td>01/31/2007</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="956584" data-rail-status="" class="clickable">
+							<td class="nowrap">476945-712-127</td>
+						    <td>CSXT</td>
+						    <td>AGR</td>
+						    <td>Linden, AL. SPLC 479800</td>
+						    <td>03/31/2000</td>
+						    <td>01/31/2007</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="956578" data-rail-status="" class="clickable">
+							<td class="nowrap">353100-712-969</td>
+						    <td>CSXT</td>
+						    <td>IORY</td>
+						    <td>Columbus, OH.  SPLC 353100
+</td>
+						    <td>04/01/2002</td>
+						    <td>01/31/2007</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="956255" data-rail-status="" class="clickable">
+							<td class="nowrap">444430-712-053</td>
+						    <td>CSXT</td>
+						    <td>CALA</td>
+						    <td>Mullins, SC.  SPLC 444430</td>
+						    <td>11/29/2006</td>
+						    <td>01/18/2007</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="955435" data-rail-status="" class="clickable">
+							<td class="nowrap">387140-712-769</td>
+						    <td>CSXT</td>
+						    <td>TPW</td>
+						    <td>Watseka, IL, SPLC 387140 </td>
+						    <td>01/30/2002</td>
+						    <td>01/05/2007</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="955253" data-rail-status="" class="clickable">
+							<td class="nowrap">261100-712-098</td>
+						    <td>CSXT</td>
+						    <td>CA</td>
+						    <td>Portsmouth, VA.  SPLC 261100</td>
+						    <td>12/13/2006</td>
+						    <td>12/20/2006</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="955391" data-rail-status="" class="clickable">
+							<td class="nowrap">148260-712-094</td>
+						    <td>CSXT</td>
+						    <td>CSO</td>
+						    <td>W. Springfield, MA. SPLC 148260</td>
+						    <td>02/22/2002</td>
+						    <td>12/19/2006</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="955312" data-rail-status="" class="clickable">
+							<td class="nowrap">346740-712-969</td>
+						    <td>CSXT</td>
+						    <td>IORY</td>
+						    <td>Lima, OH. R260 LIMOHY, SPLC 343871</td>
+						    <td>05/31/2002</td>
+						    <td>12/18/2006</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="955307" data-rail-status="" class="clickable">
+							<td class="nowrap">356259-712-969</td>
+						    <td>CSXT</td>
+						    <td>IORY</td>
+						    <td>Haynes, OH. R260 LCIIOR, SPLC 356259</td>
+						    <td>03/02/2006</td>
+						    <td>12/18/2006</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="955303" data-rail-status="" class="clickable">
+							<td class="nowrap">343871-712-969</td>
+						    <td>CSXT</td>
+						    <td>IORY</td>
+						    <td>Hamler, OH. R260 HAMLEA, SPLC 343871</td>
+						    <td>03/02/2006</td>
+						    <td>12/18/2006</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="955318" data-rail-status="" class="clickable">
+							<td class="nowrap">359876-712-188</td>
+						    <td>CSXT</td>
+						    <td>CIND</td>
+						    <td>North Bend, OH. R260 NORBE, SPLC 359876</td>
+						    <td>05/31/2002</td>
+						    <td>12/18/2006</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="955325" data-rail-status="" class="clickable">
+							<td class="nowrap">372150-712-188</td>
+						    <td>CSXT</td>
+						    <td>CIND</td>
+						    <td>Shelbyville, IN. R260 SBYVI, SPLC 353100</td>
+						    <td>08/18/2003</td>
+						    <td>12/18/2006</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="955236" data-rail-status="" class="clickable">
+							<td class="nowrap">368700-712-303</td>
+						    <td>ISRR</td>
+						    <td>CSXT</td>
+						    <td>Indianapolis IN. SPLC 368700</td>
+						    <td>05/15/2002</td>
+						    <td>12/14/2006</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="955040" data-rail-status="" class="clickable">
+							<td class="nowrap">472840-712-343</td>
+						    <td>EARY</td>
+						    <td>CSXT</td>
+						    <td>Talladega, AL SPLC 472840</td>
+						    <td>04/01/2000</td>
+						    <td>12/04/2006</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="954726" data-rail-status="" class="clickable">
+							<td class="nowrap">366452-712-769</td>
+						    <td>CSXT</td>
+						    <td>TPW</td>
+						    <td>Reynolds, IN, SPLC 366452</td>
+						    <td>01/30/2002</td>
+						    <td>11/20/2006</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="954578" data-rail-status="" class="clickable">
+							<td class="nowrap">170511-712-471</td>
+						    <td>CSXT</td>
+						    <td>MSTR</td>
+						    <td>Massena, NY.  SPLC 170511</td>
+						    <td>04/26/2002</td>
+						    <td>11/17/2006</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="954488" data-rail-status="" class="clickable">
+							<td class="nowrap">261983-712-531</td>
+						    <td>CSXT</td>
+						    <td>NCVA</td>
+						    <td>Boykins, VA.  SPLC 261983</td>
+						    <td>03/21/2000</td>
+						    <td>11/13/2006</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="954462" data-rail-status="" class="clickable">
+							<td class="nowrap">178594-712-501</td>
+						    <td>CSXT</td>
+						    <td>NYA</td>
+						    <td>Fresh Pond, NY. SPLC 178594</td>
+						    <td>03/01/2006</td>
+						    <td>11/10/2006</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="12772" data-rail-status="" class="clickable">
+							<td class="nowrap">647000-103-712</td>
+						    <td>CN</td>
+						    <td>CSXT</td>
+						    <td>New Orleans - SPLC 64700</td>
+						    <td>07/01/2004</td>
+						    <td>10/18/2006</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="13685" data-rail-status="" class="clickable">
+							<td class="nowrap">363517-712-238</td>
+						    <td>CSXT</td>
+						    <td>EJE</td>
+						    <td>Chicago, IL. SPLC 380000</td>
+						    <td>07/24/2002</td>
+						    <td>10/06/2006</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="13391" data-rail-status="" class="clickable">
+							<td class="nowrap">182340-712-546</td>
+						    <td>CSXT</td>
+						    <td>NYSW</td>
+						    <td>Syracuse, NY. SPLC182340</td>
+						    <td>01/30/2000</td>
+						    <td>08/18/2006</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="13376" data-rail-status="" class="clickable">
+							<td class="nowrap">191410-712-546</td>
+						    <td>CSXT</td>
+						    <td>NYSW</td>
+						    <td>North Bergen, NJ. SPLC 191410</td>
+						    <td>02/27/2006</td>
+						    <td>08/18/2006</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="11735" data-rail-status="" class="clickable">
+							<td class="nowrap">444620-712-582</td>
+						    <td>CSXT</td>
+						    <td>SCRF</td>
+						    <td>Florence, SC.  SPLC 444620</td>
+						    <td>06/14/2006</td>
+						    <td>06/14/2006</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="11724" data-rail-status="" class="clickable">
+							<td class="nowrap">442940-712-142</td>
+						    <td>CSXT</td>
+						    <td>CPDR</td>
+						    <td>Laurens, SC.  SPLC 442940</td>
+						    <td>06/14/2006</td>
+						    <td>06/14/2006</td>
+						    <td>ACTIVE</td>
+						</tr>
+					
+						<tr id="1" data-rail-status="" class="clickable">
+							<td class="nowrap">278881-222-444</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>CHICAGO</td>
+						    <td>12/12/2012</td>
+						    <td>03/28/2012</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="996475" data-rail-status="" class="clickable">
+							<td class="nowrap">456200-712-555</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>Atlanta GA. SPLC 456200</td>
+						    <td>12/26/2006</td>
+						    <td>02/21/2012</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="996428" data-rail-status="" class="clickable">
+							<td class="nowrap">368700-712-780</td>
+						    <td>CSXT</td>
+						    <td>INRD</td>
+						    <td>Indianapolis, IN.  SPLC 368700
+</td>
+						    <td>10/28/2003</td>
+						    <td>02/16/2012</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="996239" data-rail-status="" class="clickable">
+							<td class="nowrap">343100-712-103</td>
+						    <td>CN</td>
+						    <td>CSXT</td>
+						    <td>Toledo, Stanley & Walbridge Yards, OH.
+</td>
+						    <td>02/08/2005</td>
+						    <td>01/24/2012</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="996133" data-rail-status="" class="clickable">
+							<td class="nowrap">491200-712-755</td>
+						    <td>TTR</td>
+						    <td>CSXT</td>
+						    <td>Jacksonville, FL. SPLC 491200</td>
+						    <td>06/01/2000</td>
+						    <td>01/09/2012</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="995976" data-rail-status="" class="clickable">
+							<td class="nowrap">343940-712-458</td>
+						    <td>CSXT</td>
+						    <td>MAW</td>
+						    <td>Defiance, OH, SPLC 343940</td>
+						    <td>07/02/2010</td>
+						    <td>01/06/2012</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="996042" data-rail-status="" class="clickable">
+							<td class="nowrap">317500-712-919</td>
+						    <td>CSXT</td>
+						    <td>MQT</td>
+						    <td>Grand Rapids, MI.  SPLC 317500</td>
+						    <td>12/26/2006</td>
+						    <td>12/23/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="996036" data-rail-status="" class="clickable">
+							<td class="nowrap">218714-712-607</td>
+						    <td>CSXT</td>
+						    <td>PAM</td>
+						    <td>McKees Rocks, PA.  SPLC 218714</td>
+						    <td>02/23/2000</td>
+						    <td>12/23/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="996024" data-rail-status="" class="clickable">
+							<td class="nowrap">461450-712-313</td>
+						    <td>GITM</td>
+						    <td>CSXT</td>
+						    <td>East Savannah, GA SPLC 461450</td>
+						    <td>11/28/2005</td>
+						    <td>12/22/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="996018" data-rail-status="" class="clickable">
+							<td class="nowrap">465558-712-313</td>
+						    <td>GITM</td>
+						    <td>CSXT</td>
+						    <td>Anguilla Jct, GA SPLC 465558</td>
+						    <td>10/28/2008</td>
+						    <td>12/22/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="996017" data-rail-status="" class="clickable">
+							<td class="nowrap">465559-712-313</td>
+						    <td>GITM</td>
+						    <td>CSXT</td>
+						    <td>Anguilla Jct, GA SPLC 465559</td>
+						    <td>10/28/2008</td>
+						    <td>12/22/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="995957" data-rail-status="" class="clickable">
+							<td class="nowrap">395650-802-712-GM</td>
+						    <td>UP</td>
+						    <td>CSXT</td>
+						    <td>Salem, IL. SPLC: 395650
+East St. Louis, Il. 396640</td>
+						    <td>06/21/2010</td>
+						    <td>12/20/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="995956" data-rail-status="" class="clickable">
+							<td class="nowrap">317500-712-335</td>
+						    <td>CSXT</td>
+						    <td>GDLK</td>
+						    <td>Grand Rapids, MI.  SPLC 317500</td>
+						    <td>04/01/2009</td>
+						    <td>12/20/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="995937" data-rail-status="" class="clickable">
+							<td class="nowrap">317690-712-547</td>
+						    <td>CSXT</td>
+						    <td>MS</td>
+						    <td>Holland, MI.  SPLC 317690</td>
+						    <td>02/26/2002</td>
+						    <td>12/20/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="995900" data-rail-status="" class="clickable">
+							<td class="nowrap">145460-712-631</td>
+						    <td>CSXT</td>
+						    <td>PW</td>
+						    <td>Worcester, MA.  SPLC 145460</td>
+						    <td>05/01/2002</td>
+						    <td>12/19/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="995869" data-rail-status="" class="clickable">
+							<td class="nowrap">215270-712-477</td>
+						    <td>CSXT</td>
+						    <td>LVRJ</td>
+						    <td>Johnstown, PA.  SPLC 215270</td>
+						    <td>12/19/2011</td>
+						    <td>12/19/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="995853" data-rail-status="" class="clickable">
+							<td class="nowrap">233407-712-495</td>
+						    <td>MMID</td>
+						    <td>CSXT</td>
+						    <td>Highfield, MD. SPLC 233407</td>
+						    <td>11/03/2000</td>
+						    <td>12/19/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="995848" data-rail-status="" class="clickable">
+							<td class="nowrap">232238-712-495</td>
+						    <td>MMID</td>
+						    <td>CSXT</td>
+						    <td>Emory Grove, MD. SPLC 232238</td>
+						    <td>11/03/2000</td>
+						    <td>12/19/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="995843" data-rail-status="" class="clickable">
+							<td class="nowrap">261100-712-549</td>
+						    <td>CSXT</td>
+						    <td>NPB</td>
+						    <td>Portsmouth, VA.  SPLC 261100</td>
+						    <td>03/22/2000</td>
+						    <td>12/19/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="995801" data-rail-status="" class="clickable">
+							<td class="nowrap">218350-712-583</td>
+						    <td>CSXT</td>
+						    <td>MKC</td>
+						    <td>McKeesport, PA.  SPLC 218350</td>
+						    <td>02/23/2000</td>
+						    <td>12/19/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="995723" data-rail-status="" class="clickable">
+							<td class="nowrap">216660-712-036</td>
+						    <td>CSXT</td>
+						    <td>AOR</td>
+						    <td>Aliquippa, PA  SPLC 216660   </td>
+						    <td>11/29/2009</td>
+						    <td>12/14/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="995717" data-rail-status="" class="clickable">
+							<td class="nowrap">144220-712-464</td>
+						    <td>CSXT</td>
+						    <td>MC</td>
+						    <td>Taunton, MA.  SPLC 144220</td>
+						    <td>12/14/2011</td>
+						    <td>12/14/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="995615" data-rail-status="" class="clickable">
+							<td class="nowrap">185400-712-555</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>Buffalo NY. SPLC 185400</td>
+						    <td>05/10/2006</td>
+						    <td>12/13/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="995684" data-rail-status="" class="clickable">
+							<td class="nowrap">219124-712-824</td>
+						    <td>CSXT</td>
+						    <td>SWP</td>
+						    <td>Connellsville, PA SPLC 219124</td>
+						    <td>02/23/2000</td>
+						    <td>12/13/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="995664" data-rail-status="" class="clickable">
+							<td class="nowrap">381248-802-712-IM</td>
+						    <td>UP</td>
+						    <td>CSXT</td>
+						    <td>UP Global I, IL SPLC 0380415, UP Global II 0381238, CSXT 59th St. 0380639, CSXT Bedford Pk.0381315</td>
+						    <td>12/01/2010</td>
+						    <td>12/12/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="995653" data-rail-status="" class="clickable">
+							<td class="nowrap">439900-802-712-GM</td>
+						    <td>UP</td>
+						    <td>CSXT</td>
+						    <td>Memphis, TN SPLC 439900 Marion, AR. SPLC 0605153</td>
+						    <td>05/01/2010</td>
+						    <td>12/12/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="995643" data-rail-status="" class="clickable">
+							<td class="nowrap">185400-712-941</td>
+						    <td>BPRR</td>
+						    <td>CSXT</td>
+						    <td>Buffalo, NY</td>
+						    <td>11/07/2006</td>
+						    <td>12/12/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="995637" data-rail-status="" class="clickable">
+							<td class="nowrap">185400-103-712</td>
+						    <td>CN</td>
+						    <td>CSXT</td>
+						    <td>Buffalo, NY - SPLC 185400</td>
+						    <td>02/24/2006</td>
+						    <td>12/12/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="995634" data-rail-status="" class="clickable">
+							<td class="nowrap">341800-712-555</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>Cleveland, OH. SPLC 341800</td>
+						    <td>05/10/2006</td>
+						    <td>12/12/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="995627" data-rail-status="" class="clickable">
+							<td class="nowrap">318100-712-555</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>Detroit, SPLC 318100</td>
+						    <td>04/01/2010</td>
+						    <td>12/12/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="995623" data-rail-status="" class="clickable">
+							<td class="nowrap">439900-103-712</td>
+						    <td>CN</td>
+						    <td>CSXT</td>
+						    <td>Memphis, TN - SPLC 439900</td>
+						    <td>07/25/2003</td>
+						    <td>12/12/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="995619" data-rail-status="" class="clickable">
+							<td class="nowrap">647000-802-712-GM</td>
+						    <td>UP</td>
+						    <td>CSXT</td>
+						    <td>New Orleans, LA SPLC 647000</td>
+						    <td>05/01/2010</td>
+						    <td>12/12/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="995597" data-rail-status="" class="clickable">
+							<td class="nowrap">379500-712-303</td>
+						    <td>ISRR</td>
+						    <td>CSXT</td>
+						    <td>Evansville, IN. SPLC 379500</td>
+						    <td>04/12/2002</td>
+						    <td>12/08/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="995544" data-rail-status="" class="clickable">
+							<td class="nowrap">363510-712-168</td>
+						    <td>CSXT</td>
+						    <td>CSS</td>
+						    <td>East Chicago, IN</td>
+						    <td>02/08/2002</td>
+						    <td>12/08/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="995581" data-rail-status="" class="clickable">
+							<td class="nowrap">647000-712-536</td>
+						    <td>CSXT</td>
+						    <td>NOPB</td>
+						    <td>New Orleans, LA SPLC 647000</td>
+						    <td>03/14/2003</td>
+						    <td>12/08/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="995577" data-rail-status="" class="clickable">
+							<td class="nowrap">567500-032-712</td>
+						    <td>CSXT</td>
+						    <td>KCS</td>
+						    <td>St. Louis, MO</td>
+						    <td>02/11/2003</td>
+						    <td>12/07/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="995574" data-rail-status="" class="clickable">
+							<td class="nowrap">396640-032-712</td>
+						    <td>CSXT</td>
+						    <td>ALS</td>
+						    <td>St. Louis, MO</td>
+						    <td>03/04/2006</td>
+						    <td>12/07/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="995536" data-rail-status="" class="clickable">
+							<td class="nowrap">381380-712-168</td>
+						    <td>CSXT</td>
+						    <td>CSS</td>
+						    <td>Chicago, IL. (Barr Yard) and East Chicago, IN</td>
+						    <td>02/08/2002</td>
+						    <td>12/07/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="994890" data-rail-status="" class="clickable">
+							<td class="nowrap">380000-103-064</td>
+						    <td>CN</td>
+						    <td>CSXT</td>
+						    <td>Chicago, including:
+Bedford Park, IL  SPLC: 381315
+Markham, IL  SPLC: 381441</td>
+						    <td>11/10/2011</td>
+						    <td>11/10/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="994682" data-rail-status="" class="clickable">
+							<td class="nowrap">396295-757-712</td>
+						    <td>CSXT</td>
+						    <td>TRRA</td>
+						    <td>St. Louis, MO</td>
+						    <td>03/04/2003</td>
+						    <td>11/04/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="994517" data-rail-status="" class="clickable">
+							<td class="nowrap">345360-555-000</td>
+						    <td>CSXT</td>
+						    <td>NOW</td>
+						    <td>Tiffin, OH SPLC 345360</td>
+						    <td>07/21/2010</td>
+						    <td>10/31/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="994457" data-rail-status="" class="clickable">
+							<td class="nowrap">647000-802-712-IM</td>
+						    <td>UP</td>
+						    <td>CSXT</td>
+						    <td>New Orleans, LA SPLC 647000
+</td>
+						    <td>02/01/2008</td>
+						    <td>10/26/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="994237" data-rail-status="" class="clickable">
+							<td class="nowrap">207507-712-633</td>
+						    <td>CSXT</td>
+						    <td>PN</td>
+						    <td>Lansdale, PA SPLC 207507</td>
+						    <td>09/28/2011</td>
+						    <td>10/13/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="994026" data-rail-status="" class="clickable">
+							<td class="nowrap">472610-712-019</td>
+						    <td>CSXT</td>
+						    <td>ABWR</td>
+						    <td>North Birmingham, AL    NBIRM   SPLC 472610</td>
+						    <td>07/09/2009</td>
+						    <td>09/29/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="993860" data-rail-status="" class="clickable">
+							<td class="nowrap">416140-712-025</td>
+						    <td>CSXT</td>
+						    <td>ATW</td>
+						    <td>Sanford NC.  SPLC 416140
+
+</td>
+						    <td>02/04/2000</td>
+						    <td>09/26/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="993496" data-rail-status="" class="clickable">
+							<td class="nowrap">316700-712-888</td>
+						    <td>CSXT</td>
+						    <td>JAIL</td>
+						    <td>Lansing, MI.  SPLC 316700</td>
+						    <td>09/08/2011</td>
+						    <td>09/09/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="993354" data-rail-status="" class="clickable">
+							<td class="nowrap">316700-712-292</td>
+						    <td>CSXT</td>
+						    <td>JAIL</td>
+						    <td>Lansing, MI.  SPLC 316700</td>
+						    <td>09/08/2011</td>
+						    <td>09/08/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="992694" data-rail-status="" class="clickable">
+							<td class="nowrap">491200-712-263</td>
+						    <td>CSXT</td>
+						    <td>FEC</td>
+						    <td>Jacksonville Fl. SPLC491200</td>
+						    <td>07/29/2011</td>
+						    <td>08/18/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="992000" data-rail-status="" class="clickable">
+							<td class="nowrap">363517-712-103</td>
+						    <td>CSXT</td>
+						    <td>CN</td>
+						    <td>Curtis, IN 363517
+Kirk Yard, IN  363301</td>
+						    <td>07/18/2009</td>
+						    <td>08/03/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="991259" data-rail-status="" class="clickable">
+							<td class="nowrap">494057-712-088</td>
+						    <td>CSXT</td>
+						    <td>BAYL</td>
+						    <td>Cottondale, FL.  SPLC 494057
+</td>
+						    <td>03/17/2000</td>
+						    <td>07/15/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="990554" data-rail-status="" class="clickable">
+							<td class="nowrap">185400-712-105</td>
+						    <td>CSXT</td>
+						    <td>CPRS</td>
+						    <td>Buffalo NY. SPLC 185400</td>
+						    <td>02/28/2006</td>
+						    <td>07/06/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="990518" data-rail-status="" class="clickable">
+							<td class="nowrap">345293-712-576</td>
+						    <td>CSXT</td>
+						    <td>ASRY</td>
+						    <td>Willard, OH., SPLC 345293
+ </td>
+						    <td>02/19/2004</td>
+						    <td>07/05/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="990039" data-rail-status="" class="clickable">
+							<td class="nowrap">295583-712-792</td>
+						    <td>CSXT</td>
+						    <td>RJCM</td>
+						    <td>Memphis Jct, KY  MEMJC  SPLC 295583</td>
+						    <td>07/08/2009</td>
+						    <td>06/13/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="990038" data-rail-status="" class="clickable">
+							<td class="nowrap">297780-712-001</td>
+						    <td>CSXT</td>
+						    <td>RJCM</td>
+						    <td>Guthrie, KY  GUTHR  SPLC 297780</td>
+						    <td>10/01/2008</td>
+						    <td>06/13/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="989502" data-rail-status="" class="clickable">
+							<td class="nowrap">285730-712-967</td>
+						    <td>CSXT</td>
+						    <td>RJCC</td>
+						    <td>Winchester, KY (WINCH)  SPLC 285730</td>
+						    <td>07/08/2009</td>
+						    <td>05/26/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="989499" data-rail-status="" class="clickable">
+							<td class="nowrap">286550-712-967</td>
+						    <td>CSXT</td>
+						    <td>RJCC</td>
+						    <td>Louisville, KY   LOUISV     SPLC 286550</td>
+						    <td>07/08/2009</td>
+						    <td>05/26/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="989464" data-rail-status="" class="clickable">
+							<td class="nowrap">346740-712-237</td>
+						    <td>CSXT</td>
+						    <td>RJCW</td>
+						    <td>Lima, OH    LIMA   SPLC 346740</td>
+						    <td>07/08/2009</td>
+						    <td>05/26/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="989459" data-rail-status="" class="clickable">
+							<td class="nowrap">278470-712-905</td>
+						    <td>CSXT</td>
+						    <td>RJCV</td>
+						    <td>Thurmond, WV - THRMD SPLC 278470</td>
+						    <td>06/08/2009</td>
+						    <td>05/26/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="989458" data-rail-status="" class="clickable">
+							<td class="nowrap">344699-712-639</td>
+						    <td>CSXT</td>
+						    <td>RJCL</td>
+						    <td>Warwick, OH   WRWCK  SPLC 344699</td>
+						    <td>07/08/2009</td>
+						    <td>05/26/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="989399" data-rail-status="" class="clickable">
+							<td class="nowrap">424250-712-413</td>
+						    <td>CSXT</td>
+						    <td>KXHR</td>
+						    <td>Knoxville, TN. SPLC 424250 </td>
+						    <td>06/24/2006</td>
+						    <td>05/26/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="989381" data-rail-status="" class="clickable">
+							<td class="nowrap">479800-103-712</td>
+						    <td>CN</td>
+						    <td>CSXT</td>
+						    <td>Mobile, AL - SPLC 479800</td>
+						    <td>11/15/2001</td>
+						    <td>05/25/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="989277" data-rail-status="" class="clickable">
+							<td class="nowrap">479800-712-555</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>Mobile, AL SPLC 479800</td>
+						    <td>10/24/2008</td>
+						    <td>05/17/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="989179" data-rail-status="" class="clickable">
+							<td class="nowrap">478270-712-030</td>
+						    <td>CSXT</td>
+						    <td>AF</td>
+						    <td>Georgiana, AL   SPLC 478270</td>
+						    <td>05/16/2011</td>
+						    <td>05/16/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="988216" data-rail-status="" class="clickable">
+							<td class="nowrap">477260-712-289</td>
+						    <td>CSXT</td>
+						    <td>COEH</td>
+						    <td>Troy, Al  - R260 TROYA  - SPLC 477260</td>
+						    <td>11/29/2009</td>
+						    <td>04/14/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="988176" data-rail-status="" class="clickable">
+							<td class="nowrap">477550-712-763</td>
+						    <td>CSXT</td>
+						    <td>WGCR</td>
+						    <td>CSXT Waterford, AL, R260 WATAL, SPLC 477550
+</td>
+						    <td>07/01/2000</td>
+						    <td>04/14/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="987859" data-rail-status="" class="clickable">
+							<td class="nowrap">221154-712-274</td>
+						    <td>CSXT</td>
+						    <td>ESPN</td>
+						    <td>Elsmere Jct, DE.  SPLC 221154</td>
+						    <td>02/04/2011</td>
+						    <td>03/04/2011</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="980958" data-rail-status="" class="clickable">
+							<td class="nowrap">468890-712-300</td>
+						    <td>CSXT</td>
+						    <td>GFRR</td>
+						    <td>Thomasville, GA  SPLC 468890</td>
+						    <td>06/09/2010</td>
+						    <td>12/06/2010</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="984782" data-rail-status="" class="clickable">
+							<td class="nowrap">438597-712-258</td>
+						    <td>CSXT</td>
+						    <td>WTNN</td>
+						    <td>Humboldt, TN. SPLC438597</td>
+						    <td>05/15/2002</td>
+						    <td>10/22/2010</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="984278" data-rail-status="" class="clickable">
+							<td class="nowrap">472645-712-065</td>
+						    <td>CSXT</td>
+						    <td>BS</td>
+						    <td>Ensley, AL. SPLC 472645</td>
+						    <td>08/18/2006</td>
+						    <td>10/08/2010</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="984256" data-rail-status="" class="clickable">
+							<td class="nowrap">353100-555-712</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>Columbus OH 353100</td>
+						    <td>10/24/2008</td>
+						    <td>10/08/2010</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="983614" data-rail-status="" class="clickable">
+							<td class="nowrap">457410-555-555</td>
+						    <td>GWRC</td>
+						    <td>CSXT</td>
+						    <td>Barnett, GA   
+</td>
+						    <td>07/16/2010</td>
+						    <td>09/16/2010</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="981814" data-rail-status="" class="clickable">
+							<td class="nowrap">456348-712-731</td>
+						    <td>CSXT</td>
+						    <td>FCR</td>
+						    <td>Fulco Jct., GA. SPLC 456348</td>
+						    <td>04/05/2007</td>
+						    <td>09/16/2010</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="982056" data-rail-status="" class="clickable">
+							<td class="nowrap">341961-555-000</td>
+						    <td>CSXT</td>
+						    <td>NSR</td>
+						    <td>Marcelline, OH</td>
+						    <td>07/21/2010</td>
+						    <td>09/15/2010</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="982600" data-rail-status="" class="clickable">
+							<td class="nowrap">408848-712-427</td>
+						    <td>CSXT</td>
+						    <td>LRS</td>
+						    <td>Dixie, NC   SPLC 408848</td>
+						    <td>10/01/2009</td>
+						    <td>08/26/2010</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="981835" data-rail-status="" class="clickable">
+							<td class="nowrap">207475-712-240</td>
+						    <td>CSXT</td>
+						    <td>ESPN</td>
+						    <td>CSXT Telford, PA SPLC 207475</td>
+						    <td>07/01/2000</td>
+						    <td>08/02/2010</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="981038" data-rail-status="" class="clickable">
+							<td class="nowrap">218500-712-028</td>
+						    <td>CSXT</td>
+						    <td>AVR</td>
+						    <td>PIttsburgh, PA SPLC 218500</td>
+						    <td>02/23/2000</td>
+						    <td>07/09/2010</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="980921" data-rail-status="" class="clickable">
+							<td class="nowrap">375690-712-388</td>
+						    <td>CSXT</td>
+						    <td>MGRI</td>
+						    <td>Jeffersonville, IN </td>
+						    <td>10/01/2008</td>
+						    <td>07/02/2010</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="980894" data-rail-status="" class="clickable">
+							<td class="nowrap">371172-712-848</td>
+						    <td>CSXT</td>
+						    <td>IERR</td>
+						    <td>Cottage Grove, IN.  SPLC 371172
+</td>
+						    <td>01/08/2007</td>
+						    <td>07/02/2010</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="980891" data-rail-status="" class="clickable">
+							<td class="nowrap">368700-712-434</td>
+						    <td>CSXT</td>
+						    <td>LIRC</td>
+						    <td>Avon, IN  SPLC  368700</td>
+						    <td>05/28/2002</td>
+						    <td>07/02/2010</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="980886" data-rail-status="" class="clickable">
+							<td class="nowrap">371340-712-129</td>
+						    <td>CSXT</td>
+						    <td>CNUR</td>
+						    <td>Connersville, IN   SPLC 371340</td>
+						    <td>02/01/2000</td>
+						    <td>07/02/2010</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="980847" data-rail-status="" class="clickable">
+							<td class="nowrap">209475-712-908</td>
+						    <td>CSXT</td>
+						    <td>YRC</td>
+						    <td>Porters, PA   SPLC 209475</td>
+						    <td>08/21/2000</td>
+						    <td>07/02/2010</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="979822" data-rail-status="" class="clickable">
+							<td class="nowrap">148143-712-461</td>
+						    <td>CSXT</td>
+						    <td>MCER</td>
+						    <td>Palmer, MA.  SPLC 148143</td>
+						    <td>06/01/2010</td>
+						    <td>06/01/2010</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="979336" data-rail-status="" class="clickable">
+							<td class="nowrap">491125-712-896</td>
+						    <td>CSXT</td>
+						    <td>FCRD</td>
+						    <td>Yulee, FL  SPLC  491125</td>
+						    <td>10/29/2008</td>
+						    <td>04/30/2010</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="979236" data-rail-status="" class="clickable">
+							<td class="nowrap">344699-712-601</td>
+						    <td>CSXT</td>
+						    <td>OHCR</td>
+						    <td>Warwick, OH.  SPLC 344699</td>
+						    <td>05/01/2002</td>
+						    <td>04/25/2010</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="979221" data-rail-status="" class="clickable">
+							<td class="nowrap">344200-712-504</td>
+						    <td>CSXT</td>
+						    <td>MVRY</td>
+						    <td>Youngstown, OH SPLC 344200</td>
+						    <td>08/03/2009</td>
+						    <td>04/25/2010</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="979217" data-rail-status="" class="clickable">
+							<td class="nowrap">344260-712-876</td>
+						    <td>CSXT</td>
+						    <td>YB</td>
+						    <td>OHIO JCT,  OH - R260  OHJCT - SPLC 344260</td>
+						    <td>02/11/2002</td>
+						    <td>04/25/2010</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="979202" data-rail-status="" class="clickable">
+							<td class="nowrap">476139-712-400</td>
+						    <td>CSXT</td>
+						    <td>KCS</td>
+						    <td>Brookwood, AL. SPLC 476139</td>
+						    <td>04/02/2007</td>
+						    <td>04/25/2010</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="977919" data-rail-status="" class="clickable">
+							<td class="nowrap">368700-712-555</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>Indianapolis,IN 368700</td>
+						    <td>05/13/2009</td>
+						    <td>03/05/2010</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="977521" data-rail-status="" class="clickable">
+							<td class="nowrap">461450-712-555</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>Savannah, GA  SPLCC 461450</td>
+						    <td>08/18/2008</td>
+						    <td>01/15/2010</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="976715" data-rail-status="" class="clickable">
+							<td class="nowrap">148350-712-611</td>
+						    <td>CSXT</td>
+						    <td>PVRR</td>
+						    <td>Westfield, MA.  SPLC 148350</td>
+						    <td>06/01/2006</td>
+						    <td>11/29/2009</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="974677" data-rail-status="" class="clickable">
+							<td class="nowrap">479800-712-758</td>
+						    <td>CSXT</td>
+						    <td>TASD</td>
+						    <td>Mobile, AL   MOBIL   SPLC 479800</td>
+						    <td>07/09/2009</td>
+						    <td>11/29/2009</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="975237" data-rail-status="" class="clickable">
+							<td class="nowrap">498419-712-960</td>
+						    <td>CSXT</td>
+						    <td>PTRA</td>
+						    <td>Port Manatee, FL   SPLC 498418</td>
+						    <td>09/30/2009</td>
+						    <td>11/29/2009</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="976659" data-rail-status="" class="clickable">
+							<td class="nowrap">344200-712-372</td>
+						    <td>CSXT</td>
+						    <td>YARR</td>
+						    <td>YOUNGSTOWN, OH - R260 YGSTN -SPLC 344200 </td>
+						    <td>02/11/2002</td>
+						    <td>11/29/2009</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="955647" data-rail-status="" class="clickable">
+							<td class="nowrap">317500-712-996</td>
+						    <td>CSXT</td>
+						    <td>KWT</td>
+						    <td>Grand Rapids, MI.  SPLC 317500</td>
+						    <td>12/26/2006</td>
+						    <td>11/25/2009</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="976546" data-rail-status="" class="clickable">
+							<td class="nowrap">437432-712-996</td>
+						    <td>CSXT</td>
+						    <td>KWT</td>
+						    <td>Bruceton, TN.  SPLC 437432  </td>
+						    <td>03/30/2000</td>
+						    <td>11/25/2009</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="976542" data-rail-status="" class="clickable">
+							<td class="nowrap">379500-712-155</td>
+						    <td>CSXT</td>
+						    <td>EVWR</td>
+						    <td>Evansville, IN. SPLC 379500</td>
+						    <td>06/13/2006</td>
+						    <td>11/25/2009</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="976536" data-rail-status="" class="clickable">
+							<td class="nowrap">219124-712-856</td>
+						    <td>CSXT</td>
+						    <td>WE</td>
+						    <td>Connellsville, PA. SPLC 219124 </td>
+						    <td>07/01/2006</td>
+						    <td>11/25/2009</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="959944" data-rail-status="" class="clickable">
+							<td class="nowrap">357135-712-296</td>
+						    <td>CSXT</td>
+						    <td>GMRY</td>
+						    <td>Vauces, OH.  SPLC 357135</td>
+						    <td>09/16/2003</td>
+						    <td>11/25/2009</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="976529" data-rail-status="" class="clickable">
+							<td class="nowrap">343100-712-001</td>
+						    <td>CSXT</td>
+						    <td>AA</td>
+						    <td>Toledo, OH 343100</td>
+						    <td>10/01/2008</td>
+						    <td>11/25/2009</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="976525" data-rail-status="" class="clickable">
+							<td class="nowrap">345282-712-856</td>
+						    <td>CSXT</td>
+						    <td>WE</td>
+						    <td>Greenwich, OH. SPLC 345282</td>
+						    <td>08/21/2000</td>
+						    <td>11/25/2009</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="976522" data-rail-status="" class="clickable">
+							<td class="nowrap">353100-712-156</td>
+						    <td>CSXT</td>
+						    <td>CUOH</td>
+						    <td>Columbus, OH. SPLC 353100</td>
+						    <td>11/15/2004</td>
+						    <td>11/25/2009</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="976518" data-rail-status="" class="clickable">
+							<td class="nowrap">218810-712-653</td>
+						    <td>CSXT</td>
+						    <td>POHC</td>
+						    <td>POV JCT, PA - SPLC 218810</td>
+						    <td>11/25/2009</td>
+						    <td>11/25/2009</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="974674" data-rail-status="" class="clickable">
+							<td class="nowrap">472610-712-254</td>
+						    <td>CSXT</td>
+						    <td>JEFW</td>
+						    <td>North Birmingham, AL    NBIRM   SPLC 472610</td>
+						    <td>07/09/2009</td>
+						    <td>07/09/2009</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="974605" data-rail-status="" class="clickable">
+							<td class="nowrap">041000-712-967</td>
+						    <td>CSXT</td>
+						    <td>RJCC</td>
+						    <td>Louisville, KY</td>
+						    <td>07/08/2009</td>
+						    <td>07/08/2009</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="974603" data-rail-status="" class="clickable">
+							<td class="nowrap">041150-712-792</td>
+						    <td>CSXT</td>
+						    <td>RJCM</td>
+						    <td>Memphis Jct, KY  SPLC 041150</td>
+						    <td>07/08/2009</td>
+						    <td>07/08/2009</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="973118" data-rail-status="" class="clickable">
+							<td class="nowrap">417500-555-712</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>Charlotte, NC 417500</td>
+						    <td>09/11/2008</td>
+						    <td>03/25/2009</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="971576" data-rail-status="" class="clickable">
+							<td class="nowrap">214130-555-712</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>Erie, PA SPLC 214130</td>
+						    <td>10/24/2008</td>
+						    <td>12/08/2008</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="971556" data-rail-status="" class="clickable">
+							<td class="nowrap">345340-712-555</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>Fostoria, OH SPLC 345340</td>
+						    <td>10/24/2008</td>
+						    <td>12/04/2008</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="971315" data-rail-status="" class="clickable">
+							<td class="nowrap">345341-712-555</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>Fostoria Mixing Center, OH SPLC 345341</td>
+						    <td>10/24/2008</td>
+						    <td>11/25/2008</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="971283" data-rail-status="" class="clickable">
+							<td class="nowrap">491200-712-555</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>Jacksonville, FL SPLC 491200</td>
+						    <td>10/24/2008</td>
+						    <td>11/25/2008</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="971276" data-rail-status="" class="clickable">
+							<td class="nowrap">344192-712-555</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>Lordstown, OH SPLC 344192</td>
+						    <td>10/24/2008</td>
+						    <td>11/25/2008</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="971255" data-rail-status="" class="clickable">
+							<td class="nowrap">348540-712-555</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>Marion, OH SPLC 348540</td>
+						    <td>10/24/2008</td>
+						    <td>11/24/2008</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="971244" data-rail-status="" class="clickable">
+							<td class="nowrap">369140-712-555</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>LaFayette, IN SPLC 369140</td>
+						    <td>10/24/2008</td>
+						    <td>11/24/2008</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="971194" data-rail-status="" class="clickable">
+							<td class="nowrap">424250-712-555</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>Knoxville, TN SPLC 424250</td>
+						    <td>10/24/2008</td>
+						    <td>11/24/2008</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="971175" data-rail-status="" class="clickable">
+							<td class="nowrap">467850-712-555</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>Valdosta, GA SPLC 467850</td>
+						    <td>10/24/2008</td>
+						    <td>11/24/2008</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="971096" data-rail-status="" class="clickable">
+							<td class="nowrap">472210-712-555</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>Decatur, AL SPLC 472210</td>
+						    <td>10/24/2008</td>
+						    <td>11/24/2008</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="970562" data-rail-status="" class="clickable">
+							<td class="nowrap">428880-555-712</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>Chattanooga,TN 428880</td>
+						    <td>10/30/2008</td>
+						    <td>11/07/2008</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="970559" data-rail-status="" class="clickable">
+							<td class="nowrap">286550-712-555</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>Louisville, KY SPLC 286550</td>
+						    <td>04/10/2008</td>
+						    <td>11/07/2008</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="970074" data-rail-status="" class="clickable">
+							<td class="nowrap">461450-712-624</td>
+						    <td>CSXT</td>
+						    <td>RSOR</td>
+						    <td>Savannah, GA  SPLC  461450</td>
+						    <td>10/29/2008</td>
+						    <td>10/29/2008</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="970022" data-rail-status="" class="clickable">
+							<td class="nowrap">461450-712-726</td>
+						    <td>SAPT</td>
+						    <td>CSXT</td>
+						    <td>East Savannah, GA SPLC 461450</td>
+						    <td>05/01/2005</td>
+						    <td>10/29/2008</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="969998" data-rail-status="" class="clickable">
+							<td class="nowrap">409160-712-981</td>
+						    <td>CSXT</td>
+						    <td>WTRY</td>
+						    <td>Wilmington, NC.  SPLC 409160</td>
+						    <td>09/11/2006</td>
+						    <td>10/29/2008</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="969859" data-rail-status="" class="clickable">
+							<td class="nowrap">431130-712-555</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>LaFayette, TN SPLC 431130</td>
+						    <td>10/24/2008</td>
+						    <td>10/24/2008</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="969802" data-rail-status="" class="clickable">
+							<td class="nowrap">431200-712-555</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>Jacksonville, FL SPLC 491200</td>
+						    <td>10/24/2008</td>
+						    <td>10/24/2008</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="969176" data-rail-status="" class="clickable">
+							<td class="nowrap">262600-555-712</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>Petersburg, VA 262600</td>
+						    <td>09/18/2008</td>
+						    <td>09/26/2008</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="969160" data-rail-status="" class="clickable">
+							<td class="nowrap">257500-555-712</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>Richmond, VA 257500</td>
+						    <td>09/12/2008</td>
+						    <td>09/26/2008</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="969157" data-rail-status="" class="clickable">
+							<td class="nowrap">262400-555-712</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>Hopewell, VA 262400</td>
+						    <td>09/17/2008</td>
+						    <td>09/26/2008</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="968579" data-rail-status="" class="clickable">
+							<td class="nowrap">359900-555-712</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>Cincinnati, OH 359900</td>
+						    <td>07/14/2008</td>
+						    <td>09/11/2008</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="967735" data-rail-status="" class="clickable">
+							<td class="nowrap">353250-555-712</td>
+						    <td>CSXT</td>
+						    <td>NS</td>
+						    <td>Buckeye, OH 359900</td>
+						    <td>08/04/2008</td>
+						    <td>08/04/2008</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="960694" data-rail-status="" class="clickable">
+							<td class="nowrap">475630-712-480</td>
+						    <td>CSXT</td>
+						    <td>MNBR</td>
+						    <td>Montgomery, AL.  SPLC 475630</td>
+						    <td>09/19/2006</td>
+						    <td>07/05/2007</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="960432" data-rail-status="" class="clickable">
+							<td class="nowrap">182367-712-268</td>
+						    <td>CSXT</td>
+						    <td>FGLK</td>
+						    <td>Solvay, NY. SPLC 182367</td>
+						    <td>02/17/2006</td>
+						    <td>06/18/2007</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="960335" data-rail-status="" class="clickable">
+							<td class="nowrap">436475-712-672</td>
+						    <td>CSXT</td>
+						    <td>SCTR</td>
+						    <td>Colesburg, TN.  SPLC 436475</td>
+						    <td>02/04/2000</td>
+						    <td>06/05/2007</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="960261" data-rail-status="" class="clickable">
+							<td class="nowrap">441113-712-171</td>
+						    <td>CSXT</td>
+						    <td>PDRR</td>
+						    <td>McCall, SC.  SPLC 441113 Jct. SMCPDR</td>
+						    <td>11/15/2000</td>
+						    <td>06/01/2007</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="960228" data-rail-status="" class="clickable">
+							<td class="nowrap">447850-712-652</td>
+						    <td>CSXT</td>
+						    <td>PTR</td>
+						    <td>Charleston, SC.  SPLC 447850</td>
+						    <td>04/01/2002</td>
+						    <td>05/31/2007</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="960218" data-rail-status="" class="clickable">
+							<td class="nowrap">447850-712-657</td>
+						    <td>CSXT</td>
+						    <td>PUCC</td>
+						    <td>Charleston, SC.  SPLC 447850</td>
+						    <td>04/01/2002</td>
+						    <td>05/31/2007</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="960215" data-rail-status="" class="clickable">
+							<td class="nowrap">447159-712-229</td>
+						    <td>CSXT</td>
+						    <td>ECBR</td>
+						    <td>State Jct., SC.  SPLC 447159</td>
+						    <td>03/12/2007</td>
+						    <td>05/31/2007</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="959761" data-rail-status="" class="clickable">
+							<td class="nowrap">476139-712-927</td>
+						    <td>CSXT</td>
+						    <td>ABS</td>
+						    <td>Brookwood, AL. SPLC 476139</td>
+						    <td>04/02/2007</td>
+						    <td>05/15/2007</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="957686" data-rail-status="" class="clickable">
+							<td class="nowrap">447159-712-393</td>
+						    <td>CSXT</td>
+						    <td>ECBR</td>
+						    <td>State Jct., SC.  SPLC 447159</td>
+						    <td>03/12/2007</td>
+						    <td>03/12/2007</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="957527" data-rail-status="" class="clickable">
+							<td class="nowrap">315979-712-992</td>
+						    <td>CSXT</td>
+						    <td>MAL</td>
+						    <td>Wixon, MI.  SPLC 315979</td>
+						    <td>03/07/2007</td>
+						    <td>03/07/2007</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="957449" data-rail-status="" class="clickable">
+							<td class="nowrap">191480-712-511</td>
+						    <td>CSXT</td>
+						    <td>ME</td>
+						    <td>Kearny, NJ.  SPLC 191480</td>
+						    <td>01/01/2007</td>
+						    <td>03/07/2007</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="956746" data-rail-status="" class="clickable">
+							<td class="nowrap">477830-712-088</td>
+						    <td>CSXT</td>
+						    <td>BAYL</td>
+						    <td>Dothan,  AL.  SPLC 477830
+
+</td>
+						    <td>03/17/2000</td>
+						    <td>02/08/2007</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="956738" data-rail-status="" class="clickable">
+							<td class="nowrap">258168-712-108</td>
+						    <td>CSXT</td>
+						    <td>BB</td>
+						    <td>Strathmore, VA.  SPLC 258168
+</td>
+						    <td>02/15/2000</td>
+						    <td>02/08/2007</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="956735" data-rail-status="" class="clickable">
+							<td class="nowrap">432690-712-187</td>
+						    <td>CSXT</td>
+						    <td>CFWR</td>
+						    <td>Tullahoma, TN. SPLC 432690</td>
+						    <td>02/21/2000</td>
+						    <td>02/08/2007</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="956591" data-rail-status="" class="clickable">
+							<td class="nowrap">441340-712-582</td>
+						    <td>CSXT</td>
+						    <td>SCRF</td>
+						    <td>Cheraw, SC.  SPLC 441340</td>
+						    <td>12/18/2006</td>
+						    <td>01/31/2007</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="956575" data-rail-status="" class="clickable">
+							<td class="nowrap">316652-712-246</td>
+						    <td>CSXT</td>
+						    <td>GLC</td>
+						    <td>Annpere, MI.  SPLC 316652</td>
+						    <td>02/01/2007</td>
+						    <td>01/31/2007</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="956498" data-rail-status="" class="clickable">
+							<td class="nowrap">183165-712-268</td>
+						    <td>CSXT</td>
+						    <td>FGLK</td>
+						    <td>Lyons, NY. SPLC 183165</td>
+						    <td>02/17/2006</td>
+						    <td>01/29/2007</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="955804" data-rail-status="" class="clickable">
+							<td class="nowrap">259610-712-108</td>
+						    <td>CSXT</td>
+						    <td>BB</td>
+						    <td>Clifton Forge, VA.  SPLC 259610
+</td>
+						    <td>08/24/2006</td>
+						    <td>01/02/2007</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="955801" data-rail-status="" class="clickable">
+							<td class="nowrap">257113-712-108</td>
+						    <td>CSXT</td>
+						    <td>BB</td>
+						    <td>Doswell, VA.  SPLC 257113</td>
+						    <td>09/12/2006</td>
+						    <td>01/02/2007</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="955519" data-rail-status="" class="clickable">
+							<td class="nowrap">145574-712-674</td>
+						    <td>CSXT</td>
+						    <td>EBSR</td>
+						    <td>East Brookfield, MA.  SPLC 145574</td>
+						    <td>11/29/2006</td>
+						    <td>12/21/2006</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="954810" data-rail-status="" class="clickable">
+							<td class="nowrap">315700-712-920</td>
+						    <td>CSXT</td>
+						    <td>SBS</td>
+						    <td>Flint, MI.  SPLC 315700</td>
+						    <td>11/13/2006</td>
+						    <td>11/21/2006</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="954770" data-rail-status="" class="clickable">
+							<td class="nowrap">170592-712-585</td>
+						    <td>CSXT</td>
+						    <td>NYOG</td>
+						    <td>Norwood, NY.  SPLC 170592</td>
+						    <td>05/01/2002</td>
+						    <td>11/20/2006</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="954693" data-rail-status="" class="clickable">
+							<td class="nowrap">170592-712-246</td>
+						    <td>CSXT</td>
+						    <td>GLC</td>
+						    <td>Annpere, MI.  SPLC 170592</td>
+						    <td>02/01/2007</td>
+						    <td>11/16/2006</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="954328" data-rail-status="" class="clickable">
+							<td class="nowrap">173416-712-312</td>
+						    <td>CSXT</td>
+						    <td>SNY</td>
+						    <td>Guilderland Center, NY.  SPLC 173416</td>
+						    <td>11/01/2006</td>
+						    <td>11/03/2006</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="459967" data-rail-status="" class="clickable">
+							<td class="nowrap">191591-712-436</td>
+						    <td>CSXT</td>
+						    <td>NYNJ</td>
+						    <td>Greenville, NJ.  SPLC 191591
+</td>
+						    <td>08/24/2006</td>
+						    <td>10/09/2006</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="21967" data-rail-status="" class="clickable">
+							<td class="nowrap">384144-712-316</td>
+						    <td>CSXT</td>
+						    <td>IAIS</td>
+						    <td>CSXT Rockdale, IL, SPLC 384144</td>
+						    <td>06/26/2006</td>
+						    <td>09/28/2006</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="17967" data-rail-status="" class="clickable">
+							<td class="nowrap">384835-712-316</td>
+						    <td>CSXT</td>
+						    <td>IAIS</td>
+						    <td>CSXT Utica, IL, SPLC 384835</td>
+						    <td>02/04/2006</td>
+						    <td>09/28/2006</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="13699" data-rail-status="" class="clickable">
+							<td class="nowrap">409161-712-981</td>
+						    <td>CSXT</td>
+						    <td>WTRY</td>
+						    <td>Wilmington, NC.  SPLC 409161</td>
+						    <td>09/11/2006</td>
+						    <td>09/11/2006</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="12880" data-rail-status="" class="clickable">
+							<td class="nowrap">407750-712-009</td>
+						    <td>AR</td>
+						    <td>CSXT</td>
+						    <td>Fayetteville, NC. SPLC 407750</td>
+						    <td>02/25/2002</td>
+						    <td>08/01/2006</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+						<tr id="12879" data-rail-status="" class="clickable">
+							<td class="nowrap">416392-712-009</td>
+						    <td>AR</td>
+						    <td>CSXT</td>
+						    <td>Aberdeen, NC. SPLC 416392</td>
+						    <td>04/14/2000</td>
+						    <td>08/01/2006</td>
+						    <td>DRAFT</td>
+						</tr>
+					
+				</tbody>
+			</table>
+		
+		
+		</div>
+		<div class="clear"></div>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div id="rail-footer" >
+			<ul class="horizontal-menu">
+				<li><a href="#" class="first">legal notices</a></li>
+				<li><a href="#">privacy rights</a></li>
+				<li><a href="#">terms of service</a></li>
+				<li><a href="#">contact us</a></li>
+			</ul>
+		</div>
+		<script type="text/javascript"> 
+			var images = "images";
+			var contextPath = "/isarepo";
+		</script> 
+		<!-- jquery libs -->
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+	   	<!-- Railinc libs -->
+		<script src="js/standard.js" type="text/javascript"></script>
+		<script src="js/wizard.js" type="text/javascript"></script>
+		<script src="js/validation.js" type="text/javascript"></script>
+		<script src="js/app.js" type="text/javascript"></script>
+	</body>
+</html>

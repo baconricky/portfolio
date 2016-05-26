@@ -1,0 +1,87 @@
+@import "master.css";
+@import "forms.css";
+
+/*
+/* Main: #EAEAEA
+/* Highlight: #367595
+/* Border: #5D5
+/* Nav Color: #6D4
+/* Nav Border : #5D5
+/* Nav Hover: #9E6
+********************************/
+
+
+.portalBrandColor
+{
+	background-color: #2B2;
+	color: #EAEAEA;
+}
+#portalTitle
+{
+	color: #2B2;
+	border-color: #5D5;
+}
+
+#navStrip a:hover
+{
+	background-color: #6D4;
+}
+#navStrip ul > li > a
+{
+	border-left-color: #5D5;
+	border-right-color: #090;
+}
+	#navStrip ul > li > a:hover
+	{
+		border-bottom-color: #9E6;
+	}
+	#navStrip ul > li > a:active,
+	#navStrip ul > .active > a
+	{
+		background-color: #FFF;
+		color: #2B2;
+	}
+	#navStrip li ul
+	{
+		background-color: #3A1;
+		border-left-color: #6D4;
+		border-bottom-color: #6D4;
+	}
+		#navStrip ul ul a
+		{
+			border-bottom-color: #2B2;
+		}
+			#navStrip ul ul a:hover
+			{
+				border-left-color: #9E6;
+			}
+
+#subNav
+{
+	background-color: #9E6;
+}
+	#subNav a
+	{
+		border-top: 1px solid #9E6;
+		border-bottom: 1px solid #3A1;
+	}
+
+.formSection,
+.tabs a.current,
+.submitBtn,
+.crossRemove,
+.crossRemoveAll
+{
+	border-left-color: #2B2;
+}
+.crossAdd,
+.crossAddAll,
+.borderRight
+{
+	border-right-color: #2B2;
+}
+
+#splashContent
+{
+	background: url(../images/placeholder/agentPortal.jpg) left bottom no-repeat;	
+}

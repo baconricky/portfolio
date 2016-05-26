@@ -1,0 +1,35 @@
+/* this style sheet is for minimal data pages without navigation */
+
+html
+{
+	background-position: 0 -40px;
+}
+#contentBackground
+{
+	margin-top: 65px;
+	padding-top: 9px;
+	background-image: none;
+}
+#mainContent
+{
+	margin-bottom: 0;
+}
+	#mainContent:after
+	{
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+		line-height: 0;
+	}
+.dropShadow
+{
+	margin-top: 71px;
+}
+	.dropShadow#tileBtm,
+	.dropShadow #cornerLeft,
+	.dropShadow #cornerRight
+	{
+		height: 19px;
+	}

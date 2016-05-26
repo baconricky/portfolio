@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+    <title>crossSelect jQuery plugin demo</title>
+    <style type="text/css">
+    </style>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.crossSelect.js"></script>
+	<link rel="stylesheet" type="text/css" href="jquery.crossSelect.css" />
+	<script type="text/javascript">
+$(document).ready(function(){
+		$('form input[type=""]').click(function() {
+			$(this).select().unbind('click');
+		});
+		$('.demo').crossSelect();
+		$('form select:not(".demo"), form input').change(function() {
+			$('.demo').clone().appendTo('#demo');
+			$('.jqxs').fadeOut('slow',recreate);			
+		});
+	});
+	function recreate() {
+	$('.jqxs').remove();			
+			var string = "$('.demo').crossSelect({";
+			if( $('form [name="vertical"]').val().length > 0){string += 'vertical: "'+$('form [name="vertical"]').val()+'",';}
+			if( $('form [name="horizontal"]').val().length > 0){string+='horizontal: "'+$('form [name="horizontal"]').val()+'",';}
+			if( $('form [name="listWidth"]').val().length > 0){string+='listWidth: '+$('form [name="listWidth"]').val()+',';}
+			if( $('form [name="font"]').val().length > 0){string+='font: '+$('form [name="font"]').val()+',';}
+			if( $('form [name="rows"]').val().length > 0){string+='rows: '+$('form [name="rows"]').val()+',';}
+			if( $('form #dblclick1')[0].checked || $('form #dblclick2')[0].checked){string+='dblclick: '+$('form [name="dblclick"]:checked').val()+',';}
+			if( $('form #clickSelects1')[0].checked || $('form #clickSelects2')[0].checked){string+='clickSelects: '+$('form [name="clickSelects"]:checked').val()+',';}
+			if( $('form #clicksAccumulate1')[0].checked || $('form #clicksAccumulate2')[0].checked){string+='clicksAccumulate: '+$('form [name="clicksAccumulate"]:checked').val()+',';}
+			if( $('form [name="select_txt"]').val().length > 0){string+='select_txt: "'+$('form [name="select_txt"]').val()+'",';}
+			if( $('form [name="remove_txt"]').val().length > 0){string+='remove_txt: "'+$('form [name="remove_txt"]').val()+'",';}
+			if( $('form [name="selectAll_txt"]').val().length > 0){string+='selectAll_txt: "'+$('form [name="selectAll_txt"]').val()+'",';}
+			if( $('form [name="removeAll_txt"]').val().length > 0){string+='removeAll_txt: "'+$('form [name="removeAll_txt"]').val()+'"';}
+			if(string.substr(string.length-1,1) ===',')
+			{
+				string = string.substr(0, string.length-1);
+			}
+			string += "});"
+			eval(string);
+			$('#demo').append('<div style="clear:left;"></div>');
+			$('#demo > .alert').html('<p>The code to create a crossSelect looking and behaving like this is:</p><pre>'+string+'</pre>')
+	}
+	</script>
+	<style type="text/css">
+	form {border:5px solid gray;width:870px;padding:5px;}
+	form fieldset {width:260px;float:left;}
+	form fieldset fieldset {width:43%;float:left;padding:0;margin:0;}
+	form ul, form li {list-style:none;padding-left:0;margin-left:0;}
+	form fieldset fieldset li {padding:0 5px;}
+	#demo {clear:left;border:1px solid black;padding-left:15px;padding-right:15px;width:830px;margin-bottom:10px;}
+	</style>
+</head>
+
+<body>
+<div id="container">
+<h1>jQuery crossSelect plugin demo</h1>
+<h2>Creating more intuitive multiple select form elements</h2>
+
+	<form>
+		<div id="demo">
+	<div class="alert"><p>This is the crossSelect plugin using default settings. Change the settings below to tailor it to your website</div>
+<select class="demo" multiple="multiple">
+	<option value="1" selected="selected">Pigeon street</option>
+	<option value="2" >Bagpuss</option>
+	<option value="3" >The mysterious cities of gold</option>
+	<option value="4" >Thundercats</option>
+	<option value="5" selected="selected">Mr Benn</option>
+	<option value="6" >Button moon</option>
+	<option value="7" >The magic roundabout</option>
+	<option value="8" >Jackanory</option>
+	<option value="9" >Blue Peter</option>
+	<option value="10" >Bodger and Badger</option>
+	<option value="11" >The Chuckle Brothers</option>
+		</select>
+		<div style="clear:left;"></div>
+</div>
+	<fieldset><legend>Dimensions and overflow</legend>
+	<ul>
+	<li><label for="vertical">Vertical display setting</label>
+		<select id="vertical" name="vertical">
+			<option value="">default</option>
+			<option value="scroll">scroll</option>
+			<option value="expand">expand</option>
+		</select>
+	</li>
+	<li><label for="horizontal">Horizon display setting</label>
+		<select id="horizontal" name="horizontal">
+			<option value="">default</option>
+			<option value="scroll">hide</option>
+			<option value="scroll">scroll</option>
+			<option value="expand">expand</option>
+		</select>
+	</li>
+	<li><label for="listWidth">Width (px)</label><input name="listWidth" id="listWidth" /></li>
+	<li><label for="font">Font-size (px)</label><input name="font" id="font" /></li>
+	<li><label for="rows">Number of rows</label><input name="rows" id="rows" /></li>
+	</ul>
+	</fieldset>
+	<fieldset><legend>Click behaviour</legend>
+	<ul>
+	<li>
+		<fieldset><legend>Double click selection</legend>
+		<ul>
+			<li><label for="dblclick1">Yes</label><input type="radio" name="dblclick" id="dblclick1" value="true" /></li>
+			<li><label for="dblclick2">No</label><input type="radio" name="dblclick" id="dblclick2" value="false" /></li>
+		</ul>
+		</fieldset>
+	</li>
+	<li>
+		<fieldset><legend>Single click selection</legend>
+		<ul>
+			<li><label for="clickSelects1">Yes</label><input type="radio" name="clickSelects" id="clickSelects1" value="true" /></li>
+			<li><label for="clickSelects2">No</label><input type="radio" name="clickSelects" id="clickSelects2" value="false" /></li>
+		</ul>
+		</fieldset>
+	</li>
+	<li>
+		<fieldset><legend>Clicks accumulate</legend>
+		<ul>
+			<li><label for="clicksAccumulate1">Yes</label><input type="radio" name="clicksAccumulate" id="clicksAccumulate1" value="true" /></li>
+			<li><label for="clicksAccumulate2">No</label><input type="radio" name="clicksAccumulate" id="clicksAccumulate2" value="false" /></li>
+		</ul>
+		</fieldset>
+	</li>
+	</ul>
+	<div style="clear:left;"></div>
+	</fieldset>
+	<fieldset><legend>Language and wording</legend>
+	<ul>
+	<li><label for="select_txt">Select btn text</label><input name="select_txt" id="select_txt" /></li>
+	<li><label for="remove_txt">Remove btn text</label><input name="remove_txt" id="remove_txt" /></li>
+	<li><label for="selectAll_txt">Select all btn text</label><input name="selectAll_txt" id="selectAll_txt" /></li>
+	<li><label for="removeAll_txt">Remove all btn text</label><input name="removeAll_txt" id="removeAll_txt" /></li>
+	</ul>
+	</fieldset>
+	<div style="clear:left;"></div>
+
+	</form>
+</div>
+<div style="clear:left;">
+<h2>About the crossSelect plugin</h2>
+<p>This plugin can replace any multiple select element with a "switch item to the other column" interface more intuitive to use, and more similar to that seen in many desktop applications.</p>
+<p>To apply the plug-in to a &lt;select&gt; tag/some &lt;select&gt; tags add the line, eg </p>
+
+           <pre>$('select[multiple="multiple"]').crossSelect(); </pre>
+  
+ <p>The plugin takes 5 optional parameters in JSON form:</p>
+ <ul>
+ <li>rows (integer, default 8) - the height in rows of new select box</li>
+ <li>font (integer, default 12) - font-size in pixels</li>
+ <li>listWidth - (integer, default 150) - minimum width of the select box</li>
+ <li>vertical (string, default 'scroll') -<br /> 'scroll' adds a scroll bar if the number of options is greater than the rows parameter<br />
+                                       'expand' ignores the rows parameter and expands to show all rows</li>
+ <li>horizontal (string, default 'hide') - <br />'scroll' adds a scroll bar if the width of any items is wider than listWidth<br />
+                                       'expand' expands the width to the width of the longest item<br />
+                                       'hide' clips the horizontal display if items are longer than the listWidth</li>
+ <li>dblclick (boolean, default true) - <br />true enables quick selection of items with a double click<br />
+                                      false disables double clicks</li>    
+
+ </ul> 
+<pre>eg $('select').crossSelect({horizontal:'expand', font: '17', rows: '20'});</pre>
+<p>If you have any comments please leave a comment on <a href="http://wheresrhys.co.uk/2009/05/crossselect-jquery-plugin/">my blog</a></p>
+</div>
+</body>
+</html>

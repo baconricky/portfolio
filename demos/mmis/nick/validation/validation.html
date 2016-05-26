@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+        <title>Test for jQuery validation</title>
+        <link rel="stylesheet" type="text/css" href="../../css/portal_member.css" />
+        
+        <script type="text/javascript" language="JavaScript" src="../../js/jquery.min.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../js/jquery.tools.min.js"></script>
+	    <script type="text/javascript" language="JavaScript" src="../../js/jquery.maskedinput-1.2.2.min.js"></script>
+	    <script type="text/javascript" language="JavaScript" src="../../js/jquery.metadata.js"></script>
+
+		<script type="text/javascript" language="JavaScript" src="v2.standalone.full.min.js"></script>
+
+		<script type="text/javascript" language="JavaScript" src="../../js/jCal.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../js/DD_roundies.min.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../js/suckerfish.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../js/jquery.coolinput.min.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../js/form_init.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../js/recipient_init.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../js/general_init.js"></script>
+        
+	<style type="text/css">
+    	label.error { display: none; }	
+    </style>
+</head>
+<body>
+
+<a href="#mainContent" class="linkColor2" id="skipNav">skip navigation</a>
+
+<div id="header">
+	<div id="logo">
+		<a href="../website/home_page.html"><img src="../../images/layout/logo_main.png" width="596" height="60" alt="NCTracks"/></a>
+	</div>
+	<form id="siteSearch" action="#">
+		<input type="text" name="search" class="searchBox" title="search..." />
+		<input type="submit" class="goBtn" id="searchBtn" value="" />
+	</form>
+	<ul class="linkColor2" id="languages">
+		<li><a href="#E">English</a>,</li>
+		<li><a href="#S">Espa&ntilde;ol</a>,</li>
+		<li><a href="#V">ti?ng Vi?t</a>,</li>
+		<li><a href="#H">Hmong</a> |</li>
+		<li><a href="#V">Help</a></li>
+	</ul>
+</div>
+<div id="contentBackground">
+	<h1 id="portalTitle">Member Portal</h1>
+		<div class="portalBrandColor" id="navStrip">
+			<ul id="mainNav">
+				<!-- MAIN NAVIGATION -->
+				<li>&nbsp;</li>
+			</ul>
+		</div><!-- END navStrip -->
+	<div id="pageFunctions">
+		<!-- breadcrumb navigation -->
+		<ol id="breadcrumb">
+			<li><a href="/">Member Portal</a> <b>&gt;</b></li>
+			<li><a href="index.html">Member Enrollment</a></li>
+		</ol>
+		<!-- page tools -->
+		<ul id="pageTools">
+			<li><a href="#"><img src="../../images/icons/printer.png" width="24" height="24" alt="Print this page"/></a> |</li>
+			<li><a href="#" id="decreaseFont"><img src="../../images/icons/text_decrease.gif" width="24" height="24" alt="Decrease text size"/></a></li>
+			<li><a href="#" id="increaseFont"><img src="../../images/icons/text_increase.gif" width="24" height="24" alt="Increase text size"/></a> |</li>
+			<li><a href="#">Help</a></li>
+		</ul>
+	</div>
+	<div id="mainContent">
+		<div class="tooltip"></div>
+		<!-- single pane. it is always visible -->
+	    <h1>jQuery Validation Test</h1>
+		<div id="requiredLegend"><img src="../../images/icons/icon_required.gif" width="14" height="9" alt="Required Field" /> indicates a required field</div>
+		<div id="formLegend">
+			<div class="formBtn">
+				Legend
+				<img src="../../images/icons/legend_arrow.gif" width="11" height="17" alt="form legend" />
+			</div>
+			<ul>
+				<li><img src="../../images/icons/calendar.png" width="16" height="16" alt="calendar icon" />Calendar</li>
+				<li><img src="../../images/icons/audit.png" width="16" height="16" alt="audit icon" />Audit</li>
+				<li><img src="../../images/icons/information.png" width="16" height="16" alt="tooltip icon" />Tooltip</li>
+			</ul>
+		</div>
+        <ul class="tabs">
+        </ul>
+		<div class="panes">
+			<div class="formSection" id="individual_info">
+                <form method="get" id="form1" action="#" class="validate">
+                    <fieldset>
+                        <legend>Required</legend>
+                            <dl>
+                                <dt><label for="nullTest">Null Test:</label></dt>
+                                <dd><input name="nullTest" id="nullTest" title="This field is required" class="required" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="alpha">Text only:</label></dt>
+                                <dd><input id="alpha" name="alpha" title="Please enter only text" class="required alpha" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="digitz">Number only:</label></dt>
+                                <dd><input id="digitz" name="digitz" title="Please enter only numbers" class="required digits" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="phone">Phone Number:</label></dt>
+                                <dd><input id="phone" name="phone" title="Phone number should be in the format (123) 456-7890 x12345" class="required phone formHint" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="tin">TIN:</label></dt>
+                                <dd><input id="tin" name="tin" title="TIN should be entered in the format 1234567" class="required tin" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="med_prov">med_prov:</label></dt>
+                                <dd><input id="med_prov" name="med_prov" title="med_prov should be entered in the format 1234567" class="required med_prov" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="ssn">SSN:</label></dt>
+                                <dd><input id="ssn" name="ssn" title="SSN should be in the format 123-45-6789" class="required ssn formHint" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="ein">EIN:</label></dt>
+                                <dd><input id="ein" name="ein" title="EIN should be in the format 12-3456789" class="required ein formHint" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="age">Age:</label></dt>
+                                <dd><input id="age" name="age" title="Please a valid age" class="required age" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="dea">DEA:</label></dt>
+                                <dd><input id="dea" name="dea" title="DEA should be in the format 123456789" class="required dea" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="npi">NPI:</label></dt>
+                                <dd><input id="npi" name="npi" title="NPI should be in the format 1234567890" class="required npi" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="medicare">medicare id:</label></dt>
+                                <dd><input id="medicare" name="medicare" title="Medicare ID should be in the format 123456789012" class="required medicare" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="zip">ZIP Code:</label></dt>
+                                <dd><input id="zip" name="zip" title="PZIP Code should be in the format 123456-7890" validate="required:true" class="required zip formHint" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="upin">upin:</label></dt>
+                                <dd><input id="upin" name="upin" title="upin should be in the format abcdef" class="required upin" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="isats">isats:</label></dt>
+                                <dd><input id="isats" name="isats" title="isats should be in the format abcdefghij" class="required isats" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="clia">clia:</label></dt>
+                                <dd><input id="clia" name="clia" title="clia should be in the format abcdefghij" class="required clia" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="ncpdp">ncpdp:</label></dt>
+                                <dd><input id="ncpdp" name="ncpdp" title="ncpdp should be in the format abcdefghij" class="required ncpdp" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="someDate">Date:</label></dt>
+                                <dd><input name="someDate" id="someDate" title="Date should be in the format mm/dd/yyyy" class="required dateInput formHint" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="radio" class="required">Gender:</label></dt>
+                                <dd>
+                                    <label for="radioM"><input type="radio" id="radioM" value="m" name="radio" validate="required:true" /> Male</label>
+                                    <label for="radioF"><input type="radio" id="radioF" value="f" name="radio" /> Female</label>
+                                    <label for="radio" class="error">Please select a gender.</label>                            
+								 </dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="patientRace">Race:</label>  </dt>
+                                <dd>
+                                     <select id="patientRace" name="patientRace" title="Please select a Race" class="required" validate="required:true" >
+                                        <option value=" ">&nbsp;</option>
+                                        <option value="w">XX - White</option>
+                                        <option value="b">XX - Black</option>
+                                        <option value="ai">XX - American Indian</option>
+                                        <option value="a">XX - Asian</option>
+                                        <option value="h">XX - Native Hawaiian/Other Pacific Islander</option>
+                                        <option value="m">XX - Multi-Racial</option>
+                                        <option value="x">XX - GENERATED</option>
+                                    </select>
+                                    <label for="patientRace" class="error">Please select a Race.</label>
+								</dd>
+                            </dl>
+                            <div class="btnRow">
+                                <button id="submit1" class="submit formBtn submitBtn" type="submit">Validate</button>
+                                <button class="formBtn" type="reset">Reset</button>
+							</div>
+                    </fieldset>
+					<br clear="all" />
+                    <fieldset>
+                        <legend>Optional</legend>
+                            <dl>
+                                <dt><label for="optalpha">Text only:</label></dt>
+                                <dd><input id="optalpha" name="optalpha" title="Please enter only text" class="alpha" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="optdigitz">Number only:</label></dt>
+                                <dd><input id="optdigitz" name="optdigitz" title="Please enter only numbers" class="digits" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="optphone">Phone Number:</label></dt>
+                                <dd><input id="optphone" name="optphone" title="Phone number should be in the format (123) 456-7890 x12345" class="phone formHint" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="opttin">TIN:</label></dt>
+                                <dd><input id="opttin" name="opttin" title="TIN should be entered in the format 1234567" class="tin" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="optmed_prov">med_prov:</label></dt>
+                                <dd><input id="optmed_prov" name="optmed_prov" title="med_prov should be entered in the format 1234567" class="med_prov" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="optssn">SSN:</label></dt>
+                                <dd><input id="optssn" name="optssn" title="SSN should be in the format 123-45-6789" class="ssn formHint" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="optein">EIN:</label></dt>
+                                <dd><input id="optein" name="optein" title="EIN should be in the format 12-3456789" class="ein formHint" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="optage">Age:</label></dt>
+                                <dd><input id="optage" name="optage" title="Please a valid age" class="age" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="optdea">DEA:</label></dt>
+                                <dd><input id="optdea" name="optdea" title="DEA should be in the format 123456789" class="dea" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="optnpi">NPI:</label></dt>
+                                <dd><input id="optnpi" name="optnpi" title="NPI should be in the format 1234567890" class="npi" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="optmedicare">medicare id:</label></dt>
+                                <dd><input id="optmedicare" name="optmedicare" title="Medicare ID should be in the format 123456789012" class="medicare" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="optzip">ZIP Code:</label></dt>
+                                <dd><input id="optzip" name="optzip" title="ZIP Code should be in the format 123456-7890" class="zip formHint" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="optupin">upin:</label></dt>
+                                <dd><input id="optupin" name="optupin" title="upin should be in the format abcdef" class="upin" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="optisats">isats:</label></dt>
+                                <dd><input id="optisats" name="optisats" title="isats should be in the format abcdefghij" class="isats" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="optclia">clia:</label></dt>
+                                <dd><input id="optclia" name="optclia" title="clia should be in the format abcdefghij" class="clia" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="optncpdp">ncpdp:</label></dt>
+                                <dd><input id="optncpdp" name="optncpdp" title="ncpdp should be in the format abcdefghij" class="ncpdp" /></dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="optsomeDate">Date:</label></dt>
+                                <dd><input name="optsomeDate" id="optsomeDate" title="Date should be in the format mm/dd/yyyy" class="dateInput formHint" /></dd>
+                            </dl>
+                            <div class="btnRow">
+                                <button id="submit" class="submit formBtn submitBtn action" type="submit">Validate</button>
+                                <button class="formBtn" type="reset">Reset</button>
+							</div>
+                    </fieldset>
+					<br clear="all" />
+                </form>
+			</div>
+		</div>
+		<br clear="all" />
+	</div>
+	<ul id="footer" class="linkColor2 rounded">
+		<li><a href="#">Legal</a> |</li>
+		<li><a href="#">Privacy Policy</a> |</li>
+		<li><a href="#">Accessibility</a> |</li>
+		<li><a href="#">Site Map</a> |</li>
+		<li><a href="#">Contact Us</a> |</li>
+		<li><a href="#">Report Fraud</a></li>
+	</ul>
+</div>
+<div class="dropShadow" id="tileBtm">
+	<div id="cornerLeft"></div>
+	<div id="cornerRight"></div>
+</div>
+</body>
+</html>

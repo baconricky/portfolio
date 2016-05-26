@@ -1,0 +1,105 @@
+@import "../bootstrap/docs.less";
+@import "../plugins/prettify.less";
+
+.example,
+.example:after {
+	clear: both;
+}
+
+.example {
+	div {
+		margin-bottom: 10px;
+		padding: 10px;
+		min-height: 50px;
+		width: 150px;
+		float: left;
+		font-family: @monoFontFamily;
+	}
+	.blueLighter { color: @textColor; background: @blueLighter; }
+	.blueLight { color: @textColor; background: @blueLight; }
+	.blue { color: @textColor; background: @blue; }
+	.blueDark { color: #ddd; background: @blueDark; }
+	.blueDarker { color: #ddd; background: @blueDarker; }
+	
+	.greenLighter { color: @textColor; background: @greenLighter; }
+	.greenLight { color: @textColor; background: @greenLight; }
+	.green { color: @textColor; background: @green; }
+	.greenDark { color: #ddd; background: @greenDark; }	
+	.greenDarker { color: #ddd; background: @greenDarker; }
+	
+	.redLighter { color: @textColor; background: @redLighter; }
+	.redLight { color: @textColor; background: @redLight; }	
+	.red { color: @textColor; background: @red; }
+	.redDark { color: #ddd; background: @redDark; }	
+	.redDarker { color: #ddd; background: @redDarker; }	
+	
+	.orangeLighter { color: @textColor; background: @orangeLighter; }
+	.orangeLight { color: @textColor; background: @orangeLight; }
+	.orange { color: @textColor; background: @orange; }
+	.orangeDark { color: #ddd; background: @orangeDark; }
+	.orangeDarker { color: #ddd; background: @orangeDarker; }
+	
+	.yellowLighter { color: @textColor; background: @yellowLighter; }
+	.yellowLight { color: @textColor; background: @yellowLight; }
+	.yellow { color: @textColor; background: @yellow; }
+	.yellowDark { color: #ddd; background: @yellowDark; }
+	.yellowDarker { color: #ddd; background: @yellowDarker; }
+	
+	.pinkLighter { color: @textColor; background: @pinkLighter; }
+	.pinkLight { color: @textColor; background: @pinkLight; }	
+	.pink { color: @textColor; background: @pink; }
+	.pinkDark { color: #ddd; background: @pinkDark; }	
+	.pinkDarker { color: #ddd; background: @pinkDarker; }
+	
+	.purpleLighter { color: @textColor; background: @purpleLighter; }
+	.purpleLight { color: @textColor; background: @purpleLight; }
+	.purple { color: @textColor; background: @purple; }
+	.purpleDark { color: #ddd; background: @purpleDark; }
+	.purpleDarker { color: #ddd; background: @purpleDarker; }
+}
+
+.summary-container {
+/*
+	position: fixed;
+	top: 150px;
+*/
+	margin-top:10px;
+	right:30px;
+	width:200px;
+	min-height:100px;
+	float:left;
+	padding: @padding;
+	background-color:#EFEFEF;
+	border:1px solid #EEE;
+	-webkit-border-radius:0;
+	-moz-border-radius:0;
+	border-radius:0;
+	-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,0.05);
+	-moz-box-shadow:inset 0 1px 1px rgba(0,0,0,0.05);
+	box-shadow:inset 0 1px 1px rgba(0,0,0,0.05);
+}
+
+.jx-readonly {
+	font-weight:400;
+	margin:0 4px 4px 0;
+	max-height:240px;
+	padding:0 0 0 4px;
+	font-size:13px;
+	border:1px solid transparent;
+}
+
+.jx-negative-value {
+	color: @red !important;
+}
+
+.control-group.span6 .controls input[type=text],.control-group.span6 .controls textarea {
+	width:100%
+}
+
+.jx-titlebar {
+	padding: 10px;
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+.dashboard_container .ui-state-highlight{border-color:#efdca9;color:#525252;background:#efdca9;}

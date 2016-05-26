@@ -1,0 +1,16 @@
+function GetElqContentPersonalizationValue(strDataField){
+    var strTemp = '';
+    if(strDataField == 'Apps_Offers_O_Campaign_ID_151' || strDataField == 'Apps_Offers_O_Campaign_ID_151'){strTemp = 'A';}
+    if(strDataField == 'Apps_Offers_O_Campaign_ID_181' || strDataField == 'Apps_Offers_O_Campaign_ID_181'){strTemp = 'A';}
+    if(strDataField == 'Apps_Offers_O_Campaign_Name1' || strDataField == 'Apps_Offers_O_Campaign_Name1'){strTemp = 'test_offer_name_A';}
+    if(strDataField == 'Apps_Offers_O_Target_Persona1' || strDataField == 'Apps_Offers_O_Target_Persona1'){strTemp = 'test_offer_targetaudience_A';}
+    if(strDataField == 'Apps_Offers_O_Buying_Stage1' || strDataField == 'Apps_Offers_O_Buying_Stage1'){strTemp = 'test_offer_buyingstage_A';}
+    if(strDataField == 'Apps_Offers_O_Solution_Code1' || strDataField == 'Apps_Offers_O_Solution_Code1'){strTemp = 'test_offer_solutioncode_A';}
+    if(strDataField == 'Apps_Offers_O_Type1' || strDataField == 'Apps_Offers_O_Type1'){strTemp = 'test_offer_type_A';}
+    if(strDataField == 'Apps_Offers_O_Asset_URL1' || strDataField == 'Apps_Offers_O_Asset_URL1'){strTemp = 'http\x3a\x2f\x2fwww.redhat.com\x2ff\x2fpdf\x2fJDJSkokInterview.pdf';}
+    if(strDataField == 'Apps_Offers_O_Description1' || strDataField == 'Apps_Offers_O_Description1'){strTemp = 'Forrester Research makes a case for migrating from proprietary operating system environments to Red Hat Enterprise Linux. In-depth interviews with an existing customer and subsequent financial analysis highlight the positive risk-adjusted return on i';}
+    if(strDataField == 'Apps_Offers_O_Language1' || strDataField == 'Apps_Offers_O_Language1'){strTemp = 'en';}
+    if(strDataField == 'Apps_Offers_O_Access_Rule1' || strDataField == 'Apps_Offers_O_Access_Rule1'){strTemp = '';}
+    if(strDataField == 'Apps_Offers_O_Record_Type1' || strDataField == 'Apps_Offers_O_Record_Type1'){strTemp = '';}
+    return strTemp;
+}

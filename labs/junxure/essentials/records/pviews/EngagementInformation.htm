@@ -1,0 +1,97 @@
+              
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("a.expander-white").click(function (e) {
+            var $Section = $(this).parent().parent().nextAll('div.maximized-content:first'), isVisible = $Section.is(":visible");
+            $(this).removeClass('expand-btn-white minimize-btn-white');
+            $(this).addClass(isVisible ? "expand-btn-white" : "minimize-btn-white")
+            if (isVisible) {
+                $Section.slideUp("slow");
+            } else {
+                $Section.slideDown("slow");
+            }
+        });
+
+        $(".current").toggleClass("current");
+        $("#engagement").toggleClass("current");
+        //radio buttons and checkboxes
+
+        $('#record-engagement input[type=checkbox]').checkbox().bind('ui-checkbox-changed ui-checkbox-enabled ui-checkbox-disabled ui-checkbox-focus ui-checkbox-blur',
+                function (event, info) {
+                    $('#log').prepend('[' + $(this).attr('id') + '] ' + $('label[for=' + $(this).attr('id') + ']').text() + ': ' + event.type + '<br />');
+                }
+        );
+
+
+
+        $('#record-engagement input[type=radio]').radiobutton().bind('ui-radiobutton-changed ui-radiobutton-enabled ui-radiobutton-disabled ui-radiobutton-focus ui-radiobutton-blur',
+				function (event, info) {
+				    $('#log').prepend('[' + $(this).attr('id') + '] ' + $('label[for=' + $(this).attr('id') + ']').text() + ': ' + event.type + '<br />');
+				}
+        );
+
+        $('#record-engagement input[type=radio][name=radiogroup3]').radiobutton('option', 'highlightGroup', true);
+
+        // Tooltips
+        $('.field-help').cluetip({
+            splitTitle: '|', // use the invoking element's title attribute to populate the clueTip...
+            // ...and split the contents into separate divs where there is a "|"
+            showTitle: false, // hide the clueTip's heading
+            cluetipClass: 'rounded',
+            waitImage: false,
+            arrows: true,
+            cursor: 'pointer',
+            dropShadowSteps: 4,
+            positionBy: 'mouse',
+            topOffset: 17
+        });
+
+    });
+</script>
+
+<div id="record-engagement" class="form-block ui-widget">
+   
+    <div class="form-header ui-widget-header clearfix">
+        <h3 class="form-title"><a href="javascript:void(0)" title="Minimize/Maximize Personal Information Details" class="expander-white minimize-btn-white"></a>Engagement Information</h3>
+        
+    </div>
+    Record Engagement Info
+            <div class="form-content maximized-content grid-like">
+                <label onchange='MarkDirty(this);' isDirty='False' class='span-2 prepend-1' for="engagementOwner_tblEngagements_IpsDate">IpsDate</label>
+                <div class='span-3 append-1 datefield datefield' id='' >3/9/1986</div>
+                <label onchange='MarkDirty(this);' isDirty='False' class='span-2' for="engagementOwner_tblEngagements_IMContractDate">IMContractDate</label>
+                <div class='span-3 datefield datefield' id='' >5/19/1998</div>
+                <div class="clear"></div>
+                <label onchange='MarkDirty(this);' isDirty='False' class='span-2 prepend-1' for="engagementOwner_tblEngagements_QuestDate">QuestDate</label>
+                <div class='span-3 append-1 datefield datefield' id='' ></div>
+                <label onchange='MarkDirty(this);' isDirty='False' class='span-2' for="engagementOwner_tblEngagements_FPContractDate">FPContractDate</label>
+                <div class='span-3 datefield datefield' id='' ></div>
+                <div class="clear"></div>
+                <label onchange='MarkDirty(this);' isDirty='False' class='span-2 prepend-1' for="engagementOwner_tblEngagements_TermDate">TermDate</label>
+                <div class='span-3 append-1 datefield datefield' id='' ></div>
+                <label onchange='MarkDirty(this);' isDirty='False' class='span-2' for="engagementOwner_tblEngagements_tblLookTypeOf_TermReason_TermReason">TermReason</label>
+                <div onchange='MarkDirty(this);' isDirty='False' class='span-3 chzn-select JxDropDownList' id='' ></div>
+                <div class="clear"></div>
+                <label onchange='MarkDirty(this);' isDirty='False' class='span-6 prepend-1' for="engagementOwner_tblEngagements_tblLookTypeOf_QuestAnnIncome_QuestAnnIncome">QuestAnnIncome</label>
+                <div onchange='MarkDirty(this);' isDirty='False' class='span-4 chzn-select JxDropDownList' id='' ></div>
+                <div class="clear"></div>
+                <label onchange='MarkDirty(this);' isDirty='False' class='span-6 prepend-1' for="engagementOwner_tblEngagements_tblLookTypeOf_QuestInvestExperience_QuestInvestExperience">QuestInvestExperience</label>
+                <div onchange='MarkDirty(this);' isDirty='False' class='span-4 chzn-select JxDropDownList' id='' ></div>
+                <div class="clear"></div>
+                <label onchange='MarkDirty(this);' isDirty='False' class='span-6 prepend-1' for="engagementOwner_tblEngagements_tblLookTypeOf_QuestLiquidNetWorth_QuestLiquidNetWorth">QuestLiquidNetWorth</label>
+                <div onchange='MarkDirty(this);' isDirty='False' class='span-4 chzn-select JxDropDownList' id='' ></div>
+                <div class="clear"></div>
+                <label onchange='MarkDirty(this);' isDirty='False' class='span-6 prepend-1' for="engagementOwner_tblEngagements_tblLookTypeOf_QuestOverallInvestObj_QuestOverallInvestObj">QuestOverallInvestObj</label>
+                <div onchange='MarkDirty(this);' isDirty='False' class='span-4 chzn-select JxDropDownList' id='' ></div>
+                <div class="clear"></div>
+                <label onchange='MarkDirty(this);' isDirty='False' class='span-6 prepend-1' for="engagementOwner_tblEngagements_tblLookTypeOf_QuestRiskTolerance_QuestRiskTolerance">QuestRiskTolerance</label>
+                <div onchange='MarkDirty(this);' isDirty='False' class='span-4 chzn-select JxDropDownList' id='' ></div>
+            </div>
+
+    <br />
+
+    Record Person Engagement Info
+</div>
+ 

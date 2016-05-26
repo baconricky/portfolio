@@ -1,0 +1,422 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>Junxure Essentials // Home</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.css" />
+    <link rel="stylesheet" href="bootstrap/css/jquery-ui-1.8.16.custom.css" />
+    <link rel="stylesheet" href="bootstrap/css/jquery.ui.bootstrap.css" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.essentials.css" />
+    
+    <link rel="stylesheet" href="bootstrap/css/jquery.ribbon.css" />
+
+    <link rel="stylesheet" href="bootstrap/css/kendo.common.min.css" />
+    <link rel="stylesheet" href="bootstrap/css/kendo.metro.min.css" />
+
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="bootstrap/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="bootstrap/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="bootstrap/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="bootstrap/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="bootstrap/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+  
+  <body>
+	<!--<body data-spy="scroll" data-target=".subnav" data-offset="50">-->
+		<!--[if IE]>
+		<link rel="stylesheet" type="text/css" href="Styles/custom-theme/jquery.ui.1.8.16.ie.css"/>
+		<![endif]-->
+
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container-fluid">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<a class="brand" href="//junxure.com">Junxure<b>Essentials</b></a>
+					<div class="nav-collapse">
+						<ul class="nav">
+							<li class="">
+								<!-- This should display the user name of the person currently logged in -->
+								<!-- Action: Clicking will navigate the user to the Account section of the Control Panel. -->
+								<a href="#profile"><i class="icon-user"></i>Welcome Back, J. Doe!</a>
+							</li>
+							<li class="">
+								<!-- Action: Clicking will navigate the user to the Control Panel. -->
+								<a href="#settings"><i class="icon-cog"></i></a>
+							</li>
+							<li class="">
+								<!-- Action: Clicking will navigate the user to the users Calendar. -->
+								<a href="#my_calendar"><i class="icon-calendar"></i></a> 
+							</li>
+							<li class="">
+								<!-- Action: Clicking will navigate the user to the Import Wizard UI. -->
+								<a href="#import"><i class="icon-download-alt"></i></a> 
+							</li>
+						</ul>
+					</div>
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
+		<div class="container-fluid">
+		<header class="subhead" id="overview">
+			<div id="jx-app-ribbon" class="officebar">
+			    <ul class="group">
+			      <li class="current">
+			        <ul>
+			          <li>
+			            <span>Selected Records</span>
+			            <div class="button split">
+			              <a href="#" rel="paste">
+			                <img src="bootstrap/img/tango/32x32/printer.png" alt="" /><span>Print</span>
+			              </a>
+			              <div>
+			                <ul>
+			                  <li><a href="#"><img src="bootstrap/img/tango/16x16/document-print-preview.png">Preview Selected</a></li>
+			                  <li><a href="#"><img src="bootstrap/img/tango/16x16/document-print.png">Print Selected</a></li>
+			                  <li class="separator"><img src="bootstrap/img/tango/16x16/printer.png">Print All...</a></li>
+			                </ul>
+			              </div>
+			            </div>
+			            <div class="button">
+			              	<a href="#" rel="Edit">
+				                <img src="bootstrap/img/tango/32x32/document-settings.png" alt="" /><span>Edit</span>
+				              </a>
+			            </div>
+			            <div class="button">
+			              	<a href="#" rel="Delete">
+				                <img src="bootstrap/img/tango/32x32/edit-delete.png" alt="" /><span>Delete</span>
+				              </a>
+			            </div>
+			            <div class="button">
+			              	<a href="#" rel="CorrespondenceWizard">
+				                <img src="bootstrap/img/tango/32x32/message-new.png" alt="" /><span>Correspondence Wizard</span>
+				              </a>
+			            </div>
+			
+			            <div class="button textlist separator">
+			              <ul>
+			                <li class="dropdown"><a href="#"><img src="bootstrap/img/tango/16x16/observe.png">Favorites</a>
+								<div>
+									<ul>
+										<li><a href="#">Favorites 1</a></li>
+										<li><a href="#">Favorites 2</a></li>
+										<li><a href="#">Favorites 3</a></li>
+										<li><a href="#">Favorites 4</a></li>
+										<li><a href="#">Favorites 5</a></li>
+										<li class="separator">Add to Favorites...</li>
+									</ul>
+								</div>
+							</li>
+							
+							<li class="dropdown"><a href="#"><img src="bootstrap/img/tango/16x16/tree-diagramm.png">Actions</a>
+								<div>
+									<ul>
+										<li class="menutitle">Action Workflows</li>
+										<li><a href="#">Action Workflow 1</a></li>
+										<li><a href="#">Action Workflow 2</a></li>
+										<li><a href="#">Action Workflow 3</a></li>
+										<li><a href="#">Action Workflow 4</a></li>
+										<li><a href="#">Action Workflow 5</a></li>
+										<li class="separator">Other Action Workflow...</li>
+										<li class="menutitle">Actions</li>
+										<li><a href="#">Email</a></li>
+										<li><a href="#">Letter</a></li>
+										<li><a href="#">Fax</a></li>
+										<li><a href="#">Call</a></li>
+										<li><a href="#">Meeting</a></li>
+									</ul>
+								</div>
+							</li>
+			                
+							<li class="dropdown"><a href="#"><img src="bootstrap/img/tango/16x16/report.png">Reports</a>
+								<div>
+					                <ul>
+									  <li class="menutitle">Essential Reports</li>
+					                  <li><a href="#">Report 1</a></li>
+					                  <li><a href="#">Report 2</a></li>
+					                  <li><a href="#">Report 3</a></li>
+					                  <li><a href="#">Report 4</a></li>
+					                  <li><a href="#">Report 5</a></li>
+									  <li class="menutitle">My Reports</li>
+					                  <li><a href="#">User-Defined Report 1</a></li>
+					                  <li><a href="#">User-Defined Report 2</a></li>
+					                  <li><a href="#">User-Defined Report 3</a></li>
+									  <li class="separator">New Report...</li>
+					                </ul>
+					              </div>
+							</li>
+			              </ul>
+			            </div>
+			          </li>
+			          <li>
+			            <span>New</span>
+			            <div class="button">
+			              <a href="#" rel="table"><img src="bootstrap/img/tango/32x32/add-participant.png" alt="" />Record</a>
+			            </div>
+			          </li>
+			          <li>
+			            <span>Search</span>
+			            <div class="textboxlist">
+			              <ul>
+			                <li><img src="bootstrap/img/tango/16x16/system-search.png" alt="" /><input type="search" placeholder="Records and People"/></li>
+						</ul>
+						</div>
+			            <div class="button separator">
+			              <a href="#" rel="AdvSearch"><img src="bootstrap/img/tango/32x32/system-search.png" alt="" />Advanced Search</a>
+			            </div>
+			          </li>
+					<li>
+			            <span>Global</span>
+			            <div class="button">
+			              <a href="#" rel="AdvSearch"><img src="bootstrap/img/tango/32x32/document-save.png" alt="" />Import</a>
+			            </div>
+			            <div class="button">
+			              <a href="#" rel="AdvSearch"><img src="bootstrap/img/tango/32x32/emblem-system.png" alt="" />Control Panel</a>
+			            </div>
+			            <div class="button">
+			              <a href="#" rel="AdvSearch"><img src="bootstrap/img/tango/32x32/office-calendar.png" alt="" />Calendar</a>
+			            </div>
+			          </li>
+			        </ul>
+			      </li>
+			    </ul>
+			  </div>
+	      	<ul class="breadcrumb">
+			  <li><a href="#home">Home</a></li>
+			  <li class="divider-vertical"><span class="divider">//</span></li>
+			  <li class="active">Actions</li>
+			</ul>
+
+			<div class="alert alert-info">
+				<span class="label label-info">Welcome to Junxure Essentials!</span><a class="close" data-dismiss="alert" href="#">&times;</a>
+				<p>It looks like this is your first time logging in, check out <a href="#firstrun">our online documentation</a> or <a href="#support">contact our wonderful support team</a>. You will not see this message again, but if you click the help button found on every page, you can find all kinds of helpful information.</p>
+				
+			</div>
+		
+	
+		</header>
+		
+		<h2>Essential Tools</h2>
+    	<ul class="thumbnails">
+        <li class="span3 well">
+          
+            
+            <div class="caption">
+              <h3>Label</h3>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              
+            </div>
+        </li>
+        <li class="span3 well">
+          
+            
+            <div class="caption">
+              <h3>Label</h3>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              
+            </div>
+        </li>
+        <li class="span3 well">
+          
+            
+            <div class="caption">
+              <h3>Label</h3>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              
+            </div>
+        </li>
+        <li class="span3 well">
+          
+            
+            <div class="caption">
+              <h3>Label</h3>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              
+            </div>
+        </li>
+        <li class="span3 well">
+          
+            
+            <div class="caption">
+              <h3>Label</h3>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              
+            </div>
+        </li>
+                <li class="span3 well">
+          
+            
+            <div class="caption">
+              <h3>Label</h3>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              
+            </div>
+        </li>
+                <li class="span3 well">
+          
+            
+            <div class="caption">
+              <h3>Label</h3>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              
+            </div>
+        </li>
+                <li class="span3 well">
+          
+            
+            <div class="caption">
+              <h3>Label</h3>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              
+            </div>
+        </li>
+                <li class="span3 well">
+          
+            
+            <div class="caption">
+              <h3>Label</h3>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              
+            </div>
+        </li>
+                <li class="span3 well">
+          
+            
+            <div class="caption">
+              <h3>Label</h3>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              
+            </div>
+        </li>
+                <li class="span3 well">
+          
+            
+            <div class="caption">
+              <h3>Label</h3>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              
+            </div>
+        </li>
+                <li class="span3 well">
+          
+            
+            <div class="caption">
+              <h3>Label</h3>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              
+            </div>
+        </li>
+                <li class="span3 well">
+          
+            
+            <div class="caption">
+              <h3>Label</h3>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              
+            </div>
+        </li>
+                <li class="span3 well">
+          
+            
+            <div class="caption">
+              <h3>Label</h3>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              
+            </div>
+        </li>
+                <li class="span3 well">
+          
+            
+            <div class="caption">
+              <h3>Label</h3>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              
+            </div>
+        </li>
+              </ul>
+      
+ 		<h2>Essential Tools</h2>
+    	<ul class="thumbnails">
+        <li class="span3 well">
+          
+            
+            <div class="caption">
+              <h3>Label</h3>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              
+            </div>
+        </li>
+        <li class="span3 well">
+          
+            
+            <div class="caption">
+              <h3>Label</h3>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              
+            </div>
+        </li>
+        <li class="span3 well">
+          
+            
+            <div class="caption">
+              <h3>Label</h3>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              
+            </div>
+        </li>
+        <li class="span3 well">
+          
+            
+            <div class="caption">
+              <h3>Label</h3>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              
+            </div>
+        </li>
+      </ul>
+    </div> <!-- /container -->
+
+	
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="bootstrap/js/jquery-1.7.2.js"></script>
+	<script src="bootstrap/js/jquery-ui-1.8.21.js"></script>
+	
+    <script src="bootstrap/js/kendo.web.js"></script>
+    
+    <script src="bootstrap/js/bootstrap.js"></script>
+
+    <script src="bootstrap/js/Nonsense.js"></script>
+    <script src="bootstrap/js/localdata.js"></script>
+
+    <script src="bootstrap/js/jquery.officebar.js"></script>
+	
+	<script src="bootstrap/js/jquery.bgiframe.min.js"></script>
+    <script src="bootstrap/js/jquery.dimensions.js"></script>
+    <script src="bootstrap/js/jquery.autocomplete.js"></script>
+    <script src="bootstrap/js/jquery.autocompletefb.js"></script>
+
+    <script src="bootstrap/js/application.js"></script>
+  </body>
+</html>

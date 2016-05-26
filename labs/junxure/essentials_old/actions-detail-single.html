@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html style="height: 100%; border: 0;" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Junxure Essentials :: Actions Workspace</title>
+		<meta name="description" content="A preview of the Junxure Essentials theme"><!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+		<!--[if lt IE 9]>
+	  		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+		<!-- Styles -->
+		<link type="text/css" href="css/custom-theme/jquery-ui-1.8.16.custom.css" rel="stylesheet">
+		<link type="text/css" href="bootstrap/bootstrap.css" rel="stylesheet">
+		<link type="text/css" href="css/kendo.common.css" rel="stylesheet">
+		<link type="text/css" href="css/kendo.metroblue.css" rel="stylesheet">
+		
+		<link type="text/css" href="css/essentials.css" rel="stylesheet">
+		<link type="text/css" href="css/icons.css" rel="stylesheet">
+	</head>
+	<body style="height: 100%;">
+		<!--[if IE]>
+  		<	link rel="stylesheet" type="text/css" href="css/custom-theme/jquery.ui.1.8.16.ie.css"/>
+  		<![endif]-->
+		<div class="k-content" style="height: 100%;">
+			<div id="jx-toolbar"></div>
+			<div id="jx-main" class="container-fluid" style="height: 100%;">
+				<div id="jx-main-content-sidebar" class="sidebar"></div>
+				<div id="jx-main-view" class="content" style="height: 100%;">
+					<div id="jx-main-content">
+							<script src="js/Nonsense.js"></script>
+							<script src="other/examples/content/shared/js/records.js"></script>
+							<h1 class="sectionHeaders">
+								Actions &gt; Workspace
+							</h1><!--welcome-->
+							<script type="text/x-kendo-template" id="workspaceGridToolbarTemplate">
+							                <div class="toolbar">
+							                    <label class="category-label" for="gridViewBy">View by </label>
+							                    <input type="search" id="gridViewBy" style="width: 230px"></input>
+							                </div>
+							            </script>
+							
+							<div id="workspaceGrid"></div>
+						</div>
+					<div id="jx-preview-pane"><h2>Preview pane...</h2></div>
+				</div>
+			</div>
+			
+			<div id="jx-footer">Junxure Essentials ©2012</div>
+		</div>
+		<!--scripts-->
+		<!-- jQuery Base -->
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js">
+</script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.20.custom.min.js">
+</script><!-- KendoUI -->
+		<script src="../../../js/kendo.web.min.js" type="text/javascript">
+</script><!-- FileInput -->
+		<script src="third-party/jQuery-UI-FileInput/js/enhance.min.js" type="text/javascript">
+</script>
+		<script src="third-party/jQuery-UI-FileInput/js/fileinput.jquery.js" type="text/javascript">
+</script><!--init for this page-->
+		<script type="text/javascript" src="js/essentials.js">
+</script>
+	</body>
+</html>

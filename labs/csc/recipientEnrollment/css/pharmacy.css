@@ -1,0 +1,43 @@
+#splashContent
+{
+	height: 200px;
+	background: url("../images/splash-pharmacy.jpg") no-repeat bottom left;
+}
+.primaryTableCol
+{
+	width: 35%;
+}
+#mainContent > ul
+{
+	margin-left: 27px;
+	padding: 7px 0;
+}
+	#mainContent > ul li
+	{
+		background: url(../images/icons/bullet_gray.png) no-repeat 0 0.4em;
+		margin-bottom: 5px;
+		padding-left: 1em;
+	}
+		#mainContent > ul img
+		{
+			vertical-align: bottom;
+		}
+		#mainContent > ul p
+		{
+			margin-bottom: 5px;
+		}
+		#mainContent > ul ul
+		{
+			margin-left: 27px;
+			margin-bottom: 15px;
+		}
+		#mainContent > ul ul li
+		{
+			font-size: 0.85em;
+			background: url(../images/icons/bullet-nested_gray.png) no-repeat 0 0.4em;
+		}
+		
+.announcements h4
+{
+	color: #258;
+}

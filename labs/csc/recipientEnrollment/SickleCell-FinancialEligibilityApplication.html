@@ -1,0 +1,586 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>NCTracks - Recipient Portal - Sickle Cell Program Enrollment</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+   	<link rel="stylesheet" type="text/css" href="../css/portal_member.css" />
+
+    <script type="text/javascript" src="../js/jquery.tools.min.js"></script>
+    <script type="text/javascript" src="../js/nctracks.min.js"></script>
+</head>
+<body>
+
+<a href="#mainContent" id="skipNav" class="linkColor2" accesskey="2">skip navigation</a>
+
+<div id="header">
+	<div id="logo">
+        <a href="../website/home_page.html" accesskey="1"><img src="../images/layout/logo_main.png" width="596" height="60" alt="NCTracks"/></a>
+    </div>
+	<form method="get" action="#" id="siteSearch">
+		<input type="text" name="search" class="hint roundedLeft" title="search..." accesskey="4" />
+		<button type="submit">Search</button>
+	</form>
+	<ul class="linkColor2" id="languages">
+		<li><a href="#S">Espa&ntilde;ol</a>,</li>
+		<li><a href="#V">tiếng Việt</a>,</li>
+		<li><a href="#H">Hmong</a> |</li>
+		<li><a href="#V" accesskey="6">Help</a></li>
+	</ul>
+</div>
+<div id="contentBackground">
+	<h1 id="portalTitle">Member Portal</h1>
+	<div class="portalBrandColor" id="navStrip">
+		<ul>
+			<!-- MAIN NAVIGATION -->
+			<li>&nbsp;</li>
+		</ul>
+	</div>
+	<!-- breadcrumb navigation -->
+	<ol id="breadcrumb">
+		<li><a href="/">Member Portal</a> <b>&gt;</b></li>
+		<li><a href="index.html">Recipient Enrollment</a> <b>&gt;</b></li>
+		<li>Sickle Cell Program Enrollment</li>
+	</ol>
+	<div id="mainContent">
+		<div id="pageTitle">
+			<h1>Sickle Cell Program Enrollment - Step 1</h1>
+			<!-- page tools -->
+			<ul>
+				<li><a href="#"><img src="../images/icons/printer.png" width="24" height="24" alt="Print this page" /></a> |</li>
+				<li><a href="#" id="decreaseFont"><img src="../images/icons/text_decrease.gif" width="24" height="24" alt="Decrease text size" /></a></li>
+				<li><a href="#" id="increaseFont"><img src="../images/icons/text_increase.gif" width="24" height="24" alt="Increase text size" /></a> |</li>
+				<li><a href="#">Help</a></li>
+			</ul>
+		</div>
+		
+		<form id="appForm" method="post" action="#">
+		<div id="requiredLegend"><img src="../images/icons/icon_required.gif" width="14" height="9" alt="Required Field" /> indicates a required field</div>
+		<div id="formLegend">
+			<div>
+				<span>Legend</span>
+				<img src="../images/icons/legend_arrow.gif" width="11" height="17" alt="form legend" />
+			</div>
+			<ul>
+				<li><img src="../images/icons/calendar.png" width="16" height="16" alt="calendar icon" />Calendar</li>
+				<li><img src="../images/icons/audit.png" width="16" height="16" alt="audit icon" />Audit</li>
+			</ul>
+		</div>
+        <div class="formSection">
+			<fieldset>
+				<legend>Patient Information</legend> 
+				<a href="help.html" rel="#overlay" class="formHelpTab"><img src="../images/icons/help_tab.gif" width="22" height="22" alt="Help" title="Help" /></a>
+				<dl class="threeColumnLayout">
+					<dt><label for="ADAP-3014_firstname">First Name:</label></dt>
+					<dd><input type="text" name="ADAP-3014_firstname" id="ADAP-3014_firstname" class="medium required" /></dd>
+					<dt><label for="ADAP-3014_lastname">Last Name:</label></dt>
+					<dd><input type="text" name="ADAP-3014_lastname" id="ADAP-3014_lastname" class="medium required" /></dd>
+					<dt><label for="ADAP-3014_mi">Middle Initial:</label></dt>
+					<dd><input type="text" name="ADAP-3014_mi" id="ADAP-3014_mi" class="small" /></dd>
+				</dl>
+				<dl class="threeColumnLayout">
+					<dt><label for="ADAP-3014_ssn">Social Security Number:</label></dt>
+					<dd><input type="text" name="ADAP-3014_ssn" id="ADAP-3014_ssn" class="medium ssn" /></dd>
+					<dt><label for="ADAP-3014_dob">Date of Birth:</label></dt>
+					<dd><input type="text" name="ADAP-3014_dob" id="ADAP-3014_dob" class="dateInput required" /></dd>
+					<dt><label for="ADAP-3014_nc_resident" id="ADAP-3014_nc_resident" class="required">NC Resident:</label></dt>
+					<dd class="labelToRight">                                    
+						<input type="radio" name="ADAP-3014_nc_resident" id="ADAP-3014_nc_resident_y" value="y" />
+						<label for="nc_resident_y">Yes</label>
+						<input type="radio" name="ADAP-3014_nc_resident" id="ADAP-3014_nc_resident_n" value="n" />
+						<label for="nc_resident_n">No</label>
+					</dd>
+				</dl>
+				<dl class="threeColumnLayout">
+					<dt><label for="gndr">Gender:</label></dt>
+					<dd>
+						<select name="gndr" id="gndr" class="medium required">
+							<option value="A"></option>
+							<option value="B">Male</option>
+							<option value="C">Female</option>
+							<option value="D">Transgender M2F</option>
+							<option value="E">Transgender F2M</option>
+							<option value="F">Unknown</option>
+						</select>
+					</dd>
+					<dt><label for="ADAP-3014_p_lang">Preferred Language:</label></dt>
+					<dd>
+						<select id="ADAP-3014_p_lang" name="ADAP-3014_p_lang" class="medium required">
+							<option value="-">&nbsp;</option>
+							<option value="ar">AR - Arabic</option>
+							<option value="ca">CA - Cambodian</option>
+							<option value="ch">CH - Chinese</option>
+							<option value="ca">EN - English</option>
+							<option value="en">FR - French</option>
+							<option value="fc">XX - GENERATED</option>
+						</select>
+					</dd>
+				</dl>
+
+				<hr />
+				<dl>
+					<dt><label for="ADAP-3014_p_race">Race:</label></dt>
+					<dd>
+						<select id="ADAP-3014_p_race" name="ADAP-3014_p_race" class="required" >
+							<option value=" ">&nbsp;</option>
+							<option value="w">White</option>
+							<option value="b">Black</option>
+							<option value="ai">American Indian</option>
+							<option value="a">Asian</option>
+							<option value="h">Native Hawaiian/Other Pacific Islander</option>
+							<option value="m">Multi-Racial</option>
+							<option value="fc">GENERATED</option>
+						</select>
+					</dd>
+					<dt><label for="ADAP-3014_p_ethnicity">Ethnicity:</label></dt>
+					<dd>
+						<select id="ADAP-3014_p_ethnicity" name="ADAP-3014_p_ethnicity" class="required">
+						 <option value=" ">&nbsp;</option>
+							<option value="y">Hispanic or Latino Origin</option>
+							<option value="n">Not Hispanic or Latino Origin</option>
+							<option value="u">Unknown</option>
+							<option value="fc">GENERATED</option>
+						</select>
+					</dd>
+				</dl>
+				<hr />
+				<dl>
+					<dt><label for="ADAP-3014_address">Address Line 1:</label></dt>
+					<dd><input type="text" id="ADAP-3014_address" name="ADAP-3014_address" class="large" /></dd>
+					<dt><label for="ADAP-3014_city">City:</label></dt>
+					<dd><input type="text" id="ADAP-3014_city" name="ADAP-3014_city" class="medium" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="ADAP-3014_address2">Address Line 2:</label></dt>
+					<dd><input type="text" id="ADAP-3014_address2" name="ADAP-3014_address2" class="large" /></dd>
+					<dt><label for="ADAP-3014_state">State:</label></dt>
+					<dd>
+						<select id="ADAP-3014_state" name="ADAP-3014_state">
+							<option value=" ">&nbsp;</option>
+							<option value="AK">AK</option>
+							<option value="AZ">AZ</option>
+							<option value="AR">AR</option>
+							<option value="CA">CA</option>
+							<option value="CO">CO</option>
+							<option value="CT">CT</option>
+							<option value="CT">CT</option>
+							<option value="DE">DE</option>
+							<option value="FL">FL</option>
+							<option value="GA">GA</option>
+							<option value="HI">HI</option>
+							<option value="ID">ID</option>
+							<option value="IL">IL</option>
+							<option value="IN">IN</option>
+							<option value="IA">IA</option>
+							<option value="KS">KS</option>
+							<option value="KY">KY</option>
+							<option value="LA">LA</option>
+							<option value="ME">ME</option>
+							<option value="MD">MD</option>
+							<option value="MA">MA</option>
+							<option value="MI">MI</option>
+							<option value="MN">MN</option>
+							<option value="MS">MS</option>
+							<option value="MO">MO</option>
+							<option value="MT">MT</option>
+							<option value="NE">NE</option>
+							<option value="NV">NV</option>
+							<option value="NH">NH</option>
+							<option value="NJ">NJ</option>
+							<option value="NM">NM</option>
+							<option value="NY">NY</option>
+							<option value="NC">NC</option>
+							<option value="ND">ND</option>
+							<option value="OH">OH</option>
+							<option value="OK">OK</option>
+							<option value="OR">OR</option>
+							<option value="PA">PA</option>
+							<option value="RI">RI</option>
+							<option value="SC">SC</option>
+							<option value="SD">SD</option>
+							<option value="TN">TN</option>
+							<option value="TX">TX</option>
+							<option value="UT">UT</option>
+							<option value="VT">VT</option>
+							<option value="VA">VA</option>
+							<option value="WA">WA</option>
+							<option value="WV">WV</option>
+							<option value="WI">WI</option>
+							<option value="WY">WY</option>
+						</select>
+					</dd>
+				</dl>
+				<dl>
+					<dt><label for="ADAP-3014_cor">County of Residence:</label></dt>
+					<dd><input type="text" id="ADAP-3014_cor" name="ADAP-3014_cor" class="medium" /></dd>
+					<dt><label for="ADAP-3014_zip">Zip Code:</label></dt>
+					<dd><input type="text" id="ADAP-3014_zip" name="ADAP-3014_zip" class="zip medium" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="ADAP-3014_home_phone">Home Phone:</label></dt>
+					<dd><input type="text" id="ADAP-3014_home_phone" name="ADAP-3014_home_phone" class="phone" /></dd>
+					<dt><label for="ADAP-3014_work_phone">Work Phone:</label></dt>
+					<dd>
+						<input type="text" id="ADAP-3014_work_phone" name="ADAP-3014_work_phone" class="phone" />
+						<label for="ADAP-3014_work_phone_ext">ext.</label>
+						<input type="text" id="ADAP-3014_work_phone_ext" name="ADAP-3014_work_phone_ext" class="numeric small" />
+					</dd>
+				</dl>
+			</fieldset>
+			<fieldset>
+				<legend class="required"><span>Earliest Requested Date of Program Coverage</span></legend>
+				<dl>
+					<dt><label for="req_date" class="tip"  title="Date can be at most 12 months previous or after the current date.">Date:</label></dt>
+					<dd><input type="text" id="req_date" name="req_date" class="dateInput formHint" /></dd>
+				</dl>
+			</fieldset>
+			<fieldset>
+				<legend class="required"><span class="tip" title="Countable family members are related to the applicant by blood, marriage or adoption, live in the same household and share a finiancial responsibility.">Countable Family Members</span></legend>
+				<a href="help.html" rel="#overlay" class="formHelpTab"><img src="../images/icons/help_tab.gif" width="22" height="22" alt="Help" title="Help" /></a>
+				<dl class="threeColumnLayout">
+					<dt><label for="countableAdults">Adults:</label></dt>
+					<dd><input type="text" id="countableAdults" name="countableAdults" class="countable small" /></dd>
+					<dt><label for="countableChildren">Children:</label></dt>
+					<dd><input type="text" id="countableChildren" name="countableChildren" class="countable small" /></dd>
+					<dt><label for="countableTotal" class="tip"  title="This field is calculated with the numbers entered for adults and children above.">Total:</label></dt>
+					<dd><input type="text" name="countableTotal" id="countableTotal" class="small disabled" readonly="readonly" /></dd>
+				</dl>
+			</fieldset>
+			<fieldset>
+				<legend>Income Source</legend>
+				<a href="help.html" rel="#overlay" class="formHelpTab"><img src="../images/icons/help_tab.gif" width="22" height="22" alt="Help" title="Help" /></a>
+				<h6>Income Source - Unemployment</h6>
+				<fieldset id="incomeSource1" class="threeColumnLayout hidden">
+					<dl>
+						<dt><label for="incomeName">Name:</label></dt>
+						<dd>Unemployment</dd>
+						<dt><label for="incomeRelationship">Relationship:</label></dt>
+						<dd>Self</dd>
+						<dt><label for="incomeFormula" class="tip" title="Regular (R) - Continuously employed wage earners list income for the 12 months before the date of application or the requested date of coverage, whichever is earlier. Unemployment (U) - Wage earners unemplyed at the time of application or for 30 consecutive days during the previous 12 months list income for 8 months before and after the date of application or the requested date of coverage whichever is earlier. Must report Gross and Net Income. Earned income must be cdocumented if medical expense deductions exceed $3,000 or an inpatient stay is requested. Medical expense deductions must be documented in full when they exceed $3,000.">Income Formula:</label></dt>
+						<dd>U - Unemployed</dd>
+					</dl>
+					<dl>
+						<dt><label for="incomeSource">Source:</label></dt>
+						<dd>Unemployment</dd>
+						<dt><label for="incomeFrom">From:</label></dt>
+						<dd>01/01/2009</dd>
+						<dt><label for="incomeTo">To:</label></dt>
+						<dd>06/01/2009</dd>
+					</dl>
+					<dl>
+						<dt><label for="incomeGross">Gross Income:</label></dt>
+						<dd>$5000</dd>
+						<dt><label for="incomeAfterTax">Income After Tax:</label></dt>
+						<dd>$4500</dd>
+					</dl>
+						<!--<tr class="emphasizeRow">
+							<td></td>
+							<td><input type="text" id="incomeName2" name="incomeName" /></td>
+							<td></td>
+							<td><select class="required" id="incomeFormula2" name="incomeFormula" >
+									<option value=" " selected="selected">&nbsp;</option>
+									<option value="r">R - Regular</option>
+									<option value="u">U - Unemployed</option>
+								</select></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>-->
+					<div class="btnRow">
+						<button type="submit" class="submitBtn">Edit</button>
+						<button type="button">Delete</button>
+					</div>
+				</fieldset>
+				<fieldset class="threeColumnLayout">
+					<legend>Add New Income Source</legend>
+					<dl>
+						<dt><label for="incomeName">Name:</label></dt>
+						<dd><input type="text" name="incomeName" id="incomeName" class="medium" /></dd>
+						<dt><label for="incomeRelationship">Relationship:</label></dt>
+						<dd><input type="text" name="incomeRelationship" id="incomeRelationship" class="medium" /></dd>
+						<dt><label for="incomeFormula" class="tip" title="Regular (R) - Continuously employed wage earners list income for the 12 months before the date of application or the requested date of coverage, whichever is earlier. Unemployment (U) - Wage earners unemplyed at the time of application or for 30 consecutive days during the previous 12 months list income for 8 months before and after the date of application or the requested date of coverage whichever is earlier. Must report Gross and Net Income. Earned income must be cdocumented if medical expense deductions exceed $3,000 or an inpatient stay is requested. Medical expense deductions must be documented in full when they exceed $3,000.">Income Formula:</label></dt>
+						<dd>
+							<select name="incomeFormula" id="incomeFormula" class="medium required">
+								<option value=" " selected="selected">&nbsp;</option>
+								<option value="r">R - Regular</option>
+								<option value="u">U - Unemployed</option>
+							</select>
+						</dd>
+					</dl>
+					<dl>
+						<dt><label for="incomeSource">Source:</label></dt>
+						<dd><input type="text" name="incomeSource" id="incomeSource" class="medium" /></dd>
+						<dt><label for="incomeFrom">From:</label></dt>
+						<dd><input type="text" name="incomeFrom" id="incomeFrom" class="dateInput" /></dd>
+						<dt><label for="incomeTo">To:</label></dt>
+						<dd><input type="text" name="incomeTo" id="incomeTo" class="dateInput" /></dd>
+					</dl>
+					<dl>
+						<dt><label for="incomeGross">Gross Income:</label></dt>
+						<dd><input type="text" id="incomeGross" name="incomeGross" class="medium numeric" /></dd>
+						<dt><label for="incomeAfterTax">Income After Tax:</label></dt>
+						<dd><input type="text" id="incomeAfterTax" name="incomeAfterTax" class="medium numeric" /></dd>
+					</dl>
+					<div class="btnRow">
+						<button type="submit" class="submitBtn">Add</button>
+					</div>
+				</fieldset>
+			</fieldset>
+			<fieldset>
+				<legend>Household Income</legend>
+				<a href="help.html" rel="#overlay" class="formHelpTab"><img src="../images/icons/help_tab.gif" width="22" height="22" alt="Help" title="Help" /></a>
+				<dl>
+					<dt><label for="annualGrossIncome" class="tip" title="This field is calculated.">Annual Gross Income:</label></dt>
+					<dd><input type="text" name="annualGrossIncome" id="annualGrossIncome" class="disabled taxCalc required" readonly="readonly" /></dd>
+					<dt><label for="taxes">Federal, State and Social Security Tax:</label></dt>
+					<dd><input type="text" id="taxes" class="disabled required" readonly="readonly" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="totalIncomeAfterTax" class="tip" title="This field is calculated.">Total Income After Taxes:</label></dt> 
+					<dd><input type="text" name="totalIncomeAfterTax" class="disabled taxCalc aniCalc required" id="totalIncomeAfterTax" readonly="readonly" /></dd>
+					<dt><label for="deductionsMedical" class="tip" title="Medical expenses paid or incurred during past 12 months not covered by a third party nor requested for program coverage. Deductible medical expences are those paid or incurred by a countable family Recipient during the 12 months prior to the earliest date of service. Expenses paid for by another party or requested for coverage by a program cannot be used as deductions. The Cancer Program and ADAP are based on gross income and do not allow for deductions of any kind.">Medical Expenses Paid or Incurred:</label></dt>
+					<dd><input type="text" name="deductionsMedical" id="deductionsMedical" class="required" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="deductionsOther">Other Deductions:</label></dt>
+					<dd><input class="required" type="text" id="deductionsOther" name="deductionsOther" /></dd>
+					<dt><label for="totalDeductions" class="tip" title="This field is calculated.">Total Deductions:</label></dt>
+					<dd><input type="text" name="totalDeductions" id="totalDeductions" class="disabled aniCalc required" readonly="readonly" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="incomeExplanation" class="tip"  title="Use this area to document additional information to establish low income classification. Low Income is deinfed as 20% of the current federal poverty level. Dates unemployed; means of support if income is low; etc. (e.g., 20% fo the federal income level). Use this area to document additional information to establish low income classification. Low income is defined as 20% of the current federal poverty level.">Explanation:</label></dt>
+					<dd><textarea id="incomeExplanation" class="large" rows="" cols=""></textarea></dd>
+					<dt><label for="annualNetIncome" class="tip" title="This field is calculated.">Annual Net Income:</label></dt>
+					<dd><input type="text" name="annualNetIncome" id="annualNetIncome" class="disabled required" readonly="readonly" /></dd>
+				</dl>
+			</fieldset>
+			<fieldset>
+				<legend class="required"><span>Eligibility for Other Programs</span></legend>
+				<a href="help.html" rel="#overlay" class="formHelpTab"><img src="../images/icons/help_tab.gif" width="22" height="22" alt="Help" title="Help" /></a>
+				<div class="info">
+					<p>Medicare, Medicaid status and, if applicable,Social Security eligibility information for a low income subsidy are required for applicants.</p>
+				</div>
+								<fieldset>
+					<legend>Enrolled in Medicare?</legend>
+					<dl class="singleQ labelToRight showDetail show-medicareEnrollment-0">
+						<dt>
+							<input type="radio" id="medicareEnrollmentY" name="medicareEnrollment[]" value="yes" />
+							<label for="medicareEnrollmentY"> Yes</label>
+							<input type="radio" id="medicareEnrollmentN" name="medicareEnrollment[]" value="no" />
+							<label for="medicareEnrollmentN"> No</label>
+						</dt>
+					</dl>
+					<fieldset class="hidden" id="medicareEnrollment-details">
+						<legend><span>Medicare Details</span></legend>
+						<dl>
+							<dt><label for="medicareIdNumber">ID Number:</label></dt>
+							<dd><input type="text" id="medicareIdNumber" name="medicareIdNumber" class="required"/></dd>
+						</dl>
+						<fieldset>
+							<legend><span>Effective Dates</span></legend>
+							<dl>
+								<dt><label for="partAEffDt">Medicare Part A:</label></dt>
+								<dd><input type="text" id="partAEffDt" name="partAEffDt" class="dateInput" /></dd>
+							</dl>
+							<dl>
+								<dt><label for="partBEffDt">Medicare Part B:</label></dt>
+								<dd><input type="text" id="partBEffDt" name="partBEffDt" class="dateInput" /></dd>
+							</dl>
+							<dl>
+								<dt><label for="partCEffDt">Medicare Part C:</label></dt>
+								<dd><input type="text" id="partCEffDt" name="partCEffDt" class="dateInput" /></dd>
+							</dl>
+							<dl>
+								<dt><label for="partDEffDt">Medicare Part D:</label></dt>
+								<dd><input type="text" id="partDEffDt" name="partDEffDt" class="dateInput" /></dd>
+							</dl>
+						</fieldset>
+					</fieldset>
+				</fieldset>
+				<fieldset>
+					<legend>Social Security Low-Income Subsidy</legend>
+					<dl class="singleQ labelToRight showDetail show-ss_lis_app-0">
+						<dt>
+							<input name="ss_lis_app" type="radio" id="ss_lis_app_yes" value="yes" />
+							<label for="ss_lis_app_yes"> Applied For</label>
+						</dt>
+						<dt>
+							<input name="ss_lis_app" type="radio" id="ss_lis_app_no" value="no" />
+							<label for="ss_lis_app_no"> Not Applied For</label>
+						</dt>
+						<dt>
+							<input name="ss_lis_app" type="radio" id="ss_lis_app_na" value="na" />
+							<label for="ss_lis_app_na"> N/A (=/&gt; 150% of FPL)</label>
+						</dt>
+					</dl>
+					<dl id="ss_lis_app-details" class="hidden">
+						<dt><label for="ss_lis_app">Date of LIS App:</label></dt>
+						<dd><input type="text" id="ss_lis_app_dt" class="dateInput" /></dd>
+					</dl>
+				</fieldset>
+			</fieldset>
+			<fieldset>
+				<legend>Primary Insurance</legend>
+				<dl class="threeColumnLayout">
+					<dt><label for="pi_pn">Policy Number:</label></dt>
+					<dd><input type="text" id="pi_pn" /></dd>
+					<dt><label for="pi_ph">Policy Holder:</label></dt>
+					<dd><input type="text" id="pi_ph" /></dd>
+					<dt><label for="pi_ip">Insurance Phone:</label></dt>
+					<dd><input type="text" id="pi_ip" class="phone formHint" /></dd>
+				</dl>
+				<hr />
+				<fieldset class="singleQ labelToRight">
+					<legend class="required"><span>Does this policy cover this service?</span></legend>
+					<dl class="showDetail show-SC_3014_pi_covered-0">
+						<dt>
+							<input id="pi_covered_y" type="radio" value="y" name="pi_covered" />
+							<label for="pi_covered_y">Yes</label>
+						</dt>
+						<dt>
+							<input id="pi_covered_n" type="radio" value="n" name="pi_covered"/>
+							<label for="pi_covered_n">No</label>
+						</dt>
+						<dt>
+							<input id="pi_covered_u" type="radio" value="na" name="pi_covered"/>
+							<label for="pi_covered_u">Unknown</label>
+					</dl>
+				</fieldset>
+				<fieldset id="SC_3014_pi_covered-details" class="hidden">
+					<legend>Claims Address</legend>
+					<dl>
+						<dt><label for="pri-address">Address Line 1:</label></dt>
+						<dd><input type="text" id="pri-address" name="pri-address" class="large" /></dd>
+						<dt><label for="pi_city">City:</label></dt>
+						<dd><input type="text" id="pi_city" name="pi_city" /></dd>
+					</dl>
+					<dl>
+						<dt><label for="pri-address2">Address Line 2:</label></dt>
+						<dd><input type="text" id="pri-address2" name="pri-address2" class="large" /></dd>
+						<dt><label for="pi_state">State:</label></dt>
+						<dd>
+							<select id="pi_state" name="pi_state">
+									<option>&nbsp;</option>
+									<option value="nc">NC</option>
+									<option value="sc">SC</option>
+									<option value="va">VA</option>
+							</select>
+						</dd>
+					</dl>
+					<dl>
+						<dt><label for="pi_zip">Zip Code:</label></dt>
+						<dd><input type="text" id="pi_zip" name="pi_zip" class="medium zip formHint" /></dd>
+					</dl>
+					<hr />
+					<fieldset class="singleQ labelToRight">
+						<legend><span>Does Insurance Have a Cap?</span></legend>
+						<dl>
+							<dt>
+								<input name="pdic_cap" type="radio" id="pdic_cap_yes" value="yes" />
+								<label for="pdic_cap">Yes</label>
+							</dt>
+							<dt>
+								<input name="pdic_cap" type="radio" id="pdic_cap_no" value="no" />
+								<label for="pdic_cap">No</label>
+							</dt>
+						</dl>
+					</fieldset>
+				</fieldset>
+			</fieldset>
+			<fieldset>
+				<legend>Secondary Insurance</legend>
+				<dl class="threeColumnLayout">
+					<dt><label for="sec_pn">Policy Number:</label></dt>
+					<dd><input type="text" id="sec_pn" /></dd>
+					<dt><label for="sec_ph">Policy Holder:</label></dt>
+					<dd><input type="text" id="sec_ph" /></dd>
+					<dt><label for="sec_ip">Insurance Phone:</label></dt>
+					<dd><input type="text" id="sec_ip" class="phone formHint" /></dd>
+				</dl>
+				<hr />
+				<fieldset class="singleQ labelToRight">
+					<legend class="required"><span>Does this policy cover this service?</span></legend>
+					<dl class="showDetail show-SC_3014_sec_covered-0">
+						<dt>
+							<input id="sec_covered_y" type="radio" value="y" name="sec_covered" />
+							<label for="sec_covered_y">Yes</label>
+						</dt>
+						<dt>
+							<input id="sec_covered_n" type="radio" value="n" name="sec_covered"/>
+							<label for="sec_covered_n">No</label>
+						</dt>
+						<dt>
+							<input id="sec_covered_u" type="radio" value="na" name="sec_covered"/>
+							<label for="sec_covered_u">Unknown</label>
+						</dt>
+					</dl>
+				</fieldset>
+				<fieldset class="hidden" id="SC_3014_sec_covered-details">
+					<legend>Claims Address</legend>
+					<dl>
+						<dt><label for="sec-address">Address Line 1:</label></dt>
+						<dd><input type="text" id="sec-address" name="sec-address" class="large" /></dd>
+						<dt><label for="sec_city">City:</label></dt>
+						<dd><input type="text" id="sec_city" name="sec_city" /></dd>
+					</dl>
+					<dl>
+						<dt><label for="sec-address2">Address Line 2:</label></dt>
+						<dd><input type="text" id="sec-address2" name="sec-address2" class="large" /></dd>
+						<dt><label for="sec_state">State:</label></dt>
+						<dd>
+							<select id="sec_state" name="sec_state">
+								<option>&nbsp;</option>
+								<option value="nc">NC</option>
+								<option value="sc">SC</option>
+								<option value="va">VA</option>
+							</select>
+						</dd>
+					</dl>
+					<dl>
+						<dt><label for="sec_zip">Zip Code:</label></dt>
+						<dd><input type="text" id="sec_zip" name="sec_zip" class="zip" /></dd>
+					</dl>
+					<hr />
+					<fieldset class="singleQ labelToRight">
+						<legend><span>Does Insurance Have a Cap?</span></legend>
+						<dl>
+							<dt>
+								<input name="sdic_cap" type="radio" id="sdic_cap_yes" value="yes" />
+								<label for="sdic_cap">Yes</label>
+							</dt>
+							<dt>
+								<input name="sdic_cap" type="radio" id="sdic_cap_no" value="no" />
+								<label for="sdic_cap">No</label>
+							</dt>
+						</dl>
+					</fieldset>
+				</fieldset>
+			</fieldset>
+			<a href="#header"><img src="../images/icons/return_top.gif" class="returnTop" width="12" height="13" alt="Back to top" title="Return to the top of the page" /></a>
+		</div>
+		<div class="btnRow">
+			<button type="submit" id="submitBtn">Submit</button>
+		</div>
+		</form>
+	</div>
+	<ul id="footer" class="linkColor2 rounded">
+		<li><a href="" accesskey="8">Legal</a> |</li>
+		<li><a href="">Privacy Policy</a> |</li>
+		<li><a href="">Accessibility</a> |</li>
+		<li><a href="" accesskey="3">Site Map</a> |</li>
+		<li><a href="" accesskey="9">Contact Us</a> |</li>
+		<li><a href="">Report Fraud</a></li>
+	</ul>
+</div>
+
+<div class="dropShadow" id="tileBtm"></div>
+ <!-- overlayed element --> 
+<div class="overlay" id="overlay"> 
+    <!-- the external content is loaded inside this tag --> 
+    <div class="wrap"></div> 
+</div>
+</body>
+</html>

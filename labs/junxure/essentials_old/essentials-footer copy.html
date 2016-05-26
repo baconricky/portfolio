@@ -1,0 +1,1968 @@
+<style type="text/css">
+.bubble {
+  position: absolute;
+  /* Height is dynamic, width fixed. */
+  width: 300px;
+  z-index: 9999;
+}
+
+.bubble-contents {
+  color: black;
+  left: 1px;
+  line-height: 150%;
+  padding: 8px 11px 12px;
+  position: relative;
+  right: 1px;
+  top: 1px;
+  width: 298px;
+  z-index: 3;
+}
+
+.bubble-close {
+  background-image: no-repeat 50% 50%;  
+  height: 16px;
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  width: 16px;
+  z-index: 4;
+}
+
+html[dir='rtl'] .bubble-close {
+  left: 6px;
+  right: auto;
+}
+
+.bubble-close {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAiElEQVR42r2RsQrDMAxEBRdl8SDcX8lQPGg1GBI6lvz/h7QyRRXV0qUULwfvwZ1tenw5PxToRPWMC52eA9+WDnlh3HFQ/xBQl86NFYJqeGflkiogrOvVlIFhqURFVho3x1moGAa3deMs+LS30CAhBN5nNxeT5hbJ1zwmji2k+aF6NENIPf/hs54f0sZFUVAMigAAAABJRU5ErkJggg==");
+}
+
+.bubble-close:hover {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAqklEQVR4XqWRMQ6DMAxF/1Fyilyj2SmIBUG5QcTCyJA5Z8jGhlBPgRi4TmoDraVmKFJlWYrlp/g5QfwRlwEVNWVa4WzfH9jK6kCkEkBjwxOhLghheMWMELUAqqwQ4OCbnE4LJnhr5IYdqQt4DJQjhe9u4vBBmnxHHNzRFkDGjHDo0VuTAqy2vAG4NkvXXDHxbGsIGlj3e835VFNtdugma/Jk0eXq0lP//5svi4PtO01oFfYAAAAASUVORK5CYII=");
+}
+
+.bubble-close:active {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAARElEQVQoz2P4z4AfMlBLAYMdwxkghgEwD1XBGTC0g0sDIaYJECVwFqoChBK4WegKkJWArSJZAQErCDqSKG/iCyhaRhYA9LDIbULDzlIAAAAASUVORK5CYII=");
+}
+
+.bubble-shadow {
+  bottom: -2px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.bubble-arrow {
+  -webkit-transform: rotate(45deg);
+  /* The tip of the arrow.  */
+  border-bottom-right-radius: 1px;
+  /* No border on the right or top (inner sides of the rotated square) because
+   * it would overlap/darken the content shadow. */
+  border-right: none;
+  border-top: none;
+  bottom: -9px;
+  height: 15px;
+  left: 22px;
+  position: absolute;
+  right: 22px;
+  width: 15px;
+  z-index: 2;
+}
+
+.bubble-contents,
+.bubble-arrow {
+  background: white;
+}
+
+.bubble-arrow[is-right='true'] {
+  left: auto;
+}
+
+.bubble-arrow[is-right='false'] {
+  right: auto;
+}
+
+.bubble-arrow[is-top='true'] {
+  bottom: auto;
+  top: -8px;
+}
+
+.bubble-shadow,
+.bubble-arrow {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.bubble-shadow,
+.bubble-contents {
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+</style>
+<style>/* Copyright (c) 2012 The Chromium Authors. All rights reserved.
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file.
+ */
+
+.expandable-bubble {
+  -webkit-border-image: url('chrome://theme/IDR_APP_NOTIFICATION_SMALL_BUBBLE')
+                        5 5 7 6 stretch;
+  -webkit-box-sizing: border-box;
+  -webkit-user-select: none;
+  border-width: 5px 5px 7px 6px;
+  color: #444;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  position: absolute;
+  z-index: 1;
+}
+
+.expandable-bubble::after {
+  bottom: -1px;
+  content: url('chrome://theme/IDR_APP_NOTIFICATION_NUB');
+  display: block;
+  height: 7px;
+  position: absolute;
+  right: 5px;  /* TODO(finnur): Need to handle RTL properly. */
+  width: 9px;
+}
+
+.expandable-bubble > .expandable-bubble-contents > .expandable-bubble-title {
+  display: inline-block;
+  margin-left: 1px;
+  margin-top : -3px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.expandable-bubble[masked] > .expandable-bubble-contents >
+    .expandable-bubble-title::after {
+  content: url('chrome://theme/IDR_APP_NOTIFICATION_NUB_MASK');
+  display: block;
+  height: 15px;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 12px;
+}
+
+.expandable-bubble[expanded] > .expandable-bubble-contents >
+    .expandable-bubble-title {
+  font-size: 13px;
+  margin-bottom: 3px;
+  margin-left: 0;
+}
+
+.expandable-bubble-close {
+  background-image: no-repeat 50% 50%;
+  height: 16px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 16px;
+  z-index: 2;
+}
+
+.expandable-bubble[expanded] {
+  padding: 3px;
+  z-index: 3;  /* One higher then the close button on an unexpanded bubble. */
+}
+
+.expandable-bubble[expanded] > .expandable-bubble-close {
+  z-index: 4;
+}
+
+.expandable-bubble-close {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAiElEQVR42r2RsQrDMAxEBRdl8SDcX8lQPGg1GBI6lvz/h7QyRRXV0qUULwfvwZ1tenw5PxToRPWMC52eA9+WDnlh3HFQ/xBQl86NFYJqeGflkiogrOvVlIFhqURFVho3x1moGAa3deMs+LS30CAhBN5nNxeT5hbJ1zwmji2k+aF6NENIPf/hs54f0sZFUVAMigAAAABJRU5ErkJggg==");
+}
+
+.expandable-bubble-close:hover {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAqklEQVR4XqWRMQ6DMAxF/1Fyilyj2SmIBUG5QcTCyJA5Z8jGhlBPgRi4TmoDraVmKFJlWYrlp/g5QfwRlwEVNWVa4WzfH9jK6kCkEkBjwxOhLghheMWMELUAqqwQ4OCbnE4LJnhr5IYdqQt4DJQjhe9u4vBBmnxHHNzRFkDGjHDo0VuTAqy2vAG4NkvXXDHxbGsIGlj3e835VFNtdugma/Jk0eXq0lP//5svi4PtO01oFfYAAAAASUVORK5CYII=");
+}
+
+.expandable-bubble-close:active {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAARElEQVQoz2P4z4AfMlBLAYMdwxkghgEwD1XBGTC0g0sDIaYJECVwFqoChBK4WegKkJWArSJZAQErCDqSKG/iCyhaRhYA9LDIbULDzlIAAAAASUVORK5CYII=");
+}
+</style>
+<style>/* Copyright (c) 2012 The Chromium Authors. All rights reserved.
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file.
+ */
+
+menu {
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .50);
+  background: white;
+  color: black;
+  cursor: default;
+  left: 0;
+  margin: 0;
+  outline: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 8px 0;
+  position: fixed;
+  white-space: nowrap;
+  z-index: 3;
+}
+
+menu:not(.decorated) {
+  display: none;
+}
+
+menu > * {
+  box-sizing: border-box;
+  display: block;
+  margin: 0;
+  text-align: start;
+  width: 100%;
+}
+
+menu > :not(hr) {
+  -webkit-appearance: none;
+  background: transparent;
+  border: 0;
+  font: inherit;
+  line-height: 18px;
+  overflow: hidden;
+  padding: 0 19px;
+  text-overflow: ellipsis;
+}
+
+menu > hr {
+  background: -webkit-linear-gradient(left,
+                                      rgba(0, 0, 0, .10),
+                                      rgba(0, 0, 0, .02) 96%);
+  border: 0;
+  height: 1px;
+  margin: 8px 0;
+}
+
+menu > [disabled] {
+  color: rgba(0, 0, 0, .3);
+}
+
+menu > [hidden] {
+  display: none;
+}
+
+menu > :not(hr)[selected] {
+  background-color: rgb(220, 229, 250);
+}
+
+menu > :not(hr)[selected]:active {
+  background-color: rgb(66, 109, 201);
+  color: #fff;
+}
+
+menu > [checked]:before {
+  content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAARklEQVQYlWNgwA+MgViQkIJ3QKzEAFVpjEPBf5giJaiAMRYF72DWKSEJlKMpgNsgiCTxH5sCbG7AqgBZ4V2sCv7//08QAwAUfjKKBs+BFgAAAABJRU5ErkJggg==");
+  display: inline-block;
+  height: 9px;
+  margin: 0 5px;
+  vertical-align: 50%;
+  width: 9px;
+}
+
+menu > [checked] {
+  -webkit-padding-start: 0;
+}
+
+menu > [selected][checked]:active:before {
+  content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAATElEQVR42oXNyw0AIAgDUFdwBVZgOKd1BVeokNhgiJ9DL+WRFgCvqKX+wLBIcenFBYBIVqEHMDgnW9ECxCPneEAGRDGRQEaEnSCjbyYFHgnBSWvSHgAAAABJRU5ErkJggg==");
+}
+</style>
+<style>/* Copyright (c) 2012 The Chromium Authors. All rights reserved.
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file. */
+
+/* NOTE: If you are using the drop-down style, you must first call
+ * MenuButton.createDropDownArrows() to initialize the CSS canvases that
+ * contain the arrow images. */
+
+button.menu-button.drop-down {
+  background: white -webkit-canvas(drop-down-arrow) no-repeat center 4px;
+  border: 1px solid rgb(192, 195, 198);
+  border-radius: 2px;
+  height: 12px;
+  margin: 0 5px;
+  padding: 0;
+  position: relative;
+  top: 1px;
+  width: 12px;
+}
+
+button.menu-button.drop-down:hover {
+  background-image: -webkit-canvas(drop-down-arrow-hover);
+  border-color: rgb(48, 57, 66);
+}
+
+button.menu-button.drop-down[menu-shown],
+button.menu-button.drop-down:focus {
+  background-color: rgb(48, 57, 66);
+  background-image: -webkit-canvas(drop-down-arrow-active);
+  border-color: rgb(48, 57, 66);
+}</style>
+<style>/* Copyright (c) 2012 The Chromium Authors. All rights reserved.
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file.
+ */
+
+.trash {
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  padding: 0;
+  position: relative;
+  width: 30px;
+}
+
+.trash > span {
+  display: inline-block;
+}
+
+.trash > .can,
+.trash > .lid {
+  background: url('chrome://resources/images/trash.png') 0 0 no-repeat;
+  left: 8px;
+  position: absolute;
+  right: 8px;
+  top: 2px;
+}
+
+.trash > .lid {
+  -webkit-transform-origin: -7% 100%;
+  -webkit-transition: -webkit-transform 150ms;
+  height: 6px;
+  width: 14px;
+}
+
+html[dir='rtl'] .trash > .lid {
+  -webkit-transform-origin: 107% 100%;
+}
+
+.trash:focus > .lid,
+.trash:hover > .lid {
+  -webkit-transform: rotate(-45deg);
+  -webkit-transition: -webkit-transform 250ms;
+}
+
+html[dir='rtl'] .trash:focus > .lid,
+html[dir='rtl'] .trash:hover > .lid {
+  -webkit-transform: rotate(45deg);
+}
+
+.trash > .can {
+  background-position: -1px -4px;
+  height: 12px;
+  /* The margins match the background position offsets. */
+  margin-left: 1px;
+  /* The right margin is one greater due to a shadow on the trash image. */
+  margin-right: 2px;
+  margin-top: 4px;
+  width: 11px;
+}
+</style>
+<style>/* Copyright (c) 2012 The Chromium Authors. All rights reserved.
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file.
+ */
+
+/* This file defines styles for form controls. The order of rule blocks is
+ * important as there are some rules with equal specificity that rely on order
+ * as a tiebreaker. These are marked with OVERRIDE.
+ */
+
+/* Default state **************************************************************/
+
+button:not(.custom-appearance):not(.link-button),
+input[type='button']:not(.custom-appearance):not(.link-button),
+input[type='submit']:not(.custom-appearance):not(.link-button),
+select,
+input[type='checkbox'],
+input[type='radio'] {
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  background-image: -webkit-linear-gradient(#ededed, #ededed 38%, #dedede);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08),
+      inset 0 1px 2px rgba(255, 255, 255, 0.75);
+  color: #444;
+  font: inherit;
+  margin: 0 1px 0 0;
+  text-shadow: 0 1px 0 rgb(240, 240, 240);
+}
+
+button:not(.custom-appearance):not(.link-button),
+input[type='button']:not(.custom-appearance):not(.link-button),
+input[type='submit']:not(.custom-appearance):not(.link-button),
+select {
+  min-height: 2em;
+  min-width: 4em;
+
+
+}
+
+button:not(.custom-appearance):not(.link-button),
+input[type='button']:not(.custom-appearance):not(.link-button),
+input[type='submit']:not(.custom-appearance):not(.link-button) {
+  -webkit-padding-end: 10px;
+  -webkit-padding-start: 10px;
+}
+
+select {
+  -webkit-appearance: none;
+  -webkit-padding-end: 20px;
+  -webkit-padding-start: 6px;
+  /* OVERRIDE */
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAICAYAAAAbQcSUAAAAWklEQVQokWNgoAOIAuI0PDiKaJMSgYCZmfkbkPkfHYPEQfJEG/b//3+FBQsWLGRjY/uJbBCIDxIHyRNtGDYDyTYI3UA+Pr4vFBmEbODbt2+bKDYIyUBWYtQBAIRzRP/XKJ//AAAAAElFTkSuQmCC"),
+      -webkit-linear-gradient(#ededed, #ededed 38%, #dedede);
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+html[dir='rtl'] select {
+  background-position: center left;
+}
+
+input[type='checkbox'] {
+  bottom: 2px;
+  height: 13px;
+  position: relative;
+  vertical-align: middle;
+  width: 13px;
+}
+
+input[type='radio'] {
+  /* OVERRIDE */
+  border-radius: 100%;
+  bottom: 3px;
+  height: 15px;
+  position: relative;
+  vertical-align: middle;
+  width: 15px;
+}
+
+/* TODO(estade): add more types here? */
+input[type='password'],
+input[type='search'],
+input[type='text'],
+input[type='url'],
+input:not([type]),
+textarea {
+  border: 1px solid #bfbfbf;
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: #444;
+  font: inherit;
+  margin: 0;
+  /* Use min-height to accommodate addditional padding for touch as needed. */
+  min-height: 2em;
+  padding: 3px;
+/* For better alignment between adjacent buttons and inputs. */
+  padding-bottom: 4px;
+
+}
+
+input[type='search'] {
+  -webkit-appearance: textfield;
+  /* NOTE: Keep a relatively high min-width for this so we don't obscure the end
+   * of the default text in relatively spacious languages (i.e. German). */
+  min-width: 160px;
+}
+
+/* Checked ********************************************************************/
+
+input[type='checkbox']:checked::before {
+  -webkit-user-select: none;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wDBhYcG79aGIsAAACbSURBVBjTjdFBCkFhFAXgj4fp24PBy0SZ2ICRXRgYGb2xlKzBSEo2YgsiKWVoZgFKMjD5X/2Ux6lb99bpnNO5lKMR5i8MsEQHkhJiEzlS9HCqfiFWMUIt3AfsC3KKLCL30Qr7HfM4Ro4h6rhiEqmusIMKuphGqo+ogSPGcbYLzh91vdkXSHDDBk+0gxussS3rNcMCs+D6E18/9gLPPhbDshfzLgAAAABJRU5ErkJggg==");
+  background-size: 100% 100%;
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+html[dir='rtl'] input[type='checkbox']:checked::before {
+  -webkit-transform: scaleX(-1);
+}
+
+input[type='radio']:checked::before {
+  background-color: #666;
+  border-radius: 100%;
+  bottom: 3px;
+  content: '';
+  display: block;
+  left: 3px;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+}
+
+/* Hover **********************************************************************/
+
+button:not(.custom-appearance):not(.link-button):enabled:hover,
+input[type='button']:not(.custom-appearance):not(.link-button):enabled:hover,
+input[type='submit']:not(.custom-appearance):not(.link-button):enabled:hover,
+select:enabled:hover,
+input[type='checkbox']:enabled:hover,
+input[type='radio']:enabled:hover {
+  background-image: -webkit-linear-gradient(#f0f0f0, #f0f0f0 38%, #e0e0e0);
+  border-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.12),
+      inset 0 1px 2px rgba(255, 255, 255, 0.95);
+  color: black;
+}
+
+select:enabled:hover {
+  /* OVERRIDE */
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAICAYAAAAbQcSUAAAAWklEQVQokWNgoAOIAuI0PDiKaJMSgYCZmfkbkPkfHYPEQfJEG/b//3+FBQsWLGRjY/uJbBCIDxIHyRNtGDYDyTYI3UA+Pr4vFBmEbODbt2+bKDYIyUBWYtQBAIRzRP/XKJ//AAAAAElFTkSuQmCC"),
+      -webkit-linear-gradient(#f0f0f0, #f0f0f0 38%, #e0e0e0);
+}
+
+/* Active *********************************************************************/
+
+button:not(.custom-appearance):not(.link-button):enabled:active,
+input[type='button']:not(.custom-appearance):not(.link-button):enabled:active,
+input[type='submit']:not(.custom-appearance):not(.link-button):enabled:active,
+select:enabled:active,
+input[type='checkbox']:enabled:active,
+input[type='radio']:enabled:active {
+  background-image: -webkit-linear-gradient(#e7e7e7, #e7e7e7 38%, #d7d7d7);
+  box-shadow: none;
+  text-shadow: none;
+}
+
+select:enabled:active {
+  /* OVERRIDE */
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAICAYAAAAbQcSUAAAAWklEQVQokWNgoAOIAuI0PDiKaJMSgYCZmfkbkPkfHYPEQfJEG/b//3+FBQsWLGRjY/uJbBCIDxIHyRNtGDYDyTYI3UA+Pr4vFBmEbODbt2+bKDYIyUBWYtQBAIRzRP/XKJ//AAAAAElFTkSuQmCC"),
+      -webkit-linear-gradient(#e7e7e7, #e7e7e7 38%, #d7d7d7);
+}
+
+/* Disabled *******************************************************************/
+
+button:not(.custom-appearance):not(.link-button):disabled,
+input[type='button']:not(.custom-appearance):not(.link-button):disabled,
+input[type='submit']:not(.custom-appearance):not(.link-button):disabled,
+select:disabled {
+  background-image: -webkit-linear-gradient(#f1f1f1, #f1f1f1 38%, #e6e6e6);
+  border-color: rgba(80, 80, 80, 0.2);
+  box-shadow: 0 1px 0 rgba(80, 80, 80, 0.08),
+      inset 0 1px 2px rgba(255, 255, 255, 0.75);
+  color: #aaa;
+}
+
+select:disabled {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAICAYAAAAbQcSUAAAAAXNSR0IArs4c6QAAAAd0SU1FB9sLAxYEBKriBmwAAAAGYktHRAD/AP8A/6C9p5MAAAAJcEhZcwAACxMAAAsTAQCanBgAAABLSURBVCiRY2CgA4gC4jQ8OIpokxKBoKGh4T8uDJIn2rD///8rLFiwYCE2g0DiIHkSfIndQLIMwmYgRQYhG/j27dsmig1CMpCVGHUAo8FcsHfxfXQAAAAASUVORK5CYII="),
+      -webkit-linear-gradient(#f1f1f1, #f1f1f1 38%, #e6e6e6);
+}
+
+input[type='checkbox']:disabled,
+input[type='radio']:disabled {
+  opacity: .75;
+}
+
+input[type='password']:disabled,
+input[type='search']:disabled,
+input[type='text']:disabled,
+input[type='url']:disabled,
+input:not([type]):disabled {
+  color: #999;
+}
+
+/* Focus **********************************************************************/
+
+button:not(.custom-appearance):not(.link-button):enabled:focus,
+input[type='button']:not(.custom-appearance):enabled:focus,
+input[type='checkbox']:enabled:focus,
+input[type='password']:enabled:focus,
+input[type='radio']:enabled:focus,
+input[type='search']:enabled:focus,
+input[type='submit']:not(.custom-appearance):enabled:focus,
+input[type='text']:enabled:focus,
+input[type='url']:enabled:focus,
+input:not([type]):enabled:focus,
+select:enabled:focus {
+  /* OVERRIDE */
+  -webkit-transition: border-color 200ms;
+  /* We use border color because it follows the border radius (unlike outline).
+   * This is particularly noticeable on mac. */
+  border-color: rgb(77, 144, 254);
+  outline: none;
+}
+
+/* Link buttons ***************************************************************/
+
+.link-button {
+  -webkit-box-shadow: none;
+  background: transparent none;
+  border: none;
+  color: rgb(17, 85, 204);
+  cursor: pointer;
+  /* Input elements have -webkit-small-control which can override the body font.
+   * Resolve this by using 'inherit'. */
+  font: inherit;
+  margin: 0;
+  padding: 0 4px;
+}
+
+.link-button:hover {
+  text-decoration: underline;
+}
+
+.link-button:active {
+  color: rgb(5, 37, 119);
+  text-decoration: underline;
+}
+
+.link-button[disabled] {
+  color: #999;
+  cursor: default;
+  text-decoration: none;
+}
+
+/* Checkbox/radio helpers ******************************************************
+ *
+ * .checkbox and .radio classes wrap labels. Checkboxes and radios should use
+ * these classes with the markup structure:
+ *
+ *   <div class="checkbox">
+ *     <label>
+ *       <input type="checkbox"></input>
+ *       <span>
+ *     </label>
+ *   </div>
+ */
+
+.checkbox,
+.radio {
+  margin: 0.65em 0;
+}
+
+.checkbox label,
+.radio label {
+  /* Don't expand horizontally: <http://crbug.com/112091>. */
+  display: -webkit-inline-box;
+}
+
+.checkbox label input ~ span,
+.radio label input ~ span {
+  -webkit-margin-start: 0.6em;
+  /* Make sure long spans wrap at the same horizontal position they start. */
+  display: block;
+}
+
+.checkbox label:hover,
+.radio label:hover {
+  color: black;
+}
+
+label > input[type=checkbox]:disabled ~ span,
+label > input[type=radio]:disabled ~ span {
+  color: #999;
+}
+</style>
+<style>/* Copyright (c) 2012 The Chromium Authors. All rights reserved.
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file. */
+
+.app {
+  outline: none;
+  position: absolute;
+  text-align: center;
+}
+
+.app-contents {
+  -webkit-transition: -webkit-transform 100ms;
+}
+
+.app-contents:active:not(.suppress-active),
+.app:not(.click-focus):focus .app-contents:not(.suppress-active),
+.drag-representation:not(.placing) .app-contents {
+  -webkit-transform: scale(1.1);
+}
+
+/* Don't animate the initial scaling.  */
+.app-contents:active:not(.suppress-active),
+/* Active gets applied right before .suppress-active, so to avoid flicker
+ * we need to make the scale go back to normal without an animation. */
+.app-contents.suppress-active {
+  -webkit-transition-duration: 0;
+}
+
+.app-contents > span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.app-img-container {
+  /* -webkit-mask-image set by JavaScript to the image source. */
+  -webkit-mask-size: 100% 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.app-img-container > * {
+  height: 100%;
+  width: 100%;
+}
+
+.app-icon-div {
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  background-color: white;
+  border: 1px solid #d5d5d5;
+  border-radius: 5px;
+  display: -webkit-box;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  vertical-align: middle;
+  z-index: 0;
+}
+
+.app-icon-div .app-img-container {
+  bottom: 10px;
+  left: 10px;
+  position: absolute;
+}
+
+.app-icon-div .color-stripe {
+  border-bottom-left-radius: 5px 5px;
+  border-bottom-right-radius: 5px 5px;
+  bottom: 0;
+  height: 3px;
+  opacity: 1.0;
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+}
+
+.app-context-menu > button:first-child {
+  font-weight: bold;
+}
+
+.app-context-menu {
+  z-index: 1000;
+}
+
+.launch-click-target {
+  cursor: pointer;
+}
+
+/* Notifications */
+
+.app-notification {
+  -webkit-transition: color 150ms linear;
+  color: #999;
+  display: block;
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+
+.app-notification:hover {
+  text-decoration: underline;
+}
+
+/* Promo */
+/* Show the promo if the webstore has a promo and is the only app on the page.
+ */
+.tile:only-of-type > .has-promo > .app-contents > span {
+  display: none;
+}
+
+.tile:only-of-type > .has-promo .app-img-container > .apps-promo-logo {
+  display: block;
+}
+
+.apps-promo-logo {
+  display: none;
+  height: 128px;
+  width: 128px;
+}
+
+.tile:only-of-type > .has-promo .app-img-container > img:first-child {
+  display: none;
+}
+
+.app-img-container > img:first-child {
+  display: block;
+}
+
+/* TODO(estade): animation? */
+.tile:only-of-type > .has-promo > .apps-promo-extras {
+  display: block;
+}
+
+.apps-promo-extras {
+  display: none;
+  /* 128 * 5/4 */
+  left: 160px;
+  position: absolute;
+  text-align: left;
+  top: 0;
+}
+
+html[dir='rtl'] .apps-promo-extras {
+  left: auto;
+  right: 160px;
+}
+
+.apps-promo-heading {
+  -webkit-margin-start: 3px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.g-button-basic {
+  -webkit-border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD4AAABHCAYAAABf7PRNAAAEzUlEQVR4Xu2YP4gkRRTGf9Xdszu79088BMVEAw+8UBMREzURQ3MDMRQEQ8FE0Fi4TDQ4wcRAMLtLTA4EUzVYFUUP1vPk7tyb3fnX3VXf0x0ezcDC9qQ1Ox981LzhVfDr1/2oesHMALj2zc/2+Y09/r4/IcnIX/yF2ReqR5+Obr67DxiAryzAr779tT1/5SovPPcE54ZD2hSIMixD/nkLR3Nj/96En379g99+/4X2cP+Zw2/fvw3IwVV9+OWPC+hXX3yaqggOYEiGhUBuMhl1I+q0zZOXH6E+epQ/2+k7wAdABBJAdf3mHm+98TqTuTg3LDr4oiiQRG5KEoczMT28x2x0l0uDSCiHbwIfAzXQAFaNJg3TxuAo0STYGQRmrTGrRY4aTcX9gynTgzvMxw8g1hDCZeCcpwhQBTCepf/N4gHsboXjdfFfm8hOR3MxHd2lnvxLamYYhus8kIAIxApgOo8MBpU/gEXMtCFLxWZKnI9JscEssaQdYAZUQFEBC8hdIlDhMZLIUUoJSZgSkrGkITAAyg68shrYBqBt4yKuVZKjTGJhMzAHJwBUOPSxC8/3RAHGmqpwd08BmZFixIIoTABgIk8JMMwM6xhKltWBm9F9F4HQvQEZyoEN3Es6CQ54IhAMWcge3N0PTggQus25g/f2qsqzceo1AHceoxf8JKR/H9mSr/qqd0ldYxMY+YLj7gPHhFQQQuGh5cvN6s0NKUEoSGlpu/JEXz610Q9uhEKkZLjIuORgvtgqzc0MJYFvMCnvikuATgd3EXzUJBOG5f2N91f8pEwp+67u6+ngwYQkCCUAIesDjNz9XR3MkARW4DGW+QEGVunqXnVTwmPIGtxXOB08GQwwLCU8PiO3MzMIYXn32biPB8nHb+Bxxic3W2pu6qm4EljArMDjjL9xrd7cTAkTmEq6mJDvqw6rTmAEhlfcYwXylEDC1Qce3C5C7ncUzOip+EllP2XtJjB9FZeEFJCJACj/ru7uv48j+QaP12quHvpfdZIAyBy8W1cHlzzI/pJC/8ktCQoZMlwh74qz4pE1CkoZ0np09e7IivrO6hEoSKoIAIpgyv/ISk/FSyKEEsl8b5v1XB1stQNMsAQGKAGgmDCFbKesyMAE0N/cQjSK0AIgy3uubu6eintSMkIV85+rm47tEPSA+wRmWcZZGD11WoJf+ylrj9Z3rr5+5O7TO3TBWdMGPFdtwDfgG/AN+AZ8A74BrwBSEkWAVAYAlIRJ6w9e1y11A/O6QIIYa0yJHJWaCbGdIyVMfVPW+ggpUi+SW5SabK+lqZ0tbClinA7e1NODLYs1SsduMUvgw4nspISZcGGhAEvzk+BK303a+ctVM8IUfdP6qB3soPloD7AlU6kdf3Y4uPjyhfohpRLrpFRuMd55nPb2rRtABBIOH4DdS69de6/cvvhRmWaUqVkb6FTu0Pzzw/Xx9598BRwAD4ARMAnAENipLl95bPupV14Kw0vPkpptUxxgKoGQJfjh/p3m9q09zQ9GwNiBHwJHwCwAW8A2sAtcAM777yEwAEKG8OZugTkwdeCx/64rQHiCAyag9gdSAkWm4HKWxtlmvrZAqpYTfEP0hAoo3GQEb77KHR22waEBqwDDg6XE0h0yf9WdbdkIsP8ABZhTTDj3evgAAAAASUVORK5CYII=") 6 10 12 6;
+  border-width: 6px 10px 12px 6px;
+  color: #fff !important;
+  display: inline-block;
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 2px 10px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.app .invisible {
+  visibility: hidden;
+}
+
+/* Move the notification lower on apps pages to account for the 16px of
+ * transparency each app icon should have. */
+.apps-page #notification-container {
+  bottom: 15px;
+}
+</style>
+<link rel="stylesheet" href="chrome://newtab/suggestions_page.css">
+<style>/* Copyright (c) 2012 The Chromium Authors. All rights reserved.
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file. */
+
+.most-visited {
+  position: absolute;
+  z-index: 0;
+}
+
+.most-visited {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  position: absolute;
+  text-decoration: none;
+}
+
+.most-visited:focus {
+  outline: none;
+}
+
+.fills-parent {
+  bottom: 0;
+  display: -webkit-box;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* filler mode: hide everything except the thumbnail --- leave a grey rectangle
+ * in its place. */
+.filler * {
+  visibility: hidden;
+}
+
+.filler {
+  pointer-events: none;
+}
+
+.most-visited .close-button {
+  -webkit-transition: opacity 150ms;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 5;
+}
+
+html[dir=rtl] .most-visited .close-button {
+  left: 0;
+  right: auto;
+}
+
+.most-visited:hover .close-button {
+  -webkit-transition-delay: 500ms;
+  opacity: 1;
+}
+
+.most-visited .close-button:hover {
+  -webkit-transition: none;
+}
+
+.most-visited .favicon {
+  -webkit-margin-start: 5px;
+  background: no-repeat left 50%;
+  bottom: 7px;
+  box-sizing: border-box;
+  display: block;
+  height: 16px;
+  position: absolute;
+  width: 16px;
+}
+
+html[dir='rtl'] .most-visited .favicon {
+  background-position-x: right;
+}
+
+.most-visited .color-stripe {
+  border-bottom-left-radius: 3px 3px;
+  border-bottom-right-radius: 3px 3px;
+  /* Matches height of title.  */
+  bottom: 23px;
+  height: 3px;
+  /* Matches padding-top of the title. */
+  margin-bottom: 8px;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+.most-visited .title {
+  display: block;
+  height: 23px;
+  overflow: hidden;
+  padding-top: 8px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.thumbnail {
+  -webkit-transition: opacity 150ms;
+  background: no-repeat;
+  /* This shows for missing thumbnails. */
+  background-color: #eee;
+  background-size: 100%;
+  border-radius: 3px;
+  /* These max dimensions are not necessary, as the sizing logic in the .js
+   * should be sufficient, but they're here for extra insurance. We never want
+   * to scale a thumbnail larger than this size. */
+  max-height: 132px;
+  max-width: 212px;
+}
+
+.filler .thumbnail {
+  /* TODO(estade): there seems to be a webkit bug where this border is not
+   * always removed when it should be. Investigate. */
+  border: 1px solid;
+  visibility: visible;
+}
+
+.thumbnail-shield {
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0),
+                                      rgba(255, 255, 255, 0) 50%,
+                                      rgba(255, 255, 255, 0.9));
+  border-radius: 3px;
+}
+
+/* TODO(dbeam): Remove this when printing of -webkit-linear-gradient() works. */
+@media print {
+  .thumbnail-shield {
+    background: none;
+  }
+}
+
+.most-visited:focus .thumbnail,
+.most-visited:hover .thumbnail {
+  opacity: 0.95;
+}
+
+.most-visited:focus .thumbnail-shield,
+.most-visited:hover .thumbnail-shield,
+.most-visited:active .thumbnail-shield {
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0),
+                                      rgba(255, 255, 255, 0) 80%,
+                                      rgba(255, 255, 255, 0.9));
+}
+
+/* The thumbnail gets lighter when clicked, but not when the click is on the
+ * close button. */
+.most-visited:active .close-button:not(:active) + .thumbnail {
+  opacity: 0.9;
+}
+
+/* The thumbnail gets a shadow when clicked, but not when the click is on the
+ * close button. */
+.most-visited:active .close-button:not(:active) + .thumbnail .thumbnail-shield {
+  -webkit-box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnail-wrapper {
+  -webkit-box-flex: 1;
+  -webkit-transition: background-color 150ms;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  display: block;
+  position: relative;
+  z-index: 5;
+}
+
+.filler .thumbnail-wrapper {
+  visibility: visible;
+}
+
+/* 'finishing-drag' is the state we are in after dropping on the trash can.
+ * Override opacity of the tile to 1, so that the new tile animation
+ * occurs simultaneously with the trash animation. */
+.tile.dragging.finishing-drag {
+  opacity: 1;
+}
+
+/* Don't display the new tile until there's something to show.  */
+.blacklisted {
+  opacity: 0;
+}
+</style>
+<style>/* Copyright (c) 2012 The Chromium Authors. All rights reserved.
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file. */
+
+/* TODO(estade): handle overflow better? I tried overflow-x: hidden and
+   overflow-y: visible (for the new dot animation), but this makes a scroll
+   bar appear */
+#dot-list {
+  /* Expand to take up all available horizontal space.  */
+  -webkit-box-flex: 1;
+  /* Center child dots. */
+  -webkit-box-pack: center;
+  display: -webkit-box;
+  height: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+html.starting-up #dot-list {
+  display: none;
+}
+
+.dot {
+  -webkit-box-flex: 1;
+  -webkit-margin-end: 10px;
+  -webkit-padding-start: 2px;
+  -webkit-transition: max-width 250ms, -webkit-margin-end 250ms;
+  box-sizing: border-box;
+  cursor: pointer;
+  /* max-width: Set in new_tab.js. See measureNavDots() */
+  outline: none;
+  text-align: left;
+}
+
+.dot:last-child {
+  -webkit-margin-end: 0;
+}
+
+.dot.small {
+  -webkit-margin-end: 0;
+  max-width: 0;
+}
+
+.dot .selection-bar {
+  -webkit-transition: border-color 200ms;
+  border-bottom: 5px solid;
+  border-color: rgba(0, 0, 0, 0.1);
+  height: 10px;
+}
+
+.dot input {
+  -webkit-appearance: caret;
+  -webkit-margin-start: 2px;
+  -webkit-transition: color 200ms;
+  background-color: transparent;
+  cursor: inherit;
+  font: inherit;
+  height: auto;
+  margin-top: 2px;
+  padding: 1px 0;
+  width: 90%;
+}
+
+.dot input:focus {
+  cursor: auto;
+}
+
+/* Everything below here should be themed but we don't have appropriate colors
+ * yet.
+ */
+.dot input {
+  color: #b2b2b2;
+}
+
+.dot:focus input,
+.dot:hover input,
+.dot.selected input {
+  color: #7f7f7f;
+}
+
+.dot:focus .selection-bar,
+.dot:hover .selection-bar,
+.dot.drag-target .selection-bar {
+  border-color: #b2b2b2;
+}
+
+.dot.selected .selection-bar {
+  border-color: #7f7f7f;
+}
+</style>
+<style>/* Copyright (c) 2012 The Chromium Authors. All rights reserved.
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file. */
+
+html {
+  /* It's necessary to put this here instead of in body in order to get the
+     background-size of 100% to work properly */
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  /* Don't highlight links when they're tapped. Safari has bugs here that
+     show up as flicker when dragging in some situations */
+  -webkit-tap-highlight-color: transparent;
+  /* Don't allow selecting text - can occur when dragging */
+  -webkit-user-select: none;
+  background-size: auto 100%;
+  margin: 0;
+}
+
+/* [hidden] does display:none, but its priority is too low in some cases. */
+[hidden] {
+  display: none !important;
+}
+
+#notification-container {
+  -webkit-transition: opacity 200ms, margin-left 200ms;
+  bottom: 31px;
+  display: block;
+  float: left;
+  position: relative;
+  text-align: start;
+  z-index: 15;
+}
+
+html[dir='rtl'] #notification-container {
+  float: right;
+}
+
+#notification-container.card-changed {
+  -webkit-transition: none;
+  opacity: 0;
+}
+
+#notification-container.inactive {
+  -webkit-transition: opacity 200ms;
+  opacity: 0;
+}
+
+#notification {
+  display: inline-block;
+  font-weight: bold;
+}
+
+#notification > div > div,
+#notification > div {
+  display: inline-block;
+}
+
+/* NOTE: This is in the probable case that we start stuffing 16x16 data URI'd
+ * icons in the promo notification responses. */
+#notification > span > img {
+  margin-bottom: -3px;
+}
+
+#notification .close-button {
+  -webkit-margin-start: 0.5em;
+  vertical-align: middle;
+}
+
+.close-button {
+  background: no-repeat;
+  background-color: transparent;
+  /* TODO(estade): this should animate between states. */
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAiElEQVR42r2RsQrDMAxEBRdl8SDcX8lQPGg1GBI6lvz/h7QyRRXV0qUULwfvwZ1tenw5PxToRPWMC52eA9+WDnlh3HFQ/xBQl86NFYJqeGflkiogrOvVlIFhqURFVho3x1moGAa3deMs+LS30CAhBN5nNxeT5hbJ1zwmji2k+aF6NENIPf/hs54f0sZFUVAMigAAAABJRU5ErkJggg==");
+  border: 0;
+  cursor: default;
+  display: inline-block;
+  height: 16px;
+  padding: 0;
+  width: 16px;
+}
+
+.close-button:hover,
+.close-button:focus {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAqklEQVR4XqWRMQ6DMAxF/1Fyilyj2SmIBUG5QcTCyJA5Z8jGhlBPgRi4TmoDraVmKFJlWYrlp/g5QfwRlwEVNWVa4WzfH9jK6kCkEkBjwxOhLghheMWMELUAqqwQ4OCbnE4LJnhr5IYdqQt4DJQjhe9u4vBBmnxHHNzRFkDGjHDo0VuTAqy2vAG4NkvXXDHxbGsIGlj3e835VFNtdugma/Jk0eXq0lP//5svi4PtO01oFfYAAAAASUVORK5CYII=");
+}
+
+.close-button:active {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAARElEQVQoz2P4z4AfMlBLAYMdwxkghgEwD1XBGTC0g0sDIaYJECVwFqoChBK4WegKkJWArSJZAQErCDqSKG/iCyhaRhYA9LDIbULDzlIAAAAASUVORK5CYII=");
+}
+
+.link-button {
+  -webkit-margin-start: 0.5em;
+}
+
+#card-slider-frame {
+  /* Must match #footer height. */
+  bottom: 50px;
+  overflow: hidden;
+  /* We want this to fill the window except for the region used
+     by footer */
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+body.bare-minimum #card-slider-frame {
+  bottom: 0;
+}
+
+#page-list {
+  /* fill the apps-frame */
+  display: -webkit-box;
+  height: 100%;
+}
+
+#attribution {
+  bottom: 0;
+  left: auto;
+  margin-left: 8px;
+  /* Leave room for the scrollbar. */
+  margin-right: 13px;
+  position: absolute;
+  right: 0;
+  text-align: left;
+  z-index: -5;
+}
+
+/* For themes that right-align their images, we flip the attribution to the
+ * left to avoid conflicts. We also do this for bare-minimum mode since there
+ * can be conflicts with the recently closed menu. */
+html[themegravity='right'] #attribution,
+body.bare-minimum #attribution,
+html[dir='rtl'] #attribution {
+  left: 0;
+  right: auto;
+  text-align: right;
+}
+
+#attribution > span {
+  display: block;
+}
+
+#footer {
+  background-image: -webkit-linear-gradient(
+      rgba(242, 242, 242, 0.9), rgba(222, 222, 222, 0.9));
+  bottom: 0;
+  color: #7F7F7F;
+  font-size: 0.9em;
+  font-weight: bold;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+
+/* TODO(estade): remove this border hack and replace with a webkit-gradient
+ * border-image on #footer once WebKit supports border-image-slice.
+ * See https://bugs.webkit.org/show_bug.cgi?id=20127 */
+#footer-border {
+  height: 1px;
+}
+
+#footer-content {
+  -webkit-box-align: center;
+  display: -webkit-box;
+  height: 49px;
+}
+
+#footer-content > * {
+  margin: 0 9px;
+}
+
+#logo-img {
+  margin-top: 4px;
+}
+
+body.bare-minimum #footer {
+  background: transparent;
+  bottom: auto;
+  font-weight: normal;
+  position: absolute;
+  right: 0;
+}
+
+html[dir='rtl'] body.bare-minimum #footer {
+  left: 0;
+  right: auto;
+}
+
+body.bare-minimum #footer-border,
+body.bare-minimum #logo-img,
+body.bare-minimum #dot-list {
+  visibility: hidden;
+}
+
+.starting-up * {
+  -webkit-transition: none !important;
+}
+
+/* Login Status. **************************************************************/
+
+#login-container {
+  -webkit-box-shadow: none;
+  background: transparent none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 1.1em;
+  /* Leave room for the scrollbar. */
+  margin-left: 13px;
+  margin-right: 13px;
+  margin-top: 5px;
+  padding: 0;
+  position: fixed;
+  right: 0;
+  text-align: right;
+  top: 0;
+  z-index: 10;
+}
+
+html[dir='rtl'] #login-container {
+  left: 0;
+  right: auto;
+}
+
+.login-status-icon {
+  -webkit-padding-end: 37px;
+  background-position: right center;
+  background-repeat: no-repeat;
+  min-height: 27px;
+}
+
+html[dir='rtl'] .login-status-icon {
+  background-position-x: left;
+}
+
+.profile-name:hover,
+.link-span {
+  text-decoration: underline;
+}
+
+#login-status-bubble-contents {
+  font-size: 1.1em;
+}
+
+#login-status-message-container {
+  margin-bottom: 13px;
+}
+
+#login-status-learn-more {
+  display: inline-block;
+}
+
+.login-status-row {
+  -webkit-box-align: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: end;
+  display: -webkit-box;
+}
+
+#login-status-advanced-container {
+  -webkit-box-flex: 1;
+}
+
+#login-status-dismiss {
+  min-width: 6em;
+}
+
+/* Trash. *********************************************************************/
+
+#trash {
+  -webkit-transition: top 200ms, opacity 0;
+  -webkit-transition-delay: 0, 200ms;
+  color: #222;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  width: auto;
+}
+
+html[dir='rtl'] #trash {
+  left: 0;
+  right: auto;
+}
+
+#footer.showing-trash-mode #trash {
+  -webkit-transition-delay: 0, 0;
+  -webkit-transition-duration: 0, 200ms;
+  opacity: 0.75;
+  top: 0;
+}
+
+#footer.showing-trash-mode #trash.drag-target {
+  opacity: 1;
+}
+
+#trash > .trash-text {
+  -webkit-padding-end: 7px;
+  -webkit-padding-start: 30px;
+  border: 1px dashed #7f7f7f;
+  border-radius: 4px;
+  display: inline-block;
+  padding-bottom: 9px;
+  padding-top: 10px;
+  position: relative;
+  top: 7px;
+}
+
+#trash > .lid,
+#trash > .can {
+  top: 18px;
+}
+
+#footer.showing-trash-mode #trash.drag-target .lid {
+  -webkit-transform: rotate(-45deg);
+}
+
+html[dir='rtl'] #footer.showing-trash-mode #trash.drag-target .lid {
+  -webkit-transform: rotate(45deg);
+}
+
+#fontMeasuringDiv {
+  /* The font attributes match the nav inputs. */
+  font-size: 0.9em;
+  font-weight: bold;
+  pointer-events: none;
+  position: absolute;
+  visibility: hidden;
+}
+
+/* Page switcher buttons. *****************************************************/
+
+.page-switcher {
+  -webkit-transition: width 150ms, right 150ms, background-color 150ms;
+  background-color: transparent;
+  border: none;
+  bottom: 0;
+  font-size: 40px;
+  margin: 0;
+  max-width: 150px;
+  min-width: 90px;
+  outline: none;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+}
+
+#chrome-web-store-link {
+  -webkit-padding-end: 12px;
+  /* Match transition delay of recently closed button. */
+  -webkit-transition-delay: 100ms;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+#chrome-web-store-title {
+  -webkit-padding-end: 36px;
+  -webkit-padding-start: 15px;
+  background: url('chrome://theme/IDR_WEBSTORE_ICON_24') right 50% no-repeat;
+  display: inline-block;
+  line-height: 49px;
+}
+
+#chrome-web-store-link:hover {
+  color: #666;
+}
+
+html[dir='rtl'] #chrome-web-store-title {
+  background-position-x: left;
+}
+
+#vertical-separator {
+  background-color: rgb(178, 178, 178);
+  display: none;
+  height: 20px;
+  margin: 0;
+  vertical-align: middle;
+  width: 1px;
+}
+
+/* Show the separator only if one of the menus is visible. */
+.footer-menu-button:not(.invisible) ~ #vertical-separator {
+  display: inline-block;
+}
+
+/* In trash mode, hide the menus and web store link. */
+#footer.showing-trash-mode #chrome-web-store-link,
+#footer.showing-trash-mode .menu-container {
+  -webkit-transition-delay: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#footer .menu-container {
+  -webkit-flex-align: center;
+  /* Put menus in a flexible box so the order can easily be swapped. */
+  display: -webkit-flex;
+  height: 100%;
+  margin: 0;
+}
+
+/* Put the recently closed menu to the left when it's not visible. */
+#recently-closed-menu-button.invisible {
+  -webkit-flex-order: -1;
+  visibility: hidden;
+}
+
+#other-sessions-menu-button.invisible {
+  display: none;
+}
+
+.other-sessions-promo-message {
+  display: none;
+  padding: 0;
+}
+
+.other-sessions-promo-message:only-child {
+  display: block;
+}
+
+.other-sessions-promo-message p {
+  margin: 0;
+}
+</style>
+<style>/* Copyright (c) 2012 The Chromium Authors. All rights reserved.
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file. */
+
+.footer-menu-button {
+  -webkit-appearance: none;
+  -webkit-padding-end: 15px;
+  -webkit-padding-start: 9px;
+  -webkit-transition: opacity 200ms;
+  -webkit-transition-delay: 100ms;
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  display: block;
+  font: inherit;
+  height: 100%;
+  margin: 0;
+  /* The padding increases the clickable area. */
+  padding-bottom: 0;
+  padding-top: 0;
+  white-space: nowrap;
+}
+
+.footer-menu-button:hover:not([menu-shown]) {
+  color: #666;
+}
+
+.footer-menu-button:hover:not([menu-shown]) .disclosure-triangle {
+  background-color: #666;
+}
+
+.footer-menu-button[menu-shown] {
+  color: #555;
+}
+
+.footer-menu-button[menu-shown] .disclosure-triangle {
+  background-color: #555;
+}
+
+.footer-menu {
+  -webkit-margin-end: 10px;
+  max-height: 400px;
+  overflow: auto;
+  padding: 6px 8px;
+  /* Needs to be above #footer. */
+  z-index: 10;
+}
+
+.footer-menu,
+.footer-menu-context-menu {
+  min-width: 150px;
+}
+
+/* TODO(dubroy): Unify this with tile page scrollbar. */
+.footer-menu::-webkit-scrollbar-button {
+  display: none;
+}
+
+.footer-menu::-webkit-scrollbar {
+  width: 8px;
+}
+
+.footer-menu::-webkit-scrollbar-thumb {
+  background-color: #D9D9D9;
+  border: 2px solid white;
+}
+
+.footer-menu-item {
+  -webkit-margin-end: 8px;
+  -webkit-margin-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-start: 22px;
+  background: no-repeat 0 50%;
+  background-color: transparent !important;
+  background-size: 16px 16px;
+  box-sizing: border-box;
+  display: block;
+  line-height: 1.5em;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  max-width: 450px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.footer-menu-item:not(:hover) {
+  text-decoration: none;
+}
+
+.footer-menu-item:first-of-type {
+  margin-top: 0.25em;
+}
+
+.footer-menu-item:last-of-type {
+  margin-bottom: 0.25em;
+}
+
+.footer-menu section {
+  padding: 0;
+}
+
+.footer-menu section h3 {
+  color: black;
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.footer-menu section:first-of-type h3 {
+  margin-top: 0.25em;
+}
+
+/* Used to add additional details to a section header */
+.footer-menu section h3 .details {
+  color: rgb(151, 156, 160);
+  font-style: italic;
+  font-weight: normal;
+}
+
+.footer-menu section h3 .details:before {
+  content: '\2013';  /* En-dash character. */
+  margin: 0 0.5em;
+}
+
+html[dir='rtl'] .footer-menu-item {
+  background: no-repeat 100% 50%;
+}
+
+.recent-window {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA0UlEQVR42s2OSwsBYRSGz1+Uv6CQyTUsLFzKlFtmMWUQvkSJxIgfYGVrZWFjr9jY2L3mzJSUoo6NxdPbWTxPhwCQWq+gNisMmDWv7a5yVvHtYrsoZuPBLvXsOfzWVURvOQdZ0wna2xt2++OT5uIAX+vyFWs2AZnjoSudzvdXOPL1A3M0BBn9jie9w+GPGP0uqNYyPUFA1XFJNxrigG7UQYWKLg4UK2VQrpQXB9j9g0A2lxUHMo5LqUxCHEilk6BYXBMHoo5LES0oDrBL4VAAv/AAQoVZHAc9DoAAAAAASUVORK5CYII=");
+}
+
+/* TODO(estade): find a better color for active. */
+.footer-menu-item:active,
+.footer-menu-item:visited,
+.footer-menu-item:link {
+  color: hsl(213, 90%, 24%) !important;
+}
+
+.disclosure-triangle {
+  -webkit-margin-start: 2px;
+  -webkit-mask-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAJUlEQVQYV2NgoDuYSQSGK/RB0+yDrACbQqwKkBUW41OArJB0AAACXws0ERupuAAAAABJRU5ErkJggg==");
+  background-color: #7F7F7F;
+  display: inline-block;
+  height: 9px;
+  width: 9px;
+}
+
+.footer-menu-context-menu {
+  /* Needs to be above .footer-menu. */
+  z-index: 11;
+}
+
+.footer-menu hr {
+  background-color: rgb(217, 217, 217);
+  border: 0;
+  height: 1px;
+}
+</style>
+<style>/* Copyright (c) 2012 The Chromium Authors. All rights reserved.
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file. */
+
+.tile-page {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.tile-page-scrollbar {
+  -webkit-box-sizing: border-box;
+  margin: 0 4px;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  width: 5px;
+  z-index: 5;
+}
+
+.tile-page-content {
+  -webkit-box-flex: 1;
+  /* Don't apply clip mask to padding. */
+  -webkit-mask-clip: content-box;
+  /* TODO(estade): this mask is disabled for technical reasons. It negatively
+   * impacts performance of page switching, also it causes problems with Mac
+   * text: http://crbug.com/86955
+  -webkit-mask-image: -webkit-linear-gradient(bottom, transparent, black 30px);
+  */
+  /* The following four properties are necessary so that the mask won't clip
+   * the scrollbar. */
+  box-sizing: border-box;
+  overflow-y: scroll;
+  /* Scrollbar width(13px) + balance right padding.  */
+  padding-left: 93px;
+  padding-right: 80px;
+  /* This value is mirrored in TilePage.updateTopMargin_ */
+  padding-top: 60px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.top-margin {
+  /* The only reason height is set to 1px, rather than left at 0, is that
+   * otherwise webkit collapses the top and bottom margins. */
+  height: 1px;
+}
+
+.tile-grid {
+  position: relative;
+  width: 100%;
+}
+
+.tile {
+  -webkit-print-color-adjust: exact;
+  /* Don't offer the context menu on long-press. */
+  -webkit-touch-callout: none;
+  -webkit-user-drag: element;
+  display: inline-block;
+  position: absolute;
+}
+
+/* NOTE: Dopplegangers nest themselves inside of other tiles, so don't
+ * accidentally double apply font-size to them. */
+.tile:not(.doppleganger) {
+  font-size: 1.2em;
+}
+
+/* Not real but not a doppleganger: show nothing. This state exists for a
+ * webstore tile that's on the same page as a [+]. */
+.tile:not(.real):not(.doppleganger) {
+  display: none;
+}
+
+/* I don't know why this is necessary. -webkit-user-drag: element on .tile
+ * should be enough. If we don't do this, we get 2 drag representations for
+ * the image. */
+.tile img {
+  -webkit-user-drag: none;
+}
+
+.doppleganger {
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+}
+
+.tile.dragging {
+  opacity: 0;
+}
+
+.tile.drag-representation {
+  -webkit-transition: opacity 200ms;
+  pointer-events: none;
+  position: fixed;
+  z-index: 3;
+}
+
+.tile.drag-representation.placing > * {
+  -webkit-transition: -webkit-transform 200ms;
+}
+
+/* When a drag finishes while we're not showing the page where the tile
+ * belongs, the tile shrinks to a dot. */
+.tile.drag-representation.dropped-on-other-page > * {
+   -webkit-transform: scale(0) rotate(0);
+}
+
+.tile.drag-representation.deleting > * {
+  -webkit-transform: scale(0) rotate(360deg);
+  -webkit-transition: -webkit-transform 600ms;
+}
+
+.animating-tile-page .tile,
+.tile.drag-representation.placing {
+  -webkit-transition: left 200ms, right 200ms, top 200ms;
+}
+
+.hovering-on-trash {
+  opacity: 0.6;
+}
+
+.animating-tile-page .top-margin {
+  -webkit-transition: margin-bottom 200ms;
+}
+
+.animating-tile-page #notification-container {
+  -webkit-transition: margin 200ms, opacity 200ms;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: scale(0, 0);
+  }
+
+  60% {
+    -webkit-transform: scale(1.2, 1.2);
+  }
+
+  100% {
+    -webkit-transform: scale(1, 1);
+  }
+}
+
+.tile > .new-tile-contents {
+  -webkit-animation: bounce 500ms ease-in-out;
+}
+
+@-webkit-keyframes blipout {
+  0% {
+    -webkit-transform: scale(1, 1);
+  }
+
+  60% {
+    -webkit-animation-timing-function: ease-in;
+    -webkit-transform: scale(1.3, 0.02);
+    opacity: 1;
+  }
+
+  90% {
+    -webkit-animation-timing-function: default;
+    -webkit-transform: scale(0.3, 0.02);
+    opacity: 0.7;
+  }
+
+  100% {
+    -webkit-animation-timing-function: linear;
+    -webkit-transform: scale(0.3, 0.02);
+    opacity: 0;
+  }
+}
+
+.tile > .removing-tile-contents {
+  -webkit-animation: blipout 300ms;
+  -webkit-animation-fill-mode: forwards;
+  pointer-events: none;
+}
+
+.tile-page:not(.selected-card) * {
+  -webkit-transition: none !important;
+}
+
+/** Scrollbars ****************************************************************/
+
+.tile-page-content::-webkit-scrollbar {
+  width: 13px;
+}
+
+.tile-page-content::-webkit-scrollbar-button {
+  display: none;
+}
+</style>
+
+<div id="footer">
+    <div id="footer-border"></div>
+    <div id="footer-content">
+        <h3 class="text-orange" style="background:none"><span class="text-dk-blue">Junxure</span>Essentials</h3>
+    
+        <!--ul id="dot-list">
+            <li class="dot selected" role="button" title="Actions" tabindex="3">
+                <div class="selection-bar"></div>
+                <input spellcheck="false" disabled="">
+            </li>
+            <li class="dot" role="button" title="Records">
+                <div class="selection-bar"></div>
+                <input spellcheck="false" disabled="">
+            </li>
+            <li class="dot" role="button" title="Opportunities">
+                <div class="selection-bar"></div>
+                <input spellcheck="false" disabled="">
+            </li>
+            <li class="dot" role="button" title="Accounts">
+                <div class="selection-bar"></div>
+                <input spellcheck="false" disabled="">
+            </li>
+            <li class="dot" role="button" title="Correspondance & Documents">
+                <div class="selection-bar"></div>
+                <input spellcheck="false" disabled="">
+            </li>
+            <li class="dot" role="button" title="Reports">
+                <div class="selection-bar"></div>
+                <input spellcheck="false" disabled="">
+            </li>
+            <li class="dot" role="button" title="Dashboards">
+                <div class="selection-bar"></div>
+                <input spellcheck="false" disabled="">
+            </li>
+            <li class="dot" role="button" title="Log On">
+                <div class="selection-bar"></div>
+                <input spellcheck="false" disabled="">
+            </li>
+            <li class="dot" role="button" title="Settings">
+                <div class="selection-bar"></div>
+                <input spellcheck="false" disabled="">
+            </li>
+        </ul-->
+    </div>
+</div>
+
+<script>
+$().ready(function() {
+   $("#dot-list li").each(function() {
+       $("input", this).val(this.title);
+   }); 
+});
+</script>

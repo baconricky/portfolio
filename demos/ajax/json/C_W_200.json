@@ -1,0 +1,97 @@
+{  	
+	"returnCd": "0",
+	
+	"actionErrors": [],
+	
+	"actionMessages": [],
+	
+	"fieldErrors": [], 
+	
+    "result": [
+        {
+            "TCN": 
+                {
+                    "href": "http://www.cnn.com",
+                    "display": "0123456789012345"
+                }
+            ,
+            "ClaimType": "P-PRACT",
+            "ClaimStatus": "P-PAID",
+            "BillingProviderNumber": "12345678",
+            "NPI": "",
+            "RecipID": "",
+            "ServiceCodeDrugName": "",
+            "FromDOS": "01/30/2007",
+            "ReimbAmount": "630.00"
+        },
+        {
+            "TCN": 
+                {
+                    "href": "http://www.macnn.com",
+                    "display": "0123456789012345"
+                }
+            ,
+            "ClaimType": "P-PRACT",
+            "ClaimStatus": "P-PAID",
+            "BillingProviderNumber": "12345678",
+            "NPI": "",
+            "RecipID": "",
+            "ServiceCodeDrugName": "",
+            "FromDOS": "02/30/2007",
+            "ReimbAmount": "530.00"
+        },
+        {
+            "TCN": 
+                {
+                    "href": "http://www.wral.com",
+                    "display": "0123456789012345"
+                }
+            ,
+            "ClaimType": "P-PRACT",
+            "ClaimStatus": "P-PAID",
+            "BillingProviderNumber": "12345678",
+            "NPI": "",
+            "RecipID": "",
+            "ServiceCodeDrugName": "",
+            "FromDOS": "03/30/2007",
+            "ReimbAmount": "430.00"
+        },
+        {
+            "TCN": 
+                {
+                    "href": "http://www.digg.com",
+                    "display": "0123456789012345"
+                }
+            ,
+            "ClaimType": "P-PRACT",
+            "ClaimStatus": "P-PAID",
+            "BillingProviderNumber": "12345678",
+            "NPI": "",
+            "RecipID": "",
+            "ServiceCodeDrugName": "",
+            "FromDOS": "03/31/2007",
+            "ReimbAmount": "435.00"
+        },
+        {
+            "TCN": 
+                {
+                    "href": "http://www.google.com",
+                    "display": "0123456789012345"
+                }
+        ,
+            "ClaimType": "P-PRACT",
+            "ClaimStatus": "P-PAID",
+            "BillingProviderNumber": 
+                {
+                    "href": "http://www.wral.com",
+                    "display": "12345678"
+                }
+            ,
+            "NPI": "",
+            "RecipID": "",
+            "ServiceCodeDrugName": "",
+            "FromDOS": "03/31/2007",
+            "ReimbAmount": "935.00"
+        }
+    ]
+}

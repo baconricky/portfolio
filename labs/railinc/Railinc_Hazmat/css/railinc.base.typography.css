@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+body{
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.headerDescription {
+	font-weight:normal;
+	font-size: 16px;
+	color:#9d9fa1;
+	letter-spacing: 1px;
+}

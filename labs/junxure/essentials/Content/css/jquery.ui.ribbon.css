@@ -1,0 +1,440 @@
+div.officebar {
+	background: #fff;
+	float:	none;
+	border: none;
+	margin: 0 0 18px;
+}
+
+div.officebar ul {
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+div.officebar ul li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	height: 105px;
+}
+
+div.officebar a {
+  display:block;
+  float:none;
+  padding: 4px 15px 0px 6px;
+  text-decoration:none;
+  cursor:default;
+  height: 23px; 
+}
+
+div.officebar a:hover {
+  color:#15428B;
+}
+
+div.officebar a {
+  outline:expression(hideFocus='true');
+  outline:0;
+}
+
+div.officebar :focus {
+  -moz-outline-style: none;
+}
+
+
+div.officetab {
+	overflow: hidden;
+	cursor: default;
+	/*top: 33px;*/
+	display: none;
+	left: 0;
+}
+
+div.officetab ul {
+  background: #fff none;
+  list-style-image:none;
+  list-style-position:outside;
+  list-style-type:none;
+  margin:0;
+  padding:10px 10px 0;
+  padding:0;
+  clear:both;
+  z-index:2;
+  border: 0px none;
+}
+
+div.officetab ul li, div.officetab ul li:hover {
+	float:left;
+	padding:0 5px 0 0;
+}
+
+div.officetab div.panel {
+	display: block;
+	float: none;
+	padding: 81px 0 0;
+	text-align: center;
+	text-decoration: none;
+	
+  margin-bottom: 18px;
+  background-color: #fff; /*#d9edf7*/
+  border: 1px solid #3A87AD;
+  
+}
+div.officetab div.panel > span {
+	color: #fff;
+	background: #3A87AD;
+	padding: 0 3px;
+	border-color: #3A87AD;
+}
+div.officetab li span {
+  display: block;
+}
+
+/* === BUTTON SPLIT MENU === */
+div.buttonsplitmenu {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #3A87AD;
+  z-Index: 2000;
+  width: auto;
+  display: block;
+}
+
+div.buttonsplitmenu ul {
+  padding: 0;
+  margin: 0;
+  background: #fff;
+  height: auto;
+  width: auto;
+  /* width: 200px; /* TODO */
+}
+
+div.buttonsplitmenu ul li {
+  float: none;
+  padding: 0px 2px 2px 0;
+  margin: 0 0 0 2px;
+  line-height: 20px;
+  height: 20px;
+	vertical-align: middle;
+}
+
+div.buttonsplitmenu li.separator {
+	border-top: 1px solid #3A87AD;
+}
+
+div.buttonsplitmenu li.menutitle {
+	border-bottom: 1px solid #3A87AD;
+	font-weight: normal;
+	background: #3A87AD;
+	color: #fff;
+	padding-left: 2px;
+	margin-left: 0;
+	line-height: 20px;
+	height: 20px;
+	vertical-align: middle;
+}
+
+div.buttonsplitmenu ul li,
+div.buttonsplitmenu ul li a {
+	border-top: 1px solid transparent;
+	color: #3A87AD;
+	padding: 0;
+	line-height: 20px;
+	margin: none;
+	word-wrap: break-word;
+}
+
+div.buttonsplitmenu ul li a:hover {
+	background: #BCE8F1;
+	color: #3A87AD;
+	/*background: transparent url(images/button3_over.png) no-repeat scroll top right;*/
+}
+
+div.buttonsplitmenu  ul li a span {
+  padding-left: 22px;
+  margin-left: -20px;
+  margin-right: 8px;
+  display: inline-block;
+  height: 22px;
+  line-height: 17px;
+}
+
+div.buttonsplitmenu  ul li a span img,
+div.buttonsplitmenu  ul li span img,
+div.buttonsplitmenu  ul li img {
+  padding-right: 5px;
+}
+
+
+div.buttonsplitmenu ul li.separator a {
+  border-top: 1px solid #BCE8F1;
+}
+
+div.buttonsplitmenu ul li:hover{
+	background: #fff;
+	color: #3A87AD;
+}
+
+div.buttonsplitmenu ul li.menutitle:hover {
+	background: #3A87AD;
+	color: #fff;
+}
+
+div.buttonsplitmenu ul li.resize {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #BCE8F1;
+  background: #BCE8F1 url(images/resize_bg.png) repeat-x scroll top right;
+  height: 10px;
+  line-height: 10px;
+  font-size: 1px;
+}
+
+div.buttonsplitmenu ul li.resize span {
+  background: transparent url(images/resize.gif) no-repeat scroll top right;
+  height: 10px;
+  width: 10px;
+  display: block;
+  float: right;
+  cursor: se-resize;
+}
+
+/* === BUTTONS === */
+div.officetab li div.button {
+	display: inline-block;
+	float: left;
+    height: 76px;
+    left: 0;
+    min-width: 59px;
+    position: relative;
+    text-align: center;
+    top: -95px;
+}
+
+div.officetab li div.list, div.officetab li div.textlist {
+  width: auto;
+}
+
+div.officetab li div.list div {
+  float: left;
+}
+
+div.officetab li div.button ul {
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  z-index: 2;
+  clear: both;
+  background: none repeat scroll 0 0 transparent;
+}
+
+  div.officetab li div.list ul {
+    height: 66px;
+    line-height: 0px; /* IE7 fix */
+    font-size: 1px; /* IE7 fix */
+  }
+
+  div.officetab li div.textlist ul {
+  }
+
+
+div.officetab li div.button li {
+  background: #fff none;
+  float:none;
+  margin:0;
+  padding:0;
+}
+
+  div.officetab li div.list li {
+  }
+
+  div.officetab li div.textlist ul li {
+    height:22px;
+    height: expression('18px');/* FOR IE */
+  }
+  div.officetab li div.textlist ul li:hover {
+    color: #BCE8F1;
+	border: 1px solid #BCE8F1;
+  }
+  div.officetab li div.textlist ul li:hover{
+    color: #fff;
+	background: #BCE8F1;
+  }
+
+div.officetab li div.button a {
+	background: #fff;
+	text-decoration: none;
+	padding:5px;
+	margin:0;
+	height:66px;
+	color: #3A87AD;
+}
+div.officetab li div.button a:hover {
+  	background: #D9EDF7;
+	color: #3A87AD;
+}
+
+  div.officetab li div.list a {
+    width: 24px;
+    height: 20px;
+  }
+  div.officetab li div.list a:hover {
+  	background: #BCE8F1;
+	color: #fff;
+  }
+
+  div.officetab li div.textlist a {
+    display: block;
+    float: left;
+    height: 10px;
+    margin-right: 6px;
+    padding-right: 5px;
+	background: #fff;
+	color: #BCE8F1;
+  }
+  div.officetab li div.textlist a:hover {
+    background: #BCE8F1;
+	color: #fff;
+  }
+
+div.officetab li div.button a img {
+  padding: 4px 0 0 0;
+  border: 0;
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+  div.officetab li div.list a img {
+    margin: 0;
+    padding: 2px 0 0 4px;
+  }
+
+  div.officetab li div.textlist a img {
+    vertical-align: top;
+    padding: 1px 4px 0 0;
+    display: inline;
+  }
+
+div.officetab li div.split a span {
+  background: transparent url(images/dropdown.png) no-repeat scroll 22px 20px;
+  padding-bottom: 7px;
+  border-top: 1px solid transparent;
+}
+
+div.officetab li div.split:hover a span {
+  border-top-color: #BCE8F1;
+}
+
+div.officetab li div.textlist a span {
+  color: #3A87AD;
+  display: block;
+  height: 20px;
+  line-height: 18px;
+  margin: 0;
+  cursor: default;
+}
+
+div.officetab li div.textlist a:hover span,
+div.officetab li div.textlist a.opened span {
+	background: #3A87AD;
+	color: #fff;
+}
+
+div.officetab li div.textlist div ul li.dropdown a,
+div.officetab li div.textlist li.dropdown a {
+	padding: 3px;
+	background: url("Images/dropdown.png") no-repeat scroll 90% 9px transparent;
+	color: #3A87AD;
+	padding-right: 18px;
+}
+
+div.officetab li div.textlist li.dropdown a:hover,
+div.officetab li div.textlist li.dropdown a.opened {
+	background: url("Images/dropdown.png") no-repeat scroll 90% 9px #BCE8F1;
+	color: #fff;
+	padding: 3px;
+	padding-right: 18px;
+}
+
+div.officetab li div.textlist div ul li.dropdown div {
+  display: none;
+}
+
+/* ======== TEXT BUTTON LIST ===== */
+div.officetab li div.textboxlist {
+    display: inline-block;
+    float: left;
+    height: 66px;
+    left: 0;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    top: -105px;
+    width: auto;
+	padding: 0 10px;
+}
+
+div.officetab li div.textboxlist ul {
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  z-index: 2;
+  clear: both;
+  
+  height: 76px;
+  line-height: 0px; /* IE7 fix */
+  font-size: 1px; /* IE7 fix */
+}
+
+div.officetab li div.textboxlist li {
+  background: #fff none;
+  float:none;
+  margin:0;
+  padding:0;
+  height:22px;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+div.officetab li div.separator {
+  border-left: 1px solid #BCE8F1;
+  padding-left: 6px;
+  margin-left: 6px;
+}
+
+div.officetab li div.textboxlist img {
+	vertical-align: bottom;
+  	margin: 0 2px 0 0;
+}
+
+div.officetab li div.textboxlist input {
+	margin: 0 0 0 4px;
+}
+
+/************************************************************\
+  Layout
+\************************************************************/
+.group:after {
+	visibility: hidden;
+	   display: block;
+	   content: "";
+	     clear: both;
+	    height: 0;
+	}
+* html .group             { zoom: 1; } /* IE6 */
+*:first-child+html .group { zoom: 1; } /* IE7 */
+/************************************************************\
+  End Layout
+\************************************************************/

@@ -1,0 +1,90 @@
+@image-folder: "@{imagesPath}/metro";
+@texture-url: none;
+@widget-background-color: @white;
+@widget-border-color: @borderColor;
+@widget-text-color: @textColor;
+@header-background-color: @white;
+@header-text-color: @textColor;
+@button-background-color: @blueLighter;
+@button-text-color: @textColor;
+@group-background-color: @white;
+@group-border-color: @borderColor;
+@content-background-color: @white;
+@select-background-color: @white;
+@select-border-color: @borderColor;
+@select-hover-background-color: @blueLighter;
+@select-group-background-color: @white;
+@hover-background-color: @blue;
+@hover-border-color: @blue;
+@hover-text-color: @white;
+@selected-background-color: @blueLighter;
+@selected-border-color: @blueLighter;
+@selected-text-color: @white;
+@active-background-color: @white;
+@active-border-color: @textColor;
+@active-text-color: @textColor;
+
+@error-background-color: 	#f2dede;
+@error-border-color: 		darken(spin(@errorBackground, -10), 3%);
+@error-text-color: 			#b94a48;
+
+
+@disabled-text-color: @gray;
+@validation-background-color: #fff4c9;
+@validation-border-color: #ffe79e;
+@validation-text-color: #635145;
+@tooltip-background-color: @blue;
+@tooltip-border-color: @blue;
+@tooltip-text-color: @white;
+@main-border-radius: 0px;
+@list-border-radius: @main-border-radius - 1;
+@inner-border-radius: @main-border-radius - 2;
+@slider-border-radius: 13px;
+@draghandle-border-radius: 7px;
+@alt-background-color: @grayLighter;
+@input-background-color: @white;
+@input-text-color: @textColor;
+@shadow-color: @borderColor;
+@shadow-inset-color: @borderColor;
+@link-text-color: @textColor;
+@loading-panel-color: @borderColor;
+@splitbar-background-color: @grayLight;
+@require "template.less";
+
+.k-header.k-tabstrip {
+	border: none;
+	background: none;
+}
+
+.k-button.btn-primary {
+  .buttonBackground(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight);
+}
+// Warning appears are orange
+.k-button.btn-warning {
+  .buttonBackground(@btnWarningBackground, @btnWarningBackgroundHighlight);
+}
+// Danger and error appear as red
+.k-button.btn-danger {
+  .buttonBackground(@btnDangerBackground, @btnDangerBackgroundHighlight);
+}
+// Success appears as green
+.k-button.btn-success {
+  .buttonBackground(@btnSuccessBackground, @btnSuccessBackgroundHighlight);
+}
+// Info appears as a neutral blue
+.k-button.btn-info {
+  .buttonBackground(@btnInfoBackground, @btnInfoBackgroundHighlight);
+}
+// Inverse appears as dark gray
+.k-button.btn-inverse {
+  .buttonBackground(@btnInverseBackground, @btnInverseBackgroundHighlight);
+}
+
+.k-buttonpane {
+	padding: (@baseLineHeight - 1) 20px @baseLineHeight;
+	margin-top: @baseLineHeight;
+	margin-bottom: 0;
+	background: @formActionsBackground;
+	border: none;
+	border-top: 2px solid @blue;
+}

@@ -1,0 +1,371 @@
+<script type="text/x-kendo-template" id="toolbar_template">
+	<div class="navbar">
+		<div class="navbar-inner">
+			<ul class="nav">	
+				<li class="dropdown">
+					<a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="print-menu" href="/print.html">
+						<i class="icon-print"></i> Print
+						<b class="caret"></b>
+					</a>
+					<ul id="print-menu" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+					  <li><a tabindex="-1" href=".">All</a></li>
+					  <li><a tabindex="-1" href=".">Selected</a></li>
+					</ul>
+				</li>
+				<li><a href="."><i class="icon-edit"></i> Edit</a></li>
+				<li><a href="."><i class="icon-trash"></i> Delete</a></li>
+				<li><a href="." title="Correspondence Wizard"><i class="icon-magic"></i> Correspondence Wizard</a></li>
+			</ul>
+			<ul class="nav pull-right">	
+				<li class="dropdown">
+					<a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="view-menu" href="/print.html">
+						<i class="icon-print"></i> View by 
+						<b class="caret"></b>
+					</a>
+					<ul id="view-menu" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+					  <li><a tabindex="-1" href=".">Records</a></li>
+					  <li><a tabindex="-1" href=".">Actions</a></li>
+					  <li><a tabindex="-1" href=".">Assets</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="settings-menu" href="/print.html">
+						<i class="icon-cogs"></i> <b class="caret"></b>
+					</a>
+					<ul id="settings-menu" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+					  <li><a tabindex="-1" href="."><i class="icon-folder-open"></i> Load View</a></li>
+					  <li><a tabindex="-1" href="."><i class="icon-save"></i> Save View</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</script>
+
+<div id="v2_filter" class="clearfix">
+					<h1>Infographics and Data Visualization <span class="v2_filter_count">(20540)</span></h1>
+				<div class="v2_filter_layout" style="background-color: transparent; height: 25px; ">
+			<div class="v2_filter_layout_current">
+				<div class="label title clearfix">
+					<div class="text">Layout</div>
+					<div class="icon thumb"></div>
+					<div class="arrow"></div>
+				</div>
+			</div>
+			<ul class="viewmode">
+				<li class="label item clearfix">
+					<div class="icon thumb"></div>
+					<div class="text">Thumb</div>
+				</li>
+				<li class="label item clearfix">
+					<div class="icon list"></div>
+					<div class="text">List</div>
+				</li>
+			</ul>
+		</div>
+		<div class="v2_filter_organize" style="background-color: transparent; height: 25px; ">
+			<div class="v2_filter_organize_current">
+				<div class="label title clearfix">
+					<div class="text">Organize by</div>
+					<div class="icon newest"></div>
+					<div class="arrow"></div>
+				</div>
+			</div>
+			<ul class="sort">
+				<li class="label item clearfix">
+					<div class="icon newest"></div>
+					<div class="text">Recent</div>
+				</li>
+				<li class="label item clearfix">
+					<div class="icon liked"></div>
+					<div class="text">Liked</div>
+				</li>
+				<li class="label item clearfix">
+					<div class="icon commented"></div>
+					<div class="text">Commented</div>
+				</li>
+				<li class="label item clearfix">
+					<div class="icon viewed"></div>
+					<div class="text">Viewed</div>
+				</li>
+				<li class="label item clearfix">
+					<div class="icon trending"></div>
+					<div class="text">Trending</div>
+				</li>
+			</ul>
+		</div>
+		<div class="v2_filter_filter" style="background-color: transparent; height: 25px; ">
+			<div class="v2_filter_filter_current">
+				<div class="label title clearfix">
+					<div class="text">Filter</div>
+					<div class="icon all"></div>
+					<div class="arrow"></div>
+				</div>
+			</div>
+			<ul class="type">
+				<li class="label item clearfix">
+					<div class="icon all"></div>
+					<div class="text">All</div>
+				</li>
+				<li class="label item clearfix">
+					<div class="icon static"></div>
+					<div class="text">Static</div>
+				</li>
+				
+				<li class="label item clearfix">
+					<div class="icon interactive"></div>
+					<div class="text">Interactive</div>
+				</li>
+				<li class="label item clearfix">
+					<div class="icon video"></div>
+					<div class="text">Video</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	    
+<div id="grid"></div>
+
+<script>
+    $(document).ready(function() {
+        var element = $("#grid").kendoGrid({
+            dataSource: {
+                type: "odata",
+                transport: {
+                    read: "http://demos.kendoui.com/service/Northwind.svc/Employees"
+                },
+                pageSize: 6,
+                serverPaging: true,
+                serverSorting: true
+            },
+            height: 450,
+            sortable: true,
+            filterable: true,
+            columnMenu: true,
+            scrollable: true,
+            selectable: "multiple",
+            pageable: true,
+            toolbar: kendo.template($("#toolbar_template").html()),
+                        
+            detailInit: detailInit,
+            dataBound: function() {
+                //this.expandRow(this.tbody.find("tr.k-master-row").first());
+            },
+            columns: [
+                {
+                    field: "FirstName",
+                    title: "First Name"
+                },
+                {
+                    field: "LastName",
+                    title: "Last Name"
+                },
+                {
+                    field: "Country"
+                },
+                {
+                    field: "City"
+                },
+                {
+                    field: "Title"
+                }
+            ]
+        });
+    });
+
+    function detailInit(e) {
+        $("<div/>").appendTo(e.detailCell).kendoGrid({
+            dataSource: {
+                type: "odata",
+                transport: {
+                    read: "http://demos.kendoui.com/service/Northwind.svc/Orders"
+                },
+                serverPaging: true,
+                serverSorting: true,
+                serverFiltering: true,
+                pageSize:6,
+                filter: { field: "EmployeeID", operator: "eq", value: e.data.EmployeeID }
+            },
+            scrollable: false,
+            sortable: true,
+            pageable: true,
+            columns: [
+                { field: "OrderID", width: 70 },
+                { field: "ShipCountry", title:"Ship Country", width: 100 },
+                { field: "ShipAddress", title:"Ship Address" },
+                { field: "ShipName", title: "Ship Name", width: 200 }
+            ]
+        });
+    }
+</script>
+
+<script type="text/javascript">
+/*
+ * Lazy Load - jQuery plugin for lazy loading images
+ *
+ * Copyright (c) 2007-2012 Mika Tuupola
+ *
+ * Licensed under the MIT license:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *
+ * Project home:
+ *   http://www.appelsiini.net/projects/lazyload
+ *
+ * Version:  1.8.0
+ *
+ */
+(function(a,b){var c=a(b);a.fn.lazyload=function(d){function h(){var b=0;e.each(function(){var c=a(this);if(g.skip_invisible&&!c.is(":visible"))return;if(!a.abovethetop(this,g)&&!a.leftofbegin(this,g))if(!a.belowthefold(this,g)&&!a.rightoffold(this,g))c.trigger("appear");else if(++b>g.failure_limit)return!1})}var e=this,f,g={threshold:300,failure_limit:0,event:"scroll",effect:"show",container:b,data_attribute:"original",skip_invisible:!0,appear:null,load:null};return d&&(undefined!==d.failurelimit&&(d.failure_limit=d.failurelimit,delete d.failurelimit),undefined!==d.effectspeed&&(d.effect_speed=d.effectspeed,delete d.effectspeed),a.extend(g,d)),f=g.container===undefined||g.container===b?c:a(g.container),0===g.event.indexOf("scroll")&&f.bind(g.event,function(a){return h()}),this.each(function(){var b=this,c=a(b);b.loaded=!1,c.one("appear",function(){if(!this.loaded){if(g.appear){var d=e.length;g.appear.call(b,d,g)}a("<img />").bind("load",function(){c.hide().attr("src",c.data(g.data_attribute))[g.effect](g.effect_speed),b.loaded=!0;var d=a.grep(e,function(a){return!a.loaded});e=a(d);if(g.load){var f=e.length;g.load.call(b,f,g)}}).attr("src",c.data(g.data_attribute))}}),0!==g.event.indexOf("scroll")&&c.bind(g.event,function(a){b.loaded||c.trigger("appear")})}),c.bind("resize",function(a){h()}),h(),this},a.belowthefold=function(d,e){var f;return e.container===undefined||e.container===b?f=c.height()+c.scrollTop():f=a(e.container).offset().top+a(e.container).height(),f<=a(d).offset().top-e.threshold},a.rightoffold=function(d,e){var f;return e.container===undefined||e.container===b?f=c.width()+c.scrollLeft():f=a(e.container).offset().left+a(e.container).width(),f<=a(d).offset().left-e.threshold},a.abovethetop=function(d,e){var f;return e.container===undefined||e.container===b?f=c.scrollTop():f=a(e.container).offset().top,f>=a(d).offset().top+e.threshold+a(d).height()},a.leftofbegin=function(d,e){var f;return e.container===undefined||e.container===b?f=c.scrollLeft():f=a(e.container).offset().left,f>=a(d).offset().left+e.threshold+a(d).width()},a.inviewport=function(b,c){return!a.rightofscreen(b,c)&&!a.leftofscreen(b,c)&&!a.belowthefold(b,c)&&!a.abovethetop(b,c)},a.extend(a.expr[":"],{"below-the-fold":function(b){return a.belowthefold(b,{threshold:0})},"above-the-top":function(b){return!a.belowthefold(b,{threshold:0})},"right-of-screen":function(b){return a.rightoffold(b,{threshold:0})},"left-of-screen":function(b){return!a.rightoffold(b,{threshold:0})},"in-viewport":function(b){return!a.inviewport(b,{threshold:0})},"above-the-fold":function(b){return!a.belowthefold(b,{threshold:0})},"right-of-fold":function(b){return a.rightoffold(b,{threshold:0})},"left-of-fold":function(b){return!a.rightoffold(b,{threshold:0})}})})(jQuery,window)
+;
+
+
+Visually.Widgets.Filter = {
+	options: [],
+	init: function(options){
+		this.options = options;
+		this.bindEvents();
+	},
+	bindEvents: function(){
+		var _this = this;
+		var config = {
+            sensitivity: 2,
+            interval: 50,
+            over: function () {
+				jQuery(this).css('background-color','#e6e6e6').find('.label.title .icon').addClass('active');
+				jQuery(this).animate({
+					height: (jQuery(this).find('ul').height() + 30) + 'px'
+				},300,function(){
+					
+				});
+            },
+            timeout: 200,
+            out: function () {
+				jQuery(this).animate({
+					height: '25px'
+				},300,function(){
+					jQuery(this).css('background-color','transparent').find('.label.title .icon').removeClass('active');
+				});
+            }
+        };
+		
+		for(filter in this.options.filterSelectors){
+			jQuery(this.options.filterSelectors[filter]).hoverIntent(config)
+		}
+		
+		jQuery('#v2_filter ul li').click(function(){
+			var filterValue = jQuery(this).find('.icon').attr('class').split(' ')[1];
+			var filterName = jQuery(this).parent().attr('class');
+			
+			_this.applyChanges(filterName,filterValue);
+		});
+	},
+	applyChanges: function(filterName,filterValue){
+		var queryString = this.getUrlVars();
+		queryString[filterName] = filterValue;
+		this.setUrlVars(queryString);
+	},
+	getUrlVars: function(){
+		var vars = [], hash;
+		var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+		for(var i = 0; i < hashes.length; i++)
+		{
+			hash = hashes[i].split('=');
+			//vars.push(hash[0]);
+			vars[hash[0]] = hash[1] != undefined ? hash[1].split('#')[0] : hash[1];
+		}
+		return vars;
+	},
+	setUrlVars: function(vars,ret){
+		if(ret == undefined)
+			ret = 0;
+		
+		delete vars[0];
+		varString = '';
+		for(v in vars)
+			if(v != null && vars[v] != undefined)
+				varString += v + '=' + vars[v] + '&';
+		if(!ret)
+			if(window.location.href.indexOf('?') != -1)
+				window.location.href = window.location.href.slice(0,window.location.href.indexOf('?')) + "?" + varString.slice(0, -1) + '#v2_filter';
+			else
+				window.location.href = window.location.href + "?" + varString.slice(0, -1) + '#v2_filter';
+		else
+			return varString.slice(0, -1);
+	}
+};
+
+Visually.Widgets.ContentLoader = function(options){
+	this.options = options;
+	this.bindEvents();
+	this.page = undefined;
+}
+Visually.Widgets.ContentLoader.prototype.bindEvents = function(){
+	var _this = this;
+	jQuery(this.options.button).unbind('click').bind('click',function(){
+		if(jQuery(this).hasClass('blocked'))
+			return true;
+		
+		jQuery(this).html('Loading...');
+		
+		var queryString = Visually.Widgets.Filter.getUrlVars();
+		if(_this.page == undefined){
+			if(queryString['page'] == undefined)
+				queryString['page'] = 1;
+			else
+				queryString['page']++;
+			
+			_this.page = queryString['page'];
+		}
+		else{
+			queryString['page'] = ++(_this.page);
+		}
+		
+		if(window.location.href.indexOf('?') != -1)
+			url = window.location.href.slice(0,window.location.href.indexOf('?')) + "?" + Visually.Widgets.Filter.setUrlVars(queryString,1);
+		else
+			url = window.location.href + "?" + Visually.Widgets.Filter.setUrlVars(queryString,1);
+		
+		jQuery("#hidden-util").html('').unbind('load').load(url + ' ' + _this.options.contentSource,null,function(){
+			if(jQuery("#hidden-util .v2_grid_column").length > 0){
+				//grid or thumb
+				counter = 0;
+				jQuery("#hidden-util .v2_grid_column").each(function(){
+					jQuery('.view-mode').find('.' + counter).last().after(jQuery(this).children());
+					counter++;
+					if(counter == 5)
+						counter = 0;
+				});
+				
+				if(counter)
+					jQuery(_this.options.button).html('Show More');
+				else
+					jQuery(_this.options.button).html('Done');
+			}
+			else if(jQuery("#hidden-util .v2_list_item").length > 0){
+				jQuery(".view-mode .v2_list_item").last().after(jQuery("#hidden-util .view-mode-wrapper").children());
+				jQuery(_this.options.button).html('Show More');
+			}
+			else if(_this.options.item != undefined && jQuery("#hidden-util " + _this.options.item).length > 0){
+				jQuery(_this.options.contentDestination + " " + _this.options.item).last().after(jQuery("#hidden-util " + _this.options.contentSource).children());
+				jQuery(_this.options.button).html('Show More');
+			}
+			else{
+				jQuery(_this.options.button).html('Done');
+				jQuery(_this.options.button).unbind('click');
+			}
+			
+			_this.options.callback();
+		});
+	});
+}
+;
+
+
+
+
+	jQuery(document).ready(function(){
+		Visually.Widgets.Filter.init({
+			filterSelectors: ['.v2_filter_layout','.v2_filter_organize','.v2_filter_filter']
+		});
+	});
+</script>
+

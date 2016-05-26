@@ -1,0 +1,200 @@
+/**************************************************
+** BEGIN: Kendo UI Essentials Theme
+**************************************************/
+
+@image-folder: "@{imagesPath}/metro";
+
+@texture-url: none;
+
+@widget-background-color: @white;
+@widget-border-color: @borderColor;
+@widget-text-color: @textColor;
+
+@header-background-color: @white;
+@header-text-color: @blue;
+
+@button-background-color: @btnBackground;
+@button-text-color: @btnTextColor;
+
+@group-background-color: @white;
+@group-border-color: @borderColor;
+
+@content-background-color: @white;
+
+@select-background-color: @white;
+@select-border-color: @borderColor;
+@select-hover-background-color: @blueLighter;
+@select-group-background-color: @white;
+
+@hover-background-color: 	darker(@btnBackground, 10%);
+@hover-border-color: 		@btnBorderColor;
+@hover-text-color: 			@btnTextColor;
+
+@selected-background-color: @blueLight;
+@selected-border-color: 	@blueLight;
+@selected-text-color: 		@blue;
+
+@active-background-color: 	@blueLight;
+@active-border-color: 		@blueLight;
+@active-text-color: 		@blue;
+
+@error-background-color: 	@errorBackground;
+@error-border-color: 		@errorBorder;
+@error-text-color: 			@errorText;
+
+@disabled-text-color: @gray;
+
+@validation-background-color: 	#fff4c9;
+@validation-border-color: 		#ffe79e;
+@validation-text-color: 		#635145;
+
+@tooltip-background-color: 	@blue;
+@tooltip-border-color: 		@blue;
+@tooltip-text-color: 		@white;
+
+@main-border-radius: 0px;
+
+@list-border-radius: @main-border-radius - 1;
+
+@inner-border-radius: @main-border-radius - 2;
+
+@slider-border-radius: 13px;
+
+@draghandle-border-radius: 7px;
+
+@alt-background-color: #efefef;
+
+@input-background-color: @white;
+@input-text-color: @textColor;
+@shadow-color: @borderColor;
+@shadow-inset-color: @borderColor;
+@link-text-color: @blue;
+@loading-panel-color: @borderColor;
+@splitbar-background-color: @grayLight;
+@require "template.less";
+
+.k-widget.k-calendar {
+	width: 100%;
+}
+
+.k-picker-wrap {
+	border-color: transparent !important;
+	input, .k-input {
+		border-color: transparent !important;
+		.box-shadow(none);
+	}
+}
+
+.k-grid-header .k-header {
+	border-width: 0 0 2px 0;
+}
+.k-grid td {
+	border-width: 0 0 1px 0;
+}
+
+.k-toolbar.k-grid-toolbar,
+.k-widget.k-grid {
+	border: none;
+}
+
+.k-grid-header-wrap, 
+.k-grid-header, 
+.k-grouping-header, 
+.k-grouping-header .k-group-indicator {
+	border: none;
+	border-bottom: 2px solid;
+}
+
+
+.k-header .k-link {
+	color: @blue;
+}
+
+.k-datepicker {
+	border-color: transparent !important;
+
+	.k-state-hover {
+		background: none;
+	}
+
+	.k-picker-wrap.k-state-disabled {
+		.opacity(100);
+		
+		.k-select {
+			border-color: transparent !important;
+			color: @textColor !important;
+			.opacity(100);
+			.box-shadow(none) !important;
+			.transition(~"border linear .2s, box-shadow linear .2s");
+		}
+
+		input,
+		.k-input {
+			#font > .shorthand(@baseFontSize,normal,@baseLineHeight); // Set size, weight, line-height here
+			font-family: @baseFontFamily;
+			display: inline-block;
+			height: @baseLineHeight;
+			padding: 4px 6px;
+			margin-bottom: 0;
+			font-size: @baseFontSize;
+			line-height: @baseLineHeight;
+			color: @textColor !important;
+			.opacity(100);
+			.border-radius(@inputBorderRadius);  background-color: @inputBackground;
+			border-color: transparent !important;
+			.box-shadow(none) !important;
+			.transition(~"border linear .2s, box-shadow linear .2s");
+		}
+	}
+
+	.k-picker-wrap {
+		padding: 2px 2px 2px 27px;
+		.k-select {
+			left: 0;
+			display: inline-block;
+			margin-top: 2px;
+		    height: @baseLineHeight;
+		    width: auto;
+		    width: 13px;
+		    padding: 4px 2px 4px 8px;
+		    font-size: @baseFontSize;
+		    font-weight: normal;
+		    line-height: @baseLineHeight;
+		    text-align: center;
+		    text-shadow: 0 1px 0 @white;
+		    background-color: @grayLighter;
+		    border-color: transparent !important;
+		}
+
+		input,
+		.k-input {
+			#font > .shorthand(@baseFontSize,normal,@baseLineHeight); // Set size, weight, line-height here
+			font-family: @baseFontFamily;
+			display: inline-block;
+			height: @baseLineHeight;
+			padding: 4px 6px;
+			font-size: @baseFontSize;
+			line-height: @baseLineHeight;
+			color: @textColor;
+			.border-radius(@inputBorderRadius);  background-color: @inputBackground;
+			border: 1px solid @inputBorder !important;
+			border-color: @inputBorder !important;
+			.box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+			.transition(~"border linear .2s, box-shadow linear .2s");
+			
+			// Focus state
+			&:focus {
+				border-color: rgba(82,168,236,.8);
+				outline: 0;
+				outline: thin dotted \9; /* IE6-9 */
+				.box-shadow(~"inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6)");
+			}
+  
+		}
+	}
+}
+/**************************************************
+** END: Kendo UI Essentials Theme
+**************************************************/
+
+

@@ -1,0 +1,166 @@
+[{
+    text: 'All Products',
+    checked: false,
+    children: [{
+	    text: 'Cash Equities',
+        checked: false,
+	    children: [{
+	        text: 'Program Trading (Trading)',
+            checked: false,
+	        children: [{
+                text: 'PRG3',
+                checked: false,
+                children: [{
+                    text: 'RISK',
+                    checked: false,
+                    children: [{
+                        text: 'Risk CUST THEM',
+                        checked: false,
+                        children: [{
+                            text: '98100052',
+                            leaf: true,
+                            checked: false
+                        }]
+                    },{
+                        text: 'Risk Index',
+                        checked: false,
+                        children: [{
+                            text: '98100024',
+                            leaf: true,
+                            checked: false
+                        }]
+                    },{
+                        text: 'Risk PT',
+                        checked: false,
+                        children: [{
+                            text: '98100010',
+	                        leaf: true,
+	                        checked: false
+	                    },{
+	                        text: '98100030',
+	                        leaf: true,
+	                        checked: false
+	                    },{
+	                        text: '98100038',
+	                        leaf: true,
+	                        checked: false
+	                    },{
+	                        text: '98100042',
+	                        leaf: true,
+	                        checked: false
+	                    }]
+                    },{
+                    text: 'Risk Sectors',
+                    checked: true,
+                    children: [{
+                        text: '98100047',
+                        leaf: true,
+                        checked: false
+                    },{
+                        text: '98100049',
+                        leaf: true,
+                        checked: false
+                    }]
+	            }]
+	        }]
+	    },{
+	        text: 'Pan Euro Agency',
+	        leaf: true,
+	        checked: false
+	    },{
+	        text: 'DMA',
+	        leaf: true,
+	        checked: false
+	    },{
+	        text: 'EM Trading',
+	        leaf: true,
+	        checked: false
+	    }]
+	    }]
+	},{
+	    text: 'GFFX',
+        checked: false,
+	    cls: 'folder',
+	    children: [{
+	        text: 'Fx Cash',
+	        leaf: true,
+	        checked: false
+	    },{
+	        text: 'Fx Derivatives',
+            checked: false,
+	        children: [{
+	            text: 'Euro',
+                checked: false,
+	            children: [{
+	                text: 'Flow',
+                    checked: true,
+	                children: [{
+	                    text: 'USDE',
+	                    leaf: true,
+	                    checked: true
+	                },{
+	                    text: 'KBLE',
+	                    leaf: true,
+	                    checked: true
+	                },{
+	                    text: 'EURST',
+	                    leaf: true,
+	                    checked: true
+	                },{
+	                    text: 'EURExceptionals',
+	                    leaf: true,
+	                    checked: true
+	                }]      
+	            },{
+	                text: 'Positioning',
+                    checked: false,
+	                children: [{
+	                    text: 'KBLESH',
+	                    leaf: true,
+	                    checked: true
+	                },{
+	                    text: 'EURPCHF',
+	                    leaf: true,
+	                    checked: false
+	                },{
+	                    text: 'EURPNYC',
+	                    leaf: true,
+	                    checked: false
+	                },{
+	                    text: 'EURSTSH',
+	                    leaf: true,
+	                    checked: false
+	                },{
+	                    text: 'EURRV',
+	                    leaf: true,
+	                    checked: true
+	                }]      
+	            },{
+	                text: 'Complex',
+                    checked: false,
+	                children: [{
+	                    text: 'EURGEN',
+	                    leaf: true,
+	                    checked: false
+	                }]      
+	            },{
+	                text: 'LT',
+                    checked: false,
+    	            children: [{
+	                    text: 'EURLT',
+	                    leaf: true,
+	                    checked: false
+	                }]      
+	            }]      
+	        },{
+	            text: 'Asia',
+	            leaf: true,
+	            checked: false
+	        },{
+	            text: 'Multifactor',
+	            leaf: true,
+	            checked: false
+	        }]
+        }]
+    }]
+}]

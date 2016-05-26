@@ -1,0 +1,165 @@
+// Button backgrounds
+// ------------------
+.disabledInput() {
+	cursor: default !important;
+	color: @textColor !important;
+	background: transparent !important;
+	border: none !important;
+
+	.box-shadow(none) !important;
+	.opacity(100) !important;
+}
+
+.hoverButton(@bgColor, @borderColor, @textWeight: 400, @textColor: #fff) {
+	color: @textColor;
+	border-color: @borderColor;
+
+	background: 		darken(@bgColor, 10%);
+	*background: 		darken(@bgColor, 10%);
+	
+	font-weight: 		@textWeight;
+	text-decoration:	none;
+	
+	//.box-shadow(0 2px 3px 1px rgba(0,0,0,.5));
+	
+	.transition(all .2s linear);
+}
+	
+.buttonColor(@bgColor, @borderColor, @textWeight: 400, @textColor: #fff) {
+	cursor:				pointer;
+	color: 				@textColor;
+	background: 		@bgColor;
+	*background: 		@bgColor;
+	border: 			@btnBorderSize solid @borderColor;
+	font-weight: 		@textWeight;
+	text-decoration:	none;
+		
+	//.box-shadow(0 1px 1px 1px rgba(0,0,0,.2));
+	
+	.transition(all .2s linear);
+	
+	&.hover {
+    	.hoverButton(@bgColor, @borderColor, @textWeight, @textColor);
+	}
+	&:hover {
+    	.hoverButton(@bgColor, @borderColor, @textWeight, @textColor);
+	}
+	
+	// Focus state for keyboard and accessibility
+	&:focus {
+    	.tab-focus();
+		.transition(all .2s linear);
+	}
+	&.focus {
+    	.tab-focus();
+		.transition(all .2s linear);
+	}
+	
+	// Active state
+	&.active {
+		color: 				@white;
+		background: 		@grayDarker e("\9");
+		*background: 		@grayDarker;
+		border-color: 		@white;
+		font-weight: 		@textWeight;
+		text-decoration:	none;
+		
+		.box-shadow(inset 0 1px 1px 1px rgba(0,0,0,.4));
+		
+		.transition(all .2s linear);
+	}
+    &:active {
+		color: 				@white;
+		background: 		@grayDarker e("\9");
+		*background: 		@grayDarker;
+		border-color: 		@white;
+		font-weight: 		@textWeight;
+		text-decoration:	none;
+		
+		.box-shadow(inset 0 1px 1px 1px rgba(0,0,0,.4));
+		
+		.transition(all .2s linear);
+	}}
+
+.widget(@classPrefix: "ui") {
+
+	(~'.@{classPrefix}-widget-shadow') {
+		margin: 		-8px 0 0 -8px; 
+		padding: 		8px; 
+		background: 	@grayDark; 
+		opacity: 		.30;
+		filter:			Alpha(Opacity=30); 
+		
+		// Border Radius
+		//.border-radius(@radius);
+	}
+
+	(~'.@{classPrefix}-widget-overlay') {
+		background: 	#000; 
+		opacity: 		.80;
+		filter:			Alpha(Opacity=80);
+		position: 		absolute; 
+		top: 			0; 
+		left: 			0; 
+		width: 			100%; 
+		height: 		100%; 
+	}
+	(~'.@{classPrefix}-widget') {
+		border: 		@border;
+		background: 	@bodyBackground;
+		color: 			@textColor;
+		font-family: 	@sansFontFamily; 
+		font-size: 		@baseFontSize;
+
+		(~'.@{classPrefix}-widget') {
+			border: 	none;
+			font-size:	@baseFontSize;
+		}
+		
+		(~'.@{classPrefix}-widget-header') {
+			background: 		@headerBackground;
+			border: 			@headerBorder;
+			border-top-size:    3px;
+			color: 				@headerText;
+			
+			font-weight: 		bold;
+			padding: 			@padding;
+			font-size:			@baseFontSize;
+			
+			a {
+				color: 				@headerText;
+				text-decoration:	none;	
+				font-size: 			@baseFontSize;	
+			}
+		}
+		
+		(~'.@{classPrefix}-widget-content') {
+			padding: 		@padding; 
+			border: 		@headerBorder;
+			background: 	@bodyBackground; 
+			color: 			@textColor; 
+			
+			(~'.@{classPrefix}-widget') {
+				border: 		none;
+				background: 	@bodyBackground;
+				color: 			@textColor;
+				font-size: 		@baseFontSize;
+			}
+			
+			input, select, textarea, button {
+				font-family: 	@sansFontFamily; 
+				font-size: 		@baseFontSize;
+			}
+		}
+		(~'.@{classPrefix}-widget-footer') {
+			background: 		@footerBackground;
+			border: 			@footerBorder;
+			color: 				@footerText;
+			font-weight: 		normal;
+			padding: 			@padding;
+			font-size:			@baseFontSize;
+		}
+		
+	}
+}
+

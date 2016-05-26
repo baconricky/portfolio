@@ -1,0 +1,208 @@
+.jCalendar
+{
+    border-collapse: separate;
+    border-spacing: 2px;
+}
+	.jCalendar th 
+	{
+		padding: 3px 5px;
+		font-weight: bold;
+		color: #FFF;
+		background: #315B7C;
+	}
+
+	.jCalendar td 
+	{
+		padding: 3px 5px;
+		color: #000;
+		text-align: center;
+		background: #D7DBDF;
+	}
+	.jCalendar .other-month
+	{
+		background: #FFF;
+		color: #aaa;
+	}
+	.jCalendar .today
+	{
+		background: #666;
+		color: #fff;
+	}
+	.jCalendar .selected
+	{
+		background: #f66;
+		color: #fff;
+	}
+		.jCalendar .selected.dp-hover
+		{
+			background: #f33;
+			color: #fff;
+		}
+	.jCalendar .dp-hover,
+	.jCalendar .activeWeekHover td
+	{
+		background: #fff;
+		color: #000;
+	}
+	.jCalendar .selectedWeek td
+	{
+		background: #f66;
+		color: #fff;
+	}
+	.jCalendar td.disabled,
+	.jCalendar td.disabled.dp-hover
+	{
+		background: #bbb;
+		color: #888;
+	}
+	.jCalendar .unselectable,
+	.jCalendar .unselectable:hover,
+	.jCalendar .unselectable.dp-hover
+	{
+		background: #bbb;
+		color: #888;
+	}
+
+/* For the popup */
+
+/* NOTE - you will probably want to style a.dp-choose-date - see how I did it in demo.css */
+.dp-choose-date
+{
+	display: block;
+	width: 16px;
+	height: 16px;
+	float: right;
+	margin: 1px 2px 0;
+	overflow: hidden;
+	text-indent: -2000px;
+	background: url("../images/icons/calendar.png") no-repeat; 
+}
+
+.dp-popup
+{
+	width: 171px;
+	position: relative;
+	padding: 4px;
+	font: 10px/1.2em Arial, sans-serif;
+	background: #FFF;
+	border: 1px solid #AAA;
+	border-bottom-width: 2px;
+	
+	
+}
+#dp-popup
+{
+	position: absolute;
+	z-index: 999;
+}
+	.dp-popup h2
+	{
+		font-size: 12px;
+		text-align: center;
+		margin: 2px 0;
+		padding: 0;
+	}
+	.dp-popup a
+	{
+		color: #000;
+		text-decoration: none;
+		padding: 3px 2px 0;
+	}
+		.dp-popup a.disabled
+		{
+			cursor: default;
+			color: #aaa;
+		}
+	.dp-popup td
+	{
+		cursor: pointer;
+	}
+		.dp-popup td.disabled
+		{
+			cursor: default;
+		}
+	.dp-popup .dp-nav-prev
+	{
+		position: absolute;
+		top: 4px;
+		left: 4px;
+		width: 100px;
+		text-indent: -1000em;
+	}
+		.dp-popup .dp-nav-prev a
+		{
+			float: left;
+			margin: 0px;
+		}
+		/* Opera needs the rules to be this specific otherwise it doesn't change the cursor back to pointer after you have disabled and re-enabled a link */
+		.dp-popup .dp-nav-prev a,
+		.dp-popup .dp-nav-next a
+		{
+			cursor: pointer; /* hand-shaped cursor */
+		}
+			.dp-popup .dp-nav-prev a.dp-nav-prev-month
+			{
+				background:transparent url("../images/icons/datepicker_left.gif") no-repeat scroll center center;
+				cursor:pointer;
+				height:16px;
+				vertical-align:middle;
+				width:16px;
+				text-indent: -1000em;
+			}
+			.dp-popup .dp-nav-prev a.dp-nav-prev-year
+			{
+				background:transparent url("../images/icons/datepicker_year_left.gif") no-repeat scroll center center;
+				cursor:pointer;
+				height:16px;
+				vertical-align:middle;
+				width:16px;
+				text-indent: -1000em;
+			}
+			.dp-popup .dp-nav-prev a.disabled,
+			.dp-popup .dp-nav-next a.disabled
+			{
+				cursor: default;
+			}
+	.dp-popup .dp-nav-next
+	{
+		position: absolute;
+		top: 4px;
+		right: 4px;
+		width: 100px;
+		text-indent: -1000em;
+	}
+		.dp-popup .dp-nav-next a
+		{
+			float: right;
+		}
+			.dp-popup .dp-nav-next a.dp-nav-next-year
+			{
+				background:transparent url("../images/icons/datepicker_year_right.gif") no-repeat scroll center center;
+				float:right;
+				height:16px;
+				vertical-align:middle;
+				width:16px;
+				text-indent: -1000em;
+			}
+			
+			.dp-popup .dp-nav-next a.dp-nav-next-month
+			{
+				background:transparent url("../images/icons/datepicker_right.gif") no-repeat scroll center center;
+				float:right;
+				height:16px;
+				vertical-align:middle;
+				width:16px;
+				text-indent: -1000em;
+			}
+
+a#dp-close
+{
+	font-size: 11px;
+	padding: 4px 0;
+	text-align: center;
+	display: block;
+}
+	a#dp-close:hover
+	{
+		text-decoration: underline;
+	}

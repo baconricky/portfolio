@@ -1,0 +1,73 @@
+@import "master.css";
+@import "forms.css";
+
+article .half {width:48%;}
+article {display:inline-block;}
+article h1,h2,h3,h4,h5 {color: #68D;}
+
+section li
+{		
+	background: url(../images/icons/bullet_gray.png) no-repeat 0 0.4em;
+	margin-bottom: 5px;
+	padding-left: 1em;
+}
+	section ul ul li
+	{
+		background: url(../images/icons/bullet-nested_gray.png) no-repeat 0 0.4em;
+	}
+
+#navStrip a
+{
+	width: 58px;
+	padding: 7px 2em 7px;
+}
+#navStrip a:hover
+{
+	border-left-color: #FFF;
+	border-right-color: #FFF;
+}
+#navStrip #member
+{
+	background-color: #D45;
+}
+#navStrip #member:hover
+{
+	background-color: #E56;
+	border-bottom-color: #F89;
+}
+#navStrip #provider
+{
+	background-color: #68D;
+}
+#navStrip #provider:hover
+{
+	background-color: #79E;
+	border-bottom-color: #ACF;
+}
+#navStrip #agent
+{
+	background-color: #2B2;
+}
+#navStrip #agent:hover
+{
+	background-color: #6D4;
+	border-bottom-color: #9E6;
+}
+#navStrip #state
+{
+	background-color: #FC0;
+}
+#navStrip #state:hover
+{
+	background-color: #FD1;
+	border-bottom-color: #FF4;
+}
+
+.message h1 {
+	color: #666666;
+	font-size: 2em;
+	margin: .75em;
+}
+.message a {
+	margin: .75em;
+}

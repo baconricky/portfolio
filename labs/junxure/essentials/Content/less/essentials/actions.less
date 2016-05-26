@@ -1,0 +1,49 @@
+//
+// Actions - Dashboard Widgets
+// --------------------------------------------------
+
+// Base styles
+// -------------------------
+
+.action {
+	padding: 8px 35px 8px 14px;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	
+	margin-bottom: @baseLineHeight;
+	text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	background-color: @warningBackground;
+	border: 1px solid @warningBorder;
+	.border-radius(2px);
+	color: @warningText;
+	
+	h4 {
+		margin: 0;
+	}
+	
+	> p,
+	> ul {
+		margin-bottom: 0;
+	}
+	
+	p + p {
+		margin-top: 5px;
+	}
+
+	.close {
+		position: relative;
+		top: -2px;
+		right: -21px;
+		line-height: @baseLineHeight;
+	}
+	&.mine {
+		background-color: @infoBackground;
+		border-color: @infoBorder;
+		color: @infoText;
+	}
+}
+
+// Coloring for My Actions
+// -------------------------
+
+

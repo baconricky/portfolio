@@ -1,0 +1,16 @@
+{
+	"page":1,
+	"total":1,
+	"rows":[{
+		"id":"UN0001",
+		"cell": {
+			"hmrc": "4901105",
+			"id": "UN0001",
+			"ProperShippingName": "CARTRIDGESFORWEAPONS",
+			"PrimaryHazClass": "1.1E",
+			"PackingGroup": "II",
+			"STCC": "1929135",
+			"ShortDescription": "PROJECT.CANNON"
+			}
+	}]
+}

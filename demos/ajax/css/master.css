@@ -1,0 +1,754 @@
+/* attribute: top right bottom left */
+
+/* reset built-in styling on certain elements, courtesy yui_reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{font-size:100%;}legend{color:#000;}
+
+html
+{
+	padding-bottom: 25px;
+	background: #FEC url("../images/layout/bg_tile.png") repeat-x;
+}
+body
+{
+	width: 98%;
+	min-width: 959px;
+	max-width: 1419px;
+	position: relative;
+	margin: 0 auto 30px;
+	font: .8em Verdana, sans-serif;
+	color: #444;
+}
+
+/* generic styles */
+h1,h2,h3,h4,h5
+{
+	font: bold 1em "Trebuchet MS", Helvetica, sans-serif;
+}
+hr
+{
+	width: 100%;
+	height: 1px;	
+	border: none;
+	border-bottom: 1px solid #ddd;
+}
+	td.labelToRight hr
+	{
+		float: none;
+		margin: 3px 0;
+		*margin: 0;
+		border-color: #C7CBCF;
+		display: block;
+	}
+strong
+{
+	font-weight: bold;	
+}
+em
+{
+	font-style: italic;
+}
+a
+{
+	color: #28D;
+	text-decoration: underline;
+}
+	a:visited
+	{
+		color: #95A;
+	}
+	a:hover
+	{
+		color: #B95;
+	}
+	.linkColor2 a, a.linkColor2
+	{
+		color: #EDB;
+	}
+		.linkColor2 a:hover, a.linkColor2:hover
+		{
+			color: #FFF;
+		}
+.tip,
+button.tip span
+{
+	border-bottom: 1px dashed #2288DD;
+}
+	/* Fix legends in ie so they have the dashed underline, but not in firefox because of added spacing problems for singleQ's */
+	span.tip {
+		*display:inline-block;
+	}
+	span.tip:hover,
+	label.tip:hover
+	{
+		cursor: help;	
+	}
+.offsiteLink
+{
+	margin-left: 5px;
+	margin-bottom: -1px;
+}
+.formHint
+{
+	color: #AAA;
+}
+/** pretty up button style 
+ * TODO: work on black outline in IE
+ */
+input[type=text],
+input[type=password],
+select,
+textarea
+{
+	padding: 1px;
+	background-color: #FFF;
+	border: 1px solid #BBB;
+}
+	input.medium
+	{
+		width: 127px;
+	}
+button,
+button.tip
+{
+	margin: 0;
+	padding: 2px;
+	*padding: 0;
+	vertical-align: top;
+	font-family: "Trebuchet MS";
+	font-size: 0.85em;
+	font-weight: bold;
+	letter-spacing: 1px;
+	line-height: 155%;
+	color: #444455;
+	background: #FFFFFF url("../images/layout/btn_bg_tile.gif") repeat-x bottom;
+	border: 1px solid #A7AFBF;
+}
+	button::-moz-focus-inner
+	/* only recognized by Firefox, equalizes button size */
+	{
+		padding: 0;
+	}
+	button:hover
+	{
+		background: url("../images/layout/btn_bg_tile_hover.gif") repeat-x top;
+	}
+	button:active
+	{
+		color: #000;
+	}
+	*button + button
+	{
+		margin-left: 5px;
+	}
+	.submitBtn
+	{
+		border-left: 3px solid #81ABCC;
+	}
+	button img
+	{
+		vertical-align: bottom;	
+	}
+.portalBrandColor
+{
+	background-color: #666;
+	color: #EAEAEA;
+}
+
+/* drop shadow for main content box */
+#dropShadowBox
+{
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+	.dropShadow
+	{
+		margin-top: 176px;
+	}
+		.dropShadow #tileLeft
+		{
+			width: 8px;
+			float: left;
+			margin-left: -7px;
+			background: url("../images/layout/shadow_tile.png") repeat-y left;
+		}
+		.dropShadow #tileRight
+		{
+			width: 8px;
+			float: right;
+			margin-right: -7px;
+			background: url("../images/layout/shadow_tile.png") repeat-y right;
+		}
+		.dropShadow#tileBtm
+		{
+			width: 100%;
+			height: 20px;
+			float: left;
+			clear: both;
+			margin: 0;
+			padding: 0;
+			background: url("../images/layout/shadow_tile_btm.png") repeat-x bottom;
+		}
+		.dropShadow #cornerLeft
+		{
+			width: 20px;
+			height: 20px;
+			float: left;
+			margin-left: -8px;
+			background: url("../images/layout/shadow_corner.png") no-repeat left;
+		}
+		.dropShadow #cornerRight
+		{
+			width: 20px;
+			height: 20px;
+			float: right;
+			margin-right: -8px;
+			background: url("../images/layout/shadow_corner.png") no-repeat right;
+		}
+
+/* page styles from top to bottom */
+#skipNav,
+.accessibilityNote
+{
+	position: absolute;
+	top: 5px;
+	left: -999em;
+	font-size: 0.7em;
+}
+	#skipNav:focus, #skipNav:active
+	{
+		left: 15px;
+	}
+#header
+{
+	height: 90px;
+	margin-bottom: 5px;
+	color: #FFFFFF;
+}
+
+/* known IE7 issue: box will spread to max-width, regardless of content */
+#login
+{
+	min-width:200px;
+	max-width:500px;
+	height: 5.5em;
+	float: right;
+	clear:left;
+	margin: 0 0 -30px 0;
+	color:#FFF;
+}
+	#login hr 
+	{
+		border-color:-moz-use-text-color -moz-use-text-color #315B7C;
+		color: #315B7C;
+		background-color: #315B7C;
+		height: 1px;
+	}
+	#login span,
+	#login form
+	{
+		display:block;
+		padding: 4px;
+		margin: 0px;
+	}
+	#login label
+	{
+		padding:6px;
+		position:absolute;
+		left: -999em;
+	}
+#logo
+{
+	position: absolute;
+	margin-top: 29px;
+	padding-top: -29px;
+	float:left;
+	clear:right;
+}
+	
+#siteSearch
+{
+	float: right;
+	clear: right;
+	margin: 2px 7px 0;
+	padding-top: 3px;
+}
+	#accountInfo + #siteSearch
+	{
+		margin-top: 11px;
+	}
+	#siteSearch input[type=text]
+	{
+		width: 11.1em;
+		height: 18px;
+		float: left;
+		margin-top: -3px;
+		padding: 2px 32px 0 5px;
+		border: 2px solid #315B7C;
+	}
+	#siteSearch button
+	{
+		width: 27px;
+		height: 24px;
+		margin: -3px 0 0 -4px;
+		text-indent: -999em;
+		background: #FFF url("../images/icons/search.gif") no-repeat;
+		border: 2px solid #315B7C;
+		border-left: none;
+		cursor: pointer;
+	}
+		#siteSearch button:hover
+		{
+			background-position: -27px;
+		}
+#languages
+{
+	float: right;
+	clear: right;
+	margin-right: 10px;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+	#languages li
+	{
+		display: inline;
+		font-size: 0.7em;
+	}
+#portalTitle
+{
+	height: 20px;
+	float: left;
+	margin: 4px -2px 20px 8px;
+	padding: 0 0 4px .8%;
+	font-size: 14pt;
+	border-left: 5px solid #AAA;
+}
+
+/* portal drop-down navigation */
+#navStrip
+{
+	width: 77.5%;
+	height: 28px;
+	float: right;
+	padding-left: 39px;
+	background-image: url("../images/layout/nav_left_curve.png");
+	background-repeat: no-repeat;
+	background-position: left;
+}
+	/* generic styles */
+	#navStrip li
+	{
+		float: left;
+	}
+		#navStrip li:hover ul ul
+		{
+			left: -999em;
+		}
+	#navStrip a
+	{
+		display: block;
+		padding: 3px 7px;
+		font: 8pt Arial;
+		text-decoration: none;
+		color: #FFF;
+	}
+		#navStrip a:hover
+		{
+			color: #333;
+		}
+		
+	/* descending styles */
+	#navStrip > ul
+	{
+		height: 28px;
+		background: url("../images/layout/round_top_right.png") no-repeat top right;
+	}
+		#navStrip > ul > li > a
+		{
+			padding: 7px 0.7em 7px;
+			font-weight: bold;
+			text-align: center;
+			border-right: 1px solid;
+		}
+			#navStrip > ul > li > a:hover
+			{		
+				padding-bottom: 3px;					/* fix IE menu jump when adding a border on hover */
+				border-bottom: 4px solid;
+			}
+		#navStrip > ul > li + li > a
+		{
+			border-left-style: solid;
+			border-left-width: 1px;
+		}
+		#navStrip > ul > li:last-child > a
+		{
+			border-right: none;
+		}
+			#navStrip > ul ul
+			{
+				position: absolute;
+				left: -999em;
+				z-index: 9999;
+				background: url("../images/layout/menu_sub_shadow.png") repeat-x top;
+				border-left: 1px solid;
+				border-bottom: 2px solid;
+			}
+				#navStrip > ul ul li
+				{
+					clear: both;
+				}
+					#navStrip > ul ul a
+					{
+						width: 10em;
+						border-bottom: 1px solid;
+					}
+						#navStrip > ul ul a:hover
+						{
+							padding-left: 4px;
+							border-left: 3px solid;
+						}
+						#navStrip > ul ul ul
+						{
+							margin: -1.4em 0 0 9.4em;
+							background-image: none;
+						}
+
+	#navStrip li:hover ul,
+	#navStrip ul ul li:hover ul
+	{
+		left: auto;
+	}
+	
+#contentBackground
+{
+	width: 100%;
+	background: #FFF url("../images/layout/round_top_left.gif") no-repeat;
+}
+
+/* breadcrumb navigation */
+#breadcrumb
+{
+	clear: both;
+	margin: 0 15px 20px;
+	font-size: 0.7em;
+	white-space: nowrap;
+}
+	#breadcrumb li
+	{
+		display: inline;
+	}
+	#breadcrumb b
+	{
+		font-family: "Trebuchet MS", Helvetica, sans-serif;
+		color: #777;
+	}
+
+#leftColumn
+{
+	width: 18%;
+	float: left;
+	clear: both;
+	padding: 0 0 35px 15px;
+}
+	#leftColumn > h3
+	{
+		font-size: 1.3em;
+		margin: 4px 0 0 5px;
+	}
+	#leftColumn p
+	{
+		margin: 7px 0 7px 5px;
+		font-size: .85em;
+		clear: left;	
+		}
+		#leftColumn h3 + p
+		{
+			margin: 0 0 7px 5px;	
+		}
+		#leftColumn .note
+		{
+			font-size: .8em;	
+		}
+	#leftColumn dl
+	{
+		margin-left: 5px;
+	}
+		#leftColumn dt,
+		#leftColumn dd
+		{
+			margin-left: 0;
+			padding: 0;
+			position: static;
+		}
+		#leftColumn dt
+		{
+			width: 65px;
+			min-width: 0;
+			text-align: left;
+		}
+		#leftColumn dd
+		{
+			white-space: nowrap;
+		}
+		#leftColumn dd + dt
+		{
+			margin-left: 0;	
+		}
+		#leftColumn dd + dt + dd
+		{
+			margin-left: 0;	
+		}
+#subNav
+{
+	margin-bottom: 20px;
+	padding: 10px 0;
+}
+	#subNav h3
+	{
+		margin-top: -3px;
+		padding: 0 0 5px 10px;
+	}
+	#subNav a
+	{
+		display: block;
+		padding: 5px 10px;
+		font-size: 0.8em;
+		font-weight: bold;
+		text-decoration: none;
+		color: #FFF;
+	}
+	#subNav a:hover
+	{
+		color: #333;
+	}
+
+/* MAIN CONTENT DIV */
+#mainContent	
+{
+	min-height: 230px;
+	clear: left;
+	margin: 0 15px 20px;
+}
+	#leftColumn ~ #mainContent
+	{
+		clear: none;
+		float: right;
+		width: 77%;
+		margin-left: 0;
+	}
+	
+#pageTitle
+{
+	height: 2.2em;
+	margin-bottom: 6px;
+	border-bottom: 1px solid #DDD;
+}
+	#pageTitle h1
+	{
+		float: left;
+		font-size: 1.75em;
+	}
+	/* site tools: print, text scaling, etc. */
+	#pageTitle ul
+	{
+		float: right;
+		clear: right;
+		margin-top: 4px;
+		padding: 1px 3px;
+		color: #CCC;
+	}
+		#pageTitle ul li
+		{
+			padding: 0;
+			display: inline;
+			margin-right: 0;
+		}
+			#pageTitle a
+			{
+				display: inline-block;
+				margin-top: -4px;
+				vertical-align: middle;
+			}
+				#pageTitle a:hover
+				{
+					background-color: #DEF;
+				}
+				
+/* link to adobe acrobat and other supporting software on pages with links to pdf and other files; these DIVs will be added dynamically on most pages */
+#fileSupport
+{
+	width: 70%;
+	float: left;
+	clear: left;
+}
+	#fileSupport p
+	{
+		margin: 0 0 7px;	
+	}
+	#fileSupport img:first-child
+	{
+		vertical-align: bottom;
+	}
+
+	#lastUpdated p
+	{
+		margin: 0; 
+		font-size: .85em; 
+		text-align: right;
+	}
+
+#footer
+{
+	display:block;
+	clear: both;
+	margin: 7px 10px -1px;
+	padding: 12px;
+	font-size: 0.75em;
+	text-align: center;
+	background-color: #666;
+}
+	#footer li
+	{
+		display: inline;
+		color: #FFF;
+	}
+		#footer a
+		{
+			padding: 5px;
+		}
+		
+.copyright {
+	font-size: .8em;
+	color: #777;
+	text-align:center;
+}
+
+.partners {
+	width:450px;
+	text-align:center;
+	margin:auto;
+}
+
+/* Used with timeout alert "window" that slides down 
+ * TODO: complete mockup and implementation 
+ */
+#csc_timeout
+{
+	width: 100%;
+	height:60px;
+	clear: both;
+	position:fixed;
+	top: -84px;
+	left: 0px;
+	z-index:100000;
+	margin: 0;
+	padding: 0;
+	color: #315B7C;
+	background-color: #E7F0FF;
+	border: 1px solid #ABCBFF;
+	border-left-width: 3px;
+}
+
+.csc_timeout_title 
+{
+	font-size: 0.95em;
+	font-weight: bold;
+}
+
+/* This is the button on the logged in users' message center that allows them
+ * to set their display prefs. 
+ */
+button.userPrefs
+{
+	width: 20px;
+	height: 18px;
+	text-indent: -999em;
+	background: #FFF url("../images/icons/preferences.png") no-repeat -1px;
+}
+	button.userPrefs:hover
+	{
+		background-position: -19px;
+	}
+
+
+.draft
+{
+	background: url("../images/draft.png");
+}
+
+
+/** Replaces DD_roundies implimentation. This allows firefox/webkit based
+ * browsers to render internally, curvycorners uses these settings in IE
+ * ex: radius: top-left top-right bottom-right bottom-left **/
+.rounded {
+	border-radius:8px;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+}
+.roundedTop {
+	border-radius:12px 12px 0px 0px;
+  	-moz-border-radius:12px 12px 0px 0px;
+	-webkit-border-radius:12px 12px 0px 0px;
+}
+.roundedRight {  
+	border-radius:0px 8px 8px 0px;
+	-moz-border-radius:0px 8px 8px 0px;
+	-webkit-border-radius:0px 8px 8px 0px;
+}
+
+.roundedLeft {  
+	border-radius:8px 0px 0px 8px;
+	-moz-border-radius:8px 0px 0px 8px;
+	-webkit-border-radius:8px 0px 0px 8px;
+}
+
+.roundedBottom {  
+	border-radius:0px 0px 8px 8px;
+	-moz-border-radius:0px 0px 8px 8px;
+	-webkit-border-radius:0px 0px 8px 8px;
+}
+
+.roundedHelp {  
+	border-radius:8px 0px 8px 8px;
+	-moz-border-radius:8px 0px 8px 8px;
+	-webkit-border-radius:8px 0px 8px 8px;
+}
+
+/* The following declaration fixes outline focus bug in Firefox */
+#online:focus, #download:focus {
+    outline: none;
+}
+
+/* ------------------------------------------
+ * DEPRECATED 
+ * ------------------------------------------ */
+.formBtn
+{
+	padding: 0;
+	font: bold 0.85em/155% "Trebuchet MS";
+	letter-spacing: 1px;
+	color: #445;
+	background: #FFF url("../images/layout/btn_bg_tile.gif") repeat-x bottom;
+	border: 1px solid #A7AFBF;
+}
+.formBtn:hover
+{
+	background: url("../images/layout/btn_bg_tile_hover.gif") repeat-x top;
+}
+
+#searchBtn
+{
+	width: 27px;
+	height: 24px;
+	margin-left: -4px;
+	background: url("../images/icons/search.gif") no-repeat;
+	border: 2px solid #315B7C;
+	border-left: none;
+	cursor: pointer;
+}
+#searchBtn:hover
+{
+	background: url("../images/icons/search_hover.gif") no-repeat;
+}

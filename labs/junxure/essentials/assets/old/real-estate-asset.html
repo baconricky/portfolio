@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+	
+	<!-- jQuery UI Stuff -->
+	<link rel="stylesheet" href="../css/jquery-ui-1.8.21.custom.css" type="text/css" media="all" />
+	<script src="../Scripts/jquery-ui-1.8.21.min.js" type="text/javascript"></script>
+	<script src="../Scripts/jquery.ui.datepicker.js" type="text/javascript"></script>
+
+	<!-- Bootstrap Stuff -->
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.css" type="text/css" media="all" />
+	<script src="bootstrap/js/bootstrap.js" type="text/javascript"></script>
+	
+	<!-- ABT Styles -->
+	<link rel="stylesheet" href="style.css" type="text/css" media="all" />
+	
+	<title>Real Estate Asset</title>
+
+</head>
+
+<body>
+	
+	<div class="section top">
+		<div class="row-fluid">
+			<div class="span12">
+				<div id="net-value" class="heading">
+					<div class="amount flag">$58,000.00</div>
+					<h2>Net Value</h2>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row-fluid">
+			<div class="span12">
+				<div id="ownership-value">
+					<div class="amount"><p>100% / $200,000.00</p></div>
+					<p>Ownership Value</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row-fluid">
+			<div class="span12">
+				<div id="liabilities">
+					<div class="amount flag"><p>$278,000.00</p></div>
+					<p>Liabilities</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+		
+	<div id="real-estate-information" class="section main">
+		
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="heading">
+					<h2>Real Estate Information</h2>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row-fluid">
+			<div class="span3">
+				<div class="entry">
+					<div class="label"><p>Name</p></div>
+					<div class="value"><p>Condo</p></div>
+				</div>
+			</div>
+			<div class="span3">	
+				<div class="entry">
+					<div class="label"><p>Type</p></div>
+					<div class="value"><p>Primary Residence</p></div>
+				</div>
+			</div>
+			<div class="span3">		
+				<div class="entry">
+					<div class="label"><p>Address</p></div>
+					<div class="value"><p><a href="#"><span class="street">3344 Flagler Dr.</span><span class="city-state">Palm Beach, Fla.</span></a></p></div>
+				</div>
+			</div>
+			<div class="span3">					
+				<div class="entry">
+					<div class="label"><p>Property Taxes</p></div>
+					<div class="value"><p>$2,700.00</p></div>
+				</div>	
+			</div>		
+		</div>
+		
+		<div class="row-fluid">
+			<div class="span3">
+				<div class="entry">
+					<div class="label"><p>Purchase Price</p></div>
+					<div class="value"><p>$450,000.00</p></div>
+				</div>
+			</div>
+			<div class="span3">	
+				<div class="entry">
+					<div class="label"><p>Purchase Date</p></div>
+					<div class="value"><p>01/01/2000</p></div>
+				</div>
+			</div>
+			<div class="span3">		
+				<div class="entry">
+					<div class="label"><p>Cost Basis</p></div>
+					<div class="value"><p>$500,000.000</p></div>
+				</div>
+			</div>
+			<div class="span3">					
+				<div class="entry">
+					<div class="label"><p>Balance Sheet Category</p></div>
+					<div class="value"><p>Liability</p></div>
+				</div>	
+			</div>		
+		</div>	
+		
+		<div class="row-fluid">
+			<div class="span3">
+				<div class="entry">
+					<div class="label"><p>Current Value</p></div>
+					<div class="value"><p>$200,000.00</p></div>
+				</div>
+			</div>
+			<div class="span3">	
+				<div class="entry">
+					<div class="label"><p>Source</p></div>
+					<div class="value"><p>0Estimate (1997)</p></div>
+				</div>
+			</div>
+			<div class="span3">		
+				<div class="entry">
+					<div class="label"><p>Last Updated</p></div>
+					<div class="value"><p>1/1/2000</p></div>
+				</div>
+			</div>
+			<div class="span3">					
+				<div class="entry">
+					<div class="label"><p>Balance Sheet Owner</p></div>
+					<div class="value"><p>Client</p></div>
+				</div>	
+			</div>		
+		</div>	
+		
+		<div class="row-fluid">
+			<div class="span12"
+				<div id="notes" class="section">
+					<p class="label">Note</p>
+					<p>This is a note about this property</p>		
+				</div>
+			</div>
+		</div>
+				
+	</div>
+	
+	
+	
+	
+	
+<script>
+	$(document).ready(function() {
+		$(".entry").equalHeights();
+	});
+</script>
+	
+</body>
+</html>

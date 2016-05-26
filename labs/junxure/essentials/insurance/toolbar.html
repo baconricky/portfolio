@@ -1,0 +1,130 @@
+<div id="jx-app-ribbon" class="officebar">
+    <ul class="group">
+      <li class="current">
+        <ul>
+          <li>
+            <span>Assets</span>
+            <div class="button split">
+              <a href="#" rel="paste">
+                <img src="../Content/Images/tango/32x32/printer.png" alt="" /><span>Print</span>
+              </a>
+              <div>
+                <ul>
+                  <li><a href="#"><img src="../Content/Images/tango/16x16/document-print-preview.png">Preview Selected</a></li>
+                  <li><a href="#"><img src="../Content/Images/tango/16x16/document-print.png">Print Selected</a></li>
+                  <li class="separator"><a href="#"><img src="../Content/Images/tango/16x16/printer.png">Print All...</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="button">
+              	<a href="#" rel="Edit">
+	                <img src="../Content/Images/tango/32x32/document-settings.png" alt="" /><span>Edit</span>
+	              </a>
+            </div>
+            <div class="button">
+              	<a href="#" rel="Delete">
+	                <img src="../Content/Images/tango/32x32/edit-delete.png" alt="" /><span>Delete</span>
+	              </a>
+            </div>
+            <div class="button">
+              	<a href="#" rel="CorrespondenceWizard">
+	                <img src="../Content/Images/tango/32x32/message-new.png" alt="" /><span>Correspondence Wizard</span>
+	              </a>
+            </div>
+
+            <div class="button textlist separator">
+              <ul>
+                <li class="dropdown"><a href="#"><img src="../Content/Images/tango/16x16/observe.png">Favorites</a>
+					<div>
+						<ul>
+							<li><a href="#">Favorites 1</a></li>
+							<li><a href="#">Favorites 2</a></li>
+							<li><a href="#">Favorites 3</a></li>
+							<li><a href="#">Favorites 4</a></li>
+							<li><a href="#">Favorites 5</a></li>
+							<li class="separator">Add to Favorites...</li>
+						</ul>
+					</div>
+				</li>
+				
+				<li class="dropdown"><a href="#"><img src="../Content/Images/tango/16x16/tree-diagramm.png">Actions</a>
+					<div>
+						<ul id="action-list">
+							<li class="menutitle">Action Workflows</li>
+							<li><a href="#">Action Workflow 1</a></li>
+							<li><a href="#">Action Workflow 2</a></li>
+							<li><a href="#">Action Workflow 3</a></li>
+							<li><a href="#">Action Workflow 4</a></li>
+							<li><a href="#">Action Workflow 5</a></li>
+							<li class="separator"><a href="#">Other Action Workflow...</a></li>
+							<li class="menutitle">Actions</li>
+							<li><a data-action-type="Email"   href="#">Email</a></li>
+							<li><a data-action-type="Letter"  href="#">Letter</a></li>
+							<li><a data-action-type="Fax"     href="#">Fax</a></li>
+							<li><a data-action-type="Call"    href="#">Call</a></li>
+							<li><a data-action-type="Meeting" href="#">Meeting</a></li>
+						</ul>
+					</div>
+				</li>
+                
+				<li class="dropdown"><a href="#"><img src="../Content/Images/tango/16x16/report.png">Reports</a>
+					<div>
+		                <ul>
+						  <li class="menutitle">Essential Reports</li>
+		                  <li><a href="#">Report 1</a></li>
+		                  <li><a href="#">Report 2</a></li>
+		                  <li><a href="#">Report 3</a></li>
+		                  <li><a href="#">Report 4</a></li>
+		                  <li><a href="#">Report 5</a></li>
+						  <li class="menutitle">My Reports</li>
+		                  <li><a href="#">User-Defined Report 1</a></li>
+		                  <li><a href="#">User-Defined Report 2</a></li>
+		                  <li><a href="#">User-Defined Report 3</a></li>
+						  <li class="separator">New Report...</li>
+		                </ul>
+		              </div>
+				</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <span>New</span>
+            <div class="button">
+              <a href="#" rel="table"><img src="../Content/Images/tango/32x32/add-participant.png" alt="" />Record</a>
+            </div>
+          </li>
+          <li>
+            <span>Search</span>
+            <div class="textboxlist">
+              <ul>
+                <li><img src="../Content/Images/tango/16x16/system-search.png" alt="" /><input type="search" placeholder="Records and People"/></li>
+			</ul>
+			</div>
+            <div class="button separator">
+              <a href="#" rel="AdvSearch"><img src="../Content/Images/tango/32x32/system-search.png" alt="" />Advanced Search</a>
+            </div>
+          </li>
+          <li>
+            <span>Global</span>
+            <div class="button">
+              <a href="#" rel="AdvSearch"><img src="../Content/Images/tango/32x32/document-save.png" alt="" />Import</a>
+            </div>
+            <div class="button">
+              <a href="#" rel="AdvSearch"><img src="../Content/Images/tango/32x32/emblem-system.png" alt="" />Control Panel</a>
+            </div>
+            <div class="button">
+              <a href="#" rel="AdvSearch"><img src="../Content/Images/tango/32x32/office-calendar.png" alt="" />Calendar</a>
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  
+  <script type="text/javascript">
+      $(function () {
+          $("#globalCalendarButton").click(function () {
+              navTo('/Tools/Calendar/CalendarView');
+          });
+      })
+  </script>

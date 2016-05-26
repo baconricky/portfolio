@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/** Buttons **/
+
+div.container label {
+	font-weight: bold;
+}
+
+div.container li {
+	padding-bottom: 10px;
+}
+

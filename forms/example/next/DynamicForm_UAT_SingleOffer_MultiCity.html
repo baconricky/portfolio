@@ -1,0 +1,106 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+        <title>Red Hat</title>
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <link id="style" rel="stylesheet" type="text/css" href= "/forms/css/bootstrap.css" />
+        <link id="style" rel="stylesheet" type="text/css" href= "/forms/css/forms.css" />
+
+        <script src="/forms/scripts/lib/jquery/1.10/jquery.min.js"></script>
+        <script src="/forms/scripts/vendor/elq/elqCfg.js"></script>
+        <script src="/forms/scripts/vendor/elq/elqImg.js"></script>
+        <script src="/forms/scripts/vendor/elq/elqScr.js"></script>
+
+        <script type="text/javascript">
+            var GatedFormConfig = {
+                /**************************************
+                   Locale
+                ***************************************/
+                language : 'en', //language code
+                country  : 'us', //country code
+
+                /**************************************
+                   Campaign ID
+                ***************************************/
+                sc_cid   : '70160000000H4AjAAK',    //external campaign id
+
+                /**************************************
+                   Partner ID
+                ***************************************/
+                pid : '1',
+
+                /**************************************
+                   Offer ID
+                ***************************************/
+                offer_id : 'B',
+
+                FormTitle: 'Dynamic Form',
+                FormIntro: 'Multi City',
+                /**************************************
+                   Up to 3 User Defined Fields (UDF)
+                ***************************************/
+                CustomQuestions : [{
+                        // 1. udf with select list that updates
+                        updatesOfferId: 'true',
+                        label: 'Location',
+                        options : [{
+                                val: '',
+                                label: '-- Please Select --'
+                            },{
+                                val: 'C',
+                                label: 'New York, NY'
+                            },{
+                                val: 'D',
+                                label: 'Los Angeles, CA'
+                            }]
+                    }],
+
+                /**************************************
+                   Google Analytics
+                ***************************************/
+                //GoogleAnalyticsID : 'UA-XXXXX-X',
+
+                /**************************************
+                   Google AdWords Conversion Tracking
+                ***************************************/
+                GoogleAdWordsConversionTracking : {
+                    'id'        : '990030321',
+                    'label'     : 'SNw6CL-wggcQ8dOK2AM'
+                }
+            }
+        </script>
+
+        <script src="/forms/scripts/jquery.gatedform.js"></script>
+    </head>
+    <body class="lp">
+        <section class="rh-form reversed band">
+            <header>
+                <div id="rh-form-header" class="container"></div>
+            </header>
+            <div class="content">
+                <div class="container">
+                    <section>
+                        <div id="GatedFormContainer"></div>
+                    </section>
+                </div>
+            </div>
+        </section>
+        <div id="oTags">
+            <script src="http://dynamicform-theharris.rhcloud.com/j/s_code.js" language="JavaScript"></script>
+        </div>
+    </body>
+</html>

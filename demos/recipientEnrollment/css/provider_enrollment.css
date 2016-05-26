@@ -1,0 +1,699 @@
+@import "two_column.css";
+
+a[href="mailto:NCDHHSProvEnrol@csc.com"]
+{
+	font-size: .85em;	
+}
+#leftColumn .progressHeader
+{
+	margin-left: 0;
+	border-bottom: 1px dotted #ccc;	
+}
+#progressInfo
+{
+	position: relative;
+	margin: 1px 0 0;
+	border: solid #ccc;
+	border-width: 1px 0;
+}
+	#progressInfo div
+	{
+		margin: 1px 0;
+		border: dotted #ccc;
+		border-width: 1px 0;
+	}
+	#progressInfo > a
+	{
+		position: absolute;
+		right: 4px;
+		bottom: -1px;
+		display: block;
+		width: 22px;	
+	}
+#leftNav
+{
+	clear: both;
+	position: relative;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .85em;
+	margin: 1px 0 0;
+	padding: 0;
+	padding-bottom: 15px;
+}
+	#leftNav ul
+	{
+		margin: 0;
+		border-top: 1px dotted #CCC;
+	}
+		#leftNav li
+		{
+			clear: left;
+			width: 100%;
+			margin: 0;
+			*margin-top: -3px; /* ie carriage return bug fix */
+			background-position: left;
+			background-repeat: no-repeat;
+			line-height: 1.2em;
+			overflow: auto;
+		}			
+			/* ie carriage return bug fix, it doesn't make sense but it's not affecting the second li */
+			#leftNav li:first-child + li
+			{
+				margin: 0;
+			}
+			#leftNav li:hover
+			{
+				background: url("../images/layout/navBack_leftGrad.gif") repeat-y #ebf0f4;	
+			}
+			/* Remove instantaneous horizontal scrollbar on click in Firefox, (result of overflow: auto and Firefox's handling of link outline) */
+			#leftNav a:active
+			{
+				outline: none;	
+			}
+			#leftNav a
+			{
+				display: block;
+				margin: 0;
+				padding: 6px 0 8px;
+				border-bottom: 1px dotted #CCC;
+			}
+				#leftNav a:hover
+				{
+					background: url("../images/layout/navBack_rightGrad.gif") repeat-y right;	
+				}
+			#leftNav li img
+			{
+				float: left;
+				margin-right: 5px;
+				margin-top: 1px;
+			}
+			#leftNav li strong
+			{
+				display: block;
+				margin: 0;
+				padding: 6px 0 8px;
+				border-bottom: 1px dotted #ccc;
+			}
+				#leftNav strong:hover
+				{
+					background: url("../images/layout/navBack_rightGrad.gif") repeat-y right;	
+				}
+			
+.noFormSection
+{
+	margin: 0 0 13px 0;	
+}
+#locationsNav
+{
+	max-height: 15.5em;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+	#locationsNav .centered img
+	{
+		vertical-align: top;	
+	}
+	#locationsNav tbody tr
+	{
+		font-size: .85em !important;	
+	}
+.peNavHelp img
+{
+	margin-bottom: -5px;
+}
+.refid
+{
+	font: bold 1.5em Tahoma, Geneva, sans-serif;
+	color: #000;
+}
+#peSplash
+{
+	width: 100%;
+	min-height: 253px;
+	max-height: 285px;
+	margin-bottom: 13px;
+	padding-bottom: 15px;
+	background: url("../images/splash-pe.jpg") no-repeat bottom right;
+	border: 1px solid #ccc;
+}
+#peSplashContent
+{
+	width: 78%;
+	height: 100%;
+	margin: 13px 0 0 0;
+}
+	/*#peSplashContent fieldset
+	{
+		margin: 0;
+		background-color: #ffffff;
+	}*/
+	#announcements
+	{
+		max-height: 150px;
+		float: none;
+		margin: 0 0 0 20px;
+		overflow-y: hidden;
+		color: #258;
+	}
+		#announcements h2
+		{
+			border-bottom: 1px dotted #c0cfde;
+		}
+		#announcements li
+		{
+			margin: 0;
+			font-size: .85em;
+			border-bottom: 1px dotted #c0cfde;
+		}
+		#announcements p:first-child
+		{
+			font-size: 1.2em;
+			margin: 10px 0;
+			*margin-bottom: 9px;
+		}
+		#announcements p
+		{	
+			margin: 5px 0;
+			padding: 0;
+		}
+		/*#announcements hr
+		{
+			float: none;
+			overflow: hidden;
+			height: 0;
+			font-size: 0;
+			line-height: 0;
+			margin: 5px 0;
+			*margin: 0;	
+			padding: 0;
+		}*/
+		#announcements hr + p
+		{
+			*margin-top: 0;	
+		}
+	#peCTA-shadow
+	{
+		background: url(../images/layout/peCTA-shadow.png);
+		width: 336px;
+		height: 77px;
+		margin: 15px auto 0;
+	}
+	#peCTA
+	{
+		font-family: Trebuchet MS, Helvetica, sans-serif;
+		background-color: #68D;
+		width: 326px;
+		height: 69px;
+		border: 1px solid #68D;
+		margin-left: 4px;
+	}
+	#mainContent #peCTA h2
+	{
+		background: url("../images/layout/peCTA.gif") no-repeat;
+		height: 21px;
+		font-size: 1.2em;
+		font-variant: small-caps;
+		letter-spacing: .2em;
+		text-align: center;
+		color: #e4ebf8;
+	}
+	#peCTA #online
+	{
+		float: left;
+		display: block;
+		width: 326px;
+		height: 47px;
+		margin-top: 1px;
+		background: url("../images/layout/peCTA.gif") no-repeat 0 -21px;
+		text-indent: -999em;
+	}
+		#peCTA #online:hover
+		{
+			background-position: 0 -68px;
+		}
+	#peCTA #download
+	{
+		float: left;
+		display: block;
+		width: 225px;
+		height: 47px;
+		margin-top: 1px;
+		background: url("../images/layout/peCTA.gif") no-repeat -225px -21px;
+		text-indent: -999em;
+	}
+	#peCTA #download:hover
+	{
+		background-position: -225px -68px;
+	}
+	/* The following declaration fixes outline focus "bug" in Firefox */
+	#online:focus, #download:focus
+	{
+		outline: none;
+	}
+/* *********************************
+			FORM STYLES
+********************************** */
+/* Over-ride same forms.css style for Provider Enrollment since PE hidden fieldsets have buttons and hr's that need space around them */
+fieldset.hidden
+{
+	padding: 0 5px 5px;	
+}
+#prevNext
+{
+	height: 42px;
+	border-bottom: 1px solid #DDD;	
+}
+#submitLabel
+{
+	margin: 7px 13px;
+	float: right;
+	font-weight: bold;	
+}
+.btnRow p
+{
+	float: left;
+	font-size: .8em;
+	margin: -2px 5px 0 0;	
+}
+.linkBtn
+{
+	background: none;
+	border: none;
+	font: normal 1em Verdana, sans-serif;
+	letter-spacing: normal;
+	color: #28D;
+	margin-top: -2px;
+	padding: 0;
+	overflow: visible; /* Fix for left/right padding 0 in ie */
+}
+.linkBtn::-moz-focus-inner { 
+    border: 0;
+    padding: 0;
+}
+.linkBtn span
+{
+	text-decoration: underline;	
+}
+.linkBtn:hover
+{
+	cursor: pointer;
+	color: #B95;
+}
+/* *********************************
+	CHECKLIST TABLE STYLES
+********************************** */
+.checklistTable tbody th
+{
+	background-color: #fff;
+	text-align: left;
+	padding-left: 10px;
+	border-bottom: none;
+}
+	.checklistTable tbody tr.odd th
+	{
+		background-color: #E7EBEF;
+	}
+	#mainContent .checklistTable tbody th ul
+	{
+		font-weight: normal;
+		font-size: .85em;
+		margin-left: 0;
+		border-bottom: 1px dotted #ccc;
+		margin-right: 7px;
+	}
+	#mainContent .checklistTable tbody th ul li
+	{
+		background-image: none;
+		padding: 5px 0 0 7px;
+		border-top: 1px dotted #ccc;
+		margin-right: 0;
+	}
+.checklistTable tr.odd td.notEligible
+{
+	background-color: #b2b8be;
+	border-left: 1px solid #aaa;
+}
+.checklistTable td
+{
+	vertical-align: top;	
+}
+.checklistTable td.notEligible
+{
+	background-color: #ccc;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	border-left: 1px solid #bbb;
+}
+#mainContent .checklistTable ul
+{
+	margin: 13px 0 13px 7px;
+	padding: 0;
+}
+#mainContent .checklistTable ul ul
+{
+	margin-left: 0;	
+}
+#mainContent .checklistTable li
+{
+	color: #656565;
+}
+#mainContent .checklistTable li span
+{
+	color: #444;	
+}
+#mainContent .checklistTable ul p
+{
+	margin-left: 0;	
+}
+#mainContent .checklistTable li
+{
+	margin-right: 7px;	
+}
+/* *********************************
+	RADIO TABLE STYLES: Provider Type
+********************************** */
+.radioTable
+{
+	background-color: #fff;
+	margin: 13px 0;
+	border: 1px solid #ccc;
+	border-top: none;  /* Hidden thead ie8 fix */
+}
+	/* Hidden thead for accessibility */
+	.radioTable thead, .radioTable thead tr, .radioTable th
+	{
+		position: absolute;
+		left: -999em;
+	}
+	.radioTable tbody tr:first-child td
+	{
+		border-top: 1px solid #ccc;	/* Hidden thead ie fix */
+	}
+	.radioTable td
+	{  
+		padding: 2px 7px 7px;
+	}
+	.formSection .radioTable h3
+	{
+		margin: 0 0 3px;
+		color: #315B7C;
+		border-bottom: 1px dotted #d0d9e1;
+	}
+	.radioTable input
+	{
+		width: 13px;
+	}
+	.radioTable .odd
+	{
+		background-color: #ecf0f4;	
+	}
+	.radioTable .odd td:first-child
+	{
+		background-color: #dee3e8;	
+	}
+	.radioTable tr:hover
+	{
+		background-color: #e6e9ed;
+		cursor: default;
+	}
+	.radioTable tr td:first-child
+	{
+		background-color: #e7ebef;
+		padding: 0 2px;
+	}
+	.radioTable tr:hover td:first-child
+	{
+		background-color: #d0d9e1;	
+	}
+/* *********************************
+		HOURS TABLE STYLES
+********************************** */
+#hoursTable
+{
+	
+	width: 100%;
+}
+	#hoursTable tbody th
+	{
+		text-align: left;
+		color: #315B7C;
+		border: none;
+	}
+		#hoursTable tbody .even th
+		{
+			background-color: #E7EBEF; 
+			border-left: solid 1px #E7EBEF;
+		}
+		#hoursTable tbody .odd th
+		{
+			background-color: #dee3e8; 	
+			border-left: solid 1px #dee3e8;
+		}
+	
+	#hoursTable td {
+		text-align: center;
+	}
+	#hoursTable select {
+		font-size:0.8em;
+	}
+	#hoursTable #total input
+	{
+		width: 45px;
+		font-weight:bold;	
+		text-align: center;
+	}
+	#hoursTable #total th
+	{
+		color: #444;
+		text-align: center;
+		background-color: #ddd;	
+		border-left: solid 1px #ddd;
+		border-right: solid 1px #ccc;
+		border-top: solid 1px #ccc;
+	}
+	#hoursTable #total.odd td
+	{
+		border-top: solid 1px #E7EBEF;	
+	}
+	#copyToWeekdays{
+		font-size:0.8em;
+		font-weight: normal;
+		margin-left: 25px;
+	}
+		#copyToWeekdays:hover
+		{
+			cursor: pointer;	
+		}
+		
+/* *********************************
+		ZIP TABLE STYLES
+********************************** */
+.zipTable tr td:first-child, .zipTable tr th:first-child
+{
+	border-left: none;	
+}
+
+/* *********************************
+	TERMS AND CONDITONS STYLES
+********************************** */
+
+#terms ol li {
+	margin-left: 50px;
+	margin-bottom: 5px;
+	list-style-type:upper-alpha;	
+}
+#terms ol ol li {
+	margin-top:5px;
+	margin-bottom: 5px;
+	list-style-type:upper-roman;
+}
+#baterms ol li {
+	margin-left: 50px;
+	margin-bottom: 5px;
+	list-style-type:decimal;	
+}
+
+/* ************************************************
+	Temporary Styles (will be integrated globally)
+*************************************************** */
+.verticalCross select  /* must come after .crossSelect select */
+{
+	clear: left;
+	max-width: 700px;
+	min-width: 500px;
+	max-height: 15em;
+	min-height: 0;
+}
+	.verticalCross div
+	{
+		clear: left;
+		margin: 0;
+		padding: 0;
+	}
+	.verticalCross button
+	{
+		width: 6em;
+		float: none;
+		margin-bottom: 0;
+		font-size: .85em;
+		letter-spacing: normal;
+	}
+	.verticalCross .crossAdd
+	{
+		border: 1px solid #A7AFBF;
+		border-bottom: 2px solid #6688DD;	
+	}
+	.verticalCross .crossRemove
+	{
+		border: 1px solid #A7AFBF;
+		border-top: 2px solid #6688DD;	
+	}
+	
+table.dataTable
+{
+	width: 100%;	
+}
+.center
+{
+	text-align: center;
+}
+fieldset + .center
+{
+	margin-top: 13px;	
+}
+p.blockquote
+{
+	margin-left: 15px;	
+}
+table
+{
+	margin-bottom: 13px;
+}
+.dataTable table
+{
+	margin-bottom: 0;	
+}
+td
+{
+	padding-bottom: 5px;
+	padding-right: 35px;
+}
+/* Styles for content on static Tabs page: Supporting Information */
+#mainContent .tabs
+{
+	margin: 0;	
+}
+.formSection h2, .formSection h3
+{
+	margin: 0 7px;
+}
+.formSection p
+{
+	margin: 13px 7px;	
+}
+	.formSection .pageResults p
+	{
+		margin: 4px 0 0;	
+	}
+.formSection > .dataTable
+{
+	margin: 13px 7px; /* For dataTable on CCNC/CA Eligibility page */
+}
+.formSection p.blockquote
+{
+	margin-left: 22px;	
+}
+.formSection > h2, .formSection > h3
+{
+	margin-top: 13px;	
+}
+
+.valid
+{
+	color: #FFFFFF !important;
+	background-color: #6edb5f;
+	border: 1px solid #2ba741;
+}
+#quickLinks
+{
+	clear: left;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 7px 10px;
+	border: 1px solid #DDDDDD;
+}
+#quickLinks li
+{
+	padding: 7px 0;
+}
+.labelToRight .twoColChk dt
+{
+	width: 45%;
+}
+
+#formLegend + p, #requiredLegend + p, #formLegend + h2, #requiredLegend + h2
+{
+	clear: both;
+	margin-top: 0;
+}
+#pageTitle + .tabs
+{
+	margin-top: 10px;  /* Makes up for floated .current tab with extra 4px padding */
+}
+.formSection dl + .info
+{
+	margin-top: 7px;	
+}
+#mainContent h2
+{
+	font-size: 1.3em;
+}
+#mainContent h3
+{
+	font-size: 1.1em;
+}
+.info h3, .error h3
+{
+	margin: 0;	
+}
+	
+.subtext
+{
+	font-size: .8em;
+	padding: 5px 10px 0px;
+}
+#formSubmitLabelInner
+{
+	margin: 3px 15px 0;
+	font-size: .8em;
+	text-align: right;
+	width: 250px;
+	float: right;
+}
+.andOr
+{
+	top: -1.3em;
+	margin-left: 2.5em;
+}
+.verticalAndOr
+{
+	height: 15px;
+	width: 350px;
+	margin: 0px auto 15px;
+	color: #bbb;
+	font-size: 1.7em;
+	letter-spacing: 2px;
+	clear: left;
+	text-align: center;
+	border-bottom: solid 1px #ddd;
+}
+	.verticalAndOr span
+	{
+		padding: 0 5px;
+		background-color: #fff;
+	}
+input.largeRef, select.largeRef
+{
+	width: 265px;
+}

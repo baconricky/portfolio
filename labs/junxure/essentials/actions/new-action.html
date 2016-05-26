@@ -1,0 +1,198 @@
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">×</button>
+    <h3>New Action: <span class="action-type-label">Mail</span></h3>
+  </div>
+  <div class="row-fluid modal-body">
+	<form class="span10">
+	<!-- ROW -->
+		<div class="row-fluid">
+			<div class="control-group span3">  
+				<label class="control-label" for="cboActionType">Action Type</label>  
+				<div class="controls">  
+					<select class="chzn-select" data-placeholder="Select..." id="cboActionType">  
+						<option value="Mail">Mail</option>  
+						<option value="Letter">Letter</option>  
+						<option value="Fax">Fax</option>  
+						<option value="Call">Call</option>  
+						<option value="Meeting">Meeting</option>
+					</select>  
+				</div>
+			</div>
+			<div class="control-group span6">  
+				<label class="control-label" for="cboCategory">Category</label>  
+				<div class="controls">  
+					<select class="chzn-select" data-placeholder="Select..." id="cboCategory">  
+						<option>Contact - Phone</option>  
+						<option>Contact - Meeting</option>  
+						<option>Contact - In Person</option>  
+						<option>Correspondence - Letter</option>  
+						<option>Correspondence - Statement</option>  
+						<option>Correspondence - Fax</option>  
+					</select>  
+				</div>
+			</div>
+		</div>
+	<!-- /ROW -->
+	
+	<!-- ROW -->
+		<div class="row-fluid">
+			<div class="control-group span3">  
+				<label class="control-label" for="cboEnteredBy">Entered By</label>  
+				<div class="controls">  
+					<select class="chzn-select" data-placeholder="Select..." id="cboEnteredBy">
+						<option>Shawn Ethridge</option>  
+						<option>Nick Harris</option>  
+						<option>Page Horton</option>  
+						<option>Ken Golding</option>
+					</select>  
+				</div>
+			</div>
+			<div class="control-group span3">  
+				<label class="control-label" for="dpEntered">Entered Date</label>  
+				<div class="controls">  
+					<input class="input-small datepicker" type="text" id="dpEntered">  
+				</div>
+			</div>
+			<div class="control-group span3">  
+				<label class="control-label" for="cboPriority">Priority</label>  
+				<div class="controls">  
+					<select class="chzn-select input-small" id="cboPriority">  
+						<option>Low</option>  
+						<option>Normal</option>  
+						<option>High</option>  
+					</select>  
+				</div>
+			</div>
+		</div>
+	<!-- /ROW -->
+	
+	<!-- ROW -->
+		<div class="row-fluid">
+			<div class="control-group span3">  
+				<label class="control-label" for="cboAssignedTo">Assigned To</label>  
+				<div class="controls">  
+					<select class="chzn-select" data-placeholder="Select..." id="cboAssignedTo">
+						<option>Shawn Ethridge</option>  
+						<option>Nick Harris</option>  
+						<option>Page Horton</option>  
+						<option>Ken Golding</option>
+					</select>  
+				</div>
+			</div>
+			<div class="control-group span3">  
+				<label class="control-label" for="dpEntered">Start Date</label>  
+				<div class="controls">  
+					<input class="input-small datepicker" type="text" id="dpStart">  
+				</div>
+			</div>
+			<div class="control-group span3">  
+				<label class="control-label" for="dpEntered">Due Date</label>  
+				<div class="controls">  
+					<input class="input-small datepicker" type="text" id="dpDue">  
+				</div>
+			</div>
+		</div>
+	<!-- /ROW -->
+	
+	<!-- ROW -->
+		<div class="row-fluid">
+			<div class="control-group span3">  
+				<label class="control-label" for="cboCompletedBy">Completed By</label>  
+				<div class="controls">  
+					<select class="chzn-select" data-placeholder="Select..." id="cboCompletedBy">  
+						<option>Shawn Ethridge</option>  
+						<option>Nick Harris</option>  
+						<option>Page Horton</option>  
+						<option>Ken Golding</option>
+					</select>  
+				</div>
+			</div>
+			
+			<div class="control-group span3">  
+				<label class="control-label" for="dpCompleted">Completion Date</label>  
+				<div class="controls">  
+					<input class="input-small datepicker" type="text" id="dpCompleted">  
+				</div>
+			</div>
+			
+			<div class="control-group span3">  
+			<label class="control-label" for="nTimeSpent">Time Spent</label>  
+				<div class="controls">  
+					<input class="input-mini" type="number" id="nTimeSpent" value="0">
+					<span class="help-inline">minutes</span>
+				</div>
+			</div>
+		</div>
+	<!-- /ROW -->
+	
+	<!-- ROW -->
+		<div class="row-fluid">
+			<div class="control-group span6"> 
+				<label class="control-label" for="txtSubject">Subject</label>  
+				<div class="controls">
+					<input type="text" class="full" id="txtSubject">  
+				</div>
+			</div>
+			
+			<div class="control-group span3">  
+				<label class="control-label" for="cboFollowers">Followers</label>  
+				<div class="controls">
+					<select id="cboFollowers" data-placeholder="Add followers..." multiple class="chzn-select-deselect" tabindex="8">
+						<option value=""></option>
+						<option>Chris Jarvis</option>
+						<option>Nick Harris</option>
+						<option>Shawn Ethridge</option>
+						<option>Page Horton</option>
+						<option selected>Shawn Ethridge</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	<!-- /ROW -->
+	
+	<!-- ROW -->
+		<div class="row-fluid">
+			<div class="control-group span6">  
+				<label class="control-label" for="tNote">Note</label>  
+				<div class="controls">  
+					<textarea class="autoResize full" id="tNote"> </textarea>
+				</div>
+			</div>
+			
+			<div class="control-group span3">  
+				<label class="control-label" for="tagList">Tags</label>  
+				<div class="controls">
+					<select id="tagList" data-placeholder="Add tags..." multiple class="chzn-select-deselect" tabindex="8">
+						<option value=""></option>
+						<option>Automotive</option>
+						<option>Butcher</option>
+						<option>Caligrophy</option>
+						<option>Travel</option>
+						<option selected>New Action</option>
+					</select>
+					<label class="checkbox">
+						<input type="checkbox" id="inlineCheckbox1" value="option1"> Repeating
+					</label>
+					<label class="checkbox">
+						<input type="checkbox" id="inlineCheckbox2" value="option2"> Exclude from History
+					</label>
+					<label class="checkbox">
+						<input type="checkbox" id="inlineCheckbox3" value="option3"> Further Action Required
+					</label>
+				</div>
+			</div>
+		</div>
+	<!-- /ROW -->
+	</form>
+	<div class="summary-container">
+		<h6>Summary</h6>
+		<ul class="nav nav-list">
+			<li class="active"><i class="icon-file"></i> <span class="action-type-label">Mail</span></a></li>
+		</ul>
+	</div>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn btn-primary">Save</a>
+    <a href="#" class="btn" data-dismiss="modal">Close</a>
+  </div>
+</div>

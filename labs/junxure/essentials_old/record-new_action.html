@@ -1,0 +1,131 @@
+<h1 style="color:#333">Create <span style="color:#08c">Meeting</span> for <span style="color:#08c">Collins Family</span></h1>
+
+<div id="essentials-action-editor"></div>
+
+<script id="treeview-template" type="text/kendo-ui-template">
+    # 
+      actionPreview = "";
+      rowClass = "action k-reset k-widget";
+      if (actionIndex % 2) { 
+          rowClass += " k-alt";
+      }
+      var collapsed = ""; 
+      if (actionIndex !== 0) { 
+        collapsed += "app-section-collapsed"; 
+      } 
+    #
+    
+<div class="#= rowClass # action action-status-#= item.Status #">
+    <div class="action-header">
+        <div class="action-icon-type"><span class="ui-tango-large-normal action-large-#= item.Type #"></span>#= item.Type #</div>
+        <div class="action-subject">#= item.Subject #</div>
+        <div class="action-date">#= item.EnteredDate #</div>
+        <div class="action-user">#= item.EnteredBy #</div>
+    </div>
+    
+    <div class="#= collapsed # action-content" style="width:80%;float:left;">
+        <ul class="action-info-group gunit-container" data-available-gunits="4">
+            <li><label>Entered By</label><select><option>#= item.EnteredBy #</option></select></li>
+            <li><label>Entered On</label><input type="text" class="DatePicker" value="#= item.EnteredOn #"/></li>
+            <li><label>Category</label><select><option>#= item.Category #</option></select></li>
+            <li><label>Time Spent</label><input type="text" class="TimeSpent" value="#= item.TimeSpent #" /></li>
+            <li><label>Assigned To</label><input type="text" value="#= item.AssignedTo #"/></li>
+            <li><label>Start Date</label><input type="text" class="DatePicker" value="#= item.DateStart #" /></li>
+            <li><label>Date Due</label><input type="text" class="DatePicker" value="#= item.DueDate #" /></li>
+            <li><label>Priority</label><input type="text" value="#= item.Priority #"/></li>
+            <li data-gunits="2">
+                <label>Subject</label>
+                <input type="text" value="#= item.Subject #" />
+                <label>Note</label>
+                <textarea rows="10">#= item.Note #</textarea>
+            </li>
+            <li data-gunits="2">
+                <label>Followers</label>
+                <table class="action-followers-grid">
+                    <tr>
+                        <th>User</th>
+                        <th>Date Added</th>
+                        <th>Priority</th>
+                        <th>Confirm</th>
+                    </tr>
+                    <tr>
+                        <td>Alexandra B. Gould</td>
+                        <td>05/20/2012</td>
+                        <td>Normal</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Peter K. Button</td>
+                        <td>05/20/2012</td>
+                        <td>Normal</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Kasey Q. Gordy</td>
+                        <td>05/20/2012</td>
+                        <td>Normal</td>
+                        <td>No</td>
+                    </tr>
+                </table>
+                <a href="%20" class="button">Add User</a>
+            </li>
+            <li>
+                <label class="action-label"><input type="checkbox" /> Repeating Action</label>
+                <label class="action-label"><input type="checkbox" /> Exclude from History</label>
+                <label class="action-label"><input type="checkbox" /> Further Action Required</label>
+            </li>
+        </ul>
+
+        <div class="action-summary">
+            <h4>Summary</h4>
+            <ul class="action-summary-tree">
+                <li>Phone Call
+                    <ul>
+                        <li>Note</li>
+                    </ul>
+                </li>
+                <li>Meeting
+                    <ul>
+                        <li>Note</li>
+                    </ul>
+                </li>
+                <li>Note</li>
+                <li>Letter</li>
+                <li>Meeting</li>
+                <li>Letter</li>
+                <li>Meeting</li>
+                <li>Letter</li>
+                <li>Note</li>
+                <li>Service</li>
+                <li>Service</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="#= collapsed # action-tools">
+        <ul>
+            <li><button class="app-primary-button btn-add-action">Save Action</button></li>
+            <li><button class="app-primary-button btn-add-action">Save Action and Edit</button></li>
+            <li> | <a href="%20">Cancel</button></li>
+        </ul>
+    </div>
+</div>
+</script>
+        
+<script>
+    var actionIndex = 0;
+    
+    $(document).ready(function() {
+        $("#essentials-action-editor").kendoTreeView({
+            template: kendo.template($("#treeview-template").html()),
+            dataSource: jxSampleData.NewActionDataSource(),
+            dragAndDrop: true,
+//            select: onSelect,
+//            expand: onExpand
+        });
+        
+        $("ul.action-summary-tree").kendoTreeView();
+        $(".action-alert-grid").kendoGrid();
+    });
+</script>

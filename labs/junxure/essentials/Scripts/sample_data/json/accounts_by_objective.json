@@ -1,0 +1,18 @@
+[{
+    value:		550,
+    name:		"Objective 1",
+    color:		"#3a87ad",
+    explode:	true
+},{
+    value:		200,
+    name:	"Objective 2",
+    color:    	"#468847"
+},{
+    value:    	22,
+    name: 	"Objective 3",
+    color:    	"#b94a48"
+},{
+    value:    	160,
+    categoy: 	"Objective 4",
+    color:    	"#f58233"
+}]

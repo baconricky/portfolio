@@ -1,0 +1,54 @@
+/**************************************************
+** BEGIN: Essentials Dashboard
+**************************************************/
+
+@import "../kendo/kendo.dataviz.less";
+
+.sort-area {
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0; 
+
+	.ui-widget,
+	.k-widget {
+		margin: 0;
+		margin-right: 20px;
+		margin-top: 20px;
+		padding: 0;
+	}
+	
+	+ .container,
+	.container-fluid,
+	.row,
+	.row-fluid {
+		margin: 0;
+		padding: @padding;
+	}
+	&.container,
+	.container-fluid,
+	.row,
+	.row-fluid {
+		margin: 0;
+		padding: @padding;
+	}
+}
+
+//modeled after bootstrap alerts
+.action-info {
+	color: @warningText;
+	background: @warningBackground;
+	border: 1px solid @warningBorder;
+	padding: 5px;
+	margin-bottom: 5px;
+
+	.action-header {
+		margin-bottom: 5px;
+		font-weight: bold;
+	}
+	.action-subject {
+		margin-bottom: 5px;
+	}
+	.action-note {
+		padding: 5px;
+	}
+}

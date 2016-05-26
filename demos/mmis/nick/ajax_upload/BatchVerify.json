@@ -1,0 +1,9 @@
+{
+	returnCd: 0, //success,fail,etc
+	actionErrors: [],
+	successUrl: "BatchVerify.html",
+	actionMessages: [],
+	fieldErrors: {}, 
+	result: []
+}
+

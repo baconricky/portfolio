@@ -1,0 +1,667 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js ie6 oldie" lang="en"><![endif]-->
+<!--[if IE 7]><html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]><html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Red Hat | Event Tool</title>
+
+        <link type="text/css" rel="stylesheet" href="/forms/css/redhat/bootstrap.css" media="all" /><link type="text/css" rel="stylesheet" href="/forms/css/redhat/editorial.css" media="all" /><link type="text/css" rel="stylesheet" href="/forms/css/redhat/overpass.css" media="all" /><link type="text/css" rel="stylesheet" href="/forms/css/redhat/print.css" media="all" /><link type="text/css" rel="stylesheet" href="/forms/css/redhat/style.css" media="all" /><link type="text/css" rel="stylesheet" href="/forms/css/redhat/forms.css" media="all" />
+
+        <script src="/forms/scripts/lib/jquery/1.10/jquery.min.js"></script>
+        <script src="//www.redhat.com/j/s_code.js"></script>
+        <script src="/forms/scripts/jquery.gatedform.js"></script>
+    </head>
+    <body>
+	    <form id="icsBuilder" class="form-horizontal container">
+            <fieldset>
+                <legend>Build your Event</legend>
+    			<div class="alert alert-info">
+    				All fields are required for a valid ICS (iCal) file to be generated.
+    			</div>
+                <div class="control-group">
+    				<label class="control-label" for="event">SalesForce Offer Campaign ID</label>
+    				<div class="controls">
+    					<input class="input-block-level" type="text" id="event" name="event" placeholder="offer id">
+                    </div>
+                </div>
+                <fieldset>
+                    <legend>Organizer</legend>
+    				<div class="control-group">
+    					<label class="control-label" for="organizerName">Name</label>
+    					<div class="controls">
+    						<input class="input-block-level" type="text" name="organizerName" id="organizerName" placeholder="Organizer Name">
+    					</div>
+    				</div>
+                    <div class="control-group">
+    					<label class="control-label" for="organizerEmail">Email</label>
+    					<div class="controls">
+                            <input class="input-block-level" type="text" name="organizerEmail" id="organizerEmail" placeholder="Organizer Email">
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Event</legend>
+    	            <div class="control-group">
+    					<label class="control-label" for="summary">Subject</label>
+    					<div class="controls">
+    	                	<input placeholder="Event subject or summary" class="input-block-level" name="summary" id="summary" type="text">
+    					</div>
+    				</div>
+    				<div class="control-group">
+    					<label class="control-label" for="description">Description</label>
+    					<div class="controls">
+                    		<textarea placeholder="Event description" class="input-block-level" id="description" name="description" rows="3"></textarea>
+    					</div>
+    				</div>
+    	            <div class="control-group">
+    					<label class="control-label" for="location">Location</label>
+    					<div class="controls">
+    	                    <input class="input-block-level" type="text" id="location" placeholder="ex: 100 E Davie St Raleigh, NC 27603" name="location">
+    					</div>
+    				</div>
+    				<div class="row">
+    					<div class="span6">
+            				<div class="control-group">
+            					<label class="control-label" for="startDateTime">Start</label>
+            					<div class="controls">
+            						<div class="input-append date" id="startDate">
+            							<input class="input-block-level" id="startDateTime" name="startDateTime" type="text" data-format="MM/dd/yyyy hh:mm" placeholder="MM/dd/yyyy hh:mm">>
+            							<span class="add-on"><i class="icon-calendar"></i></span>
+            						</div>
+            					</div>
+            				</div>
+        				</div>
+    					<div class="span6">
+    						<div class="control-group">
+    							<label class="control-label" for="timezone">Timezone</label>
+    							<div class="controls">
+    			                    <select class="input-block-level" name="timezone" id="timezone">
+    			                        <option>Select a Timezone</option>
+    			                        <option value="UTC">
+    			                            Coordinated Universal Time
+    			                        </option>
+    			                        <option value="GMT">
+    			                            Greenwich Mean Time
+    			                        </option>
+    			                        <option value="EGT">
+    			                            East Greenland Time
+    			                        </option>
+    			                        <option value="WGT">
+    			                            West Greenland Time
+    			                        </option>
+    			                        <option value="PMST">
+    			                            Pierre &amp; Miquelon Standard Time
+    			                        </option>
+    			                        <option value="NST">
+    			                            Newfoundland Standard Time
+    			                        </option>
+    			                        <option value="AST">
+    			                            Atlantic Standard Time
+    			                        </option>
+    			                        <option value="EST">
+    			                            Eastern Standard Time
+    			                        </option>
+    			                        <option value="CST">
+    			                            Central Standard Time
+    			                        </option>
+    			                        <option value="MST">
+    			                            Mountain Standard Time
+    			                        </option>
+    			                        <option value="PST">
+    			                            Pacific Standard Time
+    			                        </option>
+    			                        <option value="AKST">
+    			                            Alaska Standard Time
+    			                        </option>
+    			                        <option value="HAST">
+    			                            Hawaii-Aleutian Standard Time
+    			                        </option>
+    			                        <option value="EGST">
+    			                            Eastern Greenland Summer Time
+    			                        </option>
+    			                        <option value="WGST">
+    			                            Western Greenland Summer Time
+    			                        </option>
+    			                        <option value="PMDT">
+    			                            Pierre &amp; Miquelon Daylight Time
+    			                        </option>
+    			                        <option value="NDT">
+    			                            Newfoundland Daylight Time
+    			                        </option>
+    			                        <option value="ADT">
+    			                            Atlantic Daylight Time
+    			                        </option>
+    			                        <option value="EDT">
+    			                            Eastern Daylight Time
+    			                        </option>
+    			                        <option value="CDT">
+    			                            Central Daylight Time
+    			                        </option>
+    			                        <option value="MDT">
+    			                            Mountain Daylight Time
+    			                        </option>
+    			                        <option value="PDT">
+    			                            Pacific Daylight Time
+    			                        </option>
+    			                        <option value="AKDT">
+    			                            Alaska Daylight Time
+    			                        </option>
+    			                        <option value="HADT">
+    			                            Hawaii-Aleutian Daylight Time
+    			                        </option>
+    			                        <option value="CST">
+    			                            Cuba Standard Time
+    			                        </option>
+    			                        <option value="CDT">
+    			                            Cuba Daylight Time
+    			                        </option>
+    			                        <option value="AMT">
+    			                            Amazon Time
+    			                        </option>
+    			                        <option value="AMST">
+    			                            Amazon Summer Time
+    			                        </option>
+    			                        <option value="ART">
+    			                            Argentina Time
+    			                        </option>
+    			                        <option value="BOT">
+    			                            Bolivia Time
+    			                        </option>
+    			                        <option value="BRT">
+    			                            Brasilia Time
+    			                        </option>
+    			                        <option value="BRST">
+    			                            Brasilia Summer Time
+    			                        </option>
+    			                        <option value="CLT">
+    			                            Chile Standard Time
+    			                        </option>
+    			                        <option value="CLST">
+    			                            Chile Summer Time
+    			                        </option>
+    			                        <option value="COT">
+    			                            Columbia Time
+    			                        </option>
+    			                        <option value="ECT">
+    			                            Ecuador Time
+    			                        </option>
+    			                        <option value="FKT">
+    			                            Falkland Islands Time
+    			                        </option>
+    			                        <option value="FKST">
+    			                            Falkland Islands Summer Time
+    			                        </option>
+    			                        <option value="FNT">
+    			                            Fernando de Noronha Time
+    			                        </option>
+    			                        <option value="GFT">
+    			                            French Guiana Time
+    			                        </option>
+    			                        <option value="GYT">
+    			                            Guyana Time
+    			                        </option>
+    			                        <option value="PET">
+    			                            Peru Time
+    			                        </option>
+    			                        <option value="PYT">
+    			                            Paraguay Time
+    			                        </option>
+    			                        <option value="PYST">
+    			                            Paraguay Summer Time
+    			                        </option>
+    			                        <option value="SRT">
+    			                            Suriname Time
+    			                        </option>
+    			                        <option value="UYT">
+    			                            Uruguay Time
+    			                        </option>
+    			                        <option value="UYST">
+    			                            Uruguay Summer Time
+    			                        </option>
+    			                        <option value="VET">
+    			                            Venezuelan Standard Time
+    			                        </option>
+    			                        <option value="CAT">
+    			                            Central Africa Time
+    			                        </option>
+    			                        <option value="CVT">
+    			                            Cape Verde Time
+    			                        </option>
+    			                        <option value="EAT">
+    			                            Eastern Africa Time
+    			                        </option>
+    			                        <option value="MUT">
+    			                            Mauritius Time
+    			                        </option>
+    			                        <option value="RET">
+    			                            Reunion Time
+    			                        </option>
+    			                        <option value="SAST">
+    			                            South Africa Standard Time
+    			                        </option>
+    			                        <option value="SCT">
+    			                            Seychelles Time
+    			                        </option>
+    			                        <option value="WAT">
+    			                            West Africa Time
+    			                        </option>
+    			                        <option value="WAST">
+    			                            West Africa Summer Time
+    			                        </option>
+    			                        <option value="WT">
+    			                            Western Sahara Standard Time
+    			                        </option>
+    			                        <option value="BST">
+    			                            British Summer Time
+    			                        </option>
+    			                        <option value="CET">
+    			                            Central European Time
+    			                        </option>
+    			                        <option value="CEST">
+    			                            Central European Summer Time
+    			                        </option>
+    			                        <option value="EET">
+    			                            Eastern European Time
+    			                        </option>
+    			                        <option value="EEST">
+    			                            Eastern European Summer Time
+    			                        </option>
+    			                        <option value="WET">
+    			                            Western European Time
+    			                        </option>
+    			                        <option value="WEST">
+    			                            Western European Summer Time
+    			                        </option>
+    			                        <option value="IST">
+    			                            Irish Standard Time
+    			                        </option>
+    			                        <option value="IST (Ireland)">
+    			                            Irish Standard Time
+    			                        </option>
+    			                        <option value="KUYT">
+    			                            Kuybyshev Time
+    			                        </option>
+    			                        <option value="SAMT">
+    			                            Samara Time
+    			                        </option>
+    			                        <option value="MSK">
+    			                            Moscow Standard Time
+    			                        </option>
+    			                        <option value="MSD">
+    			                            Moscow Daylight Time
+    			                        </option>
+    			                        <option value="AFT">
+    			                            Afghanistan Time
+    			                        </option>
+    			                        <option value="ALMT">
+    			                            Alma-Ata Time
+    			                        </option>
+    			                        <option value="AMT">
+    			                            Armenia Time
+    			                        </option>
+    			                        <option value="AMST">
+    			                            Armenia Summer Time
+    			                        </option>
+    			                        <option value="ANAT">
+    			                            Anadyr Time
+    			                        </option>
+    			                        <option value="ANAST">
+    			                            Anadyr Summer Time
+    			                        </option>
+    			                        <option value="AQTT">
+    			                            Aqtobe Time
+    			                        </option>
+    			                        <option value="AST">
+    			                            Arabia Standard Time
+    			                        </option>
+    			                        <option value="AZT">
+    			                            Azerbaijan Time
+    			                        </option>
+    			                        <option value="AZST">
+    			                            Azerbaijan Summer Time
+    			                        </option>
+    			                        <option value="BNT">
+    			                            Brunei Darussalam Time
+    			                        </option>
+    			                        <option value="BST">
+    			                            Bangladesh Standard Time
+    			                        </option>
+    			                        <option value="BTT">
+    			                            Bhutan Time
+    			                        </option>
+    			                        <option value="CST">
+    			                            China Standard Time
+    			                        </option>
+    			                        <option value="GET">
+    			                            Gerogia Standard Time
+    			                        </option>
+    			                        <option value="GST">
+    			                            Gulf Standard Time
+    			                        </option>
+    			                        <option value="HKT">
+    			                            Hong Kong Time
+    			                        </option>
+    			                        <option value="HOVT">
+    			                            Hovd Time
+    			                        </option>
+    			                        <option value="ICT">
+    			                            Indochina Time
+    			                        </option>
+    			                        <option value="IST">
+    			                            Israel Standard Time
+    			                        </option>
+    			                        <option value="IST (Israel)">
+    			                            Israel Standard Time
+    			                        </option>
+    			                        <option value="IDT">
+    			                            Israel Daylight Time
+    			                        </option>
+    			                        <option value="IST">
+    			                            India Standard Time
+    			                        </option>
+    			                        <option value="IRST">
+    			                            Iran Standard Time
+    			                        </option>
+    			                        <option value="IRDT">
+    			                            Iran Daylight Time
+    			                        </option>
+    			                        <option value="IRKT">
+    			                            Irkutsk Time
+    			                        </option>
+    			                        <option value="IRKST">
+    			                            Irkutsk Summer Time
+    			                        </option>
+    			                        <option value="JST">
+    			                            Japan Standard Time
+    			                        </option>
+    			                        <option value="KGT">
+    			                            Kyrgyzstan Time
+    			                        </option>
+    			                        <option value="KRAT">
+    			                            Krasnoyarsk Time
+    			                        </option>
+    			                        <option value="KRAST">
+    			                            Krasnoyarsk Summer Time
+    			                        </option>
+    			                        <option value="KST">
+    			                            Korea Standard Time
+    			                        </option>
+    			                        <option value="MAGT">
+    			                            Magadan Time
+    			                        </option>
+    			                        <option value="MAGST">
+    			                            Magadan Summer Time
+    			                        </option>
+    			                        <option value="MMT">
+    			                            Myanmar Time
+    			                        </option>
+    			                        <option value="MVT">
+    			                            Maldives Time
+    			                        </option>
+    			                        <option value="MYT">
+    			                            Malaysia Time
+    			                        </option>
+    			                        <option value="NOVT">
+    			                            Novosibirsk Time
+    			                        </option>
+    			                        <option value="NOVST">
+    			                            Novosibirsk Summer Time
+    			                        </option>
+    			                        <option value="NPT">
+    			                            Nepal Time
+    			                        </option>
+    			                        <option value="OMST">
+    			                            Omsk Standard Time
+    			                        </option>
+    			                        <option value="OMSST">
+    			                            Omsk Summer Time
+    			                        </option>
+    			                        <option value="PETT">
+    			                            Kamchatka Time
+    			                        </option>
+    			                        <option value="PETST">
+    			                            Kamchatka Summer Time
+    			                        </option>
+    			                        <option value="PHT">
+    			                            Philippine Time
+    			                        </option>
+    			                        <option value="PKT">
+    			                            Pakistan Standard Time
+    			                        </option>
+    			                        <option value="SGT">
+    			                            Singapore Time
+    			                        </option>
+    			                        <option value="TJT">
+    			                            Tajikistan Time
+    			                        </option>
+    			                        <option value="TLT">
+    			                            East Timor Time
+    			                        </option>
+    			                        <option value="TMT">
+    			                            Turkmenistan Time
+    			                        </option>
+    			                        <option value="ULAT">
+    			                            Ulaanbaatar Time
+    			                        </option>
+    			                        <option value="UZT">
+    			                            Uzbekistan Time
+    			                        </option>
+    			                        <option value="VLAT">
+    			                            Vladivostok Time
+    			                        </option>
+    			                        <option value="VLAST">
+    			                            Vladivostok Summer Time
+    			                        </option>
+    			                        <option value="WIB">
+    			                            Western Indonesian Time
+    			                        </option>
+    			                        <option value="WIT">
+    			                            Eastern Indonesian Time
+    			                        </option>
+    			                        <option value="WITA">
+    			                            Central Indonesian Time
+    			                        </option>
+    			                        <option value="YAKT">
+    			                            Yakutsk Time
+    			                        </option>
+    			                        <option value="YAKST">
+    			                            Yakutsk Summer Time
+    			                        </option>
+    			                        <option value="YEKT">
+    			                            Yekaterinburg Time
+    			                        </option>
+    			                        <option value="YEKST">
+    			                            Yekaterinburg Summer Time
+    			                        </option>
+    			                        <option value="CHAST">
+    			                            Chatham Island Standard Time
+    			                        </option>
+    			                        <option value="CHADT">
+    			                            Chatham Island Daylight Time
+    			                        </option>
+    			                        <option value="ChST">
+    			                            Chamorro Standard Time
+    			                        </option>
+    			                        <option value="CKT">
+    			                            Cook Island Time
+    			                        </option>
+    			                        <option value="EAST">
+    			                            Easter Island Standard Time
+    			                        </option>
+    			                        <option value="EASST">
+    			                            Easter Island Summer Time
+    			                        </option>
+    			                        <option value="EDT">
+    			                            Eastern Daylight Time
+    			                        </option>
+    			                        <option value="FJST">
+    			                            Fiji Summer Time
+    			                        </option>
+    			                        <option value="FJT">
+    			                            Fiji Time
+    			                        </option>
+    			                        <option value="GALT">
+    			                            Galapagos Time
+    			                        </option>
+    			                        <option value="GAMT">
+    			                            Gambier Time
+    			                        </option>
+    			                        <option value="GILT">
+    			                            Gilbert Island Time
+    			                        </option>
+    			                        <option value="LINT">
+    			                            Line Islands Time
+    			                        </option>
+    			                        <option value="MART">
+    			                            Marquesas Time
+    			                        </option>
+    			                        <option value="MHT">
+    			                            Marshall Islands Time
+    			                        </option>
+    			                        <option value="NCT">
+    			                            New Caledonia Time
+    			                        </option>
+    			                        <option value="NUT">
+    			                            Niue Time
+    			                        </option>
+    			                        <option value="NZST">
+    			                            New Zealand Standard Time
+    			                        </option>
+    			                        <option value="NZDT">
+    			                            New Zealand Daylight Time
+    			                        </option>
+    			                        <option value="PGT">
+    			                            Papua New Guinea Time
+    			                        </option>
+    			                        <option value="PHOT">
+    			                            Phoenix Island Time
+    			                        </option>
+    			                        <option value="PONT">
+    			                            Pohnpei Standard Time
+    			                        </option>
+    			                        <option value="PST">
+    			                            Pitcairn Standard Time
+    			                        </option>
+    			                        <option value="PWT">
+    			                            Palau Time
+    			                        </option>
+    			                        <option value="SBT">
+    			                            Solomon Islands Time
+    			                        </option>
+    			                        <option value="SST">
+    			                            Samoa Standard Time
+    			                        </option>
+    			                        <option value="TAHT">
+    			                            Tahiti Time
+    			                        </option>
+    			                        <option value="TKT">
+    			                            Tokelau Time
+    			                        </option>
+    			                        <option value="TVT">
+    			                            Tuvalu Time
+    			                        </option>
+    			                        <option value="VUT">
+    			                            Vanuatu Time
+    			                        </option>
+    			                        <option value="WFT">
+    			                            Wallis and Futuna Time
+    			                        </option>
+    			                        <option value="WST">
+    			                            West Samoa Time
+    			                        </option>
+    			                        <option value="YAPT">
+    			                            Yap Time
+    			                        </option>
+    			                        <option value="CST">
+    			                            Central Standard Time
+    			                        </option>
+    			                        <option value="CST (Australia)">
+    			                            Central Standard Time
+    			                        </option>
+    			                        <option value="CDT">
+    			                            Central Daylight Time
+    			                        </option>
+    			                        <option value="CXT">
+    			                            Christmas Island Time
+    			                        </option>
+    			                        <option value="EST">
+    			                            Eastern Standard Time
+    			                        </option>
+    			                        <option value="EST (Australia)">
+    			                            Eastern Standard Time
+    			                        </option>
+    			                        <option value="EDT">
+    			                            Eastern Daylight Time
+    			                        </option>
+    			                        <option value="LHST">
+    			                            Lord Howe Standard Time
+    			                        </option>
+    			                        <option value="LHDT">
+    			                            Lord Howe Daylight Time
+    			                        </option>
+    			                        <option value="NFT">
+    			                            Norfolk Time
+    			                        </option>
+    			                        <option value="WST">
+    			                            Western Standard Time
+    			                        </option>
+    			                        <option value="WDT">
+    			                            Western Daylight Time
+    			                        </option>
+    			                        <option value="AZOT">
+    			                            Azores Time
+    			                        </option>
+    			                        <option value="AZOST">
+    			                            Azores Summer Time
+    			                        </option>
+    			                        <option value="CCT">
+    			                            Cocos Islands Time
+    			                        </option>
+    			                        <option value="IOT">
+    			                            Indian Chagos Time
+    			                        </option>
+    			                        <option value="TFT">
+    			                            French Southern and Artarctic Time
+    			                        </option>
+    			                        <option value="CAST">
+    			                            Casey Time
+    			                        </option>
+    			                        <option value="DAVT">
+    			                            Davis Time
+    			                        </option>
+    			                        <option value="MAWT">
+    			                            Mawson Time
+    			                        </option>
+    								</select>
+    							</div>
+    		                </div>
+    	                </div>
+                    </div>
+    				<div class="control-group">
+    					<label class="control-label" for="endDateTime">End</label>
+    					<div class="controls">
+    						<div class="input-append date" id="endDate">
+                            	<input class="input-block-level" id="endDateTime" name="endDateTime" type="text" data-format="MM/dd/yyyy hh:mm" placeholder="MM/dd/yyyy hh:mm">
+    							<span class="add-on"><i class="icon-calendar"></i></span>
+    	                    </div>
+                        </div>
+                    </div>
+    			</div>
+            </fieldset>
+		</form>
+
+        <fieldset>
+            <legend>Event Asset URL</legend>
+            <div id="eventUrl" class="well"></div>
+        </fieldset>
+
+        <script type="t/template" id="url">{{=url_prefix}}/forms/event.html?event={{=event}}&summary={{=summary}}&description={{=description}}&location={{=location}}&timezone={{=timezone}}&startDate={{=startDate}}&startTime={{=startTime}}&endDate={{=endDate}}&endTime={{=endTime}}&organizerName={{=organizerName}}&organizerEmail={{=organizerEmail}}&dtstart={{=dtstart}}&dtend={{=dtend}}</script>
+    </body>
+</html>

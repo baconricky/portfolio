@@ -1,0 +1,36 @@
+[{
+    name:	"Shawn Ethridge",
+    value:  2640000,
+    goal:	3000000,
+    color:  "#3a87ad"
+}, {
+    name:	"Page Horton",
+    value:	3640000,
+    goal:	5000000,
+    color:	"#468847"
+}, {
+    name:	"Ken Golding",
+    value:	4640000,
+    goal:	5000000,
+    color:	"#b94a48"
+}, {
+    name:	"Greg Freidman",
+    value:	8640000,
+    goal: 	9000000,
+    color:	"#f58233"
+}, {
+    name:	"John Shangler",
+    value:	5640000,
+    goal:	5000000,
+    color:	"#ffc40d"
+}, {
+    name:	"Erin Kincheloe",
+    value:	6640000,
+    goal:	7000000,
+    color:	"#7a43b6"
+}, {
+    name:	"Firm",
+    value:  125350422,
+    goal:   200000000,
+    color:  "#c3325f"
+}]

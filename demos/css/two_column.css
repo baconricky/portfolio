@@ -1,0 +1,59 @@
+/* This style sheet converts the standard full-page layout into a two-column layout with a left sidebar */
+
+#mainContent h2 + p, #mainContent h3 + p
+{
+	margin-top: 0;
+}
+#mainContent h3 + ul
+{
+	margin-top: 5px;
+}
+#mainContent p + h2, #mainContent ul + h2, #mainContent ul + h3, #mainContent table + h2
+{
+	margin-top: 20px;	
+}
+
+dt
+{
+	width: 21%;
+}
+dd
+{
+	margin-left: -78%;
+}
+dd + dt
+{
+	margin-left: -53%;
+}
+dd + dt + dd
+{
+	margin-left: -31%;
+}
+fieldset fieldset dd
+{
+	margin-left: -77.3%;	
+}
+fieldset fieldset dd + dt + dd
+{
+	margin-left: -30%;
+}
+
+/* DEPRECATED */
+fieldset fieldset dd.columnTwo
+{
+	margin-left: -30%;
+}
+dt.columnTwo
+{
+	margin-left: -53%;
+}
+dd.columnTwo
+{
+	margin-left: -31%;
+}
+
+/* Removed 4/21/10 - Doesn't seem to be needed */
+/*#mainContent li
+{
+	margin-right: 12px;
+}*/

@@ -1,0 +1,34 @@
+[{
+    "name":     "Holding A",
+    "value":     3640000,
+    "color":    "#3a87ad"
+},{
+    "name":     "Holding B",
+    "value":     365842,
+    "color":    "#468847"
+},{
+    "name":     "Holding C",
+    "value":     1458624,
+    "color":    "#b94a48"
+},{
+    "name":     "Holding D",
+    "value":     12534,
+    "color":    "#f58233"
+},{
+    "name":     "Holding E",
+    "value":     8745632,
+    "color":    "#ffc40d",
+    "explode": true
+},{
+    "name":     "Holding F",
+    "value":     3216587,
+    "color":    "#c3325f"
+},{
+    "name":     "Holding G",
+    "value":     1145212,
+    "color":    "#7a43b6"
+},{
+    "name":     "Holding H",
+    "value":     5525454,
+    "color":    "#2d6987"
+}]
